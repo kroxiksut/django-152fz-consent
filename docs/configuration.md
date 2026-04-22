@@ -200,3 +200,38 @@ DJANGO_152FZ_CONSENT = {
 
 Готовые vendor adapters под GTM / Google Consent Mode / Яндекс Метрику по-прежнему остаются за пределами базового пакета и относятся к future TODO.
 
+
+## Дополнительные cookie-banner настройки entry points
+
+```python
+DJANGO_152FZ_CONSENT = {
+    "cookie_banner": {
+        "show_launcher": True,
+        "show_preferences_link": True,
+        "preferences_page_template": "",
+    },
+}
+```
+
+- `show_launcher` управляет постоянной кнопкой повторного открытия banner.
+- `show_preferences_link` управляет дополнительной ссылкой в footer banner.
+- `preferences_page_template` позволяет рендерить страницу
+  `django_152fz_consent:cookie_preferences` в проектном шаблоне сайта
+  (с основным меню/шапкой и т.д.); при пустом значении используется
+  коробочный standalone template.
+- Для переиспользования стандартного содержимого страницы в проектном шаблоне
+  можно подключить include:
+  `django_152fz_consent/includes/cookie_preferences_content.html`.
+- Конфликтная комбинация `False/False` валидируется Django system check
+  (`django_152fz_consent.E020`).
+
+## Cookie-only bootstrap
+
+```bash
+python manage.py bootstrap_152fz_cookie_defaults
+```
+
+Команда выполняет первичную инициализацию cookie-only контура:
+- коробочные cookie categories;
+- стартовую active `CookiePolicyRevision` (idempotent);
+- стартовую active `CookieBannerRevision` (idempotent).

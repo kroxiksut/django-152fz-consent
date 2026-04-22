@@ -270,3 +270,20 @@ Legacy-поля presentation (сохранены для обратной сов�
 - `theme_variant`: `light` или `contrast`;
 - `desktop_position`: `bottom_right` или `bottom_left`;
 - `mobile_position`: `bottom` или `top`.
+
+## 11.1 contract updates (cookie-only)
+
+- Добавлен отдельный cookie-only router `django_152fz_consent.cookies.urls`.
+- В package template `cookie_preferences.html` добавлен блочный контракт для
+  template override и i18n (`{% trans %}`) без хардкода UI-строк.
+- Entry points banner/preference теперь управляются конфигом:
+  `cookie_banner.show_launcher` и `cookie_banner.show_preferences_link`.
+- Добавлена настройка `cookie_banner.preferences_page_template`: она позволяет
+  отрисовывать страницу cookie preferences внутри проектного шаблона сайта
+  (с меню/layout), а при пустом значении оставляет коробочный standalone fallback.
+- Для такого встраивания предусмотрен reusable include:
+  `django_152fz_consent/includes/cookie_preferences_content.html`.
+- No-JS fallback остаётся инвариантом: ссылка на страницу настроек сохраняется в
+  `<noscript>` даже при отключённых видимых entry points.
+- Добавлен bootstrap default `CookiePolicyRevision` с русскоязычным коробочным
+  текстом через management command `bootstrap_152fz_cookie_defaults`.

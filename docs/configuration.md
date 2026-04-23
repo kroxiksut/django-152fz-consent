@@ -1,7 +1,7 @@
 ﻿# configuration — настройки banner-layer и интеграции
 
 **Версия документа:** `0.1`
-**Обновлено:** `2026-04-17`
+**Обновлено:** `2026-04-23`
 **Статус:** `settings contract для этапов 7.1–7.7 и дополнительного блока 7.5 (варианты и наборы текстов) реализован`
 
 ## Назначение
@@ -64,7 +64,7 @@ DJANGO_152FZ_CONSENT = {
 - можно задать только один из ключей: `reask_after_days` или `reask_after_months`;
 - `0` отключает периодический повторный запрос;
 - re-ask влияет только на повторный показ banner-layer;
-- `outdated` при публикации новой policy revision остаётся отдельным сценарием;
+- `outdated` при публикации новой редакции политики cookie остаётся отдельным сценарием;
 - `dismissed_at` и `decided_at` хранятся в отдельном `CookieBannerState`, а не внутри cookie-consent record;
 - визуальные варианты и наборы текстов выбираются независимо;
 - при `bootstrap_initial_revision=True` post-migrate bootstrap может создать стартовую `CookieBannerRevision` как `is_box_template=True`.
@@ -167,7 +167,7 @@ DJANGO_152FZ_CONSENT = {
 
 Текущая реализация уже даёт:
 - reusable template tag `{% render_cookie_banner %}`;
-- launcher `Cookie settings`;
+- launcher `Настройки cookie`;
 - quick actions `accept all`, `required only`, `custom selection`, `dismiss`;
 - внешние static assets `cookie_banner.css` и `cookie_banner.js`;
 - runtime JSON-представление для client-side loader;
@@ -217,13 +217,74 @@ DJANGO_152FZ_CONSENT = {
 - `show_preferences_link` управляет дополнительной ссылкой в footer banner.
 - `preferences_page_template` позволяет рендерить страницу
   `django_152fz_consent:cookie_preferences` в проектном шаблоне сайта
-  (с основным меню/шапкой и т.д.); при пустом значении используется
-  коробочный standalone template.
+  (с основным меню/шапкой и т.д.); при пустом значении или если указанный
+  шаблон отсутствует, используется коробочный standalone template.
 - Для переиспользования стандартного содержимого страницы в проектном шаблоне
   можно подключить include:
   `django_152fz_consent/includes/cookie_preferences_content.html`.
+- Рекомендуемый layout-contract проектного шаблона:
+  создать страницу, которая расширяет ваш `base.html` и в `block content`
+  подключает `django_152fz_consent/includes/cookie_preferences_content.html`.
 - Конфликтная комбинация `False/False` валидируется Django system check
   (`django_152fz_consent.E020`).
+- Для визуального состояния выбора в banner/preferences используется DOM-контракт:
+  `data-cookie-choice-root`, `data-cookie-choice-state`,
+  `data-cookie-choice-action` и accessibility-хуки
+  `data-cookie-choice-indicator` + `data-cookie-choice-status`.
+
+## 11.9 Optional admin navigation customization
+
+По умолчанию пакет **не меняет** стандартный `admin.site` и не перехватывает
+маршрут `/admin/`.
+
+Для optional-режима с управляемым порядком приложений и сворачиванием блоков
+можно добавить отдельный маршрут:
+
+```python
+from django.contrib import admin
+from django.urls import path
+
+from django_152fz_consent.admin_navigation import get_optional_admin_site
+
+urlpatterns = [
+    path("admin/", admin.site.urls),                  # стандартный Django admin
+    path("admin-152fz/", get_optional_admin_site().urls),  # optional admin
+]
+```
+
+Настройки:
+
+```python
+DJANGO_152FZ_CONSENT = {
+    "admin_navigation": {
+        "enabled": True,
+        "app_order": [
+            "auth",
+            "django_152fz_consent",
+            "django_152fz_consent_cookies",
+            "verified_consents",
+        ],
+        "collapsed_apps": [
+            "django_152fz_consent",
+        ],
+        "consent_apps": [
+            "django_152fz_consent",
+            "django_152fz_consent_cookies",
+            "verified_consents",
+        ],
+        "section_title": "Согласия 152-ФЗ",
+    },
+}
+```
+
+- `enabled=True` включает логику переноса consent/cookies apps вниз списка, если
+  явный `app_order` не задан.
+- `app_order` задаёт приоритет сортировки по `app_label`.
+- `collapsed_apps` включает свернутый `<details>`-режим для выбранных приложений.
+- `consent_apps` определяет список приложений, которые считаются consent-блоком.
+- `section_title` задаёт локализуемый заголовок этого блока.
+- Ошибки типа/формата валидируются через Django check
+  `django_152fz_consent.E023`.
 
 ## Cookie-only bootstrap
 
@@ -233,5 +294,62 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 Команда выполняет первичную инициализацию cookie-only контура:
 - коробочные cookie categories;
-- стартовую active `CookiePolicyRevision` (idempotent);
+- коробочные policy-варианты `short` и `full` как обычные
+  `CookiePolicyRevision` в versioned-flow (idempotent, без дублей);
+- стартовую active `CookiePolicyRevision` (по умолчанию `short`, если до этого
+  не было активной редакции);
 - стартовую active `CookieBannerRevision` (idempotent).
+
+Для выбора policy-варианта в admin добавлены действия:
+- публикация выбранного коробочного варианта (`short`/`full`) через обычный
+  versioned-flow;
+- создание пользовательского черновика на основе выбранного коробочного текста.
+
+## 11.8 Retention и очистка cookie-аудита
+
+```python
+DJANGO_152FZ_CONSENT = {
+    "cookie_retention": {
+        "records_older_than_days": 365,
+        "events_older_than_days": 365,
+        "banner_states_older_than_days": 365,
+        "records_max_count": 0,
+        "events_max_count": 0,
+        "banner_states_max_count": 0,
+        "batch_size": 1000,
+        "protect_current_records": True,
+        "private_signal_paths": [
+            "cookie_runtime.is_private_mode",
+            "client_hints.is_private_mode",
+        ],
+        "private_records_older_than_days": 30,
+        "private_events_older_than_days": 30,
+    },
+}
+```
+
+- `records_older_than_days`, `events_older_than_days`,
+  `banner_states_older_than_days` задают порог age-based очистки по моделям.
+- `records_max_count`, `events_max_count`, `banner_states_max_count` включают
+  прореживание oldest-first при превышении лимита (`0` — без лимита).
+- `batch_size` обязателен и должен быть положительным целым; некорректное
+  значение валидируется через system check `django_152fz_consent.E022`.
+- `protect_current_records=True` запрещает cleanup записей со статусом
+  `current` и связанных с ними событий.
+- `private_*_older_than_days` задают более короткое best-effort хранение для
+  private/incognito сигналов (не юридический источник истины).
+- `private_signal_paths` задаёт JSON-пути внутри `extra_meta`, по которым
+  runtime ищет признаки private/incognito режима.
+
+Команда очистки:
+
+```bash
+python manage.py cleanup_152fz_cookie_audit --dry-run --report-only
+python manage.py cleanup_152fz_cookie_audit --batch-size=500 --older-than-days=90
+```
+
+- Поддерживаются флаги: `--dry-run`, `--report-only`, `--batch-size`,
+  `--older-than-days`, `--database`.
+- Очистка выполняется batch-based, без длинной транзакции на всю таблицу.
+- Перед удалением вызывается optional archive hook
+  `set_cookie_audit_archive_hook(...)` / `trigger_cookie_audit_archive(payload)`.

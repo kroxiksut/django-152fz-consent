@@ -1,7 +1,7 @@
 ﻿# cookies — текущее состояние cookie-модуля и слоя баннера
 
 **Версия документа:** `0.1`
-**Обновлено:** `2026-04-17`
+**Обновлено:** `2026-04-23`
 **Статус:** `этапы 7.1–7.7 реализованы, включая дополнительный блок 7.5 (варианты и наборы текстов)`
 
 ## Назначение
@@ -24,7 +24,7 @@
 - страницу настройки cookie;
 - общий cookie-баннер для всего сайта через шаблонный тег;
 - быстрые действия `accept all`, `required only`, `custom selection`, `dismiss`;
-- постоянную кнопку `Cookie settings`;
+- постоянную кнопку `Настройки cookie`;
 - резервный сценарий без JavaScript через серверную форму баннера и отдельную страницу настроек;
 - нижнее размещение баннера по умолчанию на узких экранах;
 - изменение ранее выбранного решения;
@@ -102,7 +102,7 @@
 - управляет только повторным показом баннера;
 - позволяет повторно подтвердить тот же выбор без создания искусственного состояния `outdated`.
 
-### Тексты баннера не равны policy revision
+### Тексты баннера не равны редакции политики cookie
 
 Редакция текстов и presentation баннера живёт отдельно от `CookiePolicyRevision`.
 
@@ -167,7 +167,7 @@ DJANGO_152FZ_CONSENT = {
 Правила:
 - можно задать только один из ключей: `reask_after_days` или `reask_after_months`;
 - значение `0` отключает периодический повторный запрос;
-- `outdated` при публикации новой policy revision остаётся отдельным сценарием и не зависит от этого интервала.
+- `outdated` при публикации новой редакции политики cookie остаётся отдельным сценарием и не зависит от этого интервала.
 
 ## Конфигурация runtime-слоя
 
@@ -280,10 +280,72 @@ Legacy-поля presentation (сохранены для обратной сов�
   `cookie_banner.show_launcher` и `cookie_banner.show_preferences_link`.
 - Добавлена настройка `cookie_banner.preferences_page_template`: она позволяет
   отрисовывать страницу cookie preferences внутри проектного шаблона сайта
-  (с меню/layout), а при пустом значении оставляет коробочный standalone fallback.
+  (с меню/layout), а при пустом значении или отсутствии указанного шаблона
+  оставляет коробочный standalone fallback.
 - Для такого встраивания предусмотрен reusable include:
+  `django_152fz_consent/includes/cookie_preferences_content.html`.
+- Рекомендуемый layout-contract: проектный шаблон расширяет ваш `base.html`,
+  а внутри `block content` подключает include
   `django_152fz_consent/includes/cookie_preferences_content.html`.
 - No-JS fallback остаётся инвариантом: ссылка на страницу настроек сохраняется в
   `<noscript>` даже при отключённых видимых entry points.
 - Добавлен bootstrap default `CookiePolicyRevision` с русскоязычным коробочным
   текстом через management command `bootstrap_152fz_cookie_defaults`.
+- Bootstrap policy теперь загружает два коробочных варианта текста:
+  короткий (`short`) и полный (`full`), оба как обычные versioned-редакции.
+- Повторный bootstrap не создаёт дубли ни активной редакции, ни коробочных
+  policy-вариантов.
+- В admin добавлены действия для выбора и публикации нужного коробочного
+  варианта, а также для создания пользовательского черновика на его основе.
+- Правило сопровождения переводов: новые коробочные UI-тексты, preset-лейблы и
+  default labels добавляются вместе с русским переводом в том же change set.
+
+## 11.7 Визуальное состояние выбора (banner + preferences)
+
+- Для banner и страницы `cookie_preferences` добавлен единый UI-контракт выбора:
+  `data-cookie-choice-root`, `data-cookie-choice-mode`,
+  `data-cookie-choice-state`, `data-cookie-choice-action`.
+- JS-синхронизация переводит состояние в:
+  `required_only` при пустом выборе optional категорий,
+  `accept_all` при полном выборе optional категорий,
+  `custom` при частичном выборе.
+- После клика `Только необходимые` кнопка `Принять все` больше не остаётся
+  визуально активной.
+- При ручном изменении checkbox optional категорий интерфейс автоматически
+  переключается в состояние `custom` (выбранные категории).
+- Для accessibility добавлены:
+  `aria-pressed` на action-кнопках, видимый индикатор текущего состояния
+  (`data-cookie-choice-indicator`) и screen-reader live region
+  (`data-cookie-choice-status`, `role="status"`, `aria-live="polite"`).
+- No-JS fallback сохраняется: итоговый выбор по-прежнему читается из состояния
+  form controls и может быть сохранён серверной формой без JavaScript.
+
+## 11.8 Retention, cleanup и объём аудита
+
+- Добавлен runtime-модуль `cookies/retention.py` с batch-cleanup для:
+  `CookieConsentEvent`, `CookieConsentRecord`, `CookieBannerState`.
+- Поддержаны сценарии age-based очистки и max-count прореживания oldest-first.
+- Для больших таблиц очистка идёт порциями (batch) и не держит одну длинную
+  транзакцию на весь объём.
+- Для защиты юридически значимых данных поддерживается
+  `protect_current_records=True`: записи `current` и связанные события не
+  удаляются.
+- Для private/incognito best-effort сигналов поддержаны отдельные короткие
+  сроки хранения (`private_records_older_than_days`,
+  `private_events_older_than_days`) и настраиваемые JSON-пути
+  (`private_signal_paths`).
+- Перед удалением батча вызывается optional archive/export hook:
+  `set_cookie_audit_archive_hook(...)` c payload
+  `cookie_audit.archive_requested`.
+- Добавлена management command:
+  `cleanup_152fz_cookie_audit` (`dry-run`, `report-only`, `batch-size`,
+  `older-than-days`, `database`).
+- Для производительности добавлены индексы на поля времени, статуса,
+  субъектов и связей policy/revision; в admin включён `list_select_related`
+  для `CookieConsentRecord`, `CookieConsentEvent`, `CookieBannerState`.
+
+Рекомендуемые baseline-профили retention:
+- Малый сайт: 180–365 дней, `batch_size` 500–1000, без max-count лимита.
+- Средний проект: 90–180 дней, `batch_size` 1000–5000, max-count по events.
+- Крупный проект с высоким трафиком: 30–90 дней для banner/event аудита,
+  отдельные лимиты max-count и регулярный архивный hook до удаления.

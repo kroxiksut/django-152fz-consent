@@ -41,7 +41,28 @@ DJANGO_152FZ_CONSENT = {
 - `disabled` отключает bootstrap как штатный режим, а management command без `--force` отдаёт понятную ошибку;
 - sample-документы создаются как неактивные `LegalDocument` / `DocumentRevision` с `is_box_template=True`;
 - sample-документы не публикуются через live flow и не переводят существующие consent records в `outdated`;
+- у коробочных редакций заполняется `published_at`, чтобы демо и admin могли показывать дату публикации стартовой редакции;
 - тексты всегда помечаются как стартовые образцы, требующие юридической проверки и адаптации.
+
+В коробочный core-набор входят:
+- `sample_personal_data_processing_policy` — политика обработки персональных данных;
+- `sample_generic_webform_consent` — согласие для обычной web-формы;
+- `sample_feedback_contact_consent` — согласие для обратной связи и обработки обращения;
+- `sample_account_registration_consent` — согласие для регистрации и личного кабинета;
+- `sample_newsletter_subscription_consent` — отдельное добровольное согласие для рассылок.
+
+Cookie policy относится к cookie-модулю и не загружается этим core-bootstrap.
+Оператор должен заменить реквизиты, адреса, ссылки, цели, состав ПДн, сроки
+хранения, каналы связи и фактических получателей данных перед публикацией
+пользовательской редакции.
+
+Admin flow:
+- `LegalDocument` и `DocumentRevision` показывают отдельный признак starter/custom потока;
+- в `DocumentRevision` есть фильтр происхождения ревизии;
+- коробочную ревизию можно отредактировать напрямую или создать пользовательскую
+  копию через admin action и через `Save as new`;
+- пользовательская копия создаётся как `is_box_template=False`,
+  `is_active=False` и не публикуется автоматически.
 
 ### 1. Жизненный цикл баннера
 

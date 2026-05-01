@@ -88,3 +88,37 @@ USE_API_152FZ = True
 - Cookie-модуль и banner-layer: `docs/cookies.md`
 - Публичный service API и router contract: `docs/api.md`
 - Experimental verified-flow: `docs/experimental.md`
+
+## 9. Импорт исторических данных (12.x)
+
+Базовые команды импорта:
+
+```bash
+python manage.py import_152fz_core_consents --csv-path /path/to/core-consents.csv --dry-run
+python manage.py import_152fz_cookie_data --csv-path /path/to/cookie-data.csv --dry-run
+```
+
+Обе команды поддерживают:
+- `--actor-user` (id или username оператора для `ModuleOperationAuditLog`);
+- `--adapter-code` и `--adapter-payload-json` для внешних источников через adapter layer;
+- отчёт по `imported / skipped / errors` и лог результата запуска.
+
+## 10. Self-service (13.x, alpha)
+
+Минимальный пользовательский self-service сейчас ограничен двумя сценариями:
+- просмотр своих consent-записей;
+- самостоятельный отзыв согласия.
+
+Полноценный кабинет субъекта и «право на забвение» с SLA/документооборотом
+не входят в текущий alpha scope.
+
+Базовый маршрут:
+
+```text
+/consent/self-service/
+```
+
+Где проверить:
+- список согласий, версию документа, статус и дату согласия;
+- переход к тексту документа;
+- self-service отзыв через кнопку на строке согласия.

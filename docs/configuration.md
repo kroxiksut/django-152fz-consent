@@ -124,6 +124,10 @@ DJANGO_152FZ_CONSENT = {
 - `custom_css_url` и `custom_js_url` подключаются как дополнительные ассеты поверх baseline-слоя;
 - `hide_for_bots=True` скрывает баннер в template flow для bot-request;
 - `bot_patterns` задают project-specific подписи bot user-agent;
+- `CookieBannerRevision.hide_for_bots_override` позволяет управлять
+  suppression через admin: `None` = брать значение из settings,
+  `True` = скрывать баннер для bot-like user agents,
+  `False` = показывать баннер даже для bot-like user agents;
 - `user_agent_mode` принимает только `off`, `all`, `unique`;
 - `shared_subdomain=True` требует непустой `cookie_domain`;
 - `site_domain` и `cookie_domain` валидируются как host/domain без схемы, пути и порта;
@@ -174,15 +178,42 @@ DJANGO_152FZ_CONSENT = {
 Текущие legacy-поля presentation (для обратной совместимости):
 - `layout_variant`: `compact` или `wide`;
 - `theme_variant`: `light` или `contrast`;
-- `desktop_position`: `bottom_right` или `bottom_left`;
-- `mobile_position`: `bottom` или `top`.
+- `desktop_position`: `bottom_right` | `bottom_left` | `center` | `bottom_fullwidth`;
+- `mobile_position`: `bottom` | `top` | `center` | `bottom_fullwidth`.
 
 Зафиксированный template/CSS контракт слоя вариантов:
 - `data-cookie-banner-contract-version`;
 - `data-cookie-banner-variant`;
 - `data-cookie-banner-consent-ui`;
 - `data-cookie-banner-reconsent-variant`;
-- `data-cookie-banner-text-preset`.
+- `data-cookie-banner-text-preset`;
+- `data-cookie-banner-mobile-text-preset`;
+- `data-cookie-banner-mobile-variant`;
+- `data-cookie-banner-mobile-consent-ui`;
+- `data-cookie-banner-mobile-reconsent-variant`.
+
+Mobile overrides (11.17):
+- `CookieBannerRevision.mobile_text_preset_code`;
+- `CookieBannerRevision.mobile_banner_variant`;
+- `CookieBannerRevision.mobile_consent_ui_variant`;
+- `CookieBannerRevision.mobile_reconsent_notice_variant`;
+- `CookieBannerRevision.mobile_show_close_control`;
+- `CookieBannerRevision.mobile_close_control_placement`;
+- `CookieBannerRevision.mobile_show_reject_action`;
+- `CookieBannerRevision.mobile_blocking_mode_until_choice`;
+- `CookieBannerRevision.mobile_hide_launcher_after_decision`;
+- `CookieBannerRevision.mobile_keep_visible_after_accept_all`;
+- `CookieBannerRevision.mobile_keep_visible_after_required_only`;
+- `CookieBannerRevision.mobile_keep_visible_after_save_custom`.
+
+Fallback contract:
+- пустой/`None` mobile override не перезаписывает desktop значение;
+- effective mobile значения публикуются в `cookie_banner_config.mobile_overrides`.
+
+Banner lifecycle behavior (11.18):
+- при первом показе без сохранённого выбора lifecycle возвращает `default_choice_action="accept_all"`;
+- runtime state явно разделяется флагами `initial_visit` и `reopen_after_saved_choice`;
+- `blocking_mode_active=True` только до первого осмысленного выбора (`accept_all` / `reject_all` / `required_only` / `save_custom`).
 
 ## Что уже доступно без отдельного settings API
 
@@ -196,6 +227,17 @@ DJANGO_152FZ_CONSENT = {
 - attach anonymous cookie-consent и banner-state к `user` после логина;
 - DB-backed `CookieRegistryItem` и published snapshot `CookiePolicyRevisionRegistryItem` для disclosure и runtime metadata;
 - DB-backed `CookieBannerRevision` для versioned plain-text текстов и presentation баннера.
+
+Коробочные коды категорий по умолчанию (`COOKIE_152FZ_DEFAULT_CATEGORIES`):
+- `necessary`;
+- `functional`;
+- `analytics`;
+- `marketing`.
+
+Классификация по умолчанию:
+- `necessary` всегда помечается как `is_required=True`;
+- `functional`, `analytics`, `marketing` управляются через consent choice как
+  необязательные категории.
 
 ## Что уже реализовано в runtime contract
 
@@ -211,6 +253,57 @@ DJANGO_152FZ_CONSENT = {
 - запрет на хранение raw executable JS в `src_url` и в canonical runtime contract;
 - поля request-контекста `hide_for_bots`, `is_bot_request`, `bot_pattern`, `user_agent_collection_mode`, `shared_subdomain`, `site_domain`, `cookie_domain`, `geo_signal`;
 - backend hook API `set_cookie_runtime_event_hook(...)` / `trigger_cookie_runtime_event(payload)` для внешних интеграций.
+
+Важно:
+- bot suppression и bot-detection считаются operational best-effort эвристикой;
+- эти признаки не являются юридическим источником истины и не предназначены для compliance-решений.
+
+## Импорт: ядро и внешние адаптеры (12.3)
+
+В alpha-ядро входят только два штатных import-потока:
+- `import_152fz_core_consents` — baseline CSV import для `core`-согласий;
+- `import_152fz_cookie_data` — отдельный CSV import для cookie consent/banner state.
+
+Bitrix-специфичный или иной vendor-specific импорт в ядро не встроен как обязательный путь.
+
+Для внешних источников оставлен extension point:
+- settings: `DJANGO_152FZ_CONSENT["import_adapters"] = {"adapter_code": "python.path.to.callable"}`;
+- runtime API: `django_152fz_consent.imports.adapters.register_import_adapter(...)`;
+- management commands поддерживают `--adapter-code` и `--adapter-payload-json`.
+
+Контракт adapter callable:
+- вход: `payload: dict`;
+- выход: iterable из dict-строк, которые будут преобразованы во временный CSV по выбранному mapping.
+
+Таким образом, в ядре остаётся единый импортный контракт, а интеграции с Bitrix/web-form/CRM реализуются снаружи через adapter layer.
+
+### Безопасность и аудит import-flow (12.4)
+
+- каждый запуск `import_152fz_core_consents` и `import_152fz_cookie_data` пишет запись в `ModuleOperationAuditLog`;
+- команда принимает `--actor-user` (id или username) и сохраняет оператора запуска;
+- в audit также пишутся источник (`source`), mapping, итоговый счётчик `imported/skipped/errors`;
+- для защиты от повторного неидемпотентного импорта применяется row fingerprint:
+  - `core`: fingerprint на связке `purpose/document/status/subject/consented_at`;
+  - `cookies`: fingerprint на связке `policy_revision/subject/selected_categories`.
+- при повторе уже импортированной строки запись помечается как `skipped` и не создаёт новый consent record.
+
+## Self-service alpha scope (13.3)
+
+Текущий self-service слой intentionally ограничен:
+- просмотром согласий субъекта;
+- отзывом согласия через существующий service layer.
+
+Внутрь этого блока не включены:
+- произвольные юридические workflow полноценного «личного кабинета»;
+- end-to-end процесс «право на забвение» с SLA, актами удаления и юридическим документооборотом.
+
+Эти сценарии считаются внешним расширением и не являются частью alpha-контракта.
+
+### Локализация self-service (13.4)
+
+- self-service UI использует стандартный Django i18n contract (`{% trans %}` в шаблонах);
+- ru-каталог: `src/django_152fz_consent/locale/ru/LC_MESSAGES/django.po`;
+- после изменения текстов self-service необходимо пересобрать `django.mo`.
 
 ## Что зафиксировано на этапе 7.7
 
@@ -374,3 +467,157 @@ python manage.py cleanup_152fz_cookie_audit --batch-size=500 --older-than-days=9
 - Очистка выполняется batch-based, без длинной транзакции на всю таблицу.
 - Перед удалением вызывается optional archive hook
   `set_cookie_audit_archive_hook(...)` / `trigger_cookie_audit_archive(payload)`.
+
+## 11.11 Управление видимостью и закрытием cookie banner
+
+Поля `CookieBannerRevision` для banner controls:
+
+- `show_close_control` — показывать кнопку/иконку закрытия баннера.
+- `close_control_placement` — позиция close-control рядом с launcher: `left` или `right`.
+- `show_reject_action` — показывать отдельное действие `reject_all` в quick actions.
+- `blocking_mode_until_choice` — включить блокирующий режим до явного выбора пользователя.
+- `hide_launcher_after_decision` — скрывать launcher `Настройки cookie` после
+  сохранённого выбора пользователя (`current`).
+- `close_tooltip_text` — текст `title` для close-control.
+- `close_aria_label` — `aria-label` для close-control.
+- `reject_label` — подпись кнопки `reject_all`.
+- `keep_visible_after_accept_all` — если включено, после `accept_all` баннер не
+  закрывается и не сворачивается автоматически.
+- `keep_visible_after_required_only` — если включено, после `required_only`
+  баннер не закрывается и не сворачивается автоматически.
+- `keep_visible_after_save_custom` — если включено, после `save_custom` баннер
+  не закрывается и не сворачивается автоматически.
+
+Поведение:
+- по умолчанию все `keep_visible_after_* = False` (безопасный коробочный режим);
+- по умолчанию `blocking_mode_until_choice=False` (информирующий, неблокирующий режим);
+- `dismiss` записывается только в `CookieBannerState.dismissed_at` и не создаёт consent;
+- `decision_action` хранится отдельно в `CookieBannerState` и используется только для post-consent visibility логики;
+- close-control рендерится рядом с launcher после принятия решения (`has_decision=True`) и отправляет `banner_action=dismiss`;
+- `dismiss` скрывает не только панель, но и launcher-ряд (`Настройки cookie`) до
+  следующего показа по re-ask/re-consent логике;
+- при `hide_launcher_after_decision=True` launcher скрывается после сохранённого
+  выбора пользователя, если баннер сейчас не должен быть показан;
+- три флага `keep_visible_after_*` различают поведение по конкретному действию
+  (`accept_all`, `required_only`, `save_custom`) и не меняют само состояние consent;
+- launcher/reopen и no-JS submit через `banner_action=dismiss` остаются рабочими.
+- при `blocking_mode_until_choice=True` баннер работает как блокирующий слой:
+  пользователь не может закрыть его через `dismiss`, `Esc` или клик по backdrop,
+  пока не отправит одно из явных действий выбора (`accept_all`, `reject_all`,
+  `required_only`, `save_custom`).
+- все эти режимы (`desktop_position`, `mobile_position`, `blocking_mode_until_choice`)
+  настраиваются через `Cookie Banner Revision` в Django admin и версионируются вместе
+  с остальными настройками баннера, без ручного редактирования template/JS/settings.
+
+## 14. Конфигурация audit-слоя операций
+
+Отдельных settings для включения/выключения журнала операций сейчас не требуется:
+- операции пишутся в `ModuleOperationAuditLog` всегда;
+- для dry-run cleanup используется статус `dry_run`;
+- просмотр и CSV-экспорт доступны из Django admin (`Module Operation Audit Logs`).
+
+Ограничения текущего этапа:
+- экспорт реализован в CSV;
+- DOC/XLS-форматы намеренно не добавлены в базовый пакет.
+
+## 11.15 Clone/copy revisions в admin
+
+Для ревизий cookie-политики и banner добавлен стандартный clone/copy сценарий:
+- создаёт новую draft-запись с новой `version`;
+- сохраняет ссылку на исходник в `cloned_from`;
+- не требует отдельного settings-флага и доступен через admin actions.
+
+## 11.19 Help texts для admin-полей
+
+- Для core consent admin, cookie admin и verified/admin extensions добавлены
+  русскоязычные `help_text` для всех редактируемых полей форм.
+- Для action-форм (`audience_groups`, `policy_text_variant`,
+  `confirmation_note`, `rejection_note`) также добавлены пояснения.
+- Добавлен smoke-тест, который проверяет, что у editable полей admin-форм
+  `help_text` не пустой.
+
+## 11.21 Точечная дорусификация cookie/admin строк
+
+- В `CookieBannerRevision` дорусифицированы labels:
+  `Текст уведомления о повторном согласии`, `Заголовок блока выбора категорий`,
+  `Скрытый текст кнопки закрытия`, `Подсказка кнопки закрытия`,
+  `ARIA-метка кнопки закрытия`, `Вариант интерфейса согласия`,
+  `Вариант уведомления о повторном согласии`, `Устаревший layout-режим`,
+  `Устаревший theme-режим`.
+- Для выбора позиции `bottom_fullwidth` обновлено русское название:
+  `Нижний полноэкранный`.
+- Обновлены каталоги переводов `django.po` / `django.mo` и тесты admin UI.
+
+## 11.23 Расширенная визуальная кастомизация banner
+
+В `CookieBannerRevision` добавлены DB-backed настройки визуального слоя:
+- `color_preset`: `light` | `contrast` | `forest` | `sand`;
+- custom HEX-цвета (`#RRGGBB`) для фона, текста, primary-кнопки, текста primary,
+  border, surface и overlay;
+- spacing-поля `panel_padding_px`, `section_gap_px`, `button_gap_px`;
+- `overlay_opacity` в процентах.
+
+Контракт безопасности:
+- custom colors принимаются только в формате `#RRGGBB`;
+- для пары `background/text` проверяется базовая контрастность;
+- spacing/opacity нормализуются в безопасные диапазоны (`8..48`, `4..32`,
+  `4..24`, `0..85`).
+
+## 11.16 DB-backed presets
+
+Preset-слой теперь поддерживает редактирование через БД:
+- `CookieBannerTextPreset` управляет текстами banner-предустановок;
+- `CookiePolicyTextPreset` управляет текстами policy-вариантов `short/full`.
+
+Если DB-пресет активен и совпадает по `code`, он имеет приоритет над коробочным preset-значением.
+
+## 11.24 Optional media/icon slot
+
+В CookieBannerRevision добавлены поля:
+- show_media_slot (вкл/выкл slot),
+- media_slot_type (icon или image),
+- media_icon_emoji, media_image_url, media_image_alt.
+
+Правила:
+- slot остаётся optional и не влияет на consent/runtime логику;
+- image-режим требует URL и alt-текст;
+- небезопасные javascript: URL отбрасываются.
+
+
+## 11.25 Refusal UX
+- Для preferences-страницы поддержаны submit-действия ccept_all, eject_all, equired_only, save_custom.
+- eject_all фиксируется как отдельный decision_action и не маскируется как equired_only в UI state-label.
+
+
+## Дополнение по блоку 11 (реализованное)
+
+- `11.2`/`11.5`: коробочные русские labels/help texts для cookie/admin UI поставляются вместе с i18n-каталогами и остаются переводимыми.
+- `11.3`: changelist навигация в admin настроена на человекочитаемые `list_display_links` для ключевых моделей.
+- `11.4`: bootstrap cookie policy поддерживает два box-варианта (`short`/`full`) в обычном revision-flow.
+- `11.6`: `cookie_banner.preferences_page_template` позволяет встраивать страницу настроек в проектный layout с fallback на package-template.
+- `11.10`: core sample-документы согласий загружаются как обычные `LegalDocument`/`DocumentRevision` и помечаются как стартовые шаблоны.
+- `11.12`/`11.20`: lifecycle/presentation contract уточнён для `reject_all`, `dismiss`, launcher и post-decision visibility.
+- `11.14`: ручная admin-очистка cookie runtime-данных использует тот же cleanup contract, что retention-слой `11.8`.
+- `11.22`: `hide_for_bots_override` задаёт admin-priority для bot suppression поверх settings runtime-флага.
+
+## 15.2 Scope и ограничения best-effort инвентаризации
+
+Добавлен отдельный settings-блок:
+
+```python
+DJANGO_152FZ_CONSENT = {
+    "cookie_inventory": {
+        "enable_registry_hints": False,
+        "enable_external_scanners": False,
+        "enable_db_auto_discovery": False,
+    },
+}
+```
+
+Правила alpha-этапа:
+- `enable_registry_hints=False` по умолчанию: инвентаризация не является обязательной частью ядра и запускается только явно.
+- `enable_external_scanners=True` не поддерживается в alpha core и валидируется как конфигурационная ошибка.
+- `enable_db_auto_discovery=True` не поддерживается в alpha core и валидируется как конфигурационная ошибка.
+- `inventory_152fz_cookie_integrations` при выключенном `enable_registry_hints` выполняется только с `--force` для разового ручного запуска.
+- startup-валидация этих ограничений выполняется через Django system check
+  `django_152fz_consent.E024`.

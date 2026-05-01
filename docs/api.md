@@ -50,6 +50,16 @@
 Будущий внешний router должен работать поверх `service_api`, а не через прямые
 импорты внутренних модулей (`core.services`, `cookies.services`).
 
+## Import Flow (12.x)
+
+CSV/import migration flow выполняется через management commands:
+- `import_152fz_core_consents`;
+- `import_152fz_cookie_data`.
+
+Это operational-import слой, он намеренно не включён в `PUBLIC_SERVICE_API_V1`.
+Для внешних источников используется adapter extension point
+`django_152fz_consent.imports.adapters`.
+
 Границы:
 - пакет не реализует выбор юрисдикции;
 - в `core` не добавляется логика маршрутизации по правовым режимам;

@@ -1,0 +1,24 @@
+# Documentation: Consents Module
+
+This section applies to `django-consent-152fz` and describes the consent lifecycle.
+
+## Navigation
+
+- [← General documentation section](../README.md)
+
+## Basic documents
+
+- [Overview and current state of the consent layer](./overview.md)
+- [Key invariants of the consent life cycle](./invariants.md)
+- [Using and administering the consent module](./operations-admin.md)
+- [Creation and filling of consents](./authoring.md)
+- [Configuration and contract policies](./configuration.md)
+- [Public service API and transport contract](./service-api.md)
+- [Testing the consent module](./testing.md)
+- [Migration of the consent module](./migration.md)
+- [Subject self-service scenarios](./self-service.md)
+- [Access Policies and Resource Area](./access-policies.md)
+- [Experimental Confirmed Consent Contour](./verified-flow.md)
+- [Future integration with Gosklyuch](./goskey.md)
+- [Importing historical data](./import.md)
+- [Scope and limitations](./scope-limits.md)

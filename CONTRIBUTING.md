@@ -1,47 +1,109 @@
-﻿# CONTRIBUTING
+# Contributing
 
-Спасибо за вклад в `django-152fz-consent`.
+Thanks for contributing to `django-consent-152fz`.
 
-## 1. Требования к окружению
+## Environment
 
 - Python: `>=3.10`
-- Поддерживаемые Django: `5.x`, `6.x`
-- Рекомендуемое локальное окружение: conda `py312-152fz`
+- Supported Django: `5.x`, `6.x`
+- Any environment manager is allowed (`venv`, `virtualenv`, `conda`, `poetry`, etc.).
 
-Примеры команд:
+## Environment setup
+
+### Linux/macOS (`venv`)
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e .[dev]
+```
+
+### Windows PowerShell (`venv`)
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install -e .[dev]
+```
+
+### Any OS (`conda`)
+
+```bash
+conda create -n django152fz-py312 python=3.12 -y
+conda activate django152fz-py312
+python -m pip install -U pip
+python -m pip install -e .[dev]
+```
+
+Optional matrix checks:
+- For Django 5: Python `3.10+`
+- For Django 6: Python `3.12+`
+
+Example commands (Linux/macOS, `venv`):
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e .[dev]
+python -m pytest
+ruff check src tests
+```
+
+Example commands (Windows PowerShell, `venv`):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install -e .[dev]
+python -m pytest
+ruff check src tests
+```
+
+Example commands (Windows PowerShell, `conda`):
 
 ```powershell
 & 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n py312-152fz python -m pytest
 & 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n py312-152fz ruff check src tests
 ```
 
-## 2. Что проверять перед PR
+## Before opening a pull request
 
-1. Тесты проходят локально.
-2. Нет регрессий в core/cookies/api boundaries.
-3. Документация синхронизирована с кодом.
-4. При изменении структуры файлов обновлён `STRUCTURE.md`.
-5. При изменении roadmap-статусов обновлён `TASKS.md`.
+1. Run tests locally and make sure they pass.
+2. Check for regressions across core/cookies/api boundaries.
+3. Update documentation to match behavior changes.
+4. If file structure changed, update `STRUCTURE.md`.
+5. If roadmap status changed, update `TASKS.md`.
 
-## 3. Правила по коду и документации
+## Code and docs rules
 
-- Канонические доменные инварианты: `ARCHITECTURE.md`.
-- Repo-правила разработки: `AI_RULES.md`.
-- Все проектные Markdown-документы ведутся на русском языке.
-- Новая логика должна сопровождаться тестами соответствующего уровня (unit/integration).
+- Domain invariants: `ARCHITECTURE.md`.
+- Repository development rules: `AI_RULES.md`.
+- New behavior must include tests (unit/integration level as needed).
+- Translation contributions are welcome and reviewed as first-class changes.
+- For translation workflow and requirements, see [docs/i18n/README.md](./docs/i18n/README.md).
 
-## 4. Scope и ограничения
+## What to commit from AI/meta files
 
-Перед крупными изменениями проверьте разделы:
+- Commit repository-level guidance that is part of project process (for example: `AGENTS.md`, stable architecture docs, contribution docs).
+- Do not commit local tool state or private assistant workspace files.
+- Respect `.gitignore` as the source of truth for local/generated artifacts.
 
-- `README.md` (публичный scope),
-- `TASKS.md` (roadmap и статусы),
-- `AI_CONTEXT.md` (продуктовые границы),
-- `AI_RULES.md` (архитектурные и процессные ограничения).
+## Scope references
 
-## 5. Сообщения коммитов
+Before large changes, check:
 
-Рекомендуемый формат:
+- `README.md` (public scope),
+- `TASKS.md` (roadmap and statuses),
+- `AI_CONTEXT.md` (product boundaries),
+- `AI_RULES.md` (architecture and process constraints).
+
+## Commit messages
+
+Preferred prefixes:
 
 - `core: ...`
 - `cookies: ...`
@@ -49,4 +111,4 @@
 - `docs: ...`
 - `tests: ...`
 
-Сообщение должно явно отвечать на вопрос «что изменено и зачем».
+Each message should state what changed and why.

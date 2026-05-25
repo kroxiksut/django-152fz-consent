@@ -1,4 +1,4 @@
-# Project documentation `django-152fz`: consent and cookie modules
+# Project documentation `django-consent-152fz` repository: consent and cookie modules
 
 This is the English top-level documentation index.
 
@@ -14,6 +14,11 @@ This is the English top-level documentation index.
 - `pip install django-consent-152fz django-cookies-152fz` - full setup.
 - `pip install "django-consent-152fz[api]"` - optional API extras for consent package.
 
+## Versioning note
+
+`django-consent-152fz` and `django-cookies-152fz` may have different package versions and release timing.
+They are separated modules and can be used independently.
+
 ## AI-friendly guides
 
 AI agent integration guides are maintained as English-only documents:
@@ -28,6 +33,10 @@ AI agent integration guides are maintained as English-only documents:
 - [Migration of the consent module](./consent/en/migration.md)
 - [Testing the cookie module](./cookies/en/testing.md)
 - [Cookie module migration](./cookies/en/migration.md)
+
+## Localization
+
+- [Translation contributions](./i18n/README.md)
 
 ## Consent module map
 
@@ -46,6 +55,7 @@ AI agent integration guides are maintained as English-only documents:
 - [consent/import.md](./consent/en/import.md) - import of historical data.
 - [consent/scope-limits.md](./consent/en/scope-limits.md) - boundaries of the scope.
 - [consent/demo.md](./consent/en/demo.md) - demo environments for consent scenarios.
+- [consent/contributing.md](./consent/en/contributing.md) - module-specific contribution guide.
 
 ## Cookie module map
 
@@ -60,12 +70,18 @@ AI agent integration guides are maintained as English-only documents:
 - [cookies/migration.md](./cookies/en/migration.md) - cookie module migration.
 - [cookies/notes.md](./cookies/en/notes.md) - additional notes.
 - [cookies/demo.md](./cookies/en/demo.md) - demo environments for cookie scenarios.
+- [cookies/contributing.md](./cookies/en/contributing.md) - module-specific contribution guide.
 
 ## Support
 
 - Community support — GitHub Issues
 - Commercial support — contact author
 - Legal & technical consulting — on request
+
+## Contribution guides
+
+- [Contributing (EN)](../CONTRIBUTING.md)
+- [Участие в проекте (RU)](../CONTRIBUTING.ru.md)
 
 ## Legal notice
 

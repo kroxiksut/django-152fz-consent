@@ -2,7 +2,7 @@
   <img src="docs/assets/logo/dj-152fz-logo.png" alt="django-152fz" width="220">
 </p>
 
-<h1 align="center">django-152fz: consent and cookie layer for 152-FZ workflows</h1>
+<h1 align="center">django-consent-152fz repository: consent and cookie modules for 152-FZ workflows</h1>
 
 <p align="center">
   <img alt="Consent package" src="https://img.shields.io/badge/django--consent--152fz-0.1.0-blue">
@@ -13,7 +13,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
-`django-152fz` is a split project with two independent Django packages:
+`django-consent-152fz` is a repository with two independent Django packages:
 
 - `django-consent-152fz`: consent lifecycle, document revisions, audit, subject self-service, optional verified-consent flow, service API.
 - `django-cookies-152fz`: cookie banner, policy revisions, runtime registry, consent-aware script execution, cookie audit, flexible branding, and mobile-friendly variants.
@@ -27,6 +27,11 @@ Related legal context references:
 
 - [DLA Piper Data Protection Laws of the World (Russia)](https://www.dlapiperdataprotection.com/?c=RU)
 - [Russia Data Localization Law overview](https://captaincompliance.com/education/russia-data-localization-law)
+
+## Versioning note
+
+`django-consent-152fz` and `django-cookies-152fz` can have different versions and release cadence.  
+They are functionally separated modules and do not hard-couple each other's lifecycle, while still being aligned under a common 152-FZ legal implementation context.
 
 ## Installation
 
@@ -61,6 +66,8 @@ pip install "django-consent-152fz[api]"
 - [Russian README](./README.ru.md)
 - [AI-friendly guides (English only)](./docs/consent/ai/README.md)
 - [Changelog](./CHANGELOG.md)
+- [Contributing](./CONTRIBUTING.md)
+- [Translation contributions](./docs/i18n/README.md)
 
 Russian legal texts and cookie policy templates can be replaced with texts for other jurisdictions. See module docs for authoring and configuration.
 

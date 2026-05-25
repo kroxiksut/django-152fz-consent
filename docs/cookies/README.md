@@ -3,6 +3,8 @@
 - [English version](./en/README.md)
 - [Russian version](./ru/README.md)
 - [AI integration guides (English only)](./ai/README.md)
+- [Contributing (EN)](./en/contributing.md)
+- [Участие (RU)](./ru/contributing.md)
 
 ## Support
 

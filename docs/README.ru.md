@@ -1,4 +1,4 @@
-# Документация проекта `django-152fz`: модули согласий и куки
+# Документация репозитория `django-consent-152fz`: модули согласий и куки
 
 Это верхнеуровневый индекс русскоязычной документации.
 
@@ -21,12 +21,21 @@
 - `pip install django-consent-152fz django-cookies-152fz` - полная установка.
 - `pip install "django-consent-152fz[api]"` - дополнительный набор для API в модуле согласий.
 
+## Примечание о версиях пакетов
+
+`django-consent-152fz` и `django-cookies-152fz` могут иметь разные версии и разный график выпусков.
+Модули разделены и могут использоваться независимо.
+
 ## Тестирование и миграция
 
 - [Тестирование модуля согласий](./consent/ru/testing.md)
 - [Миграция модуля согласий](./consent/ru/migration.md)
 - [Тестирование модуля cookie](./cookies/ru/testing.md)
 - [Миграция модуля cookie](./cookies/ru/migration.md)
+
+## Локализация
+
+- [Вклад в переводы](./i18n/README.ru.md)
 
 ## Карта документов по модулю согласий
 
@@ -45,6 +54,7 @@
 - [consent/import.md](./consent/ru/import.md) - импорт исторических данных.
 - [consent/scope-limits.md](./consent/ru/scope-limits.md) - границы области применения.
 - [consent/demo.md](./consent/ru/demo.md) - демо-стенды для сценариев модуля согласий.
+- [consent/contributing.md](./consent/ru/contributing.md) - руководство по участию в модуле согласий.
 
 ## Карта документов по модулю cookie
 
@@ -59,6 +69,7 @@
 - [cookies/migration.md](./cookies/ru/migration.md) - миграция модуля cookie.
 - [cookies/notes.md](./cookies/ru/notes.md) - дополнительные заметки.
 - [cookies/demo.md](./cookies/ru/demo.md) - демо-стенды для сценариев модуля куки.
+- [cookies/contributing.md](./cookies/ru/contributing.md) - руководство по участию в модуле куки.
 - [AI-гайд по языкам cookie-модуля](./cookies/ai/languages.md)
 
 ## Поддержка
@@ -66,6 +77,11 @@
 - Поддержка сообщества — GitHub Issues
 - Коммерческая поддержка — связь с авторами
 - Юридическое и техническое консультирование — по запросу
+
+## Руководства по участию
+
+- [Участие в проекте (RU)](../CONTRIBUTING.ru.md)
+- [Contributing (EN)](../CONTRIBUTING.md)
 
 ## Правовое уведомление
 

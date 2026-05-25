@@ -19,6 +19,7 @@ The section describes `django-cookies-152fz`: cookie banner, selection processin
 - [Cookie module migration](./migration.md)
 - [Additional notes](./notes.md)
 - [Demo environments](./demo.md)
+- [Contributing to the cookie module](./contributing.md)
 
 ## AI instructions for cookie tasks
 

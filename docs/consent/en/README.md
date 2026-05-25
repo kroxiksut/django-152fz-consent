@@ -23,6 +23,7 @@ This section applies to `django-consent-152fz` and describes the consent lifecyc
 - [Importing historical data](./import.md)
 - [Scope and limitations](./scope-limits.md)
 - [Demo environments](./demo.md)
+- [Contributing to the consent module](./contributing.md)
 
 ## Support
 

@@ -5,7 +5,37 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 
+CLAUDE.md
+
+# Local AI/architecture working files (not published)
+AGENTS.md
+AI_CONTEXT.md
+AI_RULES.md
+ARCHITECTURE.md
+TASKS.md
+.offline-markdown-preview/
 
 build/
 dist/
 conda.txt
+
+# VS Code local settings
+.vscode/
+.history/
+*.code-workspace
+
+# Editor and IDE state
+.idea/
+.vscode/
+.codex/
+.claude/
+*.swp
+*.swo
+*~
+
+# Runtime media/test artifacts
+test_media/
+demo/**/media/
+demo/**/test_media/
+demo/**/__pycache__/
+demo/**/.venv/

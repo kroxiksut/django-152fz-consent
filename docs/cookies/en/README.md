@@ -18,3 +18,23 @@ The section describes `django-cookies-152fz`: cookie banner, selection processin
 - [Testing the cookie module](./testing.md)
 - [Cookie module migration](./migration.md)
 - [Additional notes](./notes.md)
+
+## AI instructions for cookie tasks
+
+- Banner text and presentation updates: use `AGENTS.md -> $django-152fz-cookie-banner`.
+- Runtime behavior, script gating, and event contracts: use `AGENTS.md -> $django-152fz-cookie-runtime`.
+- Cookie-related config defaults/checks: use `AGENTS.md -> $django-152fz-settings-checks`.
+- Final regression pass before merge: use `AGENTS.md -> $django-152fz-review`.
+- New language onboarding flow: see [../ai/languages.md](../ai/languages.md).
+
+## Support
+
+- Community support — GitHub Issues
+- Commercial support — contact author
+- Legal & technical consulting — on request
+
+## Legal notice
+
+This project is not affiliated with any government authority.
+
+Users remain responsible for determining applicable legal requirements and obtaining independent legal advice where necessary.

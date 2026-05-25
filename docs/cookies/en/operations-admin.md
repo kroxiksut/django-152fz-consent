@@ -58,10 +58,10 @@ Include the banner tag in the base template:
 
 ## Settings in `settings.py`
 
-The basic configuration of the cookie module is set in `DJANGO_152FZ_COOKIES`.
+The basic configuration of the cookie module is set in `DJANGO_COOKIES_152FZ`.
 
 ```python
-DJANGO_152FZ_COOKIES = {
+DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
     "default_cookie_category_codes": ["necessary"],
     "cookie_banner": {
@@ -316,7 +316,7 @@ python manage.py cleanup_152fz_cookie_audit --dry-run
 python manage.py cleanup_152fz_cookie_audit
 ```
 
-Cleaning parameters are set in `DJANGO_152FZ_COOKIES["cookie_retention"]`.
+Cleaning parameters are set in `DJANGO_COOKIES_152FZ["cookie_retention"]`.
 
 ## Practice from demo site
 

@@ -73,12 +73,12 @@ urlpatterns = [
 python manage.py migrate
 ```
 
-## Настройки `DJANGO_152FZ_CONSENT`
+## Настройки `DJANGO_CONSENT_152FZ`
 
 Базовый рабочий профиль:
 
 ```python
-DJANGO_152FZ_CONSENT = {
+DJANGO_CONSENT_152FZ = {
     "enable_core": True,
     "enable_access_policies": False,
     "subject_consents": {

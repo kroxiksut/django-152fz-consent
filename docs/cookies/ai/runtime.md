@@ -12,7 +12,7 @@ Define runtime behavior for consent-gated script loading and cleanup.
 
 ## Runtime settings focus
 
-Use `DJANGO_152FZ_COOKIES["cookie_runtime"]` for:
+Use `DJANGO_COOKIES_152FZ["cookie_runtime"]` for:
 
 - `force_banner`
 - `preview_param`

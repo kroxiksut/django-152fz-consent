@@ -214,7 +214,7 @@
 
 ## Настройки для административного редактора документов
 
-Настройки живут в `DJANGO_152FZ_CONSENT["document_templates"]`.
+Настройки живут в `DJANGO_CONSENT_152FZ["document_templates"]`.
 
 Поддерживаются, в частности:
 
@@ -227,7 +227,7 @@
 Пример:
 
 ```python
-DJANGO_152FZ_CONSENT = {
+DJANGO_CONSENT_152FZ = {
     "document_templates": {
         "default_text_format": "markdown",
         "admin_editor_mode": "wysiwyg",
@@ -315,3 +315,8 @@ DJANGO_152FZ_CONSENT = {
 - [Настройки и контракт политик](./configuration.md)
 - [Публичный сервисный API](./service-api.md)
 - [Экспериментальный контур подтверждённых согласий](./verified-flow.md)
+
+## Навигация по разделу
+
+- Предыдущий: [Использование и администрирование](./operations-admin.md)
+- Следующий: [Настройки и контракт политик](./configuration.md)

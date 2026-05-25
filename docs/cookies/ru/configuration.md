@@ -5,10 +5,10 @@
 
 ## Где задаётся конфигурация
 
-Конфигурация cookie-модуля задаётся в `settings.py` в словаре `DJANGO_152FZ_COOKIES`.
+Конфигурация cookie-модуля задаётся в `settings.py` в словаре `DJANGO_COOKIES_152FZ`.
 
 ```python
-DJANGO_152FZ_COOKIES = {
+DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
     "default_cookie_category_codes": ["necessary"],
     "cookie_banner": {...},
@@ -141,7 +141,7 @@ DJANGO_152FZ_COOKIES = {
 В демо-сайте для публичного контура использовался следующий рабочий профиль:
 
 ```python
-DJANGO_152FZ_COOKIES = {
+DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
     "cookie_banner": {
         "bootstrap_initial_revision": True,
@@ -183,10 +183,15 @@ DJANGO_152FZ_COOKIES = {
 
 Подробнее по разделам административной панели: [Использование, меню админки и настройка](./operations-admin.md).
 
-### CSV delimiter for event export
+### Разделитель CSV для выгрузки событий
 
-`csv_export_delimiter` in `CookieAdminSettings` controls the separator for `CookieConsentEvent` admin CSV export.
+Параметр `csv_export_delimiter` в `CookieAdminSettings` задаёт разделитель для CSV-выгрузки `CookieConsentEvent` из административной панели.
 
-Allowed values: `,`, `;`, `\t`, `|`.
-Invalid values fall back to `,`.
+Допустимые значения: `,`, `;`, `\t`, `|`.
+Недопустимые значения заменяются на `,`.
+
+## Навигация по разделу
+
+- Предыдущий: [Ключевые инварианты](./invariants.md)
+- Следующий: [Использование и администрирование](./operations-admin.md)
 

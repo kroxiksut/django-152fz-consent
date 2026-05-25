@@ -5,7 +5,7 @@
 
 ## Basic configuration
 
-The main configuration is set in `DJANGO_152FZ_CONSENT`:
+The main configuration is set in `DJANGO_CONSENT_152FZ`:
 - `fields_mode` and `fields` for the register of PD fields;
 - `purposes` for processing purposes;
 - `subject_consents` for self-service behavior;

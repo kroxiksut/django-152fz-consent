@@ -175,7 +175,7 @@ settings.
 
 ## What is configured via `settings.py`
 
-Not all design lives only in the database. In `DJANGO_152FZ_COOKIES` remain
+Not all design lives only in the database. In `DJANGO_COOKIES_152FZ` remain
 settings that are best set at the project level:
 
 - `cookie_banner.preferences_page_template` - project page template

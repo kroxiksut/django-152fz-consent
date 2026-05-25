@@ -1,4 +1,4 @@
-# Project documentation `django-152fz`
+# Project documentation `django-152fz`: consent and cookie modules
 
 This is the English top-level documentation index.
 
@@ -7,12 +7,20 @@ This is the English top-level documentation index.
 - [Consent module](./consent/en/README.md)
 - [Cookie module](./cookies/en/README.md)
 
+## Package installation map
+
+- `pip install django-consent-152fz` - consent lifecycle module.
+- `pip install django-cookies-152fz` - cookie banner and runtime module.
+- `pip install django-consent-152fz django-cookies-152fz` - full setup.
+- `pip install "django-consent-152fz[api]"` - optional API extras for consent package.
+
 ## AI-friendly guides
 
 AI agent integration guides are maintained as English-only documents:
 
 - [Consent AI guides](./consent/ai/README.md)
 - [Cookie AI guides](./cookies/ai/README.md)
+- [Cookie languages AI guide](./cookies/ai/languages.md)
 
 ## Testing and migration
 
@@ -50,3 +58,15 @@ AI agent integration guides are maintained as English-only documents:
 - [cookies/testing.md](./cookies/en/testing.md) - testing the cookie module.
 - [cookies/migration.md](./cookies/en/migration.md) - cookie module migration.
 - [cookies/notes.md](./cookies/en/notes.md) - additional notes.
+
+## Support
+
+- Community support — GitHub Issues
+- Commercial support — contact author
+- Legal & technical consulting — on request
+
+## Legal notice
+
+This project is not affiliated with any government authority.
+
+Users remain responsible for determining applicable legal requirements and obtaining independent legal advice where necessary.

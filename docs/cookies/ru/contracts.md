@@ -25,12 +25,17 @@
 
 Ответственность за конкретные проектные адаптеры остаётся на стороне проекта.
 
-## Request audit-context: страна, браузер и ОС
+## Контекст аудита запроса: страна, браузер и ОС
 
-`build_request_audit_context(...)` в cookie-пакете добавляет best-effort enrichment в `extra_meta.client`:
+`build_request_audit_context(...)` в пакете куки по возможности добавляет сведения в `extra_meta.client`:
 - `country_code` (ISO alpha-2);
 - `country_source` (`header:<name>` или `locale`);
 - `browser_name`, `browser_version_major`;
 - `os_family`, `os_version_major`.
 
 Данные не являются обязательными и заполняются только когда их удалось корректно определить.
+
+## Навигация по разделу
+
+- Предыдущий: [Использование и администрирование](./operations-admin.md)
+- Следующий: [Тексты и оформление](./presentation.md)

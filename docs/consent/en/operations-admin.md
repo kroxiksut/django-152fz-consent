@@ -73,12 +73,12 @@ Key routes:
 python manage.py migrate
 ```
 
-## Settings `DJANGO_152FZ_CONSENT`
+## Settings `DJANGO_CONSENT_152FZ`
 
 Basic work profile:
 
 ```python
-DJANGO_152FZ_CONSENT = {
+DJANGO_CONSENT_152FZ = {
     "enable_core": True,
     "enable_access_policies": False,
     "subject_consents": {

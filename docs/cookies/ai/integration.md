@@ -21,7 +21,7 @@ consent URLs, while cookie ownership remains in cookie module.
 
 ## Core settings namespace
 
-Use `DJANGO_152FZ_COOKIES` for:
+Use `DJANGO_COOKIES_152FZ` for:
 
 - `enable_cookies`
 - `cookie_banner`

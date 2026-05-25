@@ -22,3 +22,15 @@ This section applies to `django-consent-152fz` and describes the consent lifecyc
 - [Future integration with Gosklyuch](./goskey.md)
 - [Importing historical data](./import.md)
 - [Scope and limitations](./scope-limits.md)
+
+## Support
+
+- Community support — GitHub Issues
+- Commercial support — contact author
+- Legal & technical consulting — on request
+
+## Legal notice
+
+This project is not affiliated with any government authority.
+
+Users remain responsible for determining applicable legal requirements and obtaining independent legal advice where necessary.

@@ -16,7 +16,7 @@ Self-service in the current area covers:
 
 ## Behavior Settings
 
-`DJANGO_152FZ_CONSENT["subject_consents"]`:
+`DJANGO_CONSENT_152FZ["subject_consents"]`:
 - `open_mode`: `page` | `new_window` | `modal`;
 - `consent_input_mode`: `checkbox` | `radio`;
 - `checkbox_required`: confirmation required;

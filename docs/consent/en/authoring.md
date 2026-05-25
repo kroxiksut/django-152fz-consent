@@ -214,7 +214,7 @@ native WYSIWYG as a required dependency.
 
 ## Settings for the administrative document editor
 
-The settings live in `DJANGO_152FZ_CONSENT["document_templates"]`.
+The settings live in `DJANGO_CONSENT_152FZ["document_templates"]`.
 
 In particular, they support:
 
@@ -227,7 +227,7 @@ In particular, they support:
 Example:
 
 ```python
-DJANGO_152FZ_CONSENT = {
+DJANGO_CONSENT_152FZ = {
     "document_templates": {
         "default_text_format": "markdown",
         "admin_editor_mode": "wysiwyg",

@@ -5,7 +5,7 @@
 
 ## Базовая конфигурация
 
-Основная конфигурация задаётся в `DJANGO_152FZ_CONSENT`:
+Основная конфигурация задаётся в `DJANGO_CONSENT_152FZ`:
 - `fields_mode` и `fields` для реестра полей ПД;
 - `purposes` для целей обработки;
 - `subject_consents` для поведения самообслуживания;
@@ -33,14 +33,19 @@
   синхронизируются с [./operations-admin.md](./operations-admin.md);
 - при добавлении новых пользовательских строк обновляются `.po/.mo`.
 
-## Audit-context: страна и client metadata
+## Контекст аудита запроса: страна и сведения о клиенте
 
-`build_request_audit_context(...)` для consent-flow теперь дополнительно заполняет:
-- `extra_meta.client.country_code` (best-effort ISO alpha-2);
+`build_request_audit_context(...)` для потока согласий дополнительно заполняет:
+- `extra_meta.client.country_code` (по возможности код ISO alpha-2);
 - `extra_meta.client.country_source` (`header:<name>` или `locale`);
 - `extra_meta.client.browser_name`, `extra_meta.client.browser_version_major`;
 - `extra_meta.client.os_family`, `extra_meta.client.os_version_major`.
 
 Важно:
-- это best-effort enrichment без гарантии заполнения каждого поля;
-- структура остается обратнос совместимой: новые данные пишутся в `extra_meta.client`.
+- заполнение выполняется по возможности, без гарантии каждого поля;
+- структура остаётся обратно совместимой: новые данные пишутся в `extra_meta.client`.
+
+## Навигация по разделу
+
+- Предыдущий: [Создание и наполнение согласий](./authoring.md)
+- Следующий: [Публичный сервисный API](./service-api.md)

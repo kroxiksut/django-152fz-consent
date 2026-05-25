@@ -50,3 +50,8 @@ python manage.py transition_152fz_verified_legacy_web \
 Подробная эксплуатация и пошаговые сценарии:
 - [./operations-admin.md](./operations-admin.md);
 - [./README.md](./README.md).
+
+## Навигация по разделу
+
+- Предыдущий: [Политики доступа и область ресурсов](./access-policies.md)
+- Следующий: [Будущая интеграция с Госключом](./goskey.md)

@@ -5,10 +5,10 @@
 
 ## Where is the configuration set?
 
-The cookie module configuration is set in `settings.py` in the `DJANGO_152FZ_COOKIES` dictionary.
+The cookie module configuration is set in `settings.py` in the `DJANGO_COOKIES_152FZ` dictionary.
 
 ```python
-DJANGO_152FZ_COOKIES = {
+DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
     "default_cookie_category_codes": ["necessary"],
     "cookie_banner": {...},
@@ -141,7 +141,7 @@ In `settings.py`:
 The demo site for the public circuit used the following working profile:
 
 ```python
-DJANGO_152FZ_COOKIES = {
+DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
     "cookie_banner": {
         "bootstrap_initial_revision": True,

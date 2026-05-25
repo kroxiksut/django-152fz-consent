@@ -45,6 +45,7 @@ AI agent integration guides are maintained as English-only documents:
 - [consent/goskey.md](./consent/en/goskey.md) - status and conditions for future integration with Goskey.
 - [consent/import.md](./consent/en/import.md) - import of historical data.
 - [consent/scope-limits.md](./consent/en/scope-limits.md) - boundaries of the scope.
+- [consent/demo.md](./consent/en/demo.md) - demo environments for consent scenarios.
 
 ## Cookie module map
 
@@ -58,6 +59,7 @@ AI agent integration guides are maintained as English-only documents:
 - [cookies/testing.md](./cookies/en/testing.md) - testing the cookie module.
 - [cookies/migration.md](./cookies/en/migration.md) - cookie module migration.
 - [cookies/notes.md](./cookies/en/notes.md) - additional notes.
+- [cookies/demo.md](./cookies/en/demo.md) - demo environments for cookie scenarios.
 
 ## Support
 

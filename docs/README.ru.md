@@ -44,6 +44,7 @@
 - [consent/goskey.md](./consent/ru/goskey.md) - статус и условия будущей интеграции с Госключом.
 - [consent/import.md](./consent/ru/import.md) - импорт исторических данных.
 - [consent/scope-limits.md](./consent/ru/scope-limits.md) - границы области применения.
+- [consent/demo.md](./consent/ru/demo.md) - демо-стенды для сценариев модуля согласий.
 
 ## Карта документов по модулю cookie
 
@@ -57,6 +58,7 @@
 - [cookies/testing.md](./cookies/ru/testing.md) - тестирование модуля cookie.
 - [cookies/migration.md](./cookies/ru/migration.md) - миграция модуля cookie.
 - [cookies/notes.md](./cookies/ru/notes.md) - дополнительные заметки.
+- [cookies/demo.md](./cookies/ru/demo.md) - демо-стенды для сценариев модуля куки.
 - [AI-гайд по языкам cookie-модуля](./cookies/ai/languages.md)
 
 ## Поддержка

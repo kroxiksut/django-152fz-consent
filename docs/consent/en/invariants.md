@@ -12,9 +12,9 @@
 
 ## Subject invariants
 
-- authorized and anonymous entities supported;
+- authenticated and anonymous subjects are supported;
 - anonymous consents can be linked to the user after login;
-- Anonymous revocation is controlled by a separate policy and is not enabled implicitly.
+- anonymous revocation is controlled by a separate policy and is not enabled implicitly.
 
 ## Transport invariants
 
@@ -24,5 +24,5 @@
 
 ## Scope invariants
 
-- optional additions should not be made mandatory for kernel scripts;
-- the experimental acknowledgment circuit does not replace the core or form a separate agreement domain.
+- optional additions should not be made mandatory for core flows;
+- the experimental verified consent flow does not replace the core or form a separate consent domain.

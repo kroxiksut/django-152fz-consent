@@ -9,3 +9,5 @@
 - [forms.md](./forms.md)
 - [verified-consents.md](./verified-consents.md)
 - [goskey-future.md](./goskey-future.md)
+
+Примечание по quality-gate: основной инструмент статической типизации в репозитории — `pyright`.

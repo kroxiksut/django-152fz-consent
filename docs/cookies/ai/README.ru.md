@@ -9,3 +9,5 @@
 - [branding.md](./branding.md)
 - [runtime.md](./runtime.md)
 - [languages.md](./languages.md)
+
+Примечание по quality-gate: основной инструмент статической типизации в репозитории — `pyright`.

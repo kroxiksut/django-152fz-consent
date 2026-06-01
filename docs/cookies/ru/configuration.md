@@ -43,6 +43,9 @@ DJANGO_COOKIES_152FZ = {
     "consent_ui_variant": "panel",
     "reconsent_notice_variant": "inline",
     "text_preset": "ru_balanced",
+    "show_empty_category_block": False,
+    "show_customize_action_without_optional": False,
+    "empty_category_block_text": "",
 }
 ```
 
@@ -53,6 +56,19 @@ DJANGO_COOKIES_152FZ = {
 - `consent_ui_variant`: вариант интерфейса выбора (`inline`, `panel`).
 - `reconsent_notice_variant`: вариант уведомления о повторном согласии (`inline`, `alert`).
 - `text_preset`: код текстового пресета (`ru_balanced`, `ru_formal`, `ru_compact`).
+
+Пример для сценария, где на сайте сейчас есть только обязательные cookie, но нужно явно показать блок и кнопку настройки:
+
+```python
+"cookie_banner": {
+    "show_empty_category_block": True,
+    "show_customize_action_without_optional": True,
+    "empty_category_block_text": "На сайте используются только обязательные cookie. Дополнительные категории сейчас не настроены.",
+}
+```
+- `show_empty_category_block`: показывать пустой блок `Выбрать категории`, когда необязательных категорий нет.
+- `show_customize_action_without_optional`: показывать кнопку `Выбрать категории`, когда необязательных категорий нет.
+- `empty_category_block_text`: пользовательский текст для пустого блока категорий; если строка пустая, используется текст пресета по умолчанию.
 
 ## Раздел `cookie_runtime`
 

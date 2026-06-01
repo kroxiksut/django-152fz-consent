@@ -25,12 +25,12 @@ Additional configuration:
 ## Practice from demo site
 
 For applied testing in the demo, a two-level scheme was used:
-- first check only the cookie layer on the production site;
-- then check that after enabling the cookie layer, the basic scripts of the site did not break.
+- first check only the cookie layer on the live site;
+- then check that, after enabling the cookie layer, the basic scenarios of the site did not break.
 
 What to check manually after each change in cookie settings:
 - the banner is displayed on public pages;
-- actions `Принять все`, `Только обязательные`, `Настроить` work;
+- actions `Accept all`, `Only required`, `Customize` work;
 - the `/cookies/` page opens and saves the selection;
 - re-selection is available;
 - texts are available in Russian and English;
@@ -54,6 +54,6 @@ Before releasing a cookie module, the following are required:
 - module integration run;
 - checking installation in `cookies-only` mode;
 - checking the joint installation with the consent module;
-- manual checking of scripts from a demo checklist.
+- manual checking of scenarios from a demo checklist.
 
 Related checklist: `demo/notes/smoke-checklist.md`.

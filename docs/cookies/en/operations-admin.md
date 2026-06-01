@@ -5,11 +5,11 @@
 
 ## What kind of document is this
 
-The document describes the working scenario for using the cookie module:
-- how to include a module in a project;
+This document describes the working scenario for using the cookie module:
+- how to include the module in a project;
 - where categories, policies and banners are configured in the administrative panel;
 - which sections in the administrative panel are for viewing only;
-- what commands to use for initial initialization and maintenance.
+- which commands to use for initial initialization and maintenance.
 
 ## Quick launch path
 
@@ -17,8 +17,8 @@ The document describes the working scenario for using the cookie module:
 2. Perform migrations.
 3. Run initial boxed data initialization.
 4. Check the cookie categories and integrations registry.
-5. Prepare and publish an edition of the cookie policy.
-6. Prepare and publish an edited cookie banner.
+5. Prepare and publish a cookie policy revision.
+6. Prepare and publish a cookie banner revision.
 7. Connect the banner to the website template.
 8. Check the settings page `/cookies/` and banner actions `/cookies/banner/`.
 
@@ -28,7 +28,7 @@ The document describes the working scenario for using the cookie module:
 
 Make sure `INSTALLED_APPS` has:
 - `django_cookies_152fz`;
-- `django_consent_152fz` (if a common loop of consents and settings checks is used).
+- `django_consent_152fz` (if a common flow of consents and settings checks is used).
 
 ### Routes
 
@@ -46,7 +46,7 @@ Available routes:
 - `/cookies/` — category selection management page;
 - `/cookies/banner/` — banner action handler.
 
-### Sample
+### Template
 
 Include the banner tag in the base template:
 
@@ -114,16 +114,16 @@ After migrations run:
 python manage.py bootstrap_152fz_cookie_defaults
 ```
 
-The team creates:
+The command creates:
 - boxed cookie categories;
-- starting version of the cookie policy;
-- starting edition of the cookie banner.
+- a starting cookie policy revision;
+- a starting cookie banner revision.
 
 ## Full menu map of the administrative panel
 
-All registered cookie entities are listed below.
+All registered cookie admin entities are listed below.
 
-### `Настройки админ-инструментов cookie`
+### `Cookie admin tool settings`
 
 What is this:
 - a single entry for technical settings of the administrative panel.
@@ -132,14 +132,14 @@ What can be configured:
 - `csv_export_delimiter` — CSV export separator.
 
 Peculiarities:
-- access only to superuser;
+- superuser access only;
 - the entry cannot be deleted;
-- You can only add one entry.
+- only one entry can be added.
 
-### `Cookie-категории`
+### `Cookie categories`
 
 What is this:
-- directory of categories for grouping cookies and building a snapshot in the policy edition.
+- directory of categories for grouping cookies and building a snapshot in the policy revision.
 
 What can be configured:
 - code, title, description;
@@ -150,25 +150,25 @@ What can be configured:
 When to change:
 - when a new processing category appears or classification changes.
 
-### `Элементы cookie-реестра`
+### `Cookie Registry Elements`
 
 What is this:
-- a register of technical integrations (cookies and scripts) that are based on the user’s decision.
+- a registry of technical integrations (cookies and scripts) that depend on the user’s decision.
 
 What can be configured:
 - integration code;
 - category;
-- supplier;
-- appointment;
-- shelf life;
-- cleaning strategy;
-- source(`src_url`);
+- vendor;
+- purpose;
+- retention period;
+- cleanup strategy;
+- source (`src_url`);
 - activity.
 
 When to change:
 - when connecting/disconnecting external systems and analytics.
 
-### `Текстовые пресеты cookie-policy`
+### `Cookie-policy text presets`
 
 What is this:
 - cookie policy text templates.
@@ -176,76 +176,76 @@ What is this:
 What can be configured:
 - preset code and title;
 - policy text;
-- signs of a boxed/custom version;
+- boxed/custom version markers;
 - activity.
 
 Actions:
 - cloning selected presets into custom presets.
 
-### `Редакции cookie-policy`
+### `Cookie policy revisions`
 
 What is this:
-- versioned versions of the cookie policy text that are published and become active.
+- versioned revisions of the cookie policy text that are published and become active.
 
 What can be configured:
-- format and text of the editorial;
+- format and text of the revision;
 - snapshot of categories;
-- a sign of an active editorial team.
+- the active-revision marker.
 
 Actions:
-- publication of the selected boxed version of the text;
+- publishing the selected boxed version of the text;
 - creating a custom draft from a boxed version;
-- cloning selected editions into drafts.
+- cloning selected revisions into drafts.
 
 Important:
-- when published, a new active edition disables the previous one;
+- when published, a new active revision disables the previous one;
 - the registry is synchronized into a revision snapshot;
-- previous valid consents are converted to obsolete.
+- previously valid consents are converted to outdated.
 
-### `Текстовые пресеты cookie-баннера`
+### `Cookie banner text presets`
 
 What is this:
 - cookie banner text templates.
 
 What can be configured:
-- headings, captions, button texts, texts for mode without JavaScript;
-- signs of a boxed/custom version;
+- headings, captions, button texts, texts for the no-JavaScript mode;
+- boxed/custom version markers;
 - activity.
 
 Actions:
 - cloning selected presets into custom presets.
 
-### `Редакции cookie-баннера`
+### `Cookie banner revisions`
 
 What is this:
-- versioned versions of the cookie banner (texts, display options and visual parameters).
+- versioned revisions of the cookie banner (texts, display options and visual parameters).
 
-Where are the settings:
-- block `Тексты`: all custom banner signatures;
-- block `Варианты отображения`: banner option, selection interface type, notification option;
-- block `Визуальная настройка`: color and visual parameters;
-- block `Видимость и кнопка закрытия`: show, close, blocking behavior and mobile overrides;
-- block `Устаревшие поля совместимости`: backward compatibility fields.
+Where the settings are:
+- block `Texts`: all custom banner labels;
+- block `Display options`: banner option, selection interface type, notification option;
+- block `Visual customization`: color and visual parameters;
+- block `Visibility and close button`: show, close, blocking behavior and mobile overrides;
+- block `Deprecated compatibility fields`: backward-compatibility fields.
 
 Actions:
-- cloning selected banner editions into custom drafts.
+- cloning selected banner revisions into custom drafts.
 
 Important:
-- For boxed editions, protected text fields are read-only;
-- When published, a new active edition disables the previous one.
+- for boxed revisions, protected text fields are read-only;
+- when published, a new active revision disables the previous one.
 
-### `Элементы реестра редакции cookie-policy`
+### `Cookie-policy revision registry elements`
 
 What is this:
-- a snapshot of the integration register at the time of a specific policy revision.
+- a snapshot of the integration registry at the time of a specific policy revision.
 
 Mode:
-- Viewing only, no editing.
+- viewing only, no editing.
 
 Purpose:
-- audit of compliance with the published policy and composition of integrations.
+- auditing compliance with the published policy and the composition of integrations.
 
-### `Записи cookie-согласий`
+### `Cookie Consent Records`
 
 What is this:
 - the final state of category selection for the subject.
@@ -254,13 +254,13 @@ Mode:
 - viewing only.
 
 Purpose:
-- control of current/outdated status;
+- monitoring of current/outdated status;
 - search by user, anonymous token, request ID.
 
-### `События cookie-согласий`
+### `Cookie Consent Events`
 
 What is this:
-- Log of consent events (acceptance, update, deprecation and related actions).
+- a log of consent events (acceptance, update, deprecation and related actions).
 
 Mode:
 - viewing only.
@@ -268,44 +268,44 @@ Mode:
 Actions:
 - export selected events to CSV.
 
-### `Состояния cookie-баннера`
+### `Cookie banner states`
 
 What is this:
-- server state of the banner life cycle by subject.
+- the server state of the banner lifecycle by subject.
 
 Mode:
 - viewing only.
 
 Purpose:
-- diagnostics of replay, close, selected action and blocking mode.
+- diagnostics of re-display, close, selected action and blocking mode.
 
 ## Where to configure by task
 
 ### You need to change the cookie policy text
 
-1. Open `Текстовые пресеты cookie-policy` and prepare the variant.
-2. In `Редакции cookie-policy`, create a revision (or draft from a preset).
-3. Publish the editorial office as active.
+1. Open `Cookie-policy text presets` and prepare the variant.
+2. In `Cookie policy revisions`, create a revision (or a draft from a preset).
+3. Publish the revision as active.
 
 ### You need to change the appearance/behavior of the banner
 
-1. Open `Текстовые пресеты cookie-баннера` and correct the texts.
-2. Open `Редакции cookie-баннера`.
-3. Set up the blocks `Варианты отображения`, `Визуальная настройка`, `Видимость и кнопка закрытия`.
-4. Publish the editorial.
+1. Open `Cookie banner text presets` and correct the texts.
+2. Open `Cookie banner revisions`.
+3. Set up the blocks `Display options`, `Visual customization`, `Visibility and close button`.
+4. Publish the revision.
 
 ### Need to add a new integration (script/cookie)
 
-1. Add or update the category in `Cookie-категории` (if required).
-2. Add an entry to `Элементы cookie-реестра`.
-3. Check that the active `Редакции cookie-policy` reflects the current snapshot.
+1. Add or update the category in `Cookie categories` (if required).
+2. Add an entry to `Cookie Registry Elements`.
+3. Check that the active `Cookie policy revisions` reflects the current snapshot.
 
 ### Need to export events to CSV
 
-1. Open `События cookie-согласий`.
-2. Select entries.
-3. Apply action `Экспортировать выбранные события в CSV`.
-4. If necessary, specify the delimiter in `Настройки админ-инструментов cookie` in advance.
+1. Open `Cookie Consent Events`.
+2. Select the records.
+3. Apply the `Export selected events to CSV` action.
+4. If necessary, specify the delimiter in `Cookie admin tool settings` in advance.
 
 ### Need to clear old audit records
 
@@ -326,7 +326,7 @@ Below are solutions that showed stable behavior on the demo site and are suitabl
 
 - the banner is connected once in the base website template via `{% render_cookie_banner %}`;
 - this covers all public pages without duplicating template markup;
-- A separate link in the top menu to the cookie settings page is not required if the banner reopen button is enabled.
+- a separate link in the top menu to the cookie settings page is not required if the banner reopen button is enabled.
 
 ### Routes
 
@@ -341,13 +341,13 @@ For a public site, the demo consistently used the following scheme:
 - `cookie_banner.show_preferences_link=False`;
 - `cookie_runtime.hide_for_bots=True`;
 - `cookie_runtime.preview_param="cookie_banner_preview"`;
-- an explicit list of robot templates in `cookie_runtime.bot_patterns`.
+- an explicit list of bot patterns in `cookie_runtime.bot_patterns`.
 
 The meaning of the scheme:
 - the user can always reopen the banner with a button;
 - extra entry points to the settings page do not overload the interface;
-- For search robots, the banner does not interfere with crawling pages;
-- Banner preview mode is available manually via the URL parameter.
+- for search bots, the banner does not interfere with crawling pages;
+- banner preview mode is available manually via the URL parameter.
 
 ### Data Initialization
 
@@ -368,7 +368,7 @@ A separate checklist from the demo: `demo/notes/smoke-checklist.md`.
 
 ## Integration Inventory
 
-To check the compliance of the registry with categories:
+To check that the registry is consistent with the categories:
 
 ```bash
 python manage.py inventory_152fz_cookie_integrations

@@ -13,15 +13,15 @@ The client layer `cookie_banner.js` publishes events:
 - `dz152fz:cookie-banner:custom-opened`;
 - `dz152fz:cookie-banner:action-submitted`.
 
-Total payload:
+Common payload:
 - `contract_version`, `contract_namespace`, `event_key`, `event_name`, `timestamp`;
-- specific event fields (`allowed_categories`, `removed_categories`, `action`, `selected_optional_categories` and others).
+- event-specific fields (`allowed_categories`, `removed_categories`, `action`, `selected_optional_categories` and others).
 
 ## Server interceptions for integrations
 
 The cookie service layer publishes an extension point:
 - `set_cookie_runtime_event_hook(...)` — callback registration;
-- `trigger_cookie_runtime_event(payload)` - call the callback from the execution thread.
+- `trigger_cookie_runtime_event(payload)` - invoke the callback from the execution flow.
 
 Responsibility for specific project adapters remains with the project.
 

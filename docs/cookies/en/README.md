@@ -1,6 +1,6 @@
 # Documentation: cookie module
 
-The section describes `django-cookies-152fz`: cookie banner, selection processing back-end layer, integration registry and auditing.
+This section describes `django-cookies-152fz`: the cookie banner, the back-end layer that processes user selections, the integration registry and auditing.
 
 ## Navigation
 
@@ -16,18 +16,18 @@ The section describes `django-cookies-152fz`: cookie banner, selection processin
 - [Versioned texts and design](./presentation.md)
 - [Recommendation inventory and restrictions](./inventory.md)
 - [Testing the cookie module](./testing.md)
+- [Type checking (Pyright)](./type-checking.md)
 - [Cookie module migration](./migration.md)
+- [CI/CD separate package builds](../../ci-cd-packaging.md)
 - [Additional notes](./notes.md)
 - [Demo environments](./demo.md)
 - [Contributing to the cookie module](./contributing.md)
 
 ## AI instructions for cookie tasks
 
-- Banner text and presentation updates: use `AGENTS.md -> $django-152fz-cookie-banner`.
-- Runtime behavior, script gating, and event contracts: use `AGENTS.md -> $django-152fz-cookie-runtime`.
-- Cookie-related config defaults/checks: use `AGENTS.md -> $django-152fz-settings-checks`.
-- Final regression pass before merge: use `AGENTS.md -> $django-152fz-review`.
-- New language onboarding flow: see [../ai/languages.md](../ai/languages.md).
+- Banner text and presentation updates: see [AI integration guides](../ai/README.md).
+- Runtime behavior, script gating, and event contracts: see [runtime.md](../ai/runtime.md).
+- New language onboarding flow: see [languages.md](../ai/languages.md).
 
 ## Support
 

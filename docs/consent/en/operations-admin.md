@@ -5,21 +5,21 @@
 
 ## What kind of document is this
 
-The document describes the practical operation of the consent module:
-- how to connect a module to a project;
+This document describes the practical operation of the consent module:
+- how to connect the module to a project;
 - where and what is configured in the administrative panel;
 - how to link a consent document to an application form;
-- How to change the flow from web confirmation to paper confirmation.
+- how to switch the flow from web confirmation to paper confirmation.
 
 ## Quick launch path
 
 1. Connect apps and routes.
-2. Perform migrations.
+2. Run migrations.
 3. Register processing purposes and documents.
 4. Publish active document revisions.
 5. Bind the `purpose_code + document_code` stream to the form.
 6. Check the consent status on the form and call `accept_consent` when submitting.
-7. For a paper script, enable `verified_consents`, configure the policy and download the signed file.
+7. For a paper scenario, enable `verified_consents`, configure the policy and upload the signed file.
 
 ## Connection to the project
 
@@ -97,7 +97,7 @@ DJANGO_CONSENT_152FZ = {
 ```
 
 Important:
-- the actual activation of the paper circuit is determined by the connection
+- actual activation of the paper flow is determined by adding
 `django_consent_152fz.verified_consents` to `INSTALLED_APPS`;
 - the `enable_verified_consents` key is preserved for backward compatibility,
 but is not the main switch.
@@ -109,10 +109,10 @@ The following are the main entities that are used to support consents.
 ### `ConsentPurpose` (processing purposes)
 
 What can be configured:
-- target code and name;
+- purpose code and name;
 - description;
-- fieldset(`fields_config`);
-- reconsent policy and subject availability.
+- field set (`fields_config`);
+- re-consent policy and subject availability.
 
 When to change:
 - when a new form business flow appears.
@@ -132,14 +132,14 @@ When to change:
 
 What can be configured:
 - link to the document and `purpose_code`;
-- format and content of the editorial board;
+- format and content of the revision;
 - publication (`is_active`) and version.
 
 When to change:
 - when updating the consent text.
 
 Important:
-- it is the edition of the document that becomes a legally significant point,
+- it is the document revision that becomes the legally significant point
 to which the consent record is linked.
 
 ### `ConsentAudienceRule` (audience rules)
@@ -155,7 +155,7 @@ When to change:
 
 What can be configured:
 - resource and action;
-- reaction in the absence or outdated consent;
+- behavior when consent is missing or outdated;
 - link with `purpose + document`.
 
 When to change:
@@ -164,16 +164,16 @@ When to change:
 ### `ConsentRecord` (consent records)
 
 Mode:
-- viewing only.
+- view only.
 
 Purpose:
-- checking current/obsolete/revoked status;
+- checking current/outdated/revoked status;
 - audit by user, anonymous token, source.
 
 ### `ConsentEvent` (consent events)
 
 Mode:
-- viewing only.
+- view only.
 
 Purpose:
 - immutable event log (issue, revocation, expiration, confirmation).
@@ -181,31 +181,31 @@ Purpose:
 ### `PersonalDataManagerAssignment`
 
 What can be configured:
-- appointment of those responsible for personal data;
-- rights to manage flows and verifiable consents.
+- assignment of personnel responsible for personal data;
+- rights to manage flows and verified consents.
 
-Peculiarities:
-- access only to superuser.
+Notes:
+- accessible to superusers only.
 
 ### `ConsentSelfServiceSettings`
 
 What can be configured:
-- self-care behavior;
+- self-service behavior;
 - confirmation interface mode;
-- Print PDF options;
+- PDF print options;
 - CSV export separator.
 
-Peculiarities:
-- single entry;
-- access only to superuser.
+Notes:
+- single record;
+- accessible to superusers only.
 
 ### `ConsentModuleOperationAuditLog`
 
 Mode:
-- viewing only.
+- view only.
 
 Purpose:
-- log of consent module operations (actions of the admin panel and services).
+- log of consent module operations (admin panel and service actions).
 
 ## Where to view signed consents
 
@@ -213,47 +213,47 @@ Main operating point: section `ConsentRecord`.
 
 How to search for signed ones:
 1. Open the `ConsentRecord` list.
-2. Set the filter by `Статус`:
+2. Set the filter by status:
    - `current` - currently signed;
-   - `outdated` - previously signed, but deprecated.
-3. If necessary, filter by target (`purpose`) and source (`source`).
-4. For the user, use search by login/subject ID.
-5. For an anonymous stream, use `anonymous_token` search.
+   - `outdated` - previously signed, but now deprecated.
+3. If necessary, filter by purpose (`purpose`) and source (`source`).
+4. For a user, search by login/subject ID.
+5. For an anonymous stream, search by `anonymous_token`.
 
 What to look for in the record card:
 - `purpose` and document code (`document_code`);
 - `status`;
-- `confirmation_method` (as confirmed);
+- `confirmation_method` (how it was confirmed);
 - `source`;
 - `created_at`;
-- service metadata of the request in `extra_meta`.
+- request service metadata in `extra_meta`.
 
 Important:
 - `ConsentRecord` in the admin panel works in view mode;
-- manual editing and “retroactive correction” are not used;
-- to parse the change history, go to `ConsentEvent`.
+- manual editing and "retroactive correction" are not used;
+- to inspect the change history, go to `ConsentEvent`.
 
 ## What to do in logs and how to sort out incidents
 
 ### `ConsentRecord`: operational status analysis
 
 When to use:
-- you need to understand whether there is current agreement on the flow;
+- you need to understand whether there is a current consent for the flow;
 - you need to check why the form is asking for confirmation again.
 
 Check procedure:
-1. Find the last record by subject and stream `purpose + document`.
+1. Find the latest record for the subject and the `purpose + document` stream.
 2. Check `status` and `consent_required_reason` in the application log/form context.
-3. Check `confirmation_method` against the expected scenario (web or verifiable confirmation).
+3. Check `confirmation_method` against the expected scenario (web or verified confirmation).
 
 Available action:
-- uploading selected records to CSV.
+- exporting selected records to CSV.
 
 ### `ConsentEvent`: operational history analysis
 
 When to use:
 - you need to understand the sequence of actions (issuance, revocation, obsolescence, confirmation);
-- you need to check who confirmed or rejected the entry and when.
+- you need to check who confirmed or rejected the record, and when.
 
 Check procedure:
 1. Open the events of the desired consent record.
@@ -262,7 +262,7 @@ Check procedure:
 
 Practice:
 - `ConsentRecord` shows the current status;
-- `ConsentEvent` shows how this state was reached.
+- `ConsentEvent` shows how that state was reached.
 
 ### `ConsentModuleOperationAuditLog`: log of administrative and service operations
 
@@ -273,36 +273,36 @@ When to use:
 Check procedure:
 1. Filter by `operation_code` or `status`.
 2. Check `payload` (input parameters) and `result` (outcome).
-3. For batch operations, compare the volume of processed records with the expectation.
+3. For batch operations, compare the number of processed records against the expectation.
 
 Available action:
-- uploading selected records to CSV.
+- exporting selected records to CSV.
 
 ## Typical tasks in the administrative panel
 
-### It is necessary to check whether the user has signed consent on a specific form
+### You need to check whether a user has signed consent on a specific form
 
 1. Open `ConsentRecord`.
-2. Find a user.
+2. Find the user.
 3. Filter by `purpose` and `document`.
 4. Make sure the status is `current`.
 5. Check `confirmation_method`.
 
-### We need to understand why the signature does not appear on the form.
+### You need to understand why the signature does not appear on the form
 
-1. In `ConsentRecord` check if there is a current entry for the stream.
+1. In `ConsentRecord`, check whether there is a current record for the stream.
 2. In `ConsentEvent`, check the latest events and the reason for rejection/blocking.
-3. If using a paper outline, check `VerifiedConsentSubmission` and `VerifiedConsentArtifact`.
+3. If using a paper flow, check `VerifiedConsentSubmission` and `VerifiedConsentArtifact`.
 4. In `ConsentModuleOperationAuditLog`, check for service operation errors.
 
-### We need to check the mass transfer of the flow for paper confirmation
+### You need to verify the bulk transition of a flow to paper confirmation
 
 1. Open `ConsentModuleOperationAuditLog`.
-2. Find the transition operations by `operation_code` from the verified loop.
-3. Check `changed_records` and the number of processed packets.
-4. Additionally, check the selection of subjects in `ConsentRecord` for the desired thread.
+2. Find the transition operations by `operation_code` from the verified flow.
+3. Check `changed_records` and the number of processed batches.
+4. Additionally, check the selection of subjects in `ConsentRecord` for the desired stream.
 
-## Additional paper outline menus
+## Additional paper flow menus
 
 These entities are available when the application is connected
 `django_consent_152fz.verified_consents`.
@@ -317,18 +317,18 @@ What can be configured:
 
 What to do:
 - enable/disable the requirement for paper confirmation for the flow;
-- set soft or hard behavior for old web consents.
+- set soft or strict behavior for old web consents.
 
 ### `VerifiedConsentFormPolicy`
 
 What can be configured:
 - overriding the mode for a specific form by `form_code`;
-- behavior before loading paper;
-- redefining the notification channel.
+- behavior before the paper file is uploaded;
+- overriding the notification channel.
 
 What to do:
-- specifically include paper confirmation only for a specific form;
-- gradually expand coverage without affecting other forms of flow.
+- enable paper confirmation only for a specific form;
+- gradually expand coverage without affecting other forms in the flow.
 
 ### `VerifiedConsentSubmission`
 
@@ -336,36 +336,36 @@ Mode:
 - status board for paper confirmation requests.
 
 Purpose:
-- see what step the thread is at (`awaiting_paper_upload`,
+- see what step the flow is at (`awaiting_paper_upload`,
   `paper_uploaded`, `verified`, `rejected`).
 
 What to do:
-- control the queue of applications awaiting loading or verification;
-- check that the application has reached the status `verified` after processing.
+- monitor the queue of requests awaiting upload or verification;
+- check that a request has reached the `verified` status after processing.
 
 ### `VerifiedConsentArtifact`
 
 Purpose:
-- storage of the downloaded confirmation file and operator actions;
+- storage of the uploaded confirmation file and operator actions;
 - confirmation or rejection of the artifact by the person responsible for the personal data.
 
 What to do:
-- open confirmation file;
-- confirm or reject with comment;
-- record the reason for rejection for resubmission by the subject.
+- open the confirmation file;
+- confirm or reject it with a comment;
+- record the reason for rejection so the subject can resubmit.
 
 ## How to link a document to a form
 
-Below is a practical script used in the demo site.
+Below is a practical scenario used on the demo site.
 
-### Step 1: Capture the thread codes
+### Step 1: Capture the stream codes
 
 For the form, define a stable link in advance:
 - `purpose_code`;
 - `document_code`;
 - `form_code`.
 
-Example from demo:
+Example from the demo:
 - `demo.contact`;
 - `demo.course_signup`;
 - `demo.certificate_request`.
@@ -436,10 +436,10 @@ accept_consent(
 ### Step 7. In the template, provide a link to the document
 
 There should be a clear point for the user to view the consent text:
-- reference to `django_consent_152fz:document`;
-- for paper script - also link to `django_consent_152fz:document_pdf`.
+- a link to `django_consent_152fz:document`;
+- for the paper scenario, also a link to `django_consent_152fz:document_pdf`.
 
-### Step 8: Store Anonymous Token After Replying
+### Step 8: Store the anonymous token after responding
 
 For anonymous scenarios, after a successful response, store the token via
 `persist_anonymous_token(response, anonymous_token=...)`.
@@ -448,12 +448,12 @@ For anonymous scenarios, after a successful response, store the token via
 
 Below is a recommended step-by-step scenario.
 
-### 1.Connect the paper circuit
+### 1. Connect the paper flow
 
 Add to `INSTALLED_APPS`:
 - `django_consent_152fz.verified_consents`.
 
-Perform migrations.
+Run migrations.
 
 ### 2. Create a basic flow policy
 
@@ -470,30 +470,30 @@ In `VerifiedConsentFormPolicy`:
 - set `verification_mode_override` if the form should work differently,
 than the basic flow policy.
 
-### 4. In the form, take into account `verified_transition`
+### 4. In the form, account for `verified_transition`
 
-If `verified_transition.enabled=True` and status is not `verified`:
+If `verified_transition.enabled=True` and the status is not `verified`:
 - block web signing;
 - display a message about the required paper confirmation;
-- Please provide a link to download the confirmation.
+- provide a link to download the confirmation document.
 
 In the demo this is implemented for the certificate application form:
 - web signing is hidden;
-- a link to download the PDF and a download page for the signed file are displayed.
+- a link to download the PDF and an upload page for the signed file are displayed.
 
-### 5. Organize a paper loading point
+### 5. Set up a paper upload point
 
-In the download handler, call `submit_verified_consent(...)` and pass:
+In the upload handler, call `submit_verified_consent(...)` and pass:
 - `purpose_code`, `document_code`;
 - `paper_file`;
 - `verification_context` with the same `form_code`;
 - `audit_context`.
 
-After loading, the recording will go into a pending state until it is checked by the operator.
+After upload, the record enters a pending state until it is checked by the operator.
 
-### 6. Perform a soft translation of historical web consents
+### 6. Perform a soft migration of historical web consents
 
-Before use, always do a preliminary run:
+Before applying, always do a preliminary run:
 
 ```bash
 python manage.py transition_152fz_verified_legacy_web \
@@ -504,7 +504,7 @@ python manage.py transition_152fz_verified_legacy_web \
   --dry-run
 ```
 
-Then batch application:
+Then apply in batches:
 
 ```bash
 python manage.py transition_152fz_verified_legacy_web \
@@ -524,23 +524,23 @@ The person responsible for personal data checks artifacts in `VerifiedConsentArt
 
 Statuses are tracked in `VerifiedConsentSubmission`.
 
-## Practice from demo site
+## Practice from the demo site
 
 Solutions that have shown consistent results:
 - each application form has a constant `form_code`;
-- the presentation code uses the constants `purpose_code/document_code`;
+- the view code uses the `purpose_code/document_code` constants;
 - `get_consent_status(...)` is always called before submitting the form;
-- paper script blocking is processed before the form business action;
-- loading paper is placed in a separate screen `verified_paper_consent`;
-- after logging in and in anonymous mode, the continuity of the stream is maintained
+- paper scenario blocking is handled before the form business action;
+- paper upload is placed on a separate `verified_paper_consent` screen;
+- after login and in anonymous mode, stream continuity is preserved via
   `anonymous_token`.
 
-Practical smoke check checklist: `demo/notes/smoke-checklist.md`.
+Practical smoke-check checklist: `demo/notes/smoke-checklist.md`.
 
 ## Related documents
 
 - [Settings](./configuration.md)
 - [Public service API](./service-api.md)
-- [Paper Confirmation Outline](./verified-flow.md)
+- [Paper confirmation flow](./verified-flow.md)
 - [Testing](./testing.md)
 - [Migration](./migration.md)

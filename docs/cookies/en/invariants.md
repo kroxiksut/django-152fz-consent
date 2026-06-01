@@ -12,8 +12,8 @@
 ## Server database - source of truth
 
 - the cookie decision is stored on the server;
-- the anonymous script is stored in the database with a token;
-- Once logged in, anonymous entries can be linked to the user.
+- the anonymous record is stored in the database with a token;
+- once logged in, anonymous records can be linked to the user.
 
 ## Replay and `outdated` are different mechanisms
 
@@ -23,5 +23,5 @@
 
 ## Banner texts are separated from the cookie policy
 
-- banner editions (`CookieBannerRevision`) are published separately from `CookiePolicyRevision`;
-- publication of a banner edition does not translate consent into `outdated`.
+- banner revisions (`CookieBannerRevision`) are published separately from `CookiePolicyRevision`;
+- publishing a banner revision does not move consent into `outdated`.

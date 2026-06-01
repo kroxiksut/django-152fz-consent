@@ -35,7 +35,7 @@ This guide defines the required AI workflow when adding a new language to
 
 ## AI instruction mapping
 
-- `AGENTS.md -> $django-152fz-cookie-banner`: banner text and UX presentation.
-- `AGENTS.md -> $django-152fz-cookie-runtime`: runtime contracts and event behavior.
-- `AGENTS.md -> $django-152fz-settings-checks`: locale-related config defaults and validation.
-- `AGENTS.md -> $django-152fz-review`: pre-merge verification for regressions.
+- banner text and UX presentation;
+- runtime contracts and event behavior;
+- locale-related configuration defaults and validation;
+- pre-merge regression verification.

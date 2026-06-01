@@ -6,6 +6,7 @@ This is the English top-level documentation index.
 
 - [Consent module](./consent/en/README.md)
 - [Cookie module](./cookies/en/README.md)
+- [Legal text inventory and review map](./legal-texts.md)
 
 ## Package installation map
 
@@ -13,6 +14,10 @@ This is the English top-level documentation index.
 - `pip install django-cookies-152fz` - cookie banner and runtime module.
 - `pip install django-consent-152fz django-cookies-152fz` - full setup.
 - `pip install "django-consent-152fz[api]"` - optional API extras for consent package.
+
+## CI/CD packaging
+
+- [Separate package builds in CI/CD](./ci-cd-packaging.md)
 
 ## Versioning note
 
@@ -30,8 +35,10 @@ AI agent integration guides are maintained as English-only documents:
 ## Testing and migration
 
 - [Testing the consent module](./consent/en/testing.md)
+- [Consent type checking (Pyright)](./consent/en/type-checking.md)
 - [Migration of the consent module](./consent/en/migration.md)
 - [Testing the cookie module](./cookies/en/testing.md)
+- [Cookie type checking (Pyright)](./cookies/en/type-checking.md)
 - [Cookie module migration](./cookies/en/migration.md)
 
 ## Localization
@@ -47,6 +54,7 @@ AI agent integration guides are maintained as English-only documents:
 - [consent/configuration.md](./consent/en/configuration.md) - settings and policy contract.
 - [consent/service-api.md](./consent/en/service-api.md) - public facade and transport contract.
 - [consent/testing.md](./consent/en/testing.md) - testing the consent module.
+- [consent/type-checking.md](./consent/en/type-checking.md) - why Pyright is required and how to run it.
 - [consent/migration.md](./consent/en/migration.md) - migration of the consent module.
 - [consent/self-service.md](./consent/en/self-service.md) - subject self-service scripts.
 - [consent/access-policies.md](./consent/en/access-policies.md) - access policies and resource scope.
@@ -67,10 +75,15 @@ AI agent integration guides are maintained as English-only documents:
 - [cookies/presentation.md](./cookies/en/presentation.md) - texts, display options, and visual settings.
 - [cookies/inventory.md](./cookies/en/inventory.md) - register and inventory.
 - [cookies/testing.md](./cookies/en/testing.md) - testing the cookie module.
+- [cookies/type-checking.md](./cookies/en/type-checking.md) - why Pyright is required and how to run it.
 - [cookies/migration.md](./cookies/en/migration.md) - cookie module migration.
 - [cookies/notes.md](./cookies/en/notes.md) - additional notes.
 - [cookies/demo.md](./cookies/en/demo.md) - demo environments for cookie scenarios.
 - [cookies/contributing.md](./cookies/en/contributing.md) - module-specific contribution guide.
+
+## Security
+
+- [Security policy and vulnerability reporting](../SECURITY.md)
 
 ## Support
 

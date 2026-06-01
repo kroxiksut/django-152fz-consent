@@ -13,7 +13,7 @@ from django_consent_152fz import service_api
 
 The stable surface is fixed via `PUBLIC_SERVICE_API_V1` and `__all__`.
 
-## Key Operations of the Consent Core
+## Key operations of the consent core
 
 - `register_purposes_from_config`
 - `get_current_requirements`

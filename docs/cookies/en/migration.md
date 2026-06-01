@@ -5,15 +5,15 @@
 
 ## Purpose
 
-The document captures the update path for the individual `django_cookies_152fz` cookie.
+This document captures the update path for the standalone `django_cookies_152fz` cookie package.
 
 ## Baseline reset
 
-The historical chain of cookie migrations (`0002+`) has been compiled into a single file
+The historical chain of cookie migrations (`0002+`) has been squashed into a single file
 `django_cookies_152fz/migrations/0001_initial.py`.
 
 This simplifies the package structure, but for existing installations it requires
-controlled migration transition.
+a controlled migration transition.
 
 ## Current contract of migrations and models
 
@@ -30,47 +30,34 @@ depending on `django_consent_152fz`.
 2. Use the canonical path `django_cookies_152fz` in `INSTALLED_APPS`.
 3. Remove the old application path from `INSTALLED_APPS` if one was specified.
 4. Leave the desired route:
-   - `django_consent_152fz.urls` for complete script;
-   - `django_consent_152fz.cookies.urls` for `cookies-only` routing.
+   - `django_consent_152fz.urls` for the full scenario;
+   - `django_cookies_152fz.urls` for `cookies-only` routing.
 5. Execute `python manage.py migrate`.
 6. Check cookie routes, banner status and existing cookies.
 
-## Backward Compatibility
-
-Supported:
-- old imports `django_consent_152fz.cookies.*`;
-- old template paths in `django_consent_152fz/templates/...` space
-through the transition layer in `django_cookies_152fz`.
-
-## Incompatible scenarios after removing the transition layer
+## Incompatible scenarios
 
 - direct use of `django_consent_152fz.cookies.*` as canonical imports;
-- expecting templates and static cookie resources to remain in space
-`consent` without compatibility layer.
+- expecting old imports to be auto-redirected.
 
 ## New installation and update
 
-- new setting: use `django_cookies_152fz` in `INSTALLED_APPS` for `cookies-only`;
-- updating an existing installation: transient imports are allowed temporarily,
-but the application path must be canonical.
+- new installation: use `django_cookies_152fz` in `INSTALLED_APPS` for `cookies-only`;
+- updating an existing installation: replace old imports/routes with
+`django_cookies_152fz.*`.
 
 ## Known Limitations
 
-- mixed environments need a separate plan to clean up old imports before deleting
-transition layer;
-- in custom migrations with direct links to old python paths
-you need to go to the links through the application label and model name.
+- mixed environments need a separate plan to clean up old imports;
+- in custom migrations with direct references to old Python paths,
+the references must go through the application label and model name.
 
-## Removing Backward Compatibility
+## Transition layer status
 
-- initially, transitional imports are supported as a temporary measure;
-- then warnings are published about the deprecation of old paths;
-- After the ruler has stabilized, transitional aliases are removed.
-
-Removal condition: at least one stable release cycle without regressions in
-`cookies-only`, `consent-only` and joint installation.
+- legacy transition imports are removed;
+- only canonical `django_cookies_152fz` paths are supported.
 
 ## Control after update
 
-- check scripts from [./testing.md](./testing.md);
-- check the integration kit from the `tests` directory.
+- check the scenarios from [./testing.md](./testing.md);
+- check the integration suite from the `tests` directory.

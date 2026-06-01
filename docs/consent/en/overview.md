@@ -5,20 +5,20 @@
 
 ## Purpose
 
-The consent layer covers the life cycle of consents 152-FZ:
+The consent layer covers the 152-FZ consent life cycle:
 - versioning consent documents;
-- recording of issued and revoked consents for the `purpose + document` stream;
+- recording issued and revoked consents for the `purpose + document` stream;
 - auditing changes through events;
-- working with authorized and anonymous entities;
-- review and review in self-service.
+- working with authenticated and anonymous subjects;
+- viewing and managing consents in self-service.
 
 ## What has been implemented
 
-- kernel domain models (`ConsentPurpose`, `LegalDocument`, `DocumentRevision`, `ConsentRecord`, `ConsentEvent`);
+- core domain models (`ConsentPurpose`, `LegalDocument`, `DocumentRevision`, `ConsentRecord`, `ConsentEvent`);
 - service layer for issuing, revoking and checking the status of consents;
 - linking consent to a specific version of the document;
 - re-confirmation and re-consent modes;
-- capability flags for additional circuits;
+- feature flags for additional flows;
 - public facade `django_consent_152fz.service_api` for external integrations.
 
 ## Related Sections

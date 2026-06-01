@@ -6,6 +6,7 @@
 
 - [Модуль согласий](./consent/ru/README.md)
 - [Модуль cookie](./cookies/ru/README.md)
+- [Карта юридических текстов](./legal-texts.ru.md)
 
 ## Документы для ИИ
 
@@ -21,6 +22,10 @@
 - `pip install django-consent-152fz django-cookies-152fz` - полная установка.
 - `pip install "django-consent-152fz[api]"` - дополнительный набор для API в модуле согласий.
 
+## CI/CD и сборка пакетов
+
+- [Раздельная сборка пакетов в CI/CD](./ci-cd-packaging.ru.md)
+
 ## Примечание о версиях пакетов
 
 `django-consent-152fz` и `django-cookies-152fz` могут иметь разные версии и разный график выпусков.
@@ -29,8 +34,10 @@
 ## Тестирование и миграция
 
 - [Тестирование модуля согласий](./consent/ru/testing.md)
+- [Проверка типов модуля согласий (Pyright)](./consent/ru/type-checking.md)
 - [Миграция модуля согласий](./consent/ru/migration.md)
 - [Тестирование модуля cookie](./cookies/ru/testing.md)
+- [Проверка типов модуля куки (Pyright)](./cookies/ru/type-checking.md)
 - [Миграция модуля cookie](./cookies/ru/migration.md)
 
 ## Локализация
@@ -46,6 +53,7 @@
 - [consent/configuration.md](./consent/ru/configuration.md) - настройки и контракт политик.
 - [consent/service-api.md](./consent/ru/service-api.md) - публичный фасад и транспортный контракт.
 - [consent/testing.md](./consent/ru/testing.md) - тестирование модуля согласий.
+- [consent/type-checking.md](./consent/ru/type-checking.md) - зачем нужна проверка типов и как запускать Pyright.
 - [consent/migration.md](./consent/ru/migration.md) - миграция модуля согласий.
 - [consent/self-service.md](./consent/ru/self-service.md) - сценарии самообслуживания субъекта.
 - [consent/access-policies.md](./consent/ru/access-policies.md) - политики доступа и область ресурсов.
@@ -66,11 +74,16 @@
 - [cookies/presentation.md](./cookies/ru/presentation.md) - тексты, варианты показа и визуальные настройки.
 - [cookies/inventory.md](./cookies/ru/inventory.md) - реестр и инвентаризация.
 - [cookies/testing.md](./cookies/ru/testing.md) - тестирование модуля cookie.
+- [cookies/type-checking.md](./cookies/ru/type-checking.md) - зачем нужна проверка типов и как запускать Pyright.
 - [cookies/migration.md](./cookies/ru/migration.md) - миграция модуля cookie.
 - [cookies/notes.md](./cookies/ru/notes.md) - дополнительные заметки.
 - [cookies/demo.md](./cookies/ru/demo.md) - демо-стенды для сценариев модуля куки.
 - [cookies/contributing.md](./cookies/ru/contributing.md) - руководство по участию в модуле куки.
 - [AI-гайд по языкам cookie-модуля](./cookies/ai/languages.md)
+
+## Безопасность
+
+- [Политика безопасности и сообщение об уязвимостях](../SECURITY.ru.md)
 
 ## Поддержка
 

@@ -5,7 +5,7 @@
 
 ## Purpose
 
-The import layer is designed to provide controlled transfer of existing consent data into the kernel model.
+The import layer is designed to provide controlled transfer of existing consent data into the core model.
 
 ## Tools
 
@@ -19,7 +19,7 @@ The import layer is designed to provide controlled transfer of existing consent 
 - prefer `dry-run` before actual application;
 - the import preserves audit context and should not bypass service layer domain checks.
 
-## Escort
+## Maintenance
 
 - import contract changes are synchronized with [./configuration.md](./configuration.md), [./service-api.md](./service-api.md) and tests;
-- For vendor-specific scenarios, extensible adapters are used rather than hard-wired logic in the kernel.
+- for vendor-specific scenarios, extensible adapters are used rather than hard-wired logic in the core.

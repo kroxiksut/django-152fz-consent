@@ -6,7 +6,7 @@
 ## Scope of checks
 
 - domain consent model (`LegalDocument`, `DocumentRevision`, `ConsentRecord`, `ConsentEvent`);
-- kernel service layer (`core.services`);
+- core service layer (`core.services`);
 - public facade `service_api` regarding consent operations;
 - access policies and subject self-service.
 - scenarios for linking a document to a form and switching to paper confirmation.

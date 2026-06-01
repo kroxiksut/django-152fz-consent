@@ -3,16 +3,16 @@
 - [To the consent section](./README.md)
 - [To the general documentation section](../README.md)
 
-## Alpha area
+## Alpha scope
 
-Self-service in the current area covers:
-- view current subject consents;
-- withdrawal of consent for a specific stream `purpose + document`.
+Self-service in its current scope covers:
+- viewing current subject consents;
+- withdrawing consent for a specific `purpose + document` stream.
 
 ## What is not included in the scope
 
-- A full-fledged personal account with arbitrary legal work scenarios.
-- Complete “right to be forgotten” process with external workflow and SLA.
+- A full-fledged personal account with arbitrary legal workflow scenarios.
+- A complete "right to be forgotten" process with external workflow and SLA.
 
 ## Behavior Settings
 
@@ -21,7 +21,7 @@ Self-service in the current area covers:
 - `consent_input_mode`: `checkbox` | `radio`;
 - `checkbox_required`: confirmation required;
 - `decline_action`: `block_submit` | `allow_submit`;
-- `allow_anonymous_withdraw`: Anonymous review policy.
+- `allow_anonymous_withdraw`: anonymous withdrawal policy.
 
 ## Route
 

@@ -9,9 +9,9 @@ Use this guide to integrate `django-cookies-152fz`.
 1. Install package:
    `pip install django-cookies-152fz`
 2. Add app:
-   `django_152fz_cookies`
+   `django_cookies_152fz`
 3. Include routes:
-   `include("django_152fz_cookies.urls")`
+   `include("django_cookies_152fz.urls")`
 4. Run migrations and checks.
 
 ## Full mode with consent package

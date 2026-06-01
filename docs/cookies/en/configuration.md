@@ -22,7 +22,7 @@ DJANGO_COOKIES_152FZ = {
 ### `enable_cookies`
 
 - Type: `bool`
-- Purpose: Global enablement of the cookie stream.
+- Purpose: global enablement of the cookie flow.
 - Default: `True`
 
 ### `default_cookie_category_codes`
@@ -43,6 +43,9 @@ This section defines the basic parameters of the banner and settings page.
     "consent_ui_variant": "panel",
     "reconsent_notice_variant": "inline",
     "text_preset": "ru_balanced",
+    "show_empty_category_block": False,
+    "show_customize_action_without_optional": False,
+    "empty_category_block_text": "",
 }
 ```
 
@@ -53,6 +56,19 @@ Keys:
 - `consent_ui_variant`: selection interface option (`inline`, `panel`).
 - `reconsent_notice_variant`: re-consent notification option (`inline`, `alert`).
 - `text_preset`: text preset code (`ru_balanced`, `ru_formal`, `ru_compact`).
+- `show_empty_category_block`: show the empty `Choose categories` block when there are no optional categories.
+- `show_customize_action_without_optional`: show the `Choose categories` button when there are no optional categories.
+- `empty_category_block_text`: custom text for the empty categories block; if empty, the banner uses the default preset text.
+
+Example for a site that currently uses only required cookies but still needs an explicit empty-category block and customize action:
+
+```python
+"cookie_banner": {
+    "show_empty_category_block": True,
+    "show_customize_action_without_optional": True,
+    "empty_category_block_text": "Only required cookies are used on this site. Additional categories are not configured right now.",
+}
+```
 
 ## Section `cookie_runtime`
 
@@ -78,14 +94,14 @@ Keys:
 - `force_banner`: force the banner to be shown.
 - `preview_param`: URL parameter name for preview mode.
 - `custom_css_url`: additional path to custom styles.
-- `custom_js_url`: Additional path to the user script.
-- `hide_for_bots`: hide banner for robots.
-- `bot_patterns`: custom robot recognition templates.
+- `custom_js_url`: additional path to a custom script.
+- `hide_for_bots`: hide the banner from bots.
+- `bot_patterns`: custom bot-recognition patterns.
 - `user_agent_mode`: user agent processing mode (`off`, `all`, `unique`).
-- `shared_subdomain`: Enable common mode for subdomains.
-- `site_domain`: Site domain for safe return checks.
-- `cookie_domain`: Anonymous token cookie setting domain.
-- `geo_signal_hook`: path to the geosignal object being called.
+- `shared_subdomain`: enable shared mode across subdomains.
+- `site_domain`: site domain for safe-return checks.
+- `cookie_domain`: domain on which the anonymous token cookie is set.
+- `geo_signal_hook`: path to the geo-signal callable.
 
 ## Section `cookie_retention`
 
@@ -115,8 +131,8 @@ Keys:
 - `records_max_count`: limit on number of consent records.
 - `events_max_count`: limit on the number of consent events.
 - `banner_states_max_count`: limit on the number of banner states.
-- `private_records_older_than_days`: separate term for private entries.
-- `private_events_older_than_days`: separate term for private events.
+- `private_records_older_than_days`: separate retention period for private records.
+- `private_events_older_than_days`: separate retention period for private events.
 - `private_signal_paths`: private event source paths.
 - `protect_current_records`: protection of current records from deletion.
 
@@ -125,8 +141,8 @@ Keys:
 In the administrative panel:
 - cookie categories;
 - integration registry;
-- editions of the cookie policy;
-- cookie banner editions;
+- cookie policy revisions;
+- cookie banner revisions;
 - text presets;
 - CSV export separator.
 
@@ -138,7 +154,7 @@ In `settings.py`:
 
 ## Configuration profile from demo site
 
-The demo site for the public circuit used the following working profile:
+For the public flow, the demo site used the following working profile:
 
 ```python
 DJANGO_COOKIES_152FZ = {
@@ -178,8 +194,8 @@ DJANGO_COOKIES_152FZ = {
 This profile showed predictable behavior:
 - the banner is available on all pages via the reopen button;
 - the interface is not overloaded with a separate link in the top menu;
-- robots are not shown the visual layer of the banner;
-- There is a manual preview option to check the display.
+- bots are not shown the visual layer of the banner;
+- a manual preview option is available for checking the display.
 
 More details on the sections of the administrative panel: [Usage, admin menu and settings](./operations-admin.md).
 

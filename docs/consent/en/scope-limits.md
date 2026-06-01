@@ -7,7 +7,7 @@
 
 - Manages the life cycle of consents under 152-FZ in the application.
 - Provides a verifiable domain model and service layer for a basic consent scenario.
-- Supports optional extensions (cookies, API, consent loop, access policies).
+- Supports optional extensions (cookies, API, verified consent flow, access policies).
 
 ## What the module doesn't do
 

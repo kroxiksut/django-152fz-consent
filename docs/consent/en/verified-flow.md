@@ -1,4 +1,4 @@
-# Consent Module: Experimental Confirmed Consent Circuit
+# Consent Module: Experimental Verified Consent Flow
 
 - [To the consent section](./README.md)
 - [To the general documentation section](../README.md)
@@ -17,14 +17,14 @@
 `keep_web_current | mark_web_outdated | withdraw_web_now | withdraw_after_paper_confirmed`;
 - overriding for a specific form via `VerifiedConsentFormPolicy`.
 
-## Graduation practice
+## Rollout practice
 
-Recommended gradual inclusion of `web_only -> paper_required`:
+Recommended gradual transition `web_only -> paper_required`:
 1. `dry-run` without `--apply`;
-2. limited `apply` with `--batch-size`;
+2. a limited `apply` with `--batch-size`;
 3. monitoring `ModuleOperationAuditLog`.
 
-Jump command:
+Transition command:
 
 ```bash
 python manage.py transition_152fz_verified_legacy_web \
@@ -35,17 +35,17 @@ python manage.py transition_152fz_verified_legacy_web \
   --dry-run
 ```
 
-## Borders
+## Boundaries
 
-- the confirmation loop does not replace the underlying consent lifecycle;
-- the acknowledgment loop does not add a separate consent domain;
-- The verification loop does not promise production-ready integrations with third-party signature providers.
+- the verified consent flow does not replace the underlying consent lifecycle;
+- the verified consent flow does not add a separate consent domain;
+- the verified consent flow does not promise production-ready integrations with third-party signature providers.
 
-Separately according to State Key:
-- modes `goskey_required` and `paper_or_goskey` are reserved as a direction
-extensions;
-- working integration with an external service has not yet been implemented;
-- The detailed position of the project is listed in [./goskey.md](./goskey.md).
+Specifically regarding Gosklyuch:
+- the `goskey_required` and `paper_or_goskey` modes are reserved as a direction
+for extension;
+- a working integration with an external service has not yet been implemented;
+- the detailed project position is described in [./goskey.md](./goskey.md).
 
 Detailed operation and step-by-step scenarios:
 - [./operations-admin.md](./operations-admin.md);

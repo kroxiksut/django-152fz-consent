@@ -11,18 +11,18 @@
 `cookie_banner.show_launcher` and `cookie_banner.show_preferences_link`;
 - setting `cookie_banner.preferences_page_template` allows you to embed the page
 cookie settings in the project layout;
-- the fallback script without JavaScript is saved via `<noscript>`.
+- the no-JavaScript fallback is provided via `<noscript>`.
 
 ## Boxed texts and localization
 
-- the default load creates policy text variants `short` and `full`;
-- variants participate in the normal revision life cycle;
-- restarting the download does not create duplicates of the active edition;
-- public signatures and backup strings are supplied in Russian localization.
+- the default load creates the policy text variants `short` and `full`;
+- variants participate in the normal revision lifecycle;
+- re-running the load does not create duplicates of the active revision;
+- public labels and fallback strings are supplied in Russian localization.
 
 ## Interface behavior
 
-- captions and explanations are consistent with the `dismiss` and replay modes;
-- Suppression settings for bots are set separately from the main status logic;
-- optional media and icon slot supported;
-- The script for refusing optional cookies is saved as a separate action.
+- captions and explanations are consistent with the `dismiss` and re-display modes;
+- bot suppression settings are configured separately from the main status logic;
+- an optional media and icon slot is supported;
+- the scenario for refusing optional cookies is recorded as a separate action.

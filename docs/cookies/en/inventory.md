@@ -6,9 +6,9 @@
 ## Recommendation inventory
 
 The minimum recommended inventory scenario has been implemented:
-- analysis of known integrations (`CookieRegistryItem`) and input list;
+- analysis of known integrations (`CookieRegistryItem`) and the input list;
 - category hint: `necessary` / `functional` / `analytics` / `marketing`;
-- Mandatory manual check flag for each result.
+- a mandatory manual-check flag for each result.
 
 Technical entry points:
 - `django_cookies_152fz.inventory.build_best_effort_inventory_hints(...)`;
@@ -17,7 +17,7 @@ Technical entry points:
 
 ## Layer restrictions
 
-- This is a hint layer, not an automatic legal classification;
-- a full-fledged page scanner is not a required part of the kernel;
+- this is a hint layer, not an automatic legal classification;
+- a full-fledged page scanner is not a required part of the core;
 - automatic analysis of all database tables and external CRMs is not included in this layer;
-- Inventory launch is disabled by default: `enable_registry_hints=False`.
+- inventory launch is disabled by default: `enable_registry_hints=False`.

@@ -1,4 +1,4 @@
-# Consents Module: Access Policies and Resource Area
+# Consents Module: Access Policies and Resource Scope
 
 - [To the consent section](./README.md)
 - [To the general documentation section](../README.md)

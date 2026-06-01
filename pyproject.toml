@@ -135,10 +135,10 @@ ignore = ["E501"]
 minversion = "8.0"
 addopts = "-ra --strict-config --strict-markers"
 testpaths = ["tests"]
+pythonpath = ["."]
 DJANGO_SETTINGS_MODULE = "tests.settings"
 cache_dir = ".tmp/pytest-cache"
 markers = [
     "api: tests that require optional API extra (DRF)",
 ]
-
 

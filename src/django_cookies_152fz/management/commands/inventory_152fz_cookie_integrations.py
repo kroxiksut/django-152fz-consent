@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 from collections.abc import Mapping
-from typing import Any
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
@@ -64,4 +63,3 @@ def _is_inventory_hints_enabled() -> bool:
     if not isinstance(inventory, Mapping):
         return False
     return bool(inventory.get("enable_registry_hints", False))
-

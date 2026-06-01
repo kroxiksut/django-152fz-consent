@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Отзыв согласия" %} | {{ revision.document.title }}{% endblock %}
+
+{% block content %}
+  <main class="consent-withdraw">
+    <header class="mb-3">
+      <h2 class="h4">{% trans "Отзыв согласия" %}</h2>
+      <p class="demo-muted">{{ purpose.title }} / {{ revision.document.title }}</p>
+    </header>
+
+    {% include "django_consent_152fz/includes/reconsent_notice.html" with notice=notice only %}
+
+    <section class="mb-3">
+      <p>{% trans "Текущий статус" %}: <strong>{{ status_info.status_label|default:"Нет согласия" }}</strong></p>
+      <p><a href="{{ document_url }}">{% trans "Вернуться к документу" %}</a></p>
+    </section>
+
+    <form method="post">
+      {% csrf_token %}
+      {% if withdraw_form.non_field_errors %}
+      <div class="consent-errors">
+        {% for error in withdraw_form.non_field_errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {{ withdraw_form.anonymous_token }}
+      {{ withdraw_form.next }}
+      {{ withdraw_form.client_timezone }}
+      {{ withdraw_form.client_languages }}
+      {{ withdraw_form.client_os_locale }}
+      {{ withdraw_form.client_screen_width }}
+      {{ withdraw_form.client_screen_height }}
+
+      <label>
+        {{ withdraw_form.confirm }}
+        {{ withdraw_form.confirm.label }}
+      </label>
+      {% for error in withdraw_form.confirm.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-outline-danger mt-2">{% trans "Отозвать согласие" %}</button>
+    </form>
+  </main>
+{% endblock %}

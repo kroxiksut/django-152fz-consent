@@ -1,0 +1,99 @@
+﻿{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}Контакты | Учебный центр{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="card demo-card">
+        <div class="card-body p-4">
+          <h2 class="h4 mb-3">Связаться с нами</h2>
+          <p class="demo-muted">Используйте эту форму для вопросов по расписанию и записи на обучение.</p>
+
+          <form method="post" novalidate data-consent-radio-form>
+            {% csrf_token %}
+            {% if verified_transition and verified_transition.blocking %}
+              <div class="alert alert-warning" role="alert">
+                {{ verified_transition.message }}
+                {% if verified_transition.upload_url %}
+                  <a href="{{ verified_transition.upload_url }}" class="alert-link">Загрузить подтверждение</a>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% bootstrap_field form.full_name %}
+            {% bootstrap_field form.email %}
+            {% bootstrap_field form.message %}
+            <p class="small demo-muted mb-3">
+              Текст согласия:
+              <a href="{{ consent_document_url }}" target="_blank" rel="noopener">открыть и подписать</a>
+            </p>
+            {% if form.consent_decision %}
+              {% bootstrap_field form.consent_decision %}
+            {% endif %}
+            {% if form.confirm %}
+              {% bootstrap_field form.confirm %}
+            {% endif %}
+            <p
+              class="text-danger fw-semibold"
+              data-consent-blocked-message
+              style="display:none;"
+              role="alert"
+            >
+              Без согласия на обработку персональных данных отправка формы невозможна.
+            </p>
+            <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll("form[data-consent-radio-form]").forEach((form) => {
+      const decline = form.querySelector('input[name="consent_decision"][value="decline"]');
+      const agree = form.querySelector('input[name="consent_decision"][value="agree"]');
+      const blockedMessage = form.querySelector("[data-consent-blocked-message]");
+      const blockSubmit = "{{ consent_capture_settings.decline_action|default:'' }}" === "block_submit";
+      const warningEnabled = "{{ consent_capture_settings.decline_warning_enabled|yesno:'1,0' }}" === "1";
+
+      const syncDeclineState = () => {
+        if (!blockedMessage || !decline || !blockSubmit) {
+          return;
+        }
+        blockedMessage.style.display = decline.checked ? "" : "none";
+      };
+
+      if (decline) {
+        decline.addEventListener("change", syncDeclineState);
+      }
+      if (agree) {
+        agree.addEventListener("change", syncDeclineState);
+      }
+      syncDeclineState();
+
+      form.addEventListener("submit", (event) => {
+        if (!decline || !decline.checked) {
+          return;
+        }
+        if (blockSubmit) {
+          event.preventDefault();
+          if (blockedMessage) {
+            blockedMessage.style.display = "";
+            blockedMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return;
+        }
+        if (blockedMessage) {
+          blockedMessage.style.display = "none";
+        }
+        if (!warningEnabled) {
+          return;
+        }
+        const confirmed = window.confirm("{{ consent_capture_settings.decline_warning_text|escapejs }}");
+        if (!confirmed) {
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+{% endblock %}

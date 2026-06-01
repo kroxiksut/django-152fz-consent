@@ -1,0 +1,145 @@
+{% load i18n cookies_tags %}
+<main
+  class="cookie-preferences"
+  data-cookie-choice-root
+  data-cookie-choice-mode="preferences"
+  data-cookie-choice-all-label="{% trans 'Все необязательные категории включены' %}"
+  data-cookie-choice-reject-label="{% trans 'Отказ от необязательных категорий' %}"
+  data-cookie-choice-required-label="{% trans 'Выбраны только обязательные категории' %}"
+  data-cookie-choice-custom-label="{% trans 'Выбраны отдельные категории' %}"
+  data-cookie-choice-initial-state="{{ banner_state.default_choice_action|default:'' }}"
+>
+  {% block cookie_preferences_header %}
+  <header>
+    {% trans "no decision" as cookie_no_decision_text %}
+    <p>
+      {% trans "Версия политики cookie" %}: <strong>{{ policy.version }}</strong>
+    </p>
+    <h1>{% trans "Настройки cookie" %}</h1>
+    <p>
+      {% trans "Статус" %}: <strong>{{ status_info.status|default:cookie_no_decision_text }}</strong>
+    </p>
+    {% if status_info.requires_reconsent %}
+    <p>
+      {% trans "Обновите выбор категорий cookie: опубликована новая редакция политики cookie." %}
+    </p>
+    {% endif %}
+  </header>
+  {% endblock %}
+
+  {% block cookie_preferences_policy %}
+  <article class="cookie-policy">
+    {{ policy|render_cookie_policy }}
+  </article>
+  {% endblock %}
+
+  {% block cookie_preferences_required %}
+  <section class="cookie-required">
+    <h2>{% trans "Обязательные категории" %}</h2>
+    <ul>
+      {% for category in required_categories %}
+      <li>
+        <strong>{{ category.title }}</strong>{% if category.description %} - {{ category.description }}{% endif %}
+      </li>
+      {% empty %}
+      <li>{% trans "Нет обязательных категорий." %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endblock %}
+
+  {% block cookie_preferences_optional %}
+  <section class="cookie-optional">
+    <h2>{% trans "Необязательные категории" %}</h2>
+    <form method="post" data-cookie-audit-form data-cookie-preferences-form>
+      {% csrf_token %}
+      {% if preferences_form.non_field_errors %}
+      <div class="cookie-errors">
+        {% for error in preferences_form.non_field_errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {{ preferences_form.anonymous_token }}
+      {{ preferences_form.next }}
+      {{ preferences_form.client_timezone }}
+      {{ preferences_form.client_languages }}
+      {{ preferences_form.client_os_locale }}
+      {{ preferences_form.client_screen_width }}
+      {{ preferences_form.client_screen_height }}
+
+      <div class="dz152fz-cookie-banner__actions">
+        <button
+          type="submit"
+          name="banner_action"
+          value="accept_all"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="accept_all"
+          aria-pressed="false"
+        >
+          {% trans "Select all optional categories" %}
+        </button>
+        <button
+          type="submit"
+          name="banner_action"
+          value="reject_all"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="reject_all"
+          aria-pressed="false"
+        >
+          {% trans "Reject optional categories" %}
+        </button>
+        <button
+          type="submit"
+          name="banner_action"
+          value="required_only"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="required_only"
+          aria-pressed="false"
+        >
+          {% trans "Keep only required cookie categories" %}
+        </button>
+        {% if preferences_show_customize_action %}
+        <button
+          type="button"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="custom"
+          aria-pressed="false"
+        >
+          {% trans "Choose categories" %}
+        </button>
+        {% endif %}
+      </div>
+      <p class="dz152fz-cookie-banner__selection" data-cookie-choice-indicator></p>
+      <p
+        class="dz152fz-cookie-banner__sr-status"
+        data-cookie-choice-status
+        role="status"
+        aria-live="polite"
+      ></p>
+      <p class="dz152fz-cookie-banner__selection">
+        {% trans "Refusal means optional categories remain disabled until you change your choice." %}
+      </p>
+
+      {% if preferences_show_optional_custom_block %}
+      {% for field in preferences_form.selected_categories %}
+      <label>
+        {{ field.tag }}
+        {{ field.choice_label }}
+      </label>
+      {% empty %}
+      <p>{{ preferences_empty_category_block_text }}</p>
+      {% endfor %}
+      {% for error in preferences_form.selected_categories.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+
+      {% if preferences_has_optional_categories %}
+      <button type="submit" name="banner_action" value="save_custom">{% trans "Сохранить настройки cookie" %}</button>
+      {% endif %}
+      {% endif %}
+    </form>
+  </section>
+  {% endblock %}
+</main>

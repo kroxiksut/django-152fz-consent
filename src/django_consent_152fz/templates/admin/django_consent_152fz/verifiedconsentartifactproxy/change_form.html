@@ -1,0 +1,14 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block submit_buttons_bottom %}
+  {{ block.super }}
+  {% if change and original %}
+    <div class="submit-row">
+      <input type="submit" name="_confirm_current_as_employee" value="{% trans 'Подтвердить как сотрудник' %}">
+      {% if request.user.is_superuser %}
+        <input type="submit" name="_confirm_current_as_admin" value="{% trans 'Подтвердить как администратор' %}">
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

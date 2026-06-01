@@ -80,6 +80,16 @@ pip install "django-consent-152fz[api]"
 
 Russian legal texts and cookie policy templates can be replaced with texts for other jurisdictions. See the [legal text inventory and review map](./docs/legal-texts.md) for where these texts live and how to review them, and the module docs for authoring and configuration.
 
+## Agent-facing guides shipped with the packages
+
+In addition to the repo docs above, each installed package ships opt-in guidance for AI coding agents inside the distribution at `<package>/ai/` - `AGENTS.md`, `AI_RULES.md`, `AI_CONTEXT.md`, `SKILLS.md`. To use them, point your agent at the path, for example:
+
+```
+@<site-packages>/django_consent_152fz/ai/AGENTS.md
+```
+
+They are not loaded automatically and do not override your own project's agent rules. Each package's `ai/` folder is namespaced under its own distribution, so the consent and cookies guides never collide. See the per-package README for details.
+
 ## Translations and internationalization
 
 The packages ship with Russian (`ru`) and English (`en`) and use Django's `gettext`, so adding a locale is just a new `.po`/`.mo` pair - no code changes required.

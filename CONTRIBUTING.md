@@ -2,6 +2,9 @@
 
 Thanks for contributing to `django-consent-152fz`.
 
+> **Security issues:** do not report vulnerabilities through public issues or pull
+> requests. Follow the [security policy](./SECURITY.md) for private reporting.
+
 ## Environment
 
 - Python: `>=3.10`
@@ -31,8 +34,8 @@ python -m pip install -e .[dev]
 ### Any OS (`conda`)
 
 ```bash
-conda create -n django152fz-py312 python=3.12 -y
-conda activate django152fz-py312
+conda create -n py312-152fz python=3.12 -y
+conda activate py312-152fz
 python -m pip install -U pip
 python -m pip install -e .[dev]
 ```
@@ -50,6 +53,7 @@ python -m pip install -U pip
 python -m pip install -e .[dev]
 python -m pytest
 ruff check src tests
+pyright
 ```
 
 Example commands (Windows PowerShell, `venv`):
@@ -61,13 +65,15 @@ python -m pip install -U pip
 python -m pip install -e .[dev]
 python -m pytest
 ruff check src tests
+pyright
 ```
 
 Example commands (Windows PowerShell, `conda`):
 
 ```powershell
-& 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n py312-152fz python -m pytest
-& 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n py312-152fz ruff check src tests
+conda run -n py312-152fz python -m pytest
+conda run -n py312-152fz ruff check src tests
+conda run -n py312-152fz pyright
 ```
 
 ## Before opening a pull request
@@ -76,30 +82,24 @@ Example commands (Windows PowerShell, `conda`):
 2. Check for regressions across core/cookies/api boundaries.
 3. Update documentation to match behavior changes.
 4. If file structure changed, update `STRUCTURE.md`.
-5. If roadmap status changed, update `TASKS.md`.
+5. Run `pyright` locally. Type checking is a required gate.
 
 ## Code and docs rules
 
-- Domain invariants: `ARCHITECTURE.md`.
-- Repository development rules: `AI_RULES.md`.
 - New behavior must include tests (unit/integration level as needed).
 - Translation contributions are welcome and reviewed as first-class changes.
 - For translation workflow and requirements, see [docs/i18n/README.md](./docs/i18n/README.md).
-
-## What to commit from AI/meta files
-
-- Commit repository-level guidance that is part of project process (for example: `AGENTS.md`, stable architecture docs, contribution docs).
-- Do not commit local tool state or private assistant workspace files.
-- Respect `.gitignore` as the source of truth for local/generated artifacts.
+- If `.po` files were changed, rebuild locale binaries before package build/publish:
+  `python -m django compilemessages --ignore .venv --ignore node_modules --ignore build --ignore dist`.
+- A change that updates `.po` is incomplete without updated `.mo` files in the same change set.
 
 ## Scope references
 
 Before large changes, check:
 
 - `README.md` (public scope),
-- `TASKS.md` (roadmap and statuses),
-- `AI_CONTEXT.md` (product boundaries),
-- `AI_RULES.md` (architecture and process constraints).
+- module docs under `docs/`,
+- contribution and translation guides.
 
 ## Commit messages
 

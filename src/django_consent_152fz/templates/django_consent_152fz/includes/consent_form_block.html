@@ -1,0 +1,155 @@
+{% load i18n %}
+<section class="consent-form-block">
+  {% if requirement %}
+  <h2>{% trans "Согласие на обработку" %}</h2>
+  {% if requirement.verified_consent.required %}
+  <p>{% blocktrans with mode=requirement.verified_consent.verification_mode trimmed %}Для этого потока требуется усиленное подтверждение: {{ mode }}.{% endblocktrans %}</p>
+  {% endif %}
+  {% endif %}
+
+  {% if status_info and status_info.is_current and not status_info.requires_consent %}
+  <p>{% trans "Актуальное согласие уже зафиксировано." %}</p>
+  {% elif requirement is None and status_info and not status_info.is_applicable %}
+  {% if consent_gate_message %}
+  <p>{{ consent_gate_message }}</p>
+  {% else %}
+  <p>{% trans "Для текущего пользователя согласие в этом потоке недоступно." %}</p>
+  {% endif %}
+  {% else %}
+  {% if status_info and status_info.consent_required_reason == "every_time" %}
+  <p>{% trans "Для этого действия нужно повторное подтверждение согласия." %}</p>
+  {% elif status_info and status_info.consent_required_reason == "outdated" %}
+  <p>{% trans "Требуется подтверждение новой редакции документа." %}</p>
+  {% endif %}
+  {% if status_info and status_info.verified_transition and status_info.verified_transition.enabled and status_info.verified_transition.status_code != "verified" %}
+  <p data-verified-transition-state="{{ status_info.verified_transition.status_code }}">
+    {% if status_info.verified_transition.status_code == "paper_required" %}
+    {% trans "Для этого потока требуется бумажное или иное проверяемое подтверждение. Подписание через web-форму недоступно." %}
+    {% elif status_info.verified_transition.status_code == "awaiting_upload" %}
+    {% trans "Для этого потока уже сохранены данные, но ещё не загружен подписанный бумажный документ." %}
+    {% elif status_info.verified_transition.status_code == "pending_verification" %}
+    {% trans "Подписанный документ загружен и ожидает проверки оператором ПДн." %}
+    {% elif status_info.verified_transition.status_code == "rejected" %}
+    {% trans "Предыдущее проверяемое подтверждение отклонено. Загрузите новый подписанный документ." %}
+    {% else %}
+    {% trans "Для этого потока требуется проверяемое подтверждение согласия." %}
+    {% endif %}
+  </p>
+  {% else %}
+  <form method="post" action="{{ accept_url }}" data-consent-audit-form>
+    {% csrf_token %}
+    {% if accept_form.non_field_errors %}
+    <div class="consent-errors">
+      {% for error in accept_form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {{ accept_form.anonymous_token }}
+    {{ accept_form.next }}
+    {{ accept_form.client_timezone }}
+    {{ accept_form.client_languages }}
+    {{ accept_form.client_os_locale }}
+    {{ accept_form.client_screen_width }}
+    {{ accept_form.client_screen_height }}
+    {{ accept_form.verification_channel }}
+    {{ accept_form.verification_form_code }}
+
+    {% if field_descriptors %}
+    <p>{% trans "Подтверждаемая обработка распространяется на" %}:</p>
+    <ul>
+      {% for field in field_descriptors %}
+      <li>{{ field.label }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if accept_form.consent_decision %}
+      <fieldset>
+        <legend>{{ accept_form.consent_decision.label }}</legend>
+        {{ accept_form.consent_decision }}
+      </fieldset>
+      {% for error in accept_form.consent_decision.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% if accept_form.confirm %}
+      <label>
+        {{ accept_form.confirm }}
+        {{ accept_form.confirm.label }}
+      </label>
+      {% for error in accept_form.confirm.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    {% endif %}
+    <p
+      data-consent-blocked-message
+      style="display:none; color:#b42318; font-weight:600;"
+      role="alert"
+    >
+      {% trans "Без согласия на обработку персональных данных отправка формы невозможна." %}
+    </p>
+
+    <button type="submit">{% trans "Подтвердить согласие" %}</button>
+  </form>
+  <script>
+    (function () {
+      var form = document.querySelector("[data-consent-audit-form]");
+      if (!form) {
+        return;
+      }
+      var timezone = form.querySelector("[name='client_timezone']");
+      if (timezone && window.Intl && Intl.DateTimeFormat) {
+        timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+      }
+      var languages = form.querySelector("[name='client_languages']");
+      if (languages && Array.isArray(navigator.languages)) {
+        languages.value = JSON.stringify(navigator.languages);
+      }
+      var osLocale = form.querySelector("[name='client_os_locale']");
+      if (osLocale && navigator.language) {
+        osLocale.value = navigator.language;
+      }
+      var screenWidth = form.querySelector("[name='client_screen_width']");
+      var screenHeight = form.querySelector("[name='client_screen_height']");
+      if (screenWidth && window.screen) {
+        screenWidth.value = window.screen.width || "";
+      }
+      if (screenHeight && window.screen) {
+        screenHeight.value = window.screen.height || "";
+      }
+      var declineChoice = form.querySelector("input[name='consent_decision'][value='decline']");
+      var warningEnabled = "{{ consent_capture_settings.decline_warning_enabled|yesno:'1,0' }}" === "1";
+      var blockSubmit = "{{ consent_capture_settings.decline_action|default:'' }}" === "block_submit";
+      var blockedMessage = form.querySelector("[data-consent-blocked-message]");
+      if (declineChoice) {
+        form.addEventListener("submit", function (event) {
+          if (!declineChoice.checked) {
+            if (blockedMessage) {
+              blockedMessage.style.display = "none";
+            }
+            return;
+          }
+          if (blockSubmit) {
+            event.preventDefault();
+            if (blockedMessage) {
+              blockedMessage.style.display = "";
+            }
+            return;
+          }
+          if (!warningEnabled) {
+            return;
+          }
+          var confirmed = window.confirm("{{ consent_capture_settings.decline_warning_text|escapejs }}");
+          if (!confirmed) {
+            event.preventDefault();
+          }
+        });
+      }
+    })();
+  </script>
+  {% endif %}
+  {% endif %}
+</section>

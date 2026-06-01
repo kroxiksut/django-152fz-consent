@@ -1,0 +1,3235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: django-consent-152fz\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-24 00:00+0800\n"
+"PO-Revision-Date: 2026-05-24 00:00+0800\n"
+"Last-Translator: Codex\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\src\django_consent_152fz\admin.py:76
+#: .\src\django_consent_152fz\admin.py:380
+#| msgid "Мои согласия"
+msgid "Согласие"
+msgstr "Agreement"
+
+#: .\src\django_consent_152fz\admin.py:77
+#: .\src\django_consent_152fz\admin.py:381
+#: .\src\django_consent_152fz\verified_consents\admin.py:259
+msgid "Политика"
+msgstr "Policy"
+
+#: .\src\django_consent_152fz\admin.py:78
+#: .\src\django_consent_152fz\admin.py:382
+msgid "Политика обработки персональных данных"
+msgstr "Personal data processing policy"
+
+#: .\src\django_consent_152fz\admin.py:79
+#: .\src\django_consent_152fz\admin.py:383
+msgid "Уведомление"
+msgstr "Notification"
+
+#: .\src\django_consent_152fz\admin.py:80
+#: .\src\django_consent_152fz\admin.py:384
+#| msgid "Мои согласия"
+msgid "Соглашение"
+msgstr "Agreement"
+
+#: .\src\django_consent_152fz\admin.py:81
+#: .\src\django_consent_152fz\admin.py:385
+msgid "Тема"
+msgstr "Subject"
+
+#: .\src\django_consent_152fz\admin.py:87
+msgid "Без шаблона"
+msgstr "No template"
+
+#: .\src\django_consent_152fz\admin.py:260
+msgid "Audience groups"
+msgstr "Audience groups"
+
+#: .\src\django_consent_152fz\admin.py:262
+msgid "Ограничьте публикацию выбранных редакций участниками указанных групп."
+msgstr "Restrict publication of selected editorials to members of specified groups."
+
+#: .\src\django_consent_152fz\admin.py:270
+msgid "Коробочная цель (стартовый набор 152-ФЗ)"
+msgstr "Boxed target (starter set 152-FZ)"
+
+#: .\src\django_consent_152fz\admin.py:273
+msgid ""
+"Выберите цель из стартового набора 152-ФЗ, чтобы автоматически подставить "
+"готовые значения кода, названия, описания и конфигурации полей. После "
+"подстановки все значения можно отредактировать под проект."
+msgstr "Select a target from the 152-FZ starter kit to automatically substitute ready-made code values, names, descriptions and field configurations. After substitution, all values ​​can be edited for the project."
+
+#: .\src\django_consent_152fz\admin.py:314
+#: .\src\django_consent_152fz\admin.py:412
+#: .\src\django_consent_152fz\admin.py:557
+msgid "Код"
+msgstr "Code"
+
+#: .\src\django_consent_152fz\admin.py:315
+#: .\src\django_consent_152fz\admin.py:413
+#: .\src\django_consent_152fz\admin.py:558
+msgid "Название"
+msgstr "Name"
+
+#: .\src\django_consent_152fz\admin.py:316
+#: .\src\django_consent_152fz\admin.py:415
+#: .\src\django_consent_152fz\admin.py:559
+#: .\src\django_consent_152fz\admin.py:1643
+msgid "Описание"
+msgstr "Description"
+
+#: .\src\django_consent_152fz\admin.py:317
+msgid "Конфигурация полей"
+msgstr "Field configuration"
+
+#: .\src\django_consent_152fz\admin.py:318
+msgid "Стратегия отзыва"
+msgstr "Recall strategy"
+
+#: .\src\django_consent_152fz\admin.py:319
+msgid "Режим повторного согласия"
+msgstr "Re-consent mode"
+
+#: .\src\django_consent_152fz\admin.py:320
+msgid "Политика частоты подписания"
+msgstr "Signing Frequency Policy"
+
+#: .\src\django_consent_152fz\admin.py:321
+msgid "Доступность для субъектов"
+msgstr "Availability for subjects"
+
+#: .\src\django_consent_152fz\admin.py:322
+#| msgid "Вариант интерфейса согласия"
+msgid "UI подтверждения для этой формы"
+msgstr "Confirmation UI for this form"
+
+#: .\src\django_consent_152fz\admin.py:323
+#| msgid "Учитывать режим повторного согласия"
+msgid "Обязательный checkbox (override)"
+msgstr "Mandatory checkbox (override)"
+
+#: .\src\django_consent_152fz\admin.py:324
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Действие при «не согласен» (override)"
+msgstr "Action when “I do not agree” (override)"
+
+#: .\src\django_consent_152fz\admin.py:325
+#| msgid "Подписывать при каждом действии"
+msgid "Показывать предупреждение (override)"
+msgstr "Show warning (override)"
+
+#: .\src\django_consent_152fz\admin.py:326
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Текст предупреждения (override)"
+msgstr "Warning text (override)"
+
+#: .\src\django_consent_152fz\admin.py:327
+msgid "Экспериментальный режим"
+msgstr "Experimental mode"
+
+#: .\src\django_consent_152fz\admin.py:328
+#: .\src\django_consent_152fz\admin.py:568
+#: .\src\django_consent_152fz\verified_consents\admin.py:210
+#: .\src\django_consent_152fz\verified_consents\admin.py:310
+msgid "Активна"
+msgstr "Active"
+
+#: .\src\django_consent_152fz\admin.py:332
+msgid ""
+"Стабильный уникальный код цели (например: `newsletter_signup`, "
+"`job_application`, `support_request`). Используется не только в API, но и во "
+"внутренних связях, шаблонах, политиках доступа и маршрутизации логики "
+"согласий."
+msgstr "Stable unique target code (for example: __M0__, __M1__, __M2__). Used not only in the API, but also in internal communications, templates, access policies and routing of consent logic."
+
+#: .\src\django_consent_152fz\admin.py:337
+msgid "Краткое название цели, видимое в админке и UI-сценариях."
+msgstr "The short name of the goal, visible in the admin panel and UI scripts."
+
+#: .\src\django_consent_152fz\admin.py:338
+msgid "Подробно опишите, для чего собирается и используется согласие."
+msgstr "Describe in detail why consent is collected and used."
+
+#: .\src\django_consent_152fz\admin.py:340
+msgid ""
+"JSON-конфигурация полей формы согласия. Минимальная структура: [{\"name\": "
+"\"email\", \"required\": true}]. Каждый элемент — объект поля как минимум с "
+"ключом `name`; рекомендуется указывать `required`."
+msgstr "JSON configuration of consent form fields. Minimum structure: [{\"name\": \"email\", \"required\": true}]. Each element is a field object with at least a key __M0__; It is recommended to specify __M1__."
+
+#: .\src\django_consent_152fz\admin.py:345
+msgid "Поведение системы при отзыве согласия пользователем."
+msgstr "System behavior when the user withdraws consent."
+
+#: .\src\django_consent_152fz\admin.py:346
+msgid "Когда и при каких условиях повторно запрашивать согласие."
+msgstr "When and under what conditions to re-seek consent."
+
+#: .\src\django_consent_152fz\admin.py:348
+msgid ""
+"Определяет, требовать ли подтверждение один раз до новой редакции или при "
+"каждом пользовательском действии."
+"Определяет, требовать ли подтверждение один раз до новой редакции или при "
+"каждом пользовательском действии."
+msgstr "Determines whether to require confirmation once before a new revision or at each user action."
+
+#: .\src\django_consent_152fz\admin.py:352
+msgid ""
+"Ограничивает, может ли цель применяться только к авторизованным или также к "
+"анонимным субъектам."
+"Ограничивает, может ли цель применяться только к авторизованным или также к "
+"анонимным субъектам."
+msgstr "Limits whether the target can only apply to authorized or also anonymous entities."
+
+#: .\src\django_consent_152fz\admin.py:356
+msgid ""
+"Тонкая настройка конкретной формы: наследовать глобальный режим, checkbox "
+"или radio «согласен/не согласен»."
+msgstr "Fine-tuning a specific form: inherit the global mode, checkbox or radio “agree/disagree”."
+
+#: .\src\django_consent_152fz\admin.py:360
+msgid ""
+"Пусто = наследовать глобальную настройку. True/False = принудительное "
+"поведение для этой формы."
+msgstr "Empty = inherit global setting. True/False = Force behavior for this form."
+
+#: .\src\django_consent_152fz\admin.py:364
+msgid ""
+"Как обрабатывать выбор «не согласен» для этой формы: наследовать, "
+"блокировать отправку или разрешать отправку."
+msgstr "How to handle \"disagree\" selection for this form: inherit, block submission, or allow submission."
+
+#: .\src\django_consent_152fz\admin.py:368
+msgid "Пусто = наследовать глобальную настройку показа предупреждения."
+msgstr "Empty = Inherit the global warning display setting."
+
+#: .\src\django_consent_152fz\admin.py:371
+msgid ""
+"Если заполнено, заменяет глобальный текст предупреждения для этой формы."
+msgstr "If populated, replaces the global warning text for this form."
+
+#: .\src\django_consent_152fz\admin.py:373
+msgid "Включайте для пилотных сценариев и ограниченных rollout-потоков."
+msgstr "Enable for pilot scenarios and limited rollout flows."
+
+#: .\src\django_consent_152fz\admin.py:374
+msgid "Отключите цель, чтобы исключить её из активных потоков согласия."
+msgstr "Mute a target to remove it from active consent threads."
+
+#: .\src\django_consent_152fz\admin.py:405
+msgid "Выберите тип документа. В БД сохраняется технический код."
+msgstr "Select a document type. The technical code is stored in the database."
+
+#: .\src\django_consent_152fz\admin.py:414
+#: .\src\django_consent_152fz\admin.py:787
+#: .\src\django_consent_152fz\admin.py:871
+msgid "Тип документа"
+msgstr "Document type"
+
+#: .\src\django_consent_152fz\admin.py:416
+msgid "Активен"
+msgstr "Active"
+
+#: .\src\django_consent_152fz\admin.py:419
+msgid "Уникальный код документа для ссылок из policy и access rules."
+msgstr "Unique document code for links from policy and access rules."
+
+#: .\src\django_consent_152fz\admin.py:420
+msgid "Человекочитаемое название документа."
+msgstr "Human-readable title of the document."
+
+#: .\src\django_consent_152fz\admin.py:421
+msgid "Тип документа для группировки и фильтрации редакций."
+msgstr "Document type for grouping and filtering revisions."
+
+#: .\src\django_consent_152fz\admin.py:422
+msgid "Описание области применения и юридического назначения документа."
+msgstr "Description of the scope and legal purpose of the document."
+
+#: .\src\django_consent_152fz\admin.py:423
+msgid "Снимите флаг, чтобы скрыть документ из рабочих сценариев."
+msgstr "Clear the checkbox to hide the document from working scripts."
+
+#: .\src\django_consent_152fz\admin.py:479
+#: .\src\django_consent_152fz\admin.py:520
+#: .\src\django_consent_152fz\admin.py:561
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:82
+#: .\src\django_consent_152fz\verified_consents\admin.py:197
+#: .\src\django_consent_152fz\verified_consents\admin.py:304
+#: .\src\django_consent_152fz\verified_consents\admin.py:344
+msgid "Документ"
+msgstr "Document"
+
+#: .\src\django_consent_152fz\admin.py:480
+msgid "Код цели"
+msgstr "Target code"
+
+#: .\src\django_consent_152fz\admin.py:481
+msgid "Версия"
+msgstr "Version"
+
+#: .\src\django_consent_152fz\admin.py:482
+msgid "Формат"
+msgstr "Format"
+
+#: .\src\django_consent_152fz\admin.py:483
+msgid "Текст редакции"
+msgstr "Editorial text"
+
+#: .\src\django_consent_152fz\admin.py:484
+msgid "Файл редакции"
+msgstr "Revision file"
+
+#: .\src\django_consent_152fz\admin.py:485
+msgid "Снимок полей"
+msgstr "Snapshot of the fields"
+
+#: .\src\django_consent_152fz\admin.py:486
+#: .\src\django_consent_152fz\verified_consents\admin.py:266
+msgid "Метаданные"
+msgstr "Metadata"
+
+#: .\src\django_consent_152fz\admin.py:487
+msgid "Опубликована"
+msgstr "Published"
+
+#: .\src\django_consent_152fz\admin.py:488
+msgid "Коробочный шаблон"
+msgstr "Box template"
+
+#: .\src\django_consent_152fz\admin.py:489
+msgid "Дата публикации"
+msgstr "Publication date"
+
+#: .\src\django_consent_152fz\admin.py:490
+#: .\src\django_consent_152fz\core\models.py:195
+#: .\src\django_consent_152fz\verified_consents\admin.py:267
+#: .\src\django_consent_152fz\verified_consents\admin.py:358
+msgid "Создано"
+msgstr "Created"
+
+#: .\src\django_consent_152fz\admin.py:493
+msgid "Документ, к которому относится эта редакция."
+msgstr "The document to which this edition refers."
+
+#: .\src\django_consent_152fz\admin.py:494
+msgid "Код цели, с которой связана публикация редакции."
+msgstr "Code of the purpose with which the editorial publication is associated."
+
+#: .\src\django_consent_152fz\admin.py:495
+msgid "Версия редакции в versioned-flow документа."
+msgstr "The revision version in the document's versioned-flow."
+
+#: .\src\django_consent_152fz\admin.py:497
+msgid ""
+"Формат содержимого: text/markdown/html или file-формат (PDF/DOC/DOCX/ODT/"
+"ODTX). Для новых шаблонов рекомендуем markdown."
+msgstr "Content format: text/markdown/html or file format (PDF/DOC/DOCX/ODT/ODTX). For new templates, we recommend markdown."
+
+#: .\src\django_consent_152fz\admin.py:500
+msgid "Текст редакции, если выбран текстовый формат."
+msgstr "Revision text, if text format is selected."
+
+#: .\src\django_consent_152fz\admin.py:502
+msgid ""
+"Загрузите файл редакции для сценариев с файлами (PDF, DOC, DOCX, ODT, ODTX)."
+msgstr "Upload the revision file for scripts with files (PDF, DOC, DOCX, ODT, ODTX)."
+
+#: .\src\django_consent_152fz\admin.py:505
+msgid "JSON-снимок бизнес-полей на момент публикации."
+msgstr "JSON snapshot of business fields at the time of publication."
+
+#: .\src\django_consent_152fz\admin.py:506
+msgid "Дополнительные служебные метаданные в формате JSON."
+msgstr "Additional service metadata in JSON format."
+
+#: .\src\django_consent_152fz\admin.py:507
+msgid "Активная редакция используется в текущем потоке согласия."
+msgstr "The active edition is used in the current consent flow."
+
+#: .\src\django_consent_152fz\admin.py:508
+msgid "Отметка коробочного шаблона, поставляемого пакетом."
+msgstr "Marking the box template supplied in the package."
+
+#: .\src\django_consent_152fz\admin.py:509
+msgid "Дата и время публикации редакции."
+msgstr "Date and time of publication of the editorial."
+
+#: .\src\django_consent_152fz\admin.py:510
+#: .\src\django_consent_152fz\verified_consents\admin.py:280
+msgid "Техническое время создания записи."
+msgstr "Technical time of record creation."
+
+#: .\src\django_consent_152fz\admin.py:519
+#: .\src\django_consent_152fz\admin.py:560
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:81
+#: .\src\django_consent_152fz\verified_consents\admin.py:196
+#: .\src\django_consent_152fz\verified_consents\admin.py:303
+#: .\src\django_consent_152fz\verified_consents\admin.py:343
+msgid "Цель"
+msgstr "Target"
+
+#: .\src\django_consent_152fz\admin.py:521
+#: .\src\django_consent_152fz\admin.py:629
+msgid "Охват"
+msgstr "Coverage"
+
+#: .\src\django_consent_152fz\admin.py:522
+msgid "Django-группа"
+msgstr "Django group"
+
+#: .\src\django_consent_152fz\admin.py:523
+msgid "Требуется согласие"
+msgstr "Consent required"
+
+#: .\src\django_consent_152fz\admin.py:524
+#: .\src\django_consent_152fz\admin.py:639
+msgid "Активно"
+msgstr "Actively"
+
+#: .\src\django_consent_152fz\admin.py:525
+#: .\src\django_consent_152fz\admin.py:569
+#: .\src\django_consent_152fz\verified_consents\admin.py:211
+msgid "Начало действия"
+msgstr "Start of action"
+
+#: .\src\django_consent_152fz\admin.py:526
+#: .\src\django_consent_152fz\admin.py:570
+#: .\src\django_consent_152fz\verified_consents\admin.py:212
+msgid "Окончание действия"
+msgstr "End of action"
+
+#: .\src\django_consent_152fz\admin.py:527
+#: .\src\django_consent_152fz\admin.py:571
+#: .\src\django_consent_152fz\verified_consents\admin.py:213
+#: .\src\django_consent_152fz\verified_consents\admin.py:311
+#: .\src\django_consent_152fz\verified_consents\admin.py:355
+msgid "Заметки"
+msgstr "Notes"
+
+#: .\src\django_consent_152fz\admin.py:528
+msgid "Создано пользователем"
+msgstr "Created by user"
+
+#: .\src\django_consent_152fz\admin.py:531
+msgid "Цель согласия, на которую действует правило аудитории."
+msgstr "The target of consent that is affected by the audience rule."
+
+#: .\src\django_consent_152fz\admin.py:532
+msgid "Документ/редакция, требуемые для доступа аудитории."
+msgstr "Document/edition required for audience access."
+
+#: .\src\django_consent_152fz\admin.py:533
+msgid "Режим охвата: глобально или только для конкретной группы."
+msgstr "Coverage mode: global or only for a specific group."
+
+#: .\src\django_consent_152fz\admin.py:534
+msgid "Django-группа, если правило ограничено group-режимом."
+msgstr "Django group, if the rule is limited to group mode."
+
+#: .\src\django_consent_152fz\admin.py:535
+msgid "Требовать ли согласие по правилу для целевой аудитории."
+msgstr "Whether to require consent according to the target audience rule."
+
+#: .\src\django_consent_152fz\admin.py:536
+msgid "Отключите правило, чтобы временно исключить его из вычислений."
+msgstr "Disable a rule to temporarily exclude it from calculations."
+
+#: .\src\django_consent_152fz\admin.py:537
+msgid "Начало действия правила (опционально)."
+msgstr "Start of the rule (optional)."
+
+#: .\src\django_consent_152fz\admin.py:538
+msgid "Окончание действия правила (опционально)."
+msgstr "End of the rule (optional)."
+
+#: .\src\django_consent_152fz\admin.py:539
+msgid "Внутренние комментарии для сопровождения правила."
+msgstr "Internal comments to accompany the rule."
+
+#: .\src\django_consent_152fz\admin.py:540
+msgid "Пользователь, создавший правило."
+msgstr "The user who created the rule."
+
+#: .\src\django_consent_152fz\admin.py:562
+msgid "Код ресурса"
+msgstr "Resource code"
+
+#: .\src\django_consent_152fz\admin.py:563
+msgid "Метка приложения"
+msgstr "Application Label"
+
+#: .\src\django_consent_152fz\admin.py:564
+msgid "Модель"
+msgstr "Model"
+
+#: .\src\django_consent_152fz\admin.py:565
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:87
+msgid "Действие"
+msgstr "Action"
+
+#: .\src\django_consent_152fz\admin.py:566
+msgid "При отсутствии согласия"
+msgstr "In the absence of consent"
+
+#: .\src\django_consent_152fz\admin.py:567
+msgid "При устаревшем согласии"
+msgstr "With legacy consent"
+
+#: .\src\django_consent_152fz\admin.py:572
+#: .\src\django_consent_152fz\verified_consents\admin.py:214
+#: .\src\django_consent_152fz\verified_consents\admin.py:312
+#: .\src\django_consent_152fz\verified_consents\admin.py:356
+msgid "Доп. метаданные"
+msgstr "Add. metadata"
+
+#: .\src\django_consent_152fz\admin.py:576
+msgid ""
+"Стабильный уникальный код политики доступа (например: `public_profile_view`, "
+"`orders_export`, `crm_contact_update`). Нужен не только для API-интеграций: "
+"используется в аудит-логах, внутренних ссылках и для однозначной "
+"идентификации policy в guard layer."
+msgstr "Stable unique access policy code (for example: __M0__, __M1__, __M2__). It is needed not only for API integrations: it is used in audit logs, internal links and for unique identification of policy in the guard layer."
+
+#: .\src\django_consent_152fz\admin.py:581
+msgid "Краткое название политики доступа."
+msgstr "Short name of the access policy."
+
+#: .\src\django_consent_152fz\admin.py:582
+msgid "Опишите, какой ресурс и почему ограничивается согласием."
+msgstr "Describe which resource is limited by consent and why."
+
+#: .\src\django_consent_152fz\admin.py:583
+msgid "Цель согласия, проверяемая перед доступом."
+msgstr "Purpose of consent verified before access."
+
+#: .\src\django_consent_152fz\admin.py:585
+msgid ""
+"Документ/редакция, подтверждающие требуемое согласие. В списке отображается "
+"формат «Название (код)»."
+msgstr "Document/edition confirming the required consent. The list displays the format “Name (code)”."
+
+#: .\src\django_consent_152fz\admin.py:589
+msgid ""
+"Стабильный код защищаемого ресурса или бизнес-операции (например: "
+"`profile_page`, `orders_export_csv`, `support_ticket_update`, "
+"`billing.invoice_export`). Ресурсом считается страница, действие или "
+"endpoint, доступ к которым проверяется policy/guard layer. Для охвата по "
+"подсистемам используйте модульный префикс (`crm.contact_update`, "
+"`billing.invoice_export`, `support.ticket_view`)."
+msgstr "Stable code of the protected resource or business operation (for example: __M0__, __M1__, __M2__, __M3__). A resource is considered to be a page, action or endpoint, access to which is verified by the policy/guard layer. To cover by subsystem, use the modular prefix (__M4__, __M5__, __M6__)."
+
+#: .\src\django_consent_152fz\admin.py:598
+msgid "Django app_label целевой модели для model-level проверок."
+msgstr "Django app_label of the target model for model-level checks."
+
+#: .\src\django_consent_152fz\admin.py:599
+msgid "Имя модели (без app_label) для model-level проверок."
+msgstr "Model name (without app_label) for model-level checks."
+
+#: .\src\django_consent_152fz\admin.py:601
+msgid ""
+"Код действия в guard-проверке (например: `view` — просмотр, `add` — "
+"создание, `change` — изменение, `delete` — удаление, `export` — выгрузка). "
+"Поле остаётся свободным: можно указывать и проектные коды действий "
+"(`approve`, `publish`, `archive`), если они используются в вашем policy/"
+"guard contract."
+msgstr "Action code in the guard check (for example: __M0__ - view, __M1__ - create, __M2__ - change, __M3__ - delete, __M4__ - upload). The field remains free: you can also specify project action codes (__M5__, __M6__, __M7__) if they are used in your policy/guard contract."
+
+#: .\src\django_consent_152fz\admin.py:608
+msgid "Реакция системы, если согласие отсутствует."
+msgstr "The system's reaction if there is no agreement."
+
+#: .\src\django_consent_152fz\admin.py:609
+msgid "Реакция системы, если согласие устарело."
+msgstr "System reaction if consent is out of date."
+
+#: .\src\django_consent_152fz\admin.py:610
+msgid "Включает или отключает политику в runtime."
+msgstr "Enables or disables the policy at runtime."
+
+#: .\src\django_consent_152fz\admin.py:611
+#: .\src\django_consent_152fz\verified_consents\admin.py:246
+msgid "Начало действия политики (опционально)."
+msgstr "Start of the policy (optional)."
+
+#: .\src\django_consent_152fz\admin.py:612
+#: .\src\django_consent_152fz\verified_consents\admin.py:247
+msgid "Окончание действия политики (опционально)."
+msgstr "Expiration of the policy (optional)."
+
+#: .\src\django_consent_152fz\admin.py:613
+msgid "Внутренние пояснения по назначению политики."
+msgstr "Internal explanations of the purpose of the policy."
+
+#: .\src\django_consent_152fz\admin.py:615
+msgid ""
+"Дополнительные технические метаданные в JSON. Для группировки policy по "
+"модулю/подсистеме используйте contract вида: {\"module_scope\": \"billing\", "
+"\"subsystem\": \"invoices\"}."
+msgstr "Additional technical metadata in JSON. To group policies by module/subsystem, use a contract of the form: {\"module_scope\": \"billing\", \"subsystem\": \"invoices\"}."
+
+#: .\src\django_consent_152fz\admin.py:628
+#: .\src\django_consent_152fz\verified_consents\admin.py:345
+#: .\src\django_consent_152fz\verified_consents\admin.py:460
+msgid "Пользователь"
+msgstr "User"
+
+#: .\src\django_consent_152fz\admin.py:630
+msgid "Django-группы"
+msgstr "Django groups"
+
+#: .\src\django_consent_152fz\admin.py:631
+msgid "Может управлять целями"
+msgstr "Can manage goals"
+
+#: .\src\django_consent_152fz\admin.py:632
+msgid "Может управлять документами"
+msgstr "Can manage documents"
+
+#: .\src\django_consent_152fz\admin.py:633
+msgid "Может публиковать редакции"
+msgstr "Can publish editions"
+
+#: .\src\django_consent_152fz\admin.py:634
+msgid "Может управлять правилами аудитории"
+msgstr "Can manage audience rules"
+
+#: .\src\django_consent_152fz\admin.py:635
+msgid "Может управлять политиками доступа"
+msgstr "Can manage access policies"
+
+#: .\src\django_consent_152fz\admin.py:637
+msgid "Может обрабатывать подтверждённые/ручные согласия"
+msgstr "Can handle verified/manual consents"
+
+#: .\src\django_consent_152fz\admin.py:642
+msgid "Пользователь, которому назначаются роли управления согласием."
+msgstr "The user to whom consent management roles are assigned."
+
+#: .\src\django_consent_152fz\admin.py:643
+msgid "Область действия назначения: глобальная или по группам."
+msgstr "Scope of assignment: global or by group."
+
+#: .\src\django_consent_152fz\admin.py:644
+msgid "Группы, в рамках которых действует назначение (если применимо)."
+msgstr "Groups within which the assignment is valid (if applicable)."
+
+#: .\src\django_consent_152fz\admin.py:645
+msgid "Разрешение управлять целями согласия."
+msgstr "Permission to manage consent goals."
+
+#: .\src\django_consent_152fz\admin.py:646
+msgid "Разрешение управлять документами и редакциями."
+msgstr "Permission to manage documents and editions."
+
+#: .\src\django_consent_152fz\admin.py:647
+msgid "Разрешение публиковать новые редакции."
+msgstr "Permission to publish new editions."
+
+#: .\src\django_consent_152fz\admin.py:648
+msgid "Разрешение управлять правилами аудитории."
+msgstr "Permission to manage audience rules."
+
+#: .\src\django_consent_152fz\admin.py:650
+msgid "Разрешение управлять правилами политик доступа."
+msgstr "Permission to manage access policy rules."
+
+#: .\src\django_consent_152fz\admin.py:653
+msgid "Разрешение обрабатывать артефакты подтверждённых/ручных согласий."
+msgstr "Permission to process verified/manual consent artifacts."
+
+#: .\src\django_consent_152fz\admin.py:655
+msgid "Отключите назначение, чтобы временно снять полномочия."
+msgstr "Disable the assignment to temporarily remove permissions."
+
+#: .\src\django_consent_152fz\admin.py:665
+msgid "Как открывать «Открыть и подписать» в самообслуживании"
+msgstr "How to open Open and Sign in Self Service"
+
+#: .\src\django_consent_152fz\admin.py:667
+msgid "Что показывать в списке самообслуживания"
+msgstr "What to show in the self-service list"
+
+#: .\src\django_consent_152fz\admin.py:668
+#| msgid "Вариант интерфейса согласия"
+msgid "Вариант UI подтверждения согласия"
+msgstr "UI option to confirm consent"
+
+#: .\src\django_consent_152fz\admin.py:669
+#| msgid "Учитывать режим повторного согласия"
+msgid "Обязательный checkbox в форме согласия"
+msgstr "Mandatory checkbox in the consent form"
+
+#: .\src\django_consent_152fz\admin.py:670
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Поведение при выборе «не согласен»"
+msgstr "Behavior when choosing “disagree”"
+
+#: .\src\django_consent_152fz\admin.py:671
+#: .\src\django_consent_152fz\core\models.py:147
+#| msgid "Подписывать при каждом действии"
+msgid "Показывать предупреждение при отказе"
+msgstr "Show warning on failure"
+
+#: .\src\django_consent_152fz\admin.py:672
+#: .\src\django_consent_152fz\core\models.py:155
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Текст предупреждения при отказе"
+msgstr "Failure warning text"
+
+#: .\src\django_consent_152fz\admin.py:673
+#: .\src\django_consent_152fz\core\models.py:161
+msgid "Разделитель CSV-экспорта"
+msgstr "CSV export separator"
+
+#: .\src\django_consent_152fz\admin.py:674
+#: .\src\django_consent_152fz\core\models.py:167
+msgid "Формат бумаги для печатного PDF"
+msgstr "Paper size for printed PDF"
+
+#: .\src\django_consent_152fz\admin.py:675
+#: .\src\django_consent_152fz\core\models.py:173
+msgid "Шрифт печатного PDF"
+msgstr "Printable PDF font"
+
+#: .\src\django_consent_152fz\admin.py:676
+#: .\src\django_consent_152fz\core\models.py:177
+msgid "Размер шрифта печатного PDF"
+msgstr "Printed PDF Font Size"
+
+#: .\src\django_consent_152fz\admin.py:677
+#: .\src\django_consent_152fz\core\models.py:183
+#| msgid "Вариант интерфейса согласия"
+msgid "Выравнивание текста печатного PDF"
+msgstr "Align text in printed PDF"
+
+#: .\src\django_consent_152fz\admin.py:679
+#: .\src\django_consent_152fz\core\models.py:187
+#| msgid "Политика частоты подписания"
+msgid "Добавлять блок подписи внизу PDF"
+msgstr "Add signature block at bottom of PDF"
+
+#: .\src\django_consent_152fz\admin.py:682
+#: .\src\django_consent_152fz\core\models.py:193
+#| msgid "Вариант интерфейса согласия"
+msgid "Выравнивание подписи (ПОДПИСЬ/ФИО)"
+msgstr "Signature alignment (SIGNATURE/FULL NAME)"
+
+#: .\src\django_consent_152fz\admin.py:687
+msgid ""
+"Определяет, как открывать страницу документа из списка самообслуживания: в "
+"текущей вкладке, в новом окне или в модальном окне."
+msgstr "Determines whether to open the document page from the self-service list: in the current tab, in a new window, or in a modal window."
+
+#: .\src\django_consent_152fz\admin.py:691
+msgid ""
+"Режим списка: все потоки, только требующие подписи или только уже "
+"подписанные."
+msgstr "List mode: all streams that only require a signature or only those that have already been signed."
+
+#: .\src\django_consent_152fz\admin.py:694
+msgid "Выберите тип элемента в блоке подписания: checkbox или radio."
+msgstr "Select the type of element in the signature block: checkbox or radio."
+
+#: .\src\django_consent_152fz\admin.py:697
+msgid "Если включено, без отметки checkbox отправка формы невозможна."
+msgstr "If enabled, the form cannot be submitted without a checkbox."
+
+#: .\src\django_consent_152fz\admin.py:700
+msgid ""
+"Определяет, блокировать ли отправку формы при выборе варианта «не согласен»."
+msgstr "Determines whether to block form submission when the “disagree” option is selected."
+
+#: .\src\django_consent_152fz\admin.py:703
+msgid "Показывать диалог-предупреждение перед отправкой формы при отказе."
+msgstr "Show a warning dialog before submitting the form when the form is rejected."
+
+#: .\src\django_consent_152fz\admin.py:706
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Текст предупреждения в диалоге подтверждения отказа."
+msgstr "Warning text in the refusal confirmation dialog."
+
+#: .\src\django_consent_152fz\admin.py:709
+msgid ""
+"Разделитель по умолчанию для CSV-экспорта в административных списках "
+"согласий."
+msgstr "Default separator for CSV exports in administrative consent lists."
+
+#: .\src\django_consent_152fz\admin.py:712
+#| msgid "Для этого действия нужно повторное подтверждение согласия."
+msgid "Формат страницы для автоматически сгенерированного PDF согласия."
+msgstr "Page format for automatically generated PDF consent."
+
+#: .\src\django_consent_152fz\admin.py:715
+msgid "Базовый шрифт для текста в автоматически сгенерированном PDF."
+msgstr "Base font for text in automatically generated PDF."
+
+#: .\src\django_consent_152fz\admin.py:718
+msgid "Размер шрифта в пунктах (pt), используется при генерации печатного PDF."
+msgstr "Font size in points (pt), used when generating printed PDF."
+
+#: .\src\django_consent_152fz\admin.py:721
+msgid "Выравнивание текста по умолчанию для печатной PDF-версии согласия."
+msgstr "Default text alignment for printed consent PDF."
+
+#: .\src\django_consent_152fz\admin.py:724
+msgid "Добавляет внизу страницы поля даты и подписи для печатного подписания."
+msgstr "Adds date and signature fields to the bottom of the page for printed signatures."
+
+#: .\src\django_consent_152fz\admin.py:727
+msgid "Положение подписи (ПОДПИСЬ/ФИО): слева, по центру или справа."
+msgstr "Signature position (SIGNATURE/FULL NAME): left, center or right."
+
+#: .\src\django_consent_152fz\admin.py:737
+msgid "Размер шрифта должен быть в диапазоне от 8 до 24 pt."
+msgstr "The font size should be in the range from 8 to 24 pt."
+
+#: .\src\django_consent_152fz\admin.py:745
+msgid "Revision origin"
+msgstr "Revision origin"
+
+#: .\src\django_consent_152fz\admin.py:750
+msgid "Starter templates"
+msgstr "Starter templates"
+
+#: .\src\django_consent_152fz\admin.py:751
+msgid "Custom revisions"
+msgstr "Custom revisions"
+
+#: .\src\django_consent_152fz\admin.py:766
+#: .\src\django_consent_152fz\admin.py:883
+msgid "Document stream"
+msgstr "Document stream"
+
+#: .\src\django_consent_152fz\admin.py:771
+#: .\src\django_consent_152fz\admin.py:890
+msgid "Starter template stream"
+msgstr "Starter template stream"
+
+#: .\src\django_consent_152fz\admin.py:772
+#: .\src\django_consent_152fz\admin.py:892
+msgid "Custom stream"
+msgstr "Custom stream"
+
+#: .\src\django_consent_152fz\admin.py:888
+msgid "Starter + custom"
+msgstr "Starter + custom"
+
+#: .\src\django_consent_152fz\admin.py:893
+msgid "No revisions"
+msgstr "No revisions"
+
+#: .\src\django_consent_152fz\admin.py:895
+msgid "Склонировать выбранные документы в черновые потоки"
+msgstr "Clone selected documents into draft streams"
+
+#: .\src\django_consent_152fz\admin.py:910
+#, python-format
+msgid "Склонирован %(count)d поток документа."
+msgid_plural "Склонировано %(count)d потоков документов."
+msgstr[0] "Cloned %(count)d document stream."
+msgstr[1] "%(count)d document streams cloned."
+
+#: .\src\django_consent_152fz\admin.py:986
+msgid "Document title"
+msgstr "Document title"
+
+#: .\src\django_consent_152fz\admin.py:990
+#| msgid "Текст документа"
+msgid "Код документа"
+msgstr "Document code"
+
+#: .\src\django_consent_152fz\admin.py:994
+msgid "Origin"
+msgstr "Origin"
+
+#: .\src\django_consent_152fz\admin.py:997
+#: .\src\django_consent_152fz\admin.py:1005
+msgid "Starter template"
+msgstr "Starter template"
+
+#: .\src\django_consent_152fz\admin.py:999
+msgid "Custom draft from starter template"
+msgstr "Custom draft from starter template"
+
+#: .\src\django_consent_152fz\admin.py:1000
+msgid "Custom revision"
+msgstr "Custom revision"
+
+#: .\src\django_consent_152fz\admin.py:1002
+msgid "Source template"
+msgstr "Source template"
+
+#: .\src\django_consent_152fz\admin.py:1019
+msgid "Create custom draft copies from selected starter templates"
+msgstr "Create custom draft copies from selected starter templates"
+
+#: .\src\django_consent_152fz\admin.py:1043
+#, python-format
+msgid "Created %(count)d custom draft from starter template."
+msgid_plural "Created %(count)d custom drafts from starter templates."
+msgstr[0] "Created %(count)d custom draft from starter template."
+msgstr[1] "Created %(count)d custom drafts from starter templates."
+
+#: .\src\django_consent_152fz\admin.py:1066
+#, python-format
+msgid ""
+"Failed to adapt %(count)d revision. Action is available only for starter "
+"templates without file content."
+msgid_plural ""
+"Failed to adapt %(count)d revisions. Action is available only for starter "
+"templates without file content."
+msgstr[0] "Failed to adapt %(count)d revision. Action is available only for starter templates without file content."
+msgstr[1] "Failed to adapt %(count)d revisions. Action is available only for starter templates without file content."
+
+#: .\src\django_consent_152fz\admin.py:1074
+msgid "Apply revision to all registered users"
+msgstr "Apply revision to all registered users"
+
+#: .\src\django_consent_152fz\admin.py:1084
+#: .\src\django_consent_152fz\admin.py:1124
+msgid "Insufficient permissions to manage audience rules."
+msgstr "Insufficient permissions to manage audience rules."
+
+#: .\src\django_consent_152fz\admin.py:1097
+#, python-format
+msgid "Applied %(count)d rule to all registered users."
+msgid_plural "Applied %(count)d rules to all registered users."
+msgstr[0] "Applied %(count)d rule to all registered users."
+msgstr[1] "Applied %(count)d rules to all registered users."
+
+#: .\src\django_consent_152fz\admin.py:1114
+msgid "Apply revision to selected Django groups"
+msgstr "Apply revision to selected Django groups"
+
+#: .\src\django_consent_152fz\admin.py:1134
+msgid "Select at least one group for this action."
+msgstr "Select at least one group for this action."
+
+#: .\src\django_consent_152fz\admin.py:1148
+#, python-format
+msgid "Applied %(count)d rule to selected Django groups."
+msgid_plural "Applied %(count)d rules to selected Django groups."
+msgstr[0] "Applied %(count)d rule to selected Django groups."
+msgstr[1] "Applied %(count)d rules to selected Django groups."
+
+#: .\src\django_consent_152fz\admin.py:1265
+msgid "Склонировать выбранные правила аудитории как черновики"
+msgstr "Clone selected audience rules as drafts"
+
+#: .\src\django_consent_152fz\admin.py:1279
+#, python-format
+msgid "Склонировано %(count)d правило аудитории."
+msgid_plural "Склонировано %(count)d правил аудитории."
+msgstr[0] "Cloned %(count)d audience rule."
+msgstr[1] "Cloned %(count)d audience rules."
+
+#: .\src\django_consent_152fz\admin.py:1316
+msgid "Склонировать выбранные access policy как черновики"
+msgstr "Clone selected access policies as drafts"
+
+#: .\src\django_consent_152fz\admin.py:1327
+#, python-format
+msgid "Склонирована %(count)d access policy."
+msgid_plural "Склонировано %(count)d access policy."
+msgstr[0] "Cloned %(count)d access policy."
+msgstr[1] "Cloned %(count)d access policy."
+
+#: .\src\django_consent_152fz\admin.py:1348
+msgid "Тип субъекта"
+msgstr "Subject type"
+
+#: .\src\django_consent_152fz\admin.py:1353
+msgid "Зарегистрированный"
+msgstr "Registered"
+
+#: .\src\django_consent_152fz\admin.py:1354
+msgid "Анонимный"
+msgstr "Anonymous"
+
+#: .\src\django_consent_152fz\admin.py:1404
+msgid "Document"
+msgstr "Document"
+
+#: .\src\django_consent_152fz\admin.py:1408
+#: .\src\django_consent_152fz\core\models.py:840
+msgid "Subject"
+msgstr "Subject"
+
+#: .\src\django_consent_152fz\admin.py:1413
+msgid "Анонимный субъект"
+msgstr "Anonymous subject"
+
+#: .\src\django_consent_152fz\admin.py:1414
+msgid "Не указан"
+msgstr "Not specified"
+
+#: .\src\django_consent_152fz\admin.py:1417
+msgid "Export selected records to CSV"
+msgstr "Export selected records to CSV"
+
+#: .\src\django_consent_152fz\admin.py:1613
+msgid "Клонирование потоков юридических документов в черновики."
+msgstr "Cloning streams of legal documents into drafts."
+
+#: .\src\django_consent_152fz\admin.py:1616
+msgid "Клонирование starter-шаблонов в пользовательские черновики."
+msgstr "Cloning starter templates into custom drafts."
+
+#: .\src\django_consent_152fz\admin.py:1619
+#| msgid "Только авторизованные пользователи"
+msgid "Применение редакции ко всем зарегистрированным пользователям."
+msgstr "Applying the revision to all registered users."
+
+#: .\src\django_consent_152fz\admin.py:1622
+msgid "Применение редакции к выбранным Django-группам."
+msgstr "Applying the revision to selected Django groups."
+
+#: .\src\django_consent_152fz\admin.py:1624
+#| msgid "Текст документа"
+msgid "Опубликована редакция документа."
+msgstr "An edition of the document has been published."
+
+#: .\src\django_consent_152fz\admin.py:1626
+msgid "Клонирование правил аудитории в черновики."
+msgstr "Cloning audience rules into drafts."
+
+#: .\src\django_consent_152fz\admin.py:1629
+msgid "Клонирование политик доступа в черновики."
+msgstr "Cloning access policies into drafts."
+
+#: .\src\django_consent_152fz\admin.py:1632
+msgid "Инициализация sample-шаблонов согласий, политик и правил аудитории."
+msgstr "Initializing sample consent templates, policies and audience rules."
+
+#: .\src\django_consent_152fz\admin.py:1635
+msgid "Импорт базовых consent-записей core из CSV."
+msgstr "Import core consent records from CSV."
+
+#: .\src\django_consent_152fz\admin.py:1639
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:24
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:84
+msgid "Статус"
+msgstr "Status"
+
+#: .\src\django_consent_152fz\admin.py:1650
+msgid "Экспортировать выбранные записи журнала в CSV"
+msgstr "Export selected log entries to CSV"
+
+#: .\src\django_consent_152fz\apps.py:22
+msgid "152-FZ Consent"
+msgstr "152-FZ Consent"
+
+#: .\src\django_consent_152fz\core\models.py:44
+msgid "Legal Document"
+msgstr "Legal Document"
+
+#: .\src\django_consent_152fz\core\models.py:45
+msgid "Legal Documents"
+msgstr "Legal Documents"
+
+#: .\src\django_consent_152fz\core\models.py:58
+msgid "Open on page"
+msgstr "Open on page"
+
+#: .\src\django_consent_152fz\core\models.py:61
+msgid "Open in new window"
+msgstr "Open in new window"
+
+#: .\src\django_consent_152fz\core\models.py:65
+msgid "Open in modal dialog"
+msgstr "Open in modal dialog"
+
+#: .\src\django_consent_152fz\core\models.py:68
+msgid "Все"
+msgstr "All"
+
+#: .\src\django_consent_152fz\core\models.py:69
+#| msgid "Политика частоты подписания"
+msgid "Только на подпись"
+msgstr "Signature only"
+
+#: .\src\django_consent_152fz\core\models.py:70
+#| msgid "Политика частоты подписания"
+msgid "Только подписанные"
+msgstr "Only signed"
+
+#: .\src\django_consent_152fz\core\models.py:75
+msgid "Checkbox confirmation"
+msgstr "Checkbox confirmation"
+
+#: .\src\django_consent_152fz\core\models.py:79
+msgid "Radio agree or decline"
+msgstr "Radio agree or decline"
+
+#: .\src\django_consent_152fz\core\models.py:85
+msgid "Block submit"
+msgstr "Block submit"
+
+#: .\src\django_consent_152fz\core\models.py:89
+msgid "Allow submit"
+msgstr "Allow submit"
+
+#: .\src\django_consent_152fz\core\models.py:92
+msgid "Запятая (,)"
+msgstr "Comma (,)"
+
+#: .\src\django_consent_152fz\core\models.py:93
+msgid "Точка с запятой (;)"
+msgstr "Semicolon (;)"
+
+#: .\src\django_consent_152fz\core\models.py:94
+msgid "Табуляция (TAB)"
+msgstr "Tabulation (TAB)"
+
+#: .\src\django_consent_152fz\core\models.py:95
+#| msgid "коробочный"
+msgid "Вертикальная черта (|)"
+msgstr "Pipe (|)"
+
+#: .\src\django_consent_152fz\core\models.py:98
+msgid "A4 (210×297 мм)"
+msgstr "A4 (210×297 mm)"
+
+#: .\src\django_consent_152fz\core\models.py:99
+msgid "A5 (148×210 мм)"
+msgstr "A5 (148×210 mm)"
+
+#: .\src\django_consent_152fz\core\models.py:100
+msgid "Letter (8.5×11 in)"
+msgstr "Letter (8.5×11 in)"
+
+#: .\src\django_consent_152fz\core\models.py:103
+msgid "Times New Roman"
+msgstr "Times New Roman"
+
+#: .\src\django_consent_152fz\core\models.py:104
+msgid "Arial"
+msgstr "Arial"
+
+#: .\src\django_consent_152fz\core\models.py:107
+msgid "По левому краю"
+msgstr "Left"
+
+#: .\src\django_consent_152fz\core\models.py:108
+#: .\src\django_consent_152fz\core\models.py:114
+msgid "По центру"
+msgstr "Centered"
+
+#: .\src\django_consent_152fz\core\models.py:109
+msgid "По правому краю"
+msgstr "Right"
+
+#: .\src\django_consent_152fz\core\models.py:110
+msgid "По ширине"
+msgstr "Width"
+
+#: .\src\django_consent_152fz\core\models.py:113
+msgid "Слева"
+msgstr "Left"
+
+#: .\src\django_consent_152fz\core\models.py:115
+msgid "Справа"
+msgstr "Right"
+
+#: .\src\django_consent_152fz\core\models.py:121
+#| msgid "Текст документа"
+msgid "Режим открытия документа"
+msgstr "Document opening mode"
+
+#: .\src\django_consent_152fz\core\models.py:127
+#| msgid "Режим повторного согласия"
+msgid "Режим списка согласий"
+msgstr "Consent list mode"
+
+#: .\src\django_consent_152fz\core\models.py:133
+#| msgid "Вариант интерфейса согласия"
+msgid "Режим подтверждения согласия"
+msgstr "Consent mode"
+
+#: .\src\django_consent_152fz\core\models.py:137
+#| msgid "Учитывать режим повторного согласия"
+msgid "Обязательный checkbox"
+msgstr "Required checkbox"
+
+#: .\src\django_consent_152fz\core\models.py:143
+#| msgid "Подписывать при каждом действии"
+msgid "Поведение при отказе"
+msgstr "Failure Behavior"
+
+#: .\src\django_consent_152fz\core\models.py:196
+#: .\src\django_consent_152fz\verified_consents\admin.py:268
+#: .\src\django_consent_152fz\verified_consents\admin.py:359
+msgid "Обновлено"
+msgstr "Updated"
+
+#: .\src\django_consent_152fz\core\models.py:200
+#: .\src\django_consent_152fz\core\models.py:201
+msgid "Consent Self-service Settings"
+msgstr "Consent Self-service Settings"
+
+#: .\src\django_consent_152fz\core\models.py:205
+#| msgid "Вариант интерфейса согласия"
+msgid "Настройки самообслуживания согласий"
+msgstr "Self-service consent settings"
+
+#: .\src\django_consent_152fz\core\models.py:219
+msgid "Plain text"
+msgstr "Plain text"
+
+#: .\src\django_consent_152fz\core\models.py:220
+msgid "Markdown"
+msgstr "Markdown"
+
+#: .\src\django_consent_152fz\core\models.py:221
+msgid "HTML"
+msgstr "HTML"
+
+#: .\src\django_consent_152fz\core\models.py:222
+msgid "PDF file"
+msgstr "PDF file"
+
+#: .\src\django_consent_152fz\core\models.py:223
+msgid "Office file (DOC/DOCX/ODT/ODTX)"
+msgstr "Office file (DOC/DOCX/ODT/ODTX)"
+
+#: .\src\django_consent_152fz\core\models.py:250
+msgid "Document Revision"
+msgstr "Document Revision"
+
+#: .\src\django_consent_152fz\core\models.py:251
+msgid "Document Revisions"
+msgstr "Document Revisions"
+
+#: .\src\django_consent_152fz\core\models.py:315
+#: .\src\django_consent_152fz\verified_consents\models.py:82
+#: .\src\django_consent_152fz\verified_consents\models.py:197
+msgid "Block"
+msgstr "Block"
+
+#: .\src\django_consent_152fz\core\models.py:316
+msgid "Delete"
+msgstr "Delete"
+
+#: .\src\django_consent_152fz\core\models.py:319
+msgid "Мягкое повторное согласие"
+msgstr "Soft re-consent"
+
+#: .\src\django_consent_152fz\core\models.py:320
+msgid "Жёсткое повторное согласие"
+msgstr "Strong re-consent"
+
+#: .\src\django_consent_152fz\core\models.py:325
+msgid "Один раз до новой редакции"
+msgstr "Once before the new edition"
+
+#: .\src\django_consent_152fz\core\models.py:329
+msgid "Подписывать при каждом действии"
+msgstr "Sign for every action"
+
+#: .\src\django_consent_152fz\core\models.py:335
+msgid "Только авторизованные пользователи"
+msgstr "Only authorized users"
+
+#: .\src\django_consent_152fz\core\models.py:339
+msgid "Авторизованные и анонимные пользователи"
+msgstr "Authorized and anonymous users"
+
+#: .\src\django_consent_152fz\core\models.py:343
+#: .\src\django_consent_152fz\core\models.py:354
+#| msgid "Наследовать desktop-пресет"
+msgid "Наследовать глобальную настройку"
+msgstr "Inherit global setting"
+
+#: .\src\django_consent_152fz\core\models.py:346
+msgid "Подтверждение через checkbox"
+msgstr "Confirmation via checkbox"
+
+#: .\src\django_consent_152fz\core\models.py:350
+#| msgid "Мягкое повторное согласие"
+msgid "Выбор «согласен/не согласен»"
+msgstr "Choice \"agree/disagree\""
+
+#: .\src\django_consent_152fz\core\models.py:357
+msgid "Блокировать отправку"
+msgstr "Block sending"
+
+#: .\src\django_consent_152fz\core\models.py:361
+msgid "Разрешать отправку"
+msgstr "Allow sending"
+
+#: .\src\django_consent_152fz\core\models.py:407
+msgid "Consent Purpose"
+msgstr "Consent Purpose"
+
+#: .\src\django_consent_152fz\core\models.py:408
+msgid "Consent Purposes"
+msgstr "Consent Purposes"
+
+#: .\src\django_consent_152fz\core\models.py:427
+msgid "All registered users"
+msgstr "All registered users"
+
+#: .\src\django_consent_152fz\core\models.py:429
+msgid "Django group"
+msgstr "Django group"
+
+#: .\src\django_consent_152fz\core\models.py:432
+msgid "Anonymous subjects"
+msgstr "Anonymous subjects"
+
+#: .\src\django_consent_152fz\core\models.py:473
+msgid "Consent Audience Rule"
+msgstr "Consent Audience Rule"
+
+#: .\src\django_consent_152fz\core\models.py:474
+msgid "Consent Audience Rules"
+msgstr "Consent Audience Rules"
+
+#: .\src\django_consent_152fz\core\models.py:514
+#| msgid "Формальный"
+msgid "Глобально"
+msgstr "Globally"
+
+#: .\src\django_consent_152fz\core\models.py:515
+msgid "По Django-группам"
+msgstr "By Django groups"
+
+#: .\src\django_consent_152fz\core\models.py:543
+msgid "Personal Data Manager Assignment"
+msgstr "Personal Data Manager Assignment"
+
+#: .\src\django_consent_152fz\core\models.py:544
+msgid "Personal Data Manager Assignments"
+msgstr "Personal Data Manager Assignments"
+
+#: .\src\django_consent_152fz\core\models.py:553
+msgid "Назначение доступно только staff-пользователю."
+msgstr "The assignment is available only to the staff user."
+
+#: .\src\django_consent_152fz\core\models.py:576
+#: .\src\django_consent_152fz\core\models.py:589
+msgid "Deny"
+msgstr "Deny"
+
+#: .\src\django_consent_152fz\core\models.py:577
+#: .\src\django_consent_152fz\core\models.py:590
+msgid "Read only"
+msgstr "Read only"
+
+#: .\src\django_consent_152fz\core\models.py:580
+#: .\src\django_consent_152fz\core\models.py:593
+msgid "Redirect to consent"
+msgstr "Redirect to consent"
+
+#: .\src\django_consent_152fz\core\models.py:587
+msgid "Учитывать режим повторного согласия"
+msgstr "Consider the re-consent regime"
+
+#: .\src\django_consent_152fz\core\models.py:633
+msgid "Consent Access Policy"
+msgstr "Consent Access Policy"
+
+#: .\src\django_consent_152fz\core\models.py:634
+msgid "Consent Access Policies"
+msgstr "Consent Access Policies"
+
+#: .\src\django_consent_152fz\core\models.py:690
+msgid "Current"
+msgstr "Current"
+
+#: .\src\django_consent_152fz\core\models.py:691
+#: .\src\django_consent_152fz\core\models.py:848
+msgid "Outdated"
+msgstr "Outdated"
+
+#: .\src\django_consent_152fz\core\models.py:692
+#: .\src\django_consent_152fz\core\models.py:847
+msgid "Withdrawn"
+msgstr "Withdrawn"
+
+#: .\src\django_consent_152fz\core\models.py:695
+msgid "Pending confirmation"
+msgstr "Pending confirmation"
+
+#: .\src\django_consent_152fz\core\models.py:697
+#: .\src\django_consent_152fz\core\models.py:856
+#: .\src\django_consent_152fz\verified_consents\models.py:287
+msgid "Rejected"
+msgstr "Rejected"
+
+#: .\src\django_consent_152fz\core\models.py:698
+msgid "Deleted"
+msgstr "Deleted"
+
+#: .\src\django_consent_152fz\core\models.py:701
+msgid "Web checkbox"
+msgstr "Web checkbox"
+
+#: .\src\django_consent_152fz\core\models.py:702
+msgid "Web button"
+msgstr "Web button"
+
+#: .\src\django_consent_152fz\core\models.py:703
+msgid "API accept"
+msgstr "API accept"
+
+#: .\src\django_consent_152fz\core\models.py:704
+msgid "Uploaded paper"
+msgstr "Uploaded paper"
+
+#: .\src\django_consent_152fz\core\models.py:707
+#: .\src\django_consent_152fz\core\models.py:850
+msgid "Admin confirmed"
+msgstr "Admin confirmed"
+
+#: .\src\django_consent_152fz\core\models.py:711
+#: .\src\django_consent_152fz\core\models.py:853
+msgid "Employee confirmed"
+msgstr "Employee confirmed"
+
+#: .\src\django_consent_152fz\core\models.py:763
+msgid "Consent Record"
+msgstr "Consent Record"
+
+#: .\src\django_consent_152fz\core\models.py:764
+msgid "Consent Records"
+msgstr "Consent Records"
+
+#: .\src\django_consent_152fz\core\models.py:841
+msgid "Employee"
+msgstr "Employee"
+
+#: .\src\django_consent_152fz\core\models.py:842
+msgid "Admin"
+msgstr "Admin"
+
+#: .\src\django_consent_152fz\core\models.py:843
+msgid "System"
+msgstr "System"
+
+#: .\src\django_consent_152fz\core\models.py:846
+msgid "Given"
+msgstr "Given"
+
+#: .\src\django_consent_152fz\core\models.py:849
+msgid "Reconfirmed"
+msgstr "Reconfirmed"
+
+#: .\src\django_consent_152fz\core\models.py:855
+#: .\src\django_consent_152fz\verified_consents\models.py:285
+msgid "Paper uploaded"
+msgstr "Paper uploaded"
+
+#: .\src\django_consent_152fz\core\models.py:857
+msgid "Cookie updated"
+msgstr "Cookie updated"
+
+#: .\src\django_consent_152fz\core\models.py:858
+msgid "Blocked"
+msgstr "Blocked"
+
+#: .\src\django_consent_152fz\core\models.py:859
+msgid "Delete requested"
+msgstr "Delete requested"
+
+#: .\src\django_consent_152fz\core\models.py:860
+msgid "Anonymized"
+msgstr "Anonymized"
+
+#: .\src\django_consent_152fz\core\models.py:894
+msgid "Consent Event"
+msgstr "Consent Event"
+
+#: .\src\django_consent_152fz\core\models.py:895
+msgid "Consent Events"
+msgstr "Consent Events"
+
+#: .\src\django_consent_152fz\core\models.py:936
+msgid "Success"
+msgstr "Success"
+
+#: .\src\django_consent_152fz\core\models.py:937
+msgid "Dry run"
+msgstr "Dry run"
+
+#: .\src\django_consent_152fz\core\models.py:938
+msgid "Error"
+msgstr "Error"
+
+#: .\src\django_consent_152fz\core\models.py:963
+msgid "Журнал операций модуля"
+msgstr "Module Operation Log"
+
+#: .\src\django_consent_152fz\core\models.py:964
+msgid "Журналы операций модуля"
+msgstr "Module Operation Logs"
+
+#: .\src\django_consent_152fz\core\models.py:982
+msgid "Журнал операций согласий 152-ФЗ"
+msgstr "Log of transactions of consents 152-FZ"
+
+#: .\src\django_consent_152fz\core\models.py:983
+#| msgid "Вариант интерфейса согласия"
+msgid "Журналы операций согласий 152-ФЗ"
+msgstr "Logs of consent transactions 152-FZ"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:15
+msgid "Обратная связь и ответы на обращения"
+msgstr "Feedback and responses to requests"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:17
+msgid ""
+"Используется для обработки обращений из формы обратной связи и подготовки "
+"ответа пользователю."
+msgstr "Used to process requests from the feedback form and prepare a response to the user."
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:28
+msgid "Email-рассылка и информирование"
+msgstr "Email distribution and information"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:30
+msgid ""
+"Используется для подписки на новости, сервисные дайджесты и маркетинговые "
+"рассылки."
+msgstr "Used to subscribe to news, service digests and marketing mailings."
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:40
+msgid "Регистрация и обслуживание аккаунта"
+msgstr "Account registration and maintenance"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:42
+msgid ""
+"Используется для создания учётной записи, аутентификации и поддержки базовых "
+"сервисных операций пользователя."
+msgstr "Used to create an account, authenticate and support basic user service operations."
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:53
+msgid "Поддержка пользователей и обработка запросов"
+msgstr "User support and request processing"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:55
+msgid ""
+"Используется для обработки обращений в поддержку, диагностики проблем и "
+"обратной связи по уже оказанным услугам."
+msgstr "Used to process support requests, diagnose problems and provide feedback on services already provided."
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:67
+msgid "Отклик на вакансию и кадровый резерв"
+msgstr "Response to vacancies and personnel reserve"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:69
+msgid ""
+"Используется для приёма резюме, сопроводительных писем и организации "
+"коммуникации с кандидатами."
+msgstr "Used to receive resumes, cover letters and organize communication with candidates."
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:82
+msgid "Оформление и сопровождение заказа"
+msgstr "Order processing and support"
+
+#: .\src\django_consent_152fz\core\starter_purposes.py:84
+msgid ""
+"Используется для подтверждения заказа, связи с клиентом и сопровождения "
+"исполнения заявки."
+msgstr "Used to confirm the order, communicate with the client and support the execution of the application."
+
+#: .\src\django_consent_152fz\forms.py:51
+#| msgid "Согласия не найдены."
+msgid "Я даю согласие на обработку персональных данных"
+msgstr "I consent to the processing of personal data"
+
+#: .\src\django_consent_152fz\forms.py:55
+#| msgid "Согласия не найдены."
+msgid "Согласие на обработку персональных данных"
+msgstr "Consent to the processing of personal data"
+
+#: .\src\django_consent_152fz\forms.py:57
+#| msgid "Мои согласия"
+msgid "Согласен(а)"
+msgstr "Agree"
+
+#: .\src\django_consent_152fz\forms.py:58
+#| msgid "Мои согласия"
+msgid "Не согласен(а)"
+msgstr "Disagree"
+
+#: .\src\django_consent_152fz\forms.py:98
+msgid ""
+"Без согласия на обработку персональных данных мы не сможем обработать заявку."
+msgstr "Without consent to the processing of personal data, we will not be able to process the application."
+
+#: .\src\django_consent_152fz\forms.py:111
+#| msgid "Мои согласия"
+msgid "Подтверждаю отзыв согласия"
+msgstr "I confirm the withdrawal of consent"
+
+#: .\src\django_consent_152fz\forms.py:139
+#| msgid "Согласия не найдены."
+msgid "Я даю согласие на обработку ПДн для предзаказа"
+msgstr "I agree to the processing of PD for pre-order"
+
+#: .\src\django_consent_152fz\forms.py:143
+msgid "Я даю согласие на обработку ПДн для обратной связи"
+msgstr "I agree to the processing of personal data for feedback"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list.html:13
+msgid "You don't have permission to view or edit anything."
+msgstr "You don't have permission to view or edit anything."
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:11
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:17
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:47
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Models in the %(name)s application"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:29
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:59
+msgid "Add"
+msgstr "Add"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:34
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:64
+msgid "View"
+msgstr "View"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:36
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\includes\custom_app_list_app.html:66
+msgid "Change"
+msgstr "Change"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\verifiedconsentartifactproxy\change_form.html:8
+#| msgid "Мои согласия"
+msgid "Подтвердить как сотрудник"
+msgstr "Verify as an employee"
+
+#: .\src\django_consent_152fz\templates\admin\django_consent_152fz\verifiedconsentartifactproxy\change_form.html:10
+#| msgid "Мои согласия"
+msgid "Подтвердить как администратор"
+msgstr "Verify as administrator"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:10
+#| msgid "Текст документа"
+msgid "Вернуться к моим согласиям"
+msgstr "Return to my consents"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:12
+#| msgid "Дата согласия"
+msgid "Поток согласия"
+msgstr "Flow of consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:14
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:83
+msgid "Редакция"
+msgstr "Editorial"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:26
+#| msgid "Мягкое повторное согласие"
+msgid "Поля, покрываемые согласием"
+msgstr "Fields Covered by Consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\document_detail.html:42
+#: .\src\django_consent_152fz\templates\django_consent_152fz\withdraw.html:48
+#| msgid "Дата согласия"
+msgid "Отозвать согласие"
+msgstr "Withdraw consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:4
+#| msgid "Согласия не найдены."
+msgid "Согласие на обработку"
+msgstr "Consent to processing"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:6
+#, python-format
+msgid "Для этого потока требуется усиленное подтверждение: %(mode)s."
+msgstr "This flow requires a strong acknowledgment: %(mode)s."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:11
+msgid "Актуальное согласие уже зафиксировано."
+msgstr "The current consent has already been recorded."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:16
+msgid "Для текущего пользователя согласие в этом потоке недоступно."
+msgstr "Consent is not available for the current user in this flow."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:20
+msgid "Для этого действия нужно повторное подтверждение согласия."
+msgstr "This action requires re-confirmation of consent."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:22
+msgid "Требуется подтверждение новой редакции документа."
+msgstr "Confirmation of the new version of the document is required."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:27
+msgid ""
+"Для этого потока требуется бумажное или иное проверяемое подтверждение. "
+"Подписание через web-форму недоступно."
+msgstr "This flow requires paper or other verifiable confirmation. Signing via the web form is not available."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:29
+msgid ""
+"Для этого потока уже сохранены данные, но ещё не загружен подписанный "
+"бумажный документ."
+msgstr "Data has already been saved for this stream, but the signed paper document has not yet been loaded."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:31
+msgid "Подписанный документ загружен и ожидает проверки оператором ПДн."
+msgstr "The signed document has been uploaded and is awaiting verification by the PD operator."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:33
+#| msgid "Требуется подтверждение новой редакции документа."
+msgid ""
+"Предыдущее проверяемое подтверждение отклонено. Загрузите новый подписанный "
+"документ."
+msgstr "The previous confirmation being verified was rejected. Upload your new signed document."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:35
+#| msgid "Для этого действия нужно повторное подтверждение согласия."
+msgid "Для этого потока требуется проверяемое подтверждение согласия."
+msgstr "This flow requires verifiable proof of consent."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:60
+msgid "Подтверждаемая обработка распространяется на"
+msgstr "Confirmed processing applies to"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:92
+#| msgid "Согласия не найдены."
+msgid ""
+"Без согласия на обработку персональных данных отправка формы невозможна."
+msgstr "Without consent to the processing of personal data, submitting the form is impossible."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\consent_form_block.html:95
+#| msgid "Мои согласия"
+msgid "Подтвердить согласие"
+msgstr "Confirm your consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:25
+#, python-format
+msgid ""
+"Для отправки этой формы требуется усиленное подтверждение согласия: %(mode)s."
+"Для отправки этой формы требуется усиленное подтверждение согласия: %(mode)s."
+msgstr "Enhanced consent is required to submit this form: %(mode)s."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:35
+#| msgid ""
+#| "Для отправки этой формы требуется усиленное подтверждение согласия: %"
+#| "(mode)s."
+msgid ""
+"Подписание через web-форму недоступно: требуется бумажное подтверждение "
+"согласия."
+"Для отправки этой формы требуется усиленное подтверждение согласия: %(mode)s."
+msgstr "Signing via a web form is not available: paper confirmation of consent is required."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:37
+msgid ""
+"Подписание через web-форму недоступно: сначала загрузите подписанный "
+"бумажный документ."
+msgstr "Signing via a web form is not available: please upload a signed paper document first."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:39
+msgid ""
+"Подписание через web-форму недоступно: документ уже загружен и ожидает "
+"проверки оператором ПДн."
+msgstr "Signing via a web form is not available: the document has already been uploaded and is awaiting verification by the PD operator."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:41
+msgid ""
+"Подписание через web-форму недоступно: предыдущее подтверждение отклонено, "
+"загрузите новый документ."
+msgstr "Signing via the web form is not available: the previous confirmation was rejected, please upload a new document."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\includes\contact_consent_hook.html:43
+msgid "Подписание через web-форму недоступно для этого потока согласия."
+msgstr "Web form signing is not available for this consent flow."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:6
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:72
+msgid "Мои согласия"
+msgstr "My consents"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:73
+#| msgid "Доступный self-service alpha: просмотр и отзыв согласий."
+msgid "Самообслуживание: просмотр и отзыв ваших согласий."
+msgstr "Self-service: Review and revoke your consents."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:85
+msgid "Дата согласия"
+msgstr "Date of consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:86
+msgid "Текст документа"
+msgstr "Document text"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:107
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:110
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:114
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:117
+msgid "Открыть и подписать"
+msgstr "Open and sign"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:127
+msgid "Отозвать"
+msgstr "Withdraw"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:138
+msgid "Согласия не найдены."
+msgstr "No agreement found."
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:156
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:164
+msgid "Документ для подписания"
+msgstr "Document to be signed"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\subject_consents.html:159
+#| msgid "Открыть"
+msgid "Закрыть"
+msgstr "Close"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\withdraw.html:6
+#: .\src\django_consent_152fz\templates\django_consent_152fz\withdraw.html:11
+#| msgid "Дата согласия"
+msgid "Отзыв согласия"
+msgstr "Withdrawal of consent"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\withdraw.html:18
+msgid "Текущий статус"
+msgstr "Current status"
+
+#: .\src\django_consent_152fz\templates\django_consent_152fz\withdraw.html:19
+#| msgid "Текст документа"
+msgid "Вернуться к документу"
+msgstr "Return to document"
+
+#: .\src\django_consent_152fz\templatetags\consent_tags.py:487
+#| msgid "Текст документа"
+msgid "Открыть PDF-документ"
+msgstr "Open PDF document"
+
+#: .\src\django_consent_152fz\templatetags\consent_tags.py:489
+#| msgid "Текст документа"
+msgid "Открыть документ (DOC/DOCX/ODT/ODTX)"
+msgstr "Open document (DOC/DOCX/ODT/ODTX)"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:41
+#| msgid "Режим повторного согласия"
+msgid "Политика проверяемого согласия"
+msgstr "Verifiable Consent Policy"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:42
+#| msgid "Режим повторного согласия"
+msgid "Политики проверяемого согласия"
+msgstr "Verifiable Consent Policies"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:49
+#| msgid "Режим повторного согласия"
+msgid "Артефакт проверяемого согласия"
+msgstr "Verifiable Consent Artifact"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:50
+#| msgid "Режим повторного согласия"
+msgid "Артефакты проверяемого согласия"
+msgstr "Verifiable Consent Artifacts"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:57
+#| msgid "Режим повторного согласия"
+msgid "Политика проверяемого согласия для формы"
+msgstr "Verifiable consent policy for the form"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:58
+#| msgid "Режим повторного согласия"
+msgid "Политики проверяемого согласия для форм"
+msgstr "Verifiable consent policies for forms"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:65
+#| msgid "Режим повторного согласия"
+msgid "Заявка проверяемого согласия"
+msgstr "Application for verifiable consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:66
+#| msgid "Режим повторного согласия"
+msgid "Заявки проверяемого согласия"
+msgstr "Verifiable Consent Applications"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:164
+#| msgid "Вариант интерфейса согласия"
+msgid "Комментарий подтверждения"
+msgstr "Confirmation comment"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:166
+msgid ""
+"Комментарий, который будет записан при массовом подтверждении артефактов."
+msgstr "A comment that will be recorded during mass confirmation of artifacts."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:171
+#| msgid "Вариант интерфейса согласия"
+msgid "Причина отклонения"
+msgstr "Reason for rejection"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:173
+msgid "Причина отклонения, которая будет сохранена в аудите действий."
+msgstr "The reason for the rejection, which will be stored in the action audit."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:198
+msgid "Режим верификации"
+msgstr "Verification mode"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:199
+#| msgid "Вариант интерфейса согласия"
+msgid "Область применения"
+msgstr "Scope of application"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:200
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Поведение для старых веб-согласий"
+msgstr "Behavior for old web consents"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:201
+#| msgid "Доступность для субъектов"
+msgid "Разрешать самозагрузку субъектом"
+msgstr "Allow subject to boot"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:202
+#| msgid "Доступность для субъектов"
+msgid "Разрешать сохранение данных до загрузки согласия"
+msgstr "Allow data to be saved before downloading consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:203
+#: .\src\django_consent_152fz\verified_consents\admin.py:308
+#| msgid "Режим повторного согласия"
+msgid "Поведение до загрузки бумажного согласия"
+msgstr "Behavior before downloading paper consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:204
+#: .\src\django_consent_152fz\verified_consents\admin.py:309
+msgid "Канал уведомлений"
+msgstr "Notification channel"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:205
+msgid "Шаблоны уведомлений"
+msgstr "Notification templates"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:206
+msgid "Уведомлять при сохранении данных"
+msgstr "Notify when data is saved"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:207
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Уведомлять при загрузке согласия"
+msgstr "Notify when downloading consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:208
+#| msgid "Вариант интерфейса согласия"
+msgid "Уведомлять при подтверждении согласия"
+msgstr "Notify when confirming consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:209
+#| msgid "Вариант интерфейса согласия"
+msgid "Уведомлять при отклонении согласия"
+msgstr "Notify when consent is denied"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:217
+msgid "Цель согласия, для которой применяется политика подтверждения."
+msgstr "The consent purpose for which the confirmation policy applies."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:218
+#| msgid "Для этого действия нужно повторное подтверждение согласия."
+msgid "Документ/редакция, участвующие в сценарии подтверждённого согласия."
+msgstr "Document/edition participating in the confirmed consent scenario."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:219
+msgid "Режим верификации: кто и как подтверждает согласие."
+msgstr "Verification mode: who confirms consent and how."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:221
+msgid ""
+"Где применяется проверяемый сценарий согласия: в личном кабинете, в веб-"
+"формах или в обоих сценариях."
+msgstr "Where the verifiable consent scenario is applied: in your personal account, in web forms, or in both scenarios."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:224
+msgid ""
+"Как трактовать уже выданные веб-согласия после включения более строгого "
+"проверяемого режима."
+msgstr "How to treat already issued web consents after enabling a stricter verifiable mode."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:227
+msgid ""
+"Разрешить субъекту отправлять бумажный артефакт без участия оператора ПДн."
+msgstr "Allow the subject to send a paper artifact without the participation of the PD operator."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:230
+msgid ""
+"Разрешить двухэтапный сценарий: сначала сохранить данные, затем загрузить "
+"подписанное согласие."
+msgstr "Allow a two-step scenario: first save the data, then download the signed consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:233
+msgid "Как трактовать доступ до момента загрузки бумажного согласия."
+msgstr "How to interpret access until the paper consent is downloaded."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:236
+#| msgid "Вариант уведомления о повторном согласии"
+msgid "Куда отправлять уведомления о событиях verified-сценария."
+msgstr "Where to send notifications about verified script events."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:239
+msgid ""
+"JSON-шаблоны текстов уведомлений по ключам: data_saved, paper_uploaded, "
+"verified, rejected."
+msgstr "JSON templates for notification texts by keys: data_saved, paper_uploaded, verified, rejected."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:241
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Отправлять уведомление при сохранении данных без файла согласия."
+msgstr "Send a notification when saving data without a consent file."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:242
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Отправлять уведомление при загрузке бумажного согласия."
+msgstr "Send a notification when you download a paper consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:243
+#| msgid "Вариант уведомления о повторном согласии"
+msgid "Отправлять уведомление после подтверждения согласия оператором."
+msgstr "Send a notification after confirmation of consent by the operator."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:244
+#| msgid "Вариант уведомления о повторном согласии"
+msgid "Отправлять уведомление после отклонения согласия оператором."
+msgstr "Send a notification after consent is rejected by the operator."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:245
+msgid "Включает или отключает политику подтверждения в рабочем потоке."
+msgstr "Enables or disables the confirmation policy in the worker thread."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:248
+msgid "Внутренние комментарии по политике верификации."
+msgstr "Internal comments on verification policy."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:249
+#: .\src\django_consent_152fz\verified_consents\admin.py:334
+msgid "Дополнительные технические метаданные в формате JSON."
+msgstr "Additional technical metadata in JSON format."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:258
+#: .\src\django_consent_152fz\verified_consents\admin.py:353
+msgid "Запись согласия"
+msgstr "Recording consent"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:260
+msgid "Тип артефакта"
+msgstr "Artifact type"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:261
+#: .\src\django_consent_152fz\verified_consents\admin.py:473
+msgid "Файл артефакта"
+msgstr "Artifact file"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:262
+msgid "Внешний провайдер"
+msgstr "External provider"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:263
+msgid "Внешняя ссылка/идентификатор"
+msgstr "External link/ID"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:264
+msgid "Время подписи субъектом"
+msgstr "Subject signature time"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:265
+msgid "Заметка"
+msgstr "Note"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:271
+msgid "Связанная запись согласия, подтверждаемая артефактом."
+msgstr "Associated record of consent supported by artifact."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:272
+msgid "Политика подтверждения, по которой обрабатывается артефакт."
+msgstr "The confirmation policy by which the artifact is processed."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:273
+msgid "Тип подтверждающего артефакта (файл, провайдер, ручное подтверждение)."
+msgstr "Type of confirmation artifact (file, provider, manual confirmation)."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:274
+msgid "Файл артефакта, если используется файловый сценарий."
+msgstr "Artifact file if using a file script."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:275
+msgid "Внешний провайдер/сервис, выдавший подтверждение."
+msgstr "External provider/service that issued the confirmation."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:276
+msgid "Внешний идентификатор или ссылка на подтверждение."
+msgstr "External identifier or confirmation link."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:277
+msgid "Время, когда субъект подписал/подтвердил согласие."
+msgstr "The time the subject signed/confirmed the consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:278
+msgid "Комментарий оператора по артефакту."
+msgstr "Operator's comment on the artifact."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:279
+msgid "Дополнительные метаданные артефакта в формате JSON."
+msgstr "Additional artifact metadata in JSON format."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:281
+msgid "Техническое время последнего обновления."
+msgstr "Technical time of last update."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:305
+#: .\src\django_consent_152fz\verified_consents\admin.py:348
+#: .\src\django_consent_152fz\verified_consents\admin.py:452
+msgid "Код формы"
+msgstr "Form code"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:306
+#| msgid "Вариант интерфейса согласия"
+msgid "Режим верификации для формы"
+msgstr "Form verification mode"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:307
+#| msgid "Режим повторного согласия"
+msgid "Политика сохранения данных до загрузки"
+msgstr "Pre-Download Data Retention Policy"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:315
+msgid "Цель согласия, к которой относится эта форма."
+msgstr "The purpose of the consent to which this form relates."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:316
+msgid "Документ потока, для которого настраивается форма."
+msgstr "The flow document for which the form is being configured."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:318
+msgid ""
+"Стабильный код формы сайта (например: demo.contact, demo.course_signup)."
+msgstr "Stable site form code (for example: demo.contact, demo.course_signup)."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:321
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение для формы: только веб, бумажное, Госключ, бумажное/Госключ "
+"или наследование из политики потока."
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+msgstr "Override for form: web only, paper, State Key, paper/State Key, or inherit from flow policy."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:324
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение для формы: разрешать/запрещать сохранение данных до загрузки "
+"согласия."
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+msgstr "Override for the form: allow/deny saving data before loading consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:327
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Переопределение реакции до загрузки бумажного согласия."
+msgstr "Override response before downloading paper consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:330
+msgid "Переопределение канала уведомлений для событий формы."
+msgstr "Overriding the notification channel for form events."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:332
+msgid "Отключите запись, чтобы форма снова наследовала базовую политику."
+msgstr "Disable the entry so that the form inherits the base policy again."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:333
+msgid "Внутренние комментарии по переопределению формы."
+msgstr "Internal comments on form overriding."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:346
+#| msgid "Анонимный субъект"
+msgid "Анонимный токен"
+msgstr "Anonymous token"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:347
+#| msgid "Анонимный субъект"
+msgid "Внешний идентификатор субъекта"
+msgstr "External subject identifier"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:349
+msgid "Статус заявки"
+msgstr "Application status"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:350
+#| msgid "Анонимный субъект"
+msgid "Данные субъекта"
+msgstr "Subject details"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:351
+#| msgid "Режим повторного согласия"
+msgid "Сгенерированный бланк согласия"
+msgstr "Generated consent form"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:352
+#| msgid "Сбалансированный"
+msgid "Когда сгенерирован бланк"
+msgstr "When the form is generated"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:354
+msgid "Последний артефакт"
+msgstr "The Last Artifact"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:357
+msgid "Время завершения"
+msgstr "End time"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:362
+msgid "Данные формы, сохранённые до загрузки бумажного согласия."
+msgstr "Form data saved before downloading the paper consent."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:363
+msgid "PDF-бланк согласия для печати и подписи."
+msgstr "PDF consent form to print and sign."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:364
+msgid "Каноническая запись согласия, созданная после загрузки артефакта."
+msgstr "The canonical consent record created after the artifact is loaded."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:365
+msgid "Последний загруженный paper-артефакт по этой заявке."
+msgstr "The last uploaded paper artifact for this application."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:366
+msgid "Технические метаданные workflow и уведомлений."
+msgstr "Technical workflow and notification metadata."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:482
+#| msgid "Текст документа"
+msgid "Скачать файл"
+msgstr "Download file"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:485
+msgid "Подтвердить выбранные как подтверждённые сотрудником"
+msgstr "Confirm selected as confirmed by employee"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:495
+#| msgid "Вариант уведомления о повторном согласии"
+msgid "Подтвердить выбранные как подтверждённые администратором"
+msgstr "Confirm selected as admin approved"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:500
+#: .\src\django_consent_152fz\verified_consents\admin.py:641
+msgid "Подтверждение как admin_confirmed доступно только суперпользователю."
+msgstr "Confirmation as admin_confirmed is only available to the superuser."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:512
+#| msgid "Экспортировать выбранные записи журнала в CSV"
+msgid "Отклонить выбранные (нужна причина)"
+msgstr "Reject selected (reason required)"
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:518
+msgid "Укажите причину отклонения для выбранных артефактов."
+msgstr "Provide a reason for rejection for the selected artifacts."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:595
+#, python-format
+msgid "Confirmed %(count)d verified artifact."
+msgid_plural "Confirmed %(count)d verified artifacts."
+msgstr[0] "Confirmed %(count)d verified artifact."
+msgstr[1] "Confirmed %(count)d verified artifacts."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:601
+#, python-format
+msgid "Rejected %(count)d verified artifact."
+msgid_plural "Rejected %(count)d verified artifacts."
+msgstr[0] "Rejected %(count)d verified artifact."
+msgstr[1] "Rejected %(count)d verified artifacts."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:614
+#, python-format
+msgid "Failed to process %(count)d artifact."
+msgid_plural "Failed to process %(count)d artifacts."
+msgstr[0] "Failed to process %(count)d artifact."
+msgstr[1] "Failed to process %(count)d artifacts."
+
+#: .\src\django_consent_152fz\verified_consents\admin.py:662
+#| msgid "Режим повторного согласия"
+msgid "Артефакт подтверждён."
+msgstr "Artifact confirmed."
+
+#: .\src\django_consent_152fz\verified_consents\apps.py:17
+#| msgid "Мои согласия"
+msgid "Подтверждённые согласия 152-ФЗ"
+msgstr "Confirmed consents 152-FZ"
+
+#: .\src\django_consent_152fz\verified_consents\checks.py:67
+#, python-format
+msgid ""
+"Form policy '%(form_code)s' for flow '%(purpose_code)s/%(document_code)s' "
+"uses '%(mode)s' but no active Verified Consent Policy is configured for this "
+"flow."
+"Для политики формы '%(form_code)s' в потоке '%(purpose_code)s/"
+"%(document_code)s' задан режим '%(mode)s', но для этого потока не настроена "
+"активная политика проверяемого согласия."
+msgstr "Form policy '%(form_code)s' for flow '%(purpose_code)s/%(document_code)s' uses '%(mode)s' but no active Verified Consent Policy is configured for this flow."
+
+#: .\src\django_consent_152fz\verified_consents\checks.py:116
+#, python-format
+msgid ""
+"Form policy '%(form_code)s' for flow '%(purpose_code)s/%(document_code)s' "
+"uses '%(mode)s', but base policy flow_scope '%(flow_scope)s' does not "
+"include forms."
+"Для политики формы '%(form_code)s' в потоке '%(purpose_code)s/"
+"%(document_code)s' задан режим '%(mode)s', но область применения базовой "
+"политики '%(flow_scope)s' не включает формы."
+msgstr "Form policy '%(form_code)s' for flow '%(purpose_code)s/%(document_code)s' uses '%(mode)s', but base policy flow_scope '%(flow_scope)s' does not include forms."
+
+#: .\src\django_consent_152fz\verified_consents\models.py:53
+#: .\src\django_consent_152fz\verified_consents\models.py:177
+msgid "Web only"
+msgstr "Web only"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:54
+#: .\src\django_consent_152fz\verified_consents\models.py:180
+msgid "Paper required"
+msgstr "Paper required"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:55
+#: .\src\django_consent_152fz\verified_consents\models.py:184
+msgid "Goskey required"
+msgstr "Goskey required"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:56
+#: .\src\django_consent_152fz\verified_consents\models.py:188
+msgid "Paper or Goskey"
+msgstr "Paper or Goskey"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:59
+msgid "Both (self-service and forms)"
+msgstr "Both (self-service and forms)"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:60
+msgid "Self-service only"
+msgstr "Self-service only"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:61
+msgid "Forms only"
+msgstr "Forms only"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:66
+msgid "Keep existing web consent as current"
+msgstr "Keep existing web consent as current"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:70
+msgid "Mark existing web consent as outdated"
+msgstr "Mark existing web consent as outdated"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:74
+msgid "Withdraw existing web consent immediately"
+msgstr "Withdraw existing web consent immediately"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:78
+msgid "Withdraw existing web consent after paper is confirmed"
+msgstr "Withdraw existing web consent after paper is confirmed"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:83
+#: .\src\django_consent_152fz\verified_consents\models.py:200
+msgid "Allow limited access"
+msgstr "Allow limited access"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:86
+#: .\src\django_consent_152fz\verified_consents\models.py:207
+msgid "Audit log only"
+msgstr "Audit log only"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:87
+#: .\src\django_consent_152fz\verified_consents\models.py:211
+msgid "Notify responsible users"
+msgstr "Notify responsible users"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:140
+msgid "Verified Consent Policy"
+msgstr "Verified Consent Policy"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:141
+msgid "Verified Consent Policies"
+msgstr "Verified Consent Policies"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:176
+#: .\src\django_consent_152fz\verified_consents\models.py:191
+#: .\src\django_consent_152fz\verified_consents\models.py:196
+#: .\src\django_consent_152fz\verified_consents\models.py:204
+msgid "Inherit from purpose/document policy"
+msgstr "Inherit from purpose/document policy"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:192
+msgid "Allow draft data before upload"
+msgstr "Allow draft data before upload"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:193
+msgid "Forbid draft data before upload"
+msgstr "Forbid draft data before upload"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:252
+msgid "Verified Consent Form Policy"
+msgstr "Verified Consent Form Policy"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:253
+msgid "Verified Consent Form Policies"
+msgstr "Verified Consent Form Policies"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:283
+msgid "Draft data"
+msgstr "Draft data"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:284
+msgid "Awaiting paper upload"
+msgstr "Awaiting paper upload"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:286
+msgid "Verified"
+msgstr "Verified"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:341
+msgid "Verified Consent Submission"
+msgstr "Verified Consent Submission"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:342
+msgid "Verified Consent Submissions"
+msgstr "Verified Consent Submissions"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:391
+msgid "Paper document"
+msgstr "Paper document"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:392
+msgid "External signature"
+msgstr "External signature"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:421
+msgid "Verified Consent Artifact"
+msgstr "Verified Consent Artifact"
+
+#: .\src\django_consent_152fz\verified_consents\models.py:422
+msgid "Verified Consent Artifacts"
+msgstr "Verified Consent Artifacts"
+
+#: .\src\django_consent_152fz\views.py:677
+msgid ""
+"Для этого согласия требуется авторизация. Войдите в аккаунт, чтобы "
+"продолжить."
+"Для этого согласия требуется авторизация. Войдите в аккаунт, чтобы "
+"продолжить."
+msgstr "This consent requires authorization. Sign in to continue."
+
+#: .\src\django_consent_152fz\views.py:719
+#| msgid "Текст документа"
+msgid "Скачать PDF-документ"
+msgstr "Download PDF document"
+
+#: .\src\django_consent_152fz\views.py:721
+#| msgid "Текст документа"
+msgid "Скачать документ (DOC/DOCX/ODT/ODTX)"
+msgstr "Download document (DOC/DOCX/ODT/ODTX)"
+
+#: .\src\django_consent_152fz\views.py:722
+msgid "Скачать PDF-версию"
+msgstr "Download PDF version"
+
+#, fuzzy
+#~| msgid "Мои согласия"
+#~ msgid "Подтвердить выбранные как admin_confirmed"
+#~ msgstr "Мои согласия"
+
+#, fuzzy
+#~| msgid "PDF file"
+#~ msgid "DOC file"
+#~ msgstr "PDF-файл"
+
+#, fuzzy
+#~| msgid "PDF file"
+#~ msgid "DOCX file"
+#~ msgstr "PDF-файл"
+
+#, fuzzy
+#~| msgid "PDF file"
+#~ msgid "ODT file"
+#~ msgstr "PDF-файл"
+
+#, fuzzy
+#~| msgid "PDF file"
+#~ msgid "ODTX file"
+#~ msgstr "PDF-файл"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Открыть DOC-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Открыть DOCX-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Открыть ODT-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Открыть ODTX-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Скачать DOC-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Скачать DOCX-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Скачать ODT-документ"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Скачать ODTX-документ"
+#~ msgstr "Текст документа"
+
+#~ msgid "Global"
+#~ msgstr "Глобально"
+
+#~ msgid "Django groups"
+#~ msgstr "Django-группы"
+
+#~ msgid "Confirmation note"
+#~ msgstr "Комментарий подтверждения"
+
+#~ msgid "Rejection reason"
+#~ msgstr "Причина отклонения"
+
+#~ msgid "Confirm selected as employee_confirmed"
+#~ msgstr "Подтвердить выбранные как employee_confirmed"
+
+#~ msgid "Confirm selected as admin_confirmed"
+#~ msgstr "Подтвердить выбранные как admin_confirmed"
+
+#~ msgid "Confirming as admin_confirmed is available only to superusers."
+#~ msgstr "Подтверждение как admin_confirmed доступно только superuser."
+
+#~ msgid "Reject selected (requires reason)"
+#~ msgstr "Отклонить выбранные (требуется причина)"
+
+#~ msgid "Provide a rejection reason to reject selected artifacts."
+#~ msgstr "Для отклонения укажите причину отклонения артефактов."
+
+#~ msgid ""
+#~ "Расширенные юридические сценарии (включая «право на забвение» с SLA и "
+#~ "документооборотом) в этот интерфейс не входят."
+#~ msgstr ""
+#~ "Расширенные юридические сценарии (включая «право на забвение» с SLA и "
+#~ "документооборотом) в этот интерфейс не входят."
+
+#, fuzzy
+#~| msgid "коробочный"
+#~ msgid "Полный коробочный текст"
+#~ msgstr "коробочный"
+
+#~ msgid "Заголовок блока выбора категорий"
+#~ msgstr "Заголовок блока выбора категорий"
+
+#~ msgid "Скрытый текст кнопки закрытия"
+#~ msgstr "Скрытый текст кнопки закрытия"
+
+#~ msgid "Подсказка кнопки закрытия"
+#~ msgstr "Подсказка кнопки закрытия"
+
+#~ msgid "ARIA-метка кнопки закрытия"
+#~ msgstr "ARIA-метка кнопки закрытия"
+
+#~ msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Устаревший theme-режим"
+#~ msgid "Устаревший режим компоновки"
+#~ msgstr "Устаревший theme-режим"
+
+#, fuzzy
+#~| msgid "Устаревший theme-режим"
+#~ msgid "Устаревший режим темы"
+#~ msgstr "Устаревший theme-режим"
+
+#, fuzzy
+#~| msgid "Согласия не найдены."
+#~ msgid "Позиция на мобильных"
+#~ msgstr "Согласия не найдены."
+
+#, fuzzy
+#~| msgid "Устаревший пресет: %(code)s"
+#~ msgid "Цветовой пресет"
+#~ msgstr "Устаревший пресет: %(code)s"
+
+#, fuzzy
+#~| msgid "коробочный"
+#~ msgid "Кастомный акцентный цвет"
+#~ msgstr "коробочный"
+
+#, fuzzy
+#~| msgid "Скрытый текст кнопки закрытия"
+#~ msgid "Кастомный текст акцентной кнопки"
+#~ msgstr "Скрытый текст кнопки закрытия"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: вариант баннера (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: вариант интерфейса (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Вариант уведомления о повторном согласии"
+#~ msgid ""
+#~ "Мобильная версия: вариант уведомления о повторном согласии "
+#~ "(переопределение)"
+#~ msgstr "Вариант уведомления о повторном согласии"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: положение кнопки закрытия (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: показывать кнопку закрытия (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: показывать кнопку отклонения (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#~ msgid "Блокирующий режим до выбора"
+#~ msgstr "Блокирующий режим до выбора"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: блокирующий режим до выбора (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid ""
+#~ "Мобильная версия: скрывать 'Настройки cookie' после выбора "
+#~ "(переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Мобильная версия: не закрывать после 'принять все' (переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid ""
+#~ "Мобильная версия: не закрывать после 'только необходимые' "
+#~ "(переопределение)"
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Блокирующий режим до выбора"
+#~ msgid ""
+#~ "Мобильная версия: не закрывать после 'сохранить выбор' (переопределение)"
+#~ msgstr "Блокирующий режим до выбора"
+
+#, fuzzy
+#~| msgid "Заголовок блока выбора категорий"
+#~ msgid "Текст кнопки открытия выбора пользовательских категорий."
+#~ msgstr "Заголовок блока выбора категорий"
+
+#, fuzzy
+#~| msgid "Подсказка кнопки закрытия"
+#~ msgid "Всплывающая подсказка кнопки закрытия блока запуска."
+#~ msgstr "Подсказка кнопки закрытия"
+
+#, fuzzy
+#~| msgid "ARIA-метка кнопки закрытия"
+#~ msgid "ARIA-метка кнопки закрытия блока запуска."
+#~ msgstr "ARIA-метка кнопки закрытия"
+
+#, fuzzy
+#~| msgid "Вариант уведомления о повторном согласии"
+#~ msgid ""
+#~ "Вариант отображения уведомления о повторном согласии: встроенный или "
+#~ "предупреждение."
+#~ msgstr "Вариант уведомления о повторном согласии"
+
+#, fuzzy
+#~| msgid "Выбор текстового пресета для desktop/основного слоя баннера."
+#~ msgid "Выбор текстового пресета для основной версии баннера на компьютерах."
+#~ msgstr "Выбор текстового пресета для desktop/основного слоя баннера."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Необязательное переопределение пресета для мобильной версии; пусто — "
+#~ "наследование основного пресета."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Коробочный цветовой пресет баннера."
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Необязательное переопределение варианта баннера для мобильной версии; "
+#~ "пусто — наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Необязательное переопределение интерфейса выбора категорий для мобильной "
+#~ "версии; пусто — наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Необязательное переопределение уведомления о повторном согласии для "
+#~ "мобильной версии; пусто — наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Переопределение положения кнопки закрытия для мобильной версии; пусто — "
+#~ "наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Переопределение показа кнопки закрытия для мобильной версии; пусто — "
+#~ "наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Переопределение блокирующего режима для мобильной версии; пусто — "
+#~ "наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid ""
+#~ "Переопределение скрытия кнопки «Настройки cookie» для мобильной версии; "
+#~ "пусто — наследование основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid "Наследовать desktop-пресет"
+#~ msgid "Наследовать основной пресет"
+#~ msgstr "Наследовать desktop-пресет"
+
+#, fuzzy
+#~| msgid ""
+#~| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~| "наследовать desktop-пресет."
+#~ msgid "Если включено, мобильная версия использует значение основной версии."
+#~ msgstr ""
+#~ "Опциональное переопределение пресета для мобильной версии; пусто = "
+#~ "наследовать desktop-пресет."
+
+#, fuzzy
+#~| msgid "Сбалансированный"
+#~ msgid "Встроенный"
+#~ msgstr "Сбалансированный"
+
+#~ msgid "Компактный"
+#~ msgstr "Компактный"
+
+#~ msgid "коробочный"
+#~ msgstr "коробочный"
+
+#~ msgid "пользовательский"
+#~ msgstr "пользовательский"
+
+#, python-format
+#~ msgid "Устаревший пресет: %(code)s"
+#~ msgstr "Устаревший пресет: %(code)s"
+
+#~ msgid ""
+#~ "Выберите текстовый пресет из справочника. Ручной ввод кода не допускается."
+#~ msgstr ""
+#~ "Выберите текстовый пресет из справочника. Ручной ввод кода не допускается."
+
+#, fuzzy
+#~| msgid ""
+#~| "Выберите mobile-пресет из справочника или оставьте пустым для "
+#~| "наследования."
+#~ msgid ""
+#~ "Выберите пресет для мобильной версии из справочника или оставьте пустым "
+#~ "для наследования."
+#~ msgstr ""
+#~ "Выберите mobile-пресет из справочника или оставьте пустым для "
+#~ "наследования."
+
+#, fuzzy
+#~| msgid "Наследовать desktop-пресет"
+#~ msgid "Название пресета"
+#~ msgstr "Наследовать desktop-пресет"
+
+#, fuzzy
+#~| msgid "Текст документа"
+#~ msgid "Текст пресета"
+#~ msgstr "Текст документа"
+
+#, fuzzy
+#~| msgid "коробочный"
+#~ msgid "Коробочный пресет"
+#~ msgstr "коробочный"
+
+#, fuzzy
+#~| msgid "Мобильный текстовый пресет (переопределение)"
+#~ msgid "Уникальный стабильный код текстового пресета интерфейса баннера."
+#~ msgstr "Мобильный текстовый пресет (переопределение)"
+
+#, fuzzy
+#~| msgid "Устаревший пресет: %(code)s"
+#~ msgid "Устаревшие поля совместимости"
+#~ msgstr "Устаревший пресет: %(code)s"
+
+#, fuzzy
+#~| msgid "Подсказка кнопки закрытия"
+#~ msgid "Видимость и кнопка закрытия"
+#~ msgstr "Подсказка кнопки закрытия"
+
+#, fuzzy, python-format
+#~| msgid "Created %(count)d custom draft from starter template."
+#~| msgid_plural "Created %(count)d custom drafts from starter templates."
+#~ msgid "Created %(count)d custom policy presets."
+#~ msgstr "Создан %(count)d пользовательский черновик из коробочного шаблона."
+
+#, fuzzy, python-format
+#~| msgid "Created %(count)d custom draft from starter template."
+#~| msgid_plural "Created %(count)d custom drafts from starter templates."
+#~ msgid "Created %(count)d custom banner presets."
+#~ msgstr "Создан %(count)d пользовательский черновик из коробочного шаблона."
+
+#~ msgid "152-FZ Consent Cookies"
+#~ msgstr "Согласия 152-ФЗ: cookie"
+
+#~ msgid "Cookie Category"
+#~ msgstr "Категория cookie"
+
+#~ msgid "Cookie Categories"
+#~ msgstr "Категории cookie"
+
+#, fuzzy
+#~| msgid "Custom revision"
+#~ msgid "Cloned from revision"
+#~ msgstr "Пользовательская редакция"
+
+#~ msgid "Cookie Policy Revision"
+#~ msgstr "Редакция политики cookie"
+
+#~ msgid "Cookie Policy Revisions"
+#~ msgstr "Редакции политики cookie"
+
+#~ msgid "Cookie Policy Text Preset"
+#~ msgstr "Текстовый пресет политики cookie"
+
+#~ msgid "Cookie Policy Text Presets"
+#~ msgstr "Текстовые пресеты политики cookie"
+
+#~ msgid "None"
+#~ msgstr "Нет"
+
+#~ msgid "Best-effort delete"
+#~ msgstr "Удаление по возможности"
+
+#~ msgid "Adapter hook"
+#~ msgstr "Хук адаптера"
+
+#~ msgid "Cookie Registry Item"
+#~ msgstr "Элемент реестра cookie"
+
+#~ msgid "Cookie Registry Items"
+#~ msgstr "Элементы реестра cookie"
+
+#~ msgid "Cookie Policy Revision Registry Item"
+#~ msgstr "Элемент снимка реестра политики cookie"
+
+#~ msgid "Cookie Policy Revision Registry Items"
+#~ msgstr "Элементы снимка реестра политики cookie"
+
+#~ msgid "Compact"
+#~ msgstr "Компактный"
+
+#~ msgid "Wide"
+#~ msgstr "Широкий"
+
+#~ msgid "Light"
+#~ msgstr "Светлая"
+
+#~ msgid "Contrast"
+#~ msgstr "Контрастная"
+
+#~ msgid "Bottom right"
+#~ msgstr "Внизу справа"
+
+#~ msgid "Bottom left"
+#~ msgstr "Внизу слева"
+
+#~ msgid "Center viewport"
+#~ msgstr "По центру экрана"
+
+#~ msgid "Bottom full width"
+#~ msgstr "Нижний полноэкранный"
+
+#~ msgid "Bottom"
+#~ msgstr "Внизу"
+
+#~ msgid "Top"
+#~ msgstr "Вверху"
+
+#~ msgid "Left"
+#~ msgstr "Слева"
+
+#~ msgid "Right"
+#~ msgstr "Справа"
+
+#~ msgid "Bar"
+#~ msgstr "Панель"
+
+#~ msgid "Card"
+#~ msgstr "Карточка"
+
+#~ msgid "Modal"
+#~ msgstr "Модальное окно"
+
+#~ msgid "Inline"
+#~ msgstr "Встроенный"
+
+#~ msgid "Panel"
+#~ msgstr "Панель"
+
+#~ msgid "Alert"
+#~ msgstr "Уведомление"
+
+#, fuzzy
+#~| msgid "Custom revision"
+#~ msgid "Custom colors"
+#~ msgstr "Пользовательская редакция"
+
+#~ msgid "Reject action label"
+#~ msgstr "Подпись действия отклонения"
+
+#~ msgid "Close control tooltip"
+#~ msgstr "Подсказка кнопки закрытия"
+
+#~ msgid "Close control aria-label"
+#~ msgstr "ARIA-метка кнопки закрытия"
+
+#~ msgid "Show close control"
+#~ msgstr "Показывать кнопку закрытия"
+
+#~ msgid "Close control placement"
+#~ msgstr "Положение кнопки закрытия"
+
+#, fuzzy
+#~| msgid "Close control placement"
+#~ msgid "Mobile close control placement override"
+#~ msgstr "Положение кнопки закрытия"
+
+#~ msgid "Show reject action"
+#~ msgstr "Показывать действие отклонения"
+
+#, fuzzy
+#~| msgid "Show close control"
+#~ msgid "Mobile show close control override"
+#~ msgstr "Показывать кнопку закрытия"
+
+#, fuzzy
+#~| msgid "Show reject action"
+#~ msgid "Mobile show reject action override"
+#~ msgstr "Показывать действие отклонения"
+
+#~ msgid "Blocking mode until choice"
+#~ msgstr "Блокирующий режим до выбора"
+
+#~ msgid ""
+#~ "Block page interaction until the user explicitly chooses cookie "
+#~ "preferences."
+#~ msgstr ""
+#~ "Блокировать взаимодействие со страницей, пока пользователь явно не "
+#~ "выберет настройки cookie."
+
+#~ msgid "Keep banner visible after 'accept all'"
+#~ msgstr "Оставлять баннер видимым после «Принять все»"
+
+#~ msgid "Keep banner visible after 'required only'"
+#~ msgstr "Оставлять баннер видимым после «Только необходимые»"
+
+#~ msgid "Keep banner visible after 'save selected categories'"
+#~ msgstr "Оставлять баннер видимым после «Сохранить выбор категорий»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'accept all'"
+#~ msgid "Mobile keep banner visible after 'accept all' override"
+#~ msgstr "Оставлять баннер видимым после «Принять все»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'required only'"
+#~ msgid "Mobile keep banner visible after 'required only' override"
+#~ msgstr "Оставлять баннер видимым после «Только необходимые»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'save selected categories'"
+#~ msgid "Mobile keep banner visible after 'save selected categories' override"
+#~ msgstr "Оставлять баннер видимым после «Сохранить выбор категорий»"
+
+#~ msgid "Cookie Banner Revision"
+#~ msgstr "Редакция cookie banner"
+
+#~ msgid "Cookie Banner Revisions"
+#~ msgstr "Редакции cookie banner"
+
+#~ msgid "Cookie Banner Text Preset"
+#~ msgstr "Текстовый пресет cookie banner"
+
+#~ msgid "Cookie Banner Text Presets"
+#~ msgstr "Текстовые пресеты cookie banner"
+
+#~ msgid "Cookie Consent Record"
+#~ msgstr "Запись cookie-согласия"
+
+#~ msgid "Cookie Consent Records"
+#~ msgstr "Записи cookie-согласий"
+
+#~ msgid "Accept all"
+#~ msgstr "Принять все"
+
+#~ msgid "Reject all"
+#~ msgstr "Отклонить все"
+
+#~ msgid "Required only"
+#~ msgstr "Только необходимые"
+
+#~ msgid "Save selected categories"
+#~ msgstr "Сохранить выбранные категории"
+
+#~ msgid "Decision action"
+#~ msgstr "Действие выбора"
+
+#~ msgid "Cookie Banner State"
+#~ msgstr "Состояние cookie banner"
+
+#~ msgid "Cookie Banner States"
+#~ msgstr "Состояния cookie banner"
+
+#~ msgid "Accepted"
+#~ msgstr "Принято"
+
+#~ msgid "Updated"
+#~ msgstr "Обновлено"
+
+#~ msgid "Cookie Consent Event"
+#~ msgstr "Событие cookie-согласия"
+
+#~ msgid "Cookie Consent Events"
+#~ msgstr "События cookie-согласий"
+
+#~ msgid "Cookie preferences"
+#~ msgstr "Настройки cookie"
+
+#, fuzzy
+#~| msgid "Заголовок блока выбора категорий"
+#~ msgid "Отказ от необязательных категорий"
+#~ msgstr "Заголовок блока выбора категорий"
+
+#~ msgid "no decision"
+#~ msgstr "решение не принято"
+
+#~ msgid "Select all optional categories"
+#~ msgstr "Выбрать все необязательные категории"
+
+#, fuzzy
+#~| msgid "Select all optional categories"
+#~ msgid "Reject optional categories"
+#~ msgstr "Выбрать все необязательные категории"
+
+#, fuzzy
+#~| msgid "Keep required categories only"
+#~ msgid "Keep only required cookie categories"
+#~ msgstr "Оставить только обязательные категории"
+
+#~ msgid "Choose categories"
+#~ msgstr "Выбрать категории"
+
+#, fuzzy
+#~| msgid "коробочный"
+#~ msgid "Коробочная цель"
+#~ msgstr "коробочный"
+
+#, fuzzy, python-format
+#~| msgid "Create custom draft copies from selected starter templates"
+#~ msgid "Created %(count)d policy draft copies from selected revisions."
+#~ msgstr "Создать пользовательские черновики из выбранных коробочных шаблонов"
+
+#, fuzzy, python-format
+#~| msgid "Create custom draft copies from selected starter templates"
+#~ msgid "Created %(count)d banner draft copies from selected revisions."
+#~ msgstr "Создать пользовательские черновики из выбранных коробочных шаблонов"
+
+#, fuzzy
+#~| msgid "Export selected records to CSV"
+#~ msgid "Export selected module audit logs to CSV"
+#~ msgstr "Экспортировать выбранные записи в CSV"
+
+#~ msgid "Short boxed policy text"
+#~ msgstr "Короткий коробочный текст политики cookie"
+
+#~ msgid "Full boxed policy text"
+#~ msgstr "Полный коробочный текст политики cookie"
+
+#~ msgid "Policy text variant"
+#~ msgstr "Вариант текста политики cookie"
+
+#~ msgid "Устаревший layout-режим"
+#~ msgstr "Устаревший layout-режим"
+
+#, fuzzy
+#~| msgid "Блокирующий режим до выбора"
+#~ msgid "Mobile: блокирующий режим до выбора (override)"
+#~ msgstr "Блокирующий режим до выбора"
+
+#, fuzzy
+#~| msgid "No revisions"
+#~ msgid "Source revision"
+#~ msgstr "Без редакций"
+
+#~ msgid "Publish selected boxed policy text variant"
+#~ msgstr "Опубликовать выбранный коробочный вариант текста политики cookie"
+
+#~ msgid "Select policy text variant for this action."
+#~ msgstr "Выберите вариант текста политики cookie для этого действия."
+
+#, python-format
+#~ msgid "Published boxed policy variant. New revision: v%(version)s."
+#~ msgstr ""
+#~ "Опубликован коробочный вариант политики cookie. Новая редакция: "
+#~ "v%(version)s."
+
+#~ msgid "Create custom draft from selected boxed policy variant"
+#~ msgstr ""
+#~ "Создать пользовательский черновик из выбранного коробочного варианта "
+#~ "политики cookie"
+
+#, python-format
+#~ msgid ""
+#~ "Created custom draft from boxed variant. Draft revision: v%(version)s."
+#~ msgstr ""
+#~ "Создан пользовательский черновик из коробочного варианта. Черновик: "
+#~ "v%(version)s."
+
+#~ msgid "Revision"
+#~ msgstr "Редакция"
+
+#~ msgid "Texts"
+#~ msgstr "Тексты"
+
+#~ msgid "Variant presets"
+#~ msgstr "Пресеты вариантов"
+
+#~ msgid "Legacy presentation compatibility"
+#~ msgstr "Совместимость с прежним представлением"
+
+#~ msgid "Visibility and close controls"
+#~ msgstr "Управление видимостью и закрытием"
+
+#~ msgid ""
+#~ "Dismiss closes banner without recording consent. Post-consent visibility "
+#~ "controls only panel rendering after a decision and does not change "
+#~ "consent status. Blocking mode keeps the panel open until an explicit "
+#~ "cookie choice is submitted."
+#~ msgstr ""
+#~ "Dismiss закрывает баннер без фиксации consent. Post-consent visibility "
+#~ "управляет только отображением панели после принятия решения и не меняет "
+#~ "статус согласия. В blocking mode панель остаётся открытой до явного "
+#~ "выбора cookie."
+
+#~ msgid ""
+#~ "Fields are kept for backward compatibility with the legacy layout/theme/"
+#~ "position schema."
+#~ msgstr ""
+#~ "Поля сохранены для обратной совместимости с прежней схемой layout/theme/"
+#~ "position."
+
+#~ msgid "RU balanced"
+#~ msgstr "RU balanced"
+
+#~ msgid "RU formal"
+#~ msgstr "RU formal"
+
+#~ msgid "RU compact"
+#~ msgstr "RU compact"
+

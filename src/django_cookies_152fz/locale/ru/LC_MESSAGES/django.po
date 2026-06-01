@@ -1,0 +1,3510 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: django-consent-152fz\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-19 21:34+0800\n"
+"PO-Revision-Date: 2026-04-22 00:00+0000\n"
+"Last-Translator: Codex\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: .\src\django_cookies_152fz\admin.py:76
+msgid "Код"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:77
+#: .\src\django_cookies_152fz\admin.py:339
+msgid "Название"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:78
+#: .\src\django_cookies_152fz\admin.py:122
+#: .\src\django_cookies_152fz\admin.py:291
+#: .\src\django_cookies_152fz\admin.py:340
+#: .\src\django_cookies_152fz\admin.py:451
+#: .\src\django_cookies_152fz\admin.py:889
+msgid "Описание"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:79
+#: .\src\django_cookies_152fz\admin.py:341
+msgid "Обязательная категория"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:80
+#: .\src\django_cookies_152fz\admin.py:342
+msgid "Порядок сортировки"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:81
+#: .\src\django_cookies_152fz\admin.py:197
+#: .\src\django_cookies_152fz\admin.py:343
+#: .\src\django_cookies_152fz\admin.py:545
+msgid "Активна"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:87
+#: .\src\django_cookies_152fz\admin.py:117
+#: .\src\django_cookies_152fz\admin.py:360
+#: .\src\django_cookies_152fz\admin.py:446
+msgid "Версия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:88
+#: .\src\django_cookies_152fz\admin.py:361
+msgid "Формат"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:89
+#: .\src\django_cookies_152fz\admin.py:362
+msgid "Текст политики"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:90
+#: .\src\django_cookies_152fz\admin.py:363
+msgid "Файл политики"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:91
+#: .\src\django_cookies_152fz\admin.py:364
+msgid "Снимок категорий"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:92
+#: .\src\django_cookies_152fz\admin.py:118
+#: .\src\django_cookies_152fz\admin.py:365
+#: .\src\django_cookies_152fz\admin.py:447
+msgid "Скопировано из ревизии"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:93
+#: .\src\django_cookies_152fz\admin.py:366
+msgid "Опубликована"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:94
+#: .\src\django_cookies_152fz\admin.py:196
+#: .\src\django_cookies_152fz\admin.py:367
+#: .\src\django_cookies_152fz\admin.py:544
+msgid "Коробочный шаблон"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:95
+#: .\src\django_cookies_152fz\admin.py:198
+#: .\src\django_cookies_152fz\admin.py:368
+#: .\src\django_cookies_152fz\admin.py:546
+msgid "Дата публикации"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:96
+#: .\src\django_cookies_152fz\admin.py:218
+#: .\src\django_cookies_152fz\admin.py:251
+#: .\src\django_cookies_152fz\admin.py:258
+#: .\src\django_cookies_152fz\admin.py:369
+msgid "Создано"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:97
+#: .\src\django_cookies_152fz\admin.py:219
+#: .\src\django_cookies_152fz\admin.py:259
+#: .\src\django_cookies_152fz\admin.py:270
+#: .\src\django_cookies_152fz\admin.py:370
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:294
+#: .\src\django_cookies_152fz\models.py:1456
+msgid "Обновлено"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:103
+#: .\src\django_cookies_152fz\admin.py:243
+#: .\src\django_cookies_152fz\admin.py:392
+msgid "Код элемента реестра"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:104
+#: .\src\django_cookies_152fz\admin.py:393
+msgid "Категория"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:105
+#: .\src\django_cookies_152fz\admin.py:245
+#: .\src\django_cookies_152fz\admin.py:394
+msgid "Провайдер"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:106
+#: .\src\django_cookies_152fz\admin.py:246
+#: .\src\django_cookies_152fz\admin.py:395
+msgid "Назначение"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:107
+#: .\src\django_cookies_152fz\admin.py:247
+#: .\src\django_cookies_152fz\admin.py:396
+msgid "Срок хранения"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:108
+#: .\src\django_cookies_152fz\admin.py:248
+#: .\src\django_cookies_152fz\admin.py:397
+msgid "Cookie-имена"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:109
+#: .\src\django_cookies_152fz\admin.py:249
+#: .\src\django_cookies_152fz\admin.py:398
+msgid "URL скрипта"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:110
+#: .\src\django_cookies_152fz\admin.py:250
+#: .\src\django_cookies_152fz\admin.py:399
+msgid "Стратегия очистки"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:111
+#: .\src\django_cookies_152fz\admin.py:280
+#: .\src\django_cookies_152fz\admin.py:309
+#: .\src\django_cookies_152fz\admin.py:400
+#: .\src\django_cookies_152fz\admin.py:864
+#: .\src\django_cookies_152fz\admin.py:907
+msgid "Активен"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:119
+#: .\src\django_cookies_152fz\admin.py:288
+#: .\src\django_cookies_152fz\admin.py:448
+#: .\src\django_cookies_152fz\admin.py:886
+msgid "Текст кнопки «Настройки cookie»"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:120
+#: .\src\django_cookies_152fz\admin.py:289
+#: .\src\django_cookies_152fz\admin.py:449
+#: .\src\django_cookies_152fz\admin.py:887
+msgid "Подзаголовок"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:121
+#: .\src\django_cookies_152fz\admin.py:290
+#: .\src\django_cookies_152fz\admin.py:450
+#: .\src\django_cookies_152fz\admin.py:888
+msgid "Заголовок"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:123
+#: .\src\django_cookies_152fz\admin.py:292
+#: .\src\django_cookies_152fz\admin.py:452
+#: .\src\django_cookies_152fz\admin.py:890
+msgid "Текст уведомления о повторном согласии"
+msgstr "Текст уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:124
+#: .\src\django_cookies_152fz\admin.py:293
+#: .\src\django_cookies_152fz\admin.py:453
+#: .\src\django_cookies_152fz\admin.py:891
+msgid "Текст повторного запроса"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:125
+#: .\src\django_cookies_152fz\admin.py:294
+#: .\src\django_cookies_152fz\admin.py:454
+#: .\src\django_cookies_152fz\admin.py:892
+msgid "Кнопка: принять все"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:126
+#: .\src\django_cookies_152fz\admin.py:295
+#: .\src\django_cookies_152fz\admin.py:455
+#: .\src\django_cookies_152fz\admin.py:893
+msgid "Кнопка: отказаться от необязательных cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:127
+#: .\src\django_cookies_152fz\admin.py:296
+#: .\src\django_cookies_152fz\admin.py:456
+#: .\src\django_cookies_152fz\admin.py:894
+msgid "Кнопка: только необходимые"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:128
+#: .\src\django_cookies_152fz\admin.py:297
+#: .\src\django_cookies_152fz\admin.py:457
+#: .\src\django_cookies_152fz\admin.py:895
+msgid "Кнопка: выбрать категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:129
+#: .\src\django_cookies_152fz\admin.py:298
+#: .\src\django_cookies_152fz\admin.py:458
+#: .\src\django_cookies_152fz\admin.py:896
+msgid "Заголовок блока выбора категорий"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:130
+#: .\src\django_cookies_152fz\admin.py:299
+#: .\src\django_cookies_152fz\admin.py:459
+#: .\src\django_cookies_152fz\admin.py:897
+msgid "Заголовок обязательных категорий"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:131
+#: .\src\django_cookies_152fz\admin.py:300
+#: .\src\django_cookies_152fz\admin.py:460
+#: .\src\django_cookies_152fz\admin.py:898
+msgid "Пустой текст обязательных"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:132
+#: .\src\django_cookies_152fz\admin.py:301
+#: .\src\django_cookies_152fz\admin.py:461
+#: .\src\django_cookies_152fz\admin.py:899
+msgid "Заголовок необязательных категорий"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:133
+#: .\src\django_cookies_152fz\admin.py:302
+#: .\src\django_cookies_152fz\admin.py:462
+#: .\src\django_cookies_152fz\admin.py:900
+msgid "Пустой текст необязательных"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:134
+#: .\src\django_cookies_152fz\admin.py:303
+#: .\src\django_cookies_152fz\admin.py:463
+#: .\src\django_cookies_152fz\admin.py:901
+msgid "Кнопка: сохранить выбор"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:135
+#: .\src\django_cookies_152fz\admin.py:304
+#: .\src\django_cookies_152fz\admin.py:464
+#: .\src\django_cookies_152fz\admin.py:902
+msgid "Ссылка: полная страница"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:136
+#: .\src\django_cookies_152fz\admin.py:305
+#: .\src\django_cookies_152fz\admin.py:465
+#: .\src\django_cookies_152fz\admin.py:903
+msgid "Скрытый текст кнопки закрытия"
+msgstr "Скрытый текст кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:137
+#: .\src\django_cookies_152fz\admin.py:466
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:116
+#: .\src\django_cookies_152fz\models.py:768
+msgid "Подсказка кнопки закрытия"
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:138
+#: .\src\django_cookies_152fz\admin.py:467
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:117
+#: .\src\django_cookies_152fz\models.py:773
+msgid "ARIA-метка кнопки закрытия"
+msgstr "ARIA-метка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:139
+#: .\src\django_cookies_152fz\admin.py:306
+#: .\src\django_cookies_152fz\admin.py:468
+msgid "Текст для режима без JavaScript"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:140
+#: .\src\django_cookies_152fz\admin.py:307
+#: .\src\django_cookies_152fz\admin.py:469
+msgid "Ссылка для режима без JavaScript"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:141
+#: .\src\django_cookies_152fz\admin.py:470
+msgid "Вариант баннера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:142
+#: .\src\django_cookies_152fz\admin.py:471
+msgid "Вариант интерфейса согласия"
+msgstr "Вариант интерфейса согласия"
+
+#: .\src\django_cookies_152fz\admin.py:143
+#: .\src\django_cookies_152fz\admin.py:472
+msgid "Вариант уведомления о повторном согласии"
+msgstr "Вариант уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:144
+#: .\src\django_cookies_152fz\admin.py:473
+msgid "Текстовый пресет"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:145
+#: .\src\django_cookies_152fz\admin.py:474
+msgid "Мобильный текстовый пресет (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:146
+#: .\src\django_cookies_152fz\admin.py:475
+#, fuzzy
+#| msgid "Устаревший theme-режим"
+msgid "Устаревший режим компоновки"
+msgstr "Устаревший theme-режим"
+
+#: .\src\django_cookies_152fz\admin.py:147
+#: .\src\django_cookies_152fz\admin.py:476
+#, fuzzy
+#| msgid "Устаревший theme-режим"
+msgid "Устаревший режим темы"
+msgstr "Устаревший theme-режим"
+
+#: .\src\django_cookies_152fz\admin.py:148
+#: .\src\django_cookies_152fz\admin.py:477
+msgid "Позиция на компьютерах"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:149
+#, fuzzy
+#| msgid "Согласия не найдены."
+msgid "Позиция на мобильных устройствах"
+msgstr "Согласия не найдены."
+
+#: .\src\django_cookies_152fz\admin.py:150
+#: .\src\django_cookies_152fz\admin.py:496
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: вариант баннера (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:151
+#: .\src\django_cookies_152fz\admin.py:497
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: вариант интерфейса (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:153
+#: .\src\django_cookies_152fz\admin.py:499
+#, fuzzy
+#| msgid "Вариант уведомления о повторном согласии"
+msgid ""
+"Мобильная версия: вариант уведомления о повторном согласии (переопределение)"
+msgstr "Вариант уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:155
+#: .\src\django_cookies_152fz\admin.py:501
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:149
+#: .\src\django_cookies_152fz\models.py:910
+msgid "Показывать кнопку закрытия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:156
+#: .\src\django_cookies_152fz\admin.py:502
+msgid "Положение кнопки закрытия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:158
+#: .\src\django_cookies_152fz\admin.py:504
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: положение кнопки закрытия (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:160
+#: .\src\django_cookies_152fz\admin.py:506
+msgid "Показывать кнопку отклонения"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:162
+#: .\src\django_cookies_152fz\admin.py:508
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: показывать кнопку закрытия (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:165
+#: .\src\django_cookies_152fz\admin.py:511
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: показывать кнопку отклонения (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:167
+#: .\src\django_cookies_152fz\admin.py:513
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:155
+#: .\src\django_cookies_152fz\models.py:953
+msgid "Блокирующий режим до выбора"
+msgstr "Блокирующий режим до выбора"
+
+#: .\src\django_cookies_152fz\admin.py:169
+#: .\src\django_cookies_152fz\admin.py:515
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: блокирующий режим до выбора (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:172
+#: .\src\django_cookies_152fz\admin.py:518
+msgid "Скрывать 'Настройки cookie' после выбора пользователя"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:175
+#: .\src\django_cookies_152fz\admin.py:521
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid ""
+"Мобильная версия: скрывать 'Настройки cookie' после выбора (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:178
+#: .\src\django_cookies_152fz\admin.py:524
+msgid "Не закрывать баннер после 'принять все'"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:181
+#: .\src\django_cookies_152fz\admin.py:527
+msgid "Не закрывать баннер после 'только необходимые'"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:184
+#: .\src\django_cookies_152fz\admin.py:530
+msgid "Не закрывать баннер после 'сохранить выбор'"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:187
+#: .\src\django_cookies_152fz\admin.py:533
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Мобильная версия: не закрывать после 'принять все' (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:190
+#: .\src\django_cookies_152fz\admin.py:536
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid ""
+"Мобильная версия: не закрывать после 'только необходимые' (переопределение)"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:193
+#: .\src\django_cookies_152fz\admin.py:539
+#, fuzzy
+#| msgid "Блокирующий режим до выбора"
+msgid ""
+"Мобильная версия: не закрывать после 'сохранить выбор' (переопределение)"
+msgstr "Блокирующий режим до выбора"
+
+#: .\src\django_cookies_152fz\admin.py:195
+#: .\src\django_cookies_152fz\admin.py:542
+msgid "Скрывать баннер для поисковых/технических ботов"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:199
+#: .\src\django_cookies_152fz\admin.py:547
+msgid "Создана"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:200
+#: .\src\django_cookies_152fz\admin.py:548
+msgid "Обновлена"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:206
+#: .\src\django_cookies_152fz\admin.py:265
+#, fuzzy
+#| msgid "пользовательский"
+msgid "Пользователь"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\admin.py:207
+#: .\src\django_cookies_152fz\admin.py:266
+msgid "Анонимный токен"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:208
+#: .\src\django_cookies_152fz\admin.py:241
+#, fuzzy
+#| msgid "Вариант интерфейса согласия"
+msgid "Редакция политики"
+msgstr "Вариант интерфейса согласия"
+
+#: .\src\django_cookies_152fz\admin.py:209
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:20
+msgid "Статус"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:210
+#: .\src\django_cookies_152fz\admin.py:227
+msgid "Источник"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:211
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Выбранные категории"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:212
+#: .\src\django_cookies_152fz\admin.py:228
+msgid "IP-адрес"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:213
+#: .\src\django_cookies_152fz\admin.py:229
+msgid "User-Agent"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:214
+#: .\src\django_cookies_152fz\admin.py:230
+msgid "Локаль"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:215
+#: .\src\django_cookies_152fz\admin.py:231
+msgid "Request ID"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:216
+#: .\src\django_cookies_152fz\admin.py:232
+msgid "Хеш ключа сессии"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:217
+#: .\src\django_cookies_152fz\admin.py:234
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Дополнительные метаданные"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:225
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:221
+#: .\src\django_cookies_152fz\models.py:1252
+#, fuzzy
+#| msgid "Мои согласия"
+msgid "Запись cookie-согласия"
+msgstr "Мои согласия"
+
+#: .\src\django_cookies_152fz\admin.py:226
+msgid "Тип события"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:233
+msgid "Данные события"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:235
+msgid "Время события"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:242
+#, fuzzy
+#| msgid "Элемент реестра редакции cookie-policy"
+msgid "Элемент реестра"
+msgstr "Элемент реестра редакции политики cookie"
+
+#: .\src\django_cookies_152fz\admin.py:244
+#: .\src\django_cookies_152fz\admin.py:338
+msgid "Код категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:257
+#: .\src\django_cookies_152fz\admin.py:1009
+#: .\src\django_cookies_152fz\models.py:1421
+msgid "Разделитель CSV-экспорта"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:267
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:277
+#: .\src\django_cookies_152fz\models.py:1353
+msgid "Действие выбора"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:268
+#, fuzzy
+#| msgid "Открыть"
+msgid "Скрыт в"
+msgstr "Открыть"
+
+#: .\src\django_cookies_152fz\admin.py:269
+#, fuzzy
+#| msgid "Наследовать desktop-пресет"
+msgid "Решение принято в"
+msgstr "Наследовать desktop-пресет"
+
+#: .\src\django_cookies_152fz\admin.py:276
+#: .\src\django_cookies_152fz\admin.py:286
+#: .\src\django_cookies_152fz\admin.py:860
+#: .\src\django_cookies_152fz\admin.py:884
+msgid "Код пресета"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:277
+#: .\src\django_cookies_152fz\admin.py:287
+#: .\src\django_cookies_152fz\admin.py:861
+#: .\src\django_cookies_152fz\admin.py:885
+#, fuzzy
+#| msgid "Наследовать desktop-пресет"
+msgid "Название пресета"
+msgstr "Наследовать desktop-пресет"
+
+#: .\src\django_cookies_152fz\admin.py:278
+#: .\src\django_cookies_152fz\admin.py:862
+#, fuzzy
+#| msgid "Текст документа"
+msgid "Текст пресета"
+msgstr "Текст документа"
+
+#: .\src\django_cookies_152fz\admin.py:279
+#: .\src\django_cookies_152fz\admin.py:308
+#: .\src\django_cookies_152fz\admin.py:863
+#: .\src\django_cookies_152fz\admin.py:906
+#, fuzzy
+#| msgid "коробочный"
+msgid "Коробочный пресет"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\admin.py:322
+msgid "Короткий коробочный текст"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:323
+#, fuzzy
+#| msgid "коробочный"
+msgid "Полный коробочный текст"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\admin.py:326
+#, fuzzy
+#| msgid "Вариант интерфейса согласия"
+msgid "Вариант текста политики"
+msgstr "Вариант интерфейса согласия"
+
+#: .\src\django_cookies_152fz\admin.py:328
+msgid "Выберите коробочный вариант текста политики для массового действия."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:346
+msgid "Стабильный код категории cookie в consent/runtime контрактах."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:347
+msgid "Название категории, отображаемое пользователю."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:348
+msgid "Пояснение назначения категории cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:349
+msgid "Обязательная категория всегда включается независимо от выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:350
+msgid "Порядок отображения категории в баннере и на странице настроек."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:351
+msgid "Отключите категорию, чтобы исключить её из текущего выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:373
+msgid "Версия policy revision в versioned-flow."
+msgstr "Версия редакции политики в versioned-flow."
+
+#: .\src\django_cookies_152fz\admin.py:374
+msgid "Формат контента политики: текст или файл."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:375
+msgid "Текст policy revision для text-формата."
+msgstr "Текст редакции политики для text-формата."
+
+#: .\src\django_cookies_152fz\admin.py:376
+msgid "Файл policy revision для file/pdf сценариев."
+msgstr "Файл редакции политики для file/pdf сценариев."
+
+#: .\src\django_cookies_152fz\admin.py:377
+msgid "JSON-снимок активных категорий на момент публикации."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:378
+#: .\src\django_cookies_152fz\admin.py:552
+msgid "Исходная ревизия, если запись создана через clone/copy flow."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:379
+msgid "Активная редакция применяется в текущем cookie flow."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:380
+msgid "Флаг коробочного шаблона, поставляемого пакетом."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:381
+msgid "Дата и время публикации редакции."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:382
+#: .\src\django_cookies_152fz\admin.py:634
+msgid "Техническое время создания записи."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:383
+#: .\src\django_cookies_152fz\admin.py:635
+msgid "Техническое время последнего обновления."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:403
+msgid "Уникальный код элемента runtime-реестра cookie/script."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:404
+msgid "Категория cookie, к которой относится элемент."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:405
+msgid "Провайдер/вендор cookie или скрипта."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:406
+msgid "Назначение cookie/script элемента для disclosure и аудита."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:407
+msgid "Срок хранения cookie/script данных."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:408
+msgid "JSON-список имён cookie, связанных с элементом."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:409
+msgid "URL скрипта для consent-gated runtime загрузки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:410
+msgid "Стратегия очистки при отзыве/изменении согласия."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:411
+msgid "Включает или отключает элемент в runtime."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:478
+#, fuzzy
+#| msgid "Согласия не найдены."
+msgid "Позиция на мобильных"
+msgstr "Согласия не найдены."
+
+#: .\src\django_cookies_152fz\admin.py:479
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:132
+#: .\src\django_cookies_152fz\models.py:859
+#, fuzzy
+#| msgid "Устаревший пресет: %(code)s"
+msgid "Цветовой пресет"
+msgstr "Устаревший пресет: %(code)s"
+
+#: .\src\django_cookies_152fz\admin.py:480
+msgid "Кастомный фон"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:481
+msgid "Кастомный текст"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:482
+#, fuzzy
+#| msgid "коробочный"
+msgid "Кастомный акцентный цвет"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\admin.py:483
+#, fuzzy
+#| msgid "Скрытый текст кнопки закрытия"
+msgid "Кастомный текст акцентной кнопки"
+msgstr "Скрытый текст кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:484
+msgid "Кастомная граница"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:485
+msgid "Кастомная подложка"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:486
+msgid "Кастомный overlay"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:487
+msgid "Внутренний отступ panel (px)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:488
+msgid "Отступ между секциями (px)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:489
+msgid "Отступ между кнопками (px)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:490
+msgid "Прозрачность overlay (%)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:491
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:144
+#: .\src\django_cookies_152fz\models.py:882
+msgid "Показывать медиаблок"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:492
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:145
+#: .\src\django_cookies_152fz\models.py:888
+msgid "Тип медиаблока"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:493
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:146
+#: .\src\django_cookies_152fz\models.py:894
+msgid "Эмодзи для медиаблока"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:494
+msgid "Адрес изображения для медиаблока"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:495
+msgid "Alt-текст изображения для accessibility"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:551
+msgid "Версия banner revision в versioned-flow."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:553
+#: .\src\django_cookies_152fz\admin.py:912
+msgid "Текст кнопки/ссылки открытия настроек cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:554
+#: .\src\django_cookies_152fz\admin.py:914
+msgid "Короткий подзаголовок над основным заголовком баннера."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:555
+#: .\src\django_cookies_152fz\admin.py:916
+msgid "Главный заголовок баннера cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:556
+#: .\src\django_cookies_152fz\admin.py:918
+msgid "Основное описание назначения cookie и выбора категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:557
+msgid "Текст уведомления при необходимости re-consent."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:559
+#: .\src\django_cookies_152fz\admin.py:924
+#, fuzzy
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Текст повторного запроса после интервала повторного показа."
+msgstr "Текст уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:561
+#: .\src\django_cookies_152fz\admin.py:926
+msgid "Текст кнопки быстрого действия «принять все»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:562
+msgid "Текст кнопки быстрого действия «отказаться от необязательных cookie». "
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:563
+#: .\src\django_cookies_152fz\admin.py:930
+msgid "Текст кнопки «только необходимые»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:565
+#: .\src\django_cookies_152fz\admin.py:932
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Текст кнопки открытия выбора пользовательских категорий."
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:567
+#: .\src\django_cookies_152fz\admin.py:935
+msgid "Заголовок/summary блока детальной настройки категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:568
+#: .\src\django_cookies_152fz\admin.py:937
+msgid "Заголовок секции обязательных категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:569
+#: .\src\django_cookies_152fz\admin.py:939
+msgid "Текст, если обязательные категории не отображаются."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:570
+#: .\src\django_cookies_152fz\admin.py:941
+msgid "Заголовок секции необязательных категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:571
+#: .\src\django_cookies_152fz\admin.py:943
+msgid "Текст, если необязательные категории отсутствуют."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:572
+#: .\src\django_cookies_152fz\admin.py:946
+msgid "Текст кнопки сохранения пользовательского выбора категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:573
+#: .\src\django_cookies_152fz\admin.py:949
+msgid "Текст ссылки на полную страницу настроек cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:574
+#: .\src\django_cookies_152fz\admin.py:952
+msgid "Скрытый (a11y) текст для кнопки закрытия/сворачивания."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:575
+#, fuzzy
+#| msgid "Подсказка кнопки закрытия"
+msgid "Всплывающая подсказка кнопки закрытия блока запуска."
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:576
+#, fuzzy
+#| msgid "ARIA-метка кнопки закрытия"
+msgid "ARIA-метка кнопки закрытия блока запуска."
+msgstr "ARIA-метка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:577
+#: .\src\django_cookies_152fz\admin.py:954
+msgid "Текст блока для режима без JavaScript."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:578
+msgid "Текст ссылки в блоке без JavaScript."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:579
+msgid "Визуальный вариант баннера: полоска, карточка или модальное окно."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:580
+msgid "Вариант интерфейса выбора категорий: встроенный или панель."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:581
+#, fuzzy
+#| msgid "Вариант уведомления о повторном согласии"
+msgid ""
+"Вариант отображения уведомления о повторном согласии: встроенный или "
+"предупреждение."
+msgstr "Вариант уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:583
+#, fuzzy
+#| msgid "Выбор текстового пресета для desktop/основного слоя баннера."
+msgid "Выбор текстового пресета для основной версии баннера на компьютерах."
+msgstr "Выбор текстового пресета для desktop/основного слоя баннера."
+
+#: .\src\django_cookies_152fz\admin.py:586
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Необязательное переопределение пресета для мобильной версии; пусто — "
+"наследование основного пресета."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:588
+msgid "Устаревшее поле режима компоновки для обратной совместимости."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:589
+msgid "Устаревшее поле темы для обратной совместимости."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:590
+msgid "Позиция баннера на компьютерах."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:591
+msgid "Позиция баннера на мобильных устройствах."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:592
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Коробочный цветовой пресет баннера."
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:593
+msgid "Опциональный HEX #RRGGBB для фона баннера."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:594
+msgid "Опциональный HEX #RRGGBB для текста баннера."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:595
+msgid "Опциональный HEX #RRGGBB для основной кнопки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:596
+msgid "Опциональный HEX #RRGGBB для текста основной кнопки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:597
+msgid "Опциональный HEX #RRGGBB для границ."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:598
+msgid "Опциональный HEX #RRGGBB для вторичной подложки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:599
+msgid "Опциональный HEX #RRGGBB для фона backdrop/overlay."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:600
+msgid "Внутренние отступы панели. Безопасный диапазон: 8..48."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:601
+msgid "Отступ между секциями формы. Безопасный диапазон: 4..32."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:602
+msgid "Отступ между кнопками. Безопасный диапазон: 4..24."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:603
+msgid "Прозрачность overlay в процентах. Безопасный диапазон: 0..85."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:604
+msgid "Включает необязательный медиаблок в заголовке баннера."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:605
+msgid "Тип медиаблока: эмодзи-иконка или небольшое изображение."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:606
+msgid "Эмодзи для простого сценария с иконкой."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:607
+msgid "Адрес или путь к изображению для медиаблока (без произвольного HTML)."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:609
+msgid "Alt-текст для accessibility при использовании режима изображения."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:611
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Необязательное переопределение варианта баннера для мобильной версии; пусто "
+"— наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:612
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Необязательное переопределение интерфейса выбора категорий для мобильной "
+"версии; пусто — наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:613
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Необязательное переопределение уведомления о повторном согласии для "
+"мобильной версии; пусто — наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:614
+msgid "Показывать кнопку закрытия рядом с кнопкой «Настройки cookie»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:615
+msgid ""
+"Расположение кнопки закрытия относительно текста кнопки «Настройки cookie»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:616
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение положения кнопки закрытия для мобильной версии; пусто — "
+"наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:617
+msgid "Показывать кнопку «Отклонить cookie»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:618
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение показа кнопки закрытия для мобильной версии; пусто — "
+"наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:619
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение показа кнопки отклонения для мобильной версии; пусто — "
+"наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:620
+msgid "Блокировать взаимодействие со страницей до первого явного выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:621
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение блокирующего режима для мобильной версии; пусто — "
+"наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:622
+msgid "Скрывать кнопку «Настройки cookie» после сохранённого выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:623
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение скрытия кнопки «Настройки cookie» для мобильной версии; "
+"пусто — наследование основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:624
+msgid ""
+"Если включено, баннер после «принять все» не закрывается и не сворачивается "
+"автоматически."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:625
+msgid ""
+"Если включено, баннер после «только необходимые» не закрывается и не "
+"сворачивается автоматически."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:626
+msgid ""
+"Если включено, баннер после «сохранить выбор» не закрывается и не "
+"сворачивается автоматически."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:627
+msgid ""
+"Переопределение поведения после «принять все» для мобильной версии: оставить "
+"баннер открытым; пусто — наследование основной версии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:628
+msgid ""
+"Переопределение поведения после «только необходимые» для мобильной версии: "
+"оставить баннер открытым; пусто — наследование основной версии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:629
+msgid ""
+"Переопределение поведения после «сохранить выбор» для мобильной версии: "
+"оставить баннер открытым; пусто — наследование основной версии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:630
+msgid ""
+"Переопределение скрытия для ботов: пусто — использовать "
+"`cookie_runtime.hide_for_bots` из настроек; включено — скрывать баннер для "
+"похожих на ботов user-agent; выключено — показывать баннер даже ботам."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:631
+msgid "Признак коробочной (поставляемой пакетом) ревизии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:632
+msgid "Активная ревизия используется в рабочем режиме."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:633
+msgid "Дата и время публикации ревизии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:650
+#, fuzzy
+#| msgid "Наследовать desktop-пресет"
+msgid "Наследовать основной пресет"
+msgstr "Наследовать desktop-пресет"
+
+#: .\src\django_cookies_152fz\admin.py:724
+#: .\src\django_cookies_152fz\admin.py:784
+#, fuzzy
+#| msgid "Наследовать desktop-пресет"
+msgid "Наследовать основное значение"
+msgstr "Наследовать desktop-пресет"
+
+#: .\src\django_cookies_152fz\admin.py:726
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Если включено, мобильная версия использует значение основной версии."
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\admin.py:743
+#: .\src\django_cookies_152fz\admin.py:748
+msgid "Полоска"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:744
+#: .\src\django_cookies_152fz\admin.py:749
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:120
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:123
+#: .\src\django_cookies_152fz\models.py:667
+msgid "Карточка"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:745
+#: .\src\django_cookies_152fz\admin.py:750
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:120
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:123
+#: .\src\django_cookies_152fz\models.py:668
+msgid "Модальное окно"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:753
+#: .\src\django_cookies_152fz\admin.py:757
+#: .\src\django_cookies_152fz\admin.py:761
+#: .\src\django_cookies_152fz\admin.py:765
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:121
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:122
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:124
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:125
+#: .\src\django_cookies_152fz\models.py:670
+#: .\src\django_cookies_152fz\models.py:673
+#, fuzzy
+#| msgid "Сбалансированный"
+msgid "Встроенный"
+msgstr "Сбалансированный"
+
+#: .\src\django_cookies_152fz\admin.py:754
+#: .\src\django_cookies_152fz\admin.py:758
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:121
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:124
+#: .\src\django_cookies_152fz\models.py:671
+msgid "Панель"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:762
+#: .\src\django_cookies_152fz\admin.py:766
+msgid "Предупреждение"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:769
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:145
+#: .\src\django_cookies_152fz\models.py:344
+#: .\src\django_cookies_152fz\models.py:693
+msgid "Иконка"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:770
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:145
+#: .\src\django_cookies_152fz\models.py:345
+#: .\src\django_cookies_152fz\models.py:694
+msgid "Изображение"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:792
+msgid "Сбалансированный"
+msgstr "Сбалансированный"
+
+#: .\src\django_cookies_152fz\admin.py:793
+msgid "Формальный"
+msgstr "Формальный"
+
+#: .\src\django_cookies_152fz\admin.py:794
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:128
+#: .\src\django_cookies_152fz\models.py:647
+msgid "Компактный"
+msgstr "Компактный"
+
+#: .\src\django_cookies_152fz\admin.py:801
+msgid "коробочный"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\admin.py:801
+msgid "пользовательский"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\admin.py:820
+#, python-format
+msgid "Устаревший пресет: %(code)s"
+msgstr "Устаревший пресет: %(code)s"
+
+#: .\src\django_cookies_152fz\admin.py:827
+msgid ""
+"Выберите текстовый пресет из справочника. Ручной ввод кода не допускается."
+msgstr ""
+"Выберите текстовый пресет из справочника. Ручной ввод кода не допускается."
+
+#: .\src\django_cookies_152fz\admin.py:839
+#, fuzzy
+#| msgid ""
+#| "Выберите mobile-пресет из справочника или оставьте пустым для "
+#| "наследования."
+msgid ""
+"Выберите пресет для мобильной версии из справочника или оставьте пустым для "
+"наследования."
+msgstr ""
+"Выберите mobile-пресет из справочника или оставьте пустым для наследования."
+
+#: .\src\django_cookies_152fz\admin.py:867
+msgid "Уникальный стабильный код текстового пресета политики cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:868
+#: .\src\django_cookies_152fz\admin.py:911
+msgid "Служебное название пресета для админки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:870
+msgid "Текст политики cookie, который будет подставляться в редакцию."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:873
+#: .\src\django_cookies_152fz\admin.py:957
+msgid "Отмечает пресет как коробочный (поставляется пакетом)."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:875
+#: .\src\django_cookies_152fz\admin.py:959
+msgid "Отключите пресет, чтобы скрыть его из выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:904
+msgid "Текст no-JS"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:905
+msgid "Ссылка no-JS"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:910
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Уникальный стабильный код текстового пресета интерфейса баннера."
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\admin.py:921
+#, fuzzy
+#| msgid "Текст уведомления о повторном согласии"
+msgid "Текст уведомления при необходимости повторного согласия."
+msgstr "Текст уведомления о повторном согласии"
+
+#: .\src\django_cookies_152fz\admin.py:928
+msgid "Текст кнопки быстрого действия «отказаться от необязательных cookie»."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:955
+msgid "Текст ссылки в блоке для режима без JavaScript."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1013
+msgid ""
+"Разделитель по умолчанию для CSV-экспорта записей и событий cookie-согласия "
+"в админке."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1066
+#: .\src\django_cookies_152fz\admin.py:1461
+msgid "Исходная ревизия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1074
+msgid "Клонировать выбранные редакции политики как пользовательские черновики"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1084
+#, python-format
+msgid "Создано %(count)d черновиков политики из выбранных редакций."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1094
+msgid "Клонирование выбранных редакций политики в пользовательские черновики."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1100
+msgid "Опубликовать выбранный коробочный вариант текста политики"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1107
+#: .\src\django_cookies_152fz\admin.py:1144
+msgid "Выберите вариант текста политики для этого действия."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1120
+#, python-format
+msgid "Опубликован коробочный вариант политики. Новая ревизия: v%(version)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1136
+msgid "Создать пользовательский черновик из выбранного коробочного варианта"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1159
+#, python-format
+msgid ""
+"Создан пользовательский черновик из коробочного варианта. Ревизия: "
+"v%(version)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1261
+msgid "Ревизия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1276
+msgid "Тексты"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1306
+#, fuzzy
+#| msgid "Вариант интерфейса согласия"
+msgid "Варианты отображения"
+msgstr "Вариант интерфейса согласия"
+
+#: .\src\django_cookies_152fz\admin.py:1319
+msgid "Визуальная настройка"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1344
+#, fuzzy
+#| msgid "Устаревший пресет: %(code)s"
+msgid "Устаревшие поля совместимости"
+msgstr "Устаревший пресет: %(code)s"
+
+#: .\src\django_cookies_152fz\admin.py:1347
+msgid ""
+"Поля сохранены для обратной совместимости с прежней схемой компоновки, темы "
+"и позиционирования."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1359
+#, fuzzy
+#| msgid "Подсказка кнопки закрытия"
+msgid "Видимость и кнопка закрытия"
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\admin.py:1362
+msgid ""
+"Параметры сгруппированы парами: слева — основная версия (desktop), справа — "
+"мобильное переопределение. Кнопка закрытия скрывает баннер без фиксации "
+"согласия. Параметры видимости после выбора управляют только отображением "
+"баннера и не меняют статус согласия. Блокирующий режим удерживает баннер "
+"открытым до явного выбора пользователя."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1425
+msgid "Настольная версия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1429
+#, fuzzy
+#| msgid "коробочный"
+msgid "Мобильная версия"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\admin.py:1431
+msgid "Сброс цветовых настроек"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1438
+msgid "Сбросить цвета по умолчанию"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1440
+msgid ""
+"Возвращает цветовой пресет и кастомные цветовые поля к значениям по "
+"умолчанию."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1444
+msgid "Статус редактирования текстов"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1448
+msgid "Поля текста можно редактировать в пользовательских ревизиях."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1454
+msgid ""
+"Это коробочная ревизия: защищённые текстовые поля доступны только для "
+"чтения. Чтобы редактировать тексты, создайте пользовательскую копию ревизии."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1458
+msgid ""
+"Это пользовательская ревизия: все текстовые поля доступны для редактирования."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1469
+msgid "Клонировать выбранные редакции баннера как пользовательские черновики"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1479
+#, python-format
+msgid "Создано %(count)d черновиков баннера из выбранных редакций."
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1489
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Клонирование выбранных редакций баннера в пользовательские черновики."
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:1548
+#: .\src\django_cookies_152fz\admin.py:1744
+msgid "Subject"
+msgstr "Субъект"
+
+#: .\src\django_cookies_152fz\admin.py:1614
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Экспортировать выбранные события в CSV"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\admin.py:1762
+msgid "Clone selected policy presets as custom presets"
+msgstr "Клонировать выбранные заготовки политики в пользовательские заготовки"
+
+#: .\src\django_cookies_152fz\admin.py:1774
+#: .\src\django_cookies_152fz\admin.py:1831
+msgid "копия"
+msgstr ""
+
+#: .\src\django_cookies_152fz\admin.py:1782
+#, python-format
+msgid "Created %(count)d custom policy presets."
+msgstr "Создано %(count)d пользовательских заготовок политики."
+
+#: .\src\django_cookies_152fz\admin.py:1819
+msgid "Clone selected banner presets as custom presets"
+msgstr "Клонировать выбранные заготовки баннера в пользовательские заготовки"
+
+#: .\src\django_cookies_152fz\admin.py:1859
+#, python-format
+msgid "Created %(count)d custom banner presets."
+msgstr "Создано %(count)d пользовательских заготовок баннера."
+
+#: .\src\django_cookies_152fz\apps.py:13
+#, fuzzy
+#| msgid "Мои согласия"
+msgid "Согласия 152-ФЗ: cookie"
+msgstr "Мои согласия"
+
+#: .\src\django_cookies_152fz\forms.py:18
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Необязательные категории cookie"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\forms.py:35
+msgid "Обязательные категории включены всегда и не требуют выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:69
+#, python-format
+msgid "CSV-файл не найден: %(path)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:75
+msgid "CSV-файл не содержит строку заголовков."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:116
+msgid "Импорт записей cookie-согласий и состояния баннера из CSV."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:142
+#, python-format
+msgid "Неподдерживаемый kind '%(kind)s'."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:151
+#, python-format
+msgid ""
+"Неподдерживаемый contract_version '%(actual)s', ожидается '%(expected)s'."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:164
+msgid "Субъект не задан: укажите user или anonymous_token."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:199
+msgid "policy_revision_version должен быть положительным целым числом."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:208
+#, python-format
+msgid "Редакция политики cookie v%(version)s не найдена."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:224
+#, python-format
+msgid ""
+"policy_categories_snapshot_json не совпадает с редакцией политики "
+"v%(version)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:235
+msgid "selected_categories_json должен быть JSON-списком."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:253
+msgid "Дубликат: fingerprint строки уже был импортирован."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:260
+#, python-format
+msgid "consent для policy_revision_version=%(version)s, категорий=%(count)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:282
+#, python-format
+msgid ""
+"Активная редакция политики не совпадает с импортируемой версией v%(version)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:289
+#, python-format
+msgid "record_id=%(id)s"
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:307
+#, python-format
+msgid "Неподдерживаемый decision_action '%(action)s'."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:316
+msgid "banner_state"
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:335
+#, python-format
+msgid "banner_state_id=%(id)s"
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:359
+msgid "datetime должен быть в формате ISO."
+msgstr ""
+
+#: .\src\django_cookies_152fz\importers.py:369
+msgid "extra_meta_json должен содержать JSON-объект."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:22
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:59
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:78
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:96
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:182
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:204
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:229
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:251
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:273
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:293
+msgid "ID"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:51
+#: .\src\django_cookies_152fz\models.py:1183
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Текстовый пресет cookie-баннера"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:52
+#: .\src\django_cookies_152fz\models.py:1184
+#, fuzzy
+#| msgid "Мобильный текстовый пресет (переопределение)"
+msgid "Текстовые пресеты cookie-баннера"
+msgstr "Мобильный текстовый пресет (переопределение)"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:70
+#: .\src\django_cookies_152fz\models.py:313
+msgid "Cookie-категория"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:71
+#: .\src\django_cookies_152fz\models.py:314
+msgid "Cookie-категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:88
+#: .\src\django_cookies_152fz\models.py:442
+msgid "Текстовый пресет cookie-policy"
+msgstr "Текстовый пресет политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:89
+#: .\src\django_cookies_152fz\models.py:443
+msgid "Текстовые пресеты cookie-policy"
+msgstr "Текстовые пресеты политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:98
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:99
+#: .\src\django_cookies_152fz\models.py:20
+#: .\src\django_cookies_152fz\models.py:21
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:18
+msgid "Настройки cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:100
+#: .\src\django_cookies_152fz\models.py:23
+msgid ""
+"Мы используем cookie для работы сайта и настройки дополнительных категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:101
+#: .\src\django_cookies_152fz\models.py:28
+msgid ""
+"Обязательные категории включены всегда. Необязательные категории можно "
+"разрешить сразу, оставить выключенными или выбрать вручную."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:102
+#: .\src\django_cookies_152fz\models.py:33
+msgid "Доступна новая редакция cookie-policy. Обновите свой выбор категорий."
+msgstr ""
+"Доступна новая редакция политики cookie. Обновите свой выбор категорий."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:103
+#: .\src\django_cookies_152fz\models.py:36
+msgid ""
+"Мы периодически уточняем выбор cookie-категорий. Подтвердите или обновите "
+"настройки."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:104
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:277
+#: .\src\django_cookies_152fz\models.py:39
+#: .\src\django_cookies_152fz\models.py:1330
+msgid "Принять все"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:105
+#: .\src\django_cookies_152fz\models.py:40
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Отказаться от необязательных cookie"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:105
+#: .\src\django_cookies_152fz\models.py:723
+#, fuzzy
+#| msgid "Подсказка кнопки закрытия"
+msgid "Надпись кнопки отказа"
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:106
+#: .\src\django_cookies_152fz\models.py:41
+#, fuzzy
+#| msgid "пользовательский"
+msgid "Только необходимые cookie"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:107
+#: .\src\django_cookies_152fz\models.py:42
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Выбрать категории"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:108
+#: .\src\django_cookies_152fz\models.py:43
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Собственный выбор категорий"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:109
+#: .\src\django_cookies_152fz\models.py:44
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:38
+msgid "Обязательные категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:110
+#: .\src\django_cookies_152fz\models.py:45
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:45
+msgid "Нет обязательных категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:111
+#: .\src\django_cookies_152fz\models.py:46
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:53
+msgid "Необязательные категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:112
+#: .\src\django_cookies_152fz\models.py:48
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:129
+msgid "Сейчас нет дополнительных категорий для выбора."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:113
+#: .\src\django_cookies_152fz\models.py:50
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Сохранить выбор"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:114
+#: .\src\django_cookies_152fz\models.py:51
+msgid "Полная страница настроек"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:115
+#: .\src\django_cookies_152fz\models.py:52
+msgid "Свернуть"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:116
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:117
+#: .\src\django_cookies_152fz\models.py:182
+#: .\src\django_cookies_152fz\models.py:183
+msgid "Закрыть баннер cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:118
+#: .\src\django_cookies_152fz\models.py:53
+msgid "Если JavaScript отключён, можно открыть"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:119
+#: .\src\django_cookies_152fz\models.py:54
+msgid "страницу настроек cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:120
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:123
+#: .\src\django_cookies_152fz\models.py:666
+msgid "Плашка"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:122
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:125
+#: .\src\django_cookies_152fz\models.py:674
+msgid "Оповещение"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:128
+#: .\src\django_cookies_152fz\models.py:648
+msgid "Широкий"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:129
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:132
+#: .\src\django_cookies_152fz\models.py:650
+#: .\src\django_cookies_152fz\models.py:689
+msgid "Светлый"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:129
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:132
+#: .\src\django_cookies_152fz\models.py:651
+#: .\src\django_cookies_152fz\models.py:690
+#, fuzzy
+#| msgid "Компактный"
+msgid "Контрастный"
+msgstr "Компактный"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:130
+#: .\src\django_cookies_152fz\models.py:653
+msgid "Снизу справа"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:130
+#: .\src\django_cookies_152fz\models.py:654
+msgid "Снизу слева"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:130
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:131
+#: .\src\django_cookies_152fz\models.py:655
+#: .\src\django_cookies_152fz\models.py:660
+msgid "По центру экрана"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:130
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:131
+#: .\src\django_cookies_152fz\models.py:656
+#: .\src\django_cookies_152fz\models.py:661
+msgid "Снизу на всю ширину"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:131
+#: .\src\django_cookies_152fz\models.py:658
+msgid "Снизу"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:131
+#: .\src\django_cookies_152fz\models.py:659
+msgid "Сверху"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:132
+#: .\src\django_cookies_152fz\models.py:691
+#, fuzzy
+#| msgid "пользовательский"
+msgid "Пользовательские цвета"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:147
+#: .\src\django_cookies_152fz\models.py:900
+msgid "URL изображения для медиаблока"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:148
+#: .\src\django_cookies_152fz\models.py:163
+msgid "Иконка cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:148
+#: .\src\django_cookies_152fz\models.py:906
+msgid "Alt-текст изображения медиаблока"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:150
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:151
+#: .\src\django_cookies_152fz\models.py:663
+msgid "Слева"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:150
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:151
+#: .\src\django_cookies_152fz\models.py:664
+msgid "Справа"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:150
+#: .\src\django_cookies_152fz\models.py:918
+#, fuzzy
+#| msgid "Подсказка кнопки закрытия"
+msgid "Расположение кнопки закрытия"
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:151
+#: .\src\django_cookies_152fz\models.py:927
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Переопределение расположения кнопки закрытия для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:152
+#: .\src\django_cookies_152fz\models.py:931
+#, fuzzy
+#| msgid "Подсказка кнопки закрытия"
+msgid "Показывать кнопку отказа"
+msgstr "Подсказка кнопки закрытия"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:153
+#: .\src\django_cookies_152fz\models.py:939
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Переопределение показа кнопки закрытия для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:154
+#: .\src\django_cookies_152fz\models.py:947
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Переопределение показа кнопки отказа для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:155
+#: .\src\django_cookies_152fz\models.py:955
+msgid ""
+"Блокировать взаимодействие со страницей, пока пользователь явно не выберет "
+"настройки cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:156
+#: .\src\django_cookies_152fz\models.py:964
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Переопределение блокирующего режима для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:157
+#: .\src\django_cookies_152fz\models.py:970
+msgid "Скрывать кнопку настроек после выбора"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:158
+#: .\src\django_cookies_152fz\models.py:978
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid "Переопределение скрытия кнопки настроек для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:159
+#: .\src\django_cookies_152fz\models.py:984
+msgid "Оставлять баннер видимым после действия «принять все»"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:160
+#: .\src\django_cookies_152fz\models.py:990
+msgid "Оставлять баннер видимым после действия «только обязательные»"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:161
+#: .\src\django_cookies_152fz\models.py:997
+msgid "Оставлять баннер видимым после действия «сохранить выбранные категории»"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:162
+#: .\src\django_cookies_152fz\models.py:1007
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение видимости баннера после «принять все» для мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:163
+#: .\src\django_cookies_152fz\models.py:1017
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение видимости баннера после «только обязательные» для мобильной "
+"версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:164
+#: .\src\django_cookies_152fz\models.py:1027
+#, fuzzy
+#| msgid ""
+#| "Опциональное переопределение пресета для мобильной версии; пусто = "
+#| "наследовать desktop-пресет."
+msgid ""
+"Переопределение видимости баннера после «сохранить выбранные категории» для "
+"мобильной версии"
+msgstr ""
+"Опциональное переопределение пресета для мобильной версии; пусто = "
+"наследовать desktop-пресет."
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:165
+#: .\src\django_cookies_152fz\models.py:1036
+msgid ""
+"Переопределение скрытия для ботов в runtime: пусто — использовать "
+"settings.py, включено — скрывать баннер для определённых ботов, выключено — "
+"показывать баннер."
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:165
+#: .\src\django_cookies_152fz\models.py:1034
+msgid "Переопределение скрытия для ботов"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:171
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:193
+#: .\src\django_cookies_152fz\models.py:365
+#: .\src\django_cookies_152fz\models.py:1046
+msgid "Скопировано из редакции"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:174
+#: .\src\django_cookies_152fz\models.py:1055
+msgid "Редакция cookie-баннера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:175
+#: .\src\django_cookies_152fz\models.py:1056
+msgid "Редакции cookie-баннера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:184
+#: .\src\django_cookies_152fz\models.py:338
+#, fuzzy
+#| msgid "коробочный"
+msgid "Обычный текст"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:184
+#: .\src\django_cookies_152fz\models.py:339
+msgid "Разметка Markdown"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:184
+#: .\src\django_cookies_152fz\models.py:340
+msgid "Разметка HTML"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:184
+#: .\src\django_cookies_152fz\models.py:341
+msgid "PDF-файл"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:196
+#: .\src\django_cookies_152fz\models.py:374
+msgid "Редакция cookie-policy"
+msgstr "Редакция политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:197
+#: .\src\django_cookies_152fz\models.py:375
+msgid "Редакции cookie-policy"
+msgstr "Редакции политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:207
+#: .\src\django_cookies_152fz\models.py:1220
+#, fuzzy
+#| msgid "Формальный"
+msgid "Актуальная"
+msgstr "Формальный"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:207
+#: .\src\django_cookies_152fz\models.py:1221
+#, fuzzy
+#| msgid "Устаревший layout-режим"
+msgid "Устаревшая"
+msgstr "Устаревший layout-режим"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:222
+#: .\src\django_cookies_152fz\models.py:1253
+#, fuzzy
+#| msgid "Дата согласия"
+msgid "Записи cookie-согласий"
+msgstr "Дата согласия"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:236
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:259
+#: .\src\django_cookies_152fz\models.py:475
+msgid "Нет"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:236
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:259
+#: .\src\django_cookies_152fz\models.py:476
+msgid "Удалить по возможности"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:236
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:259
+#: .\src\django_cookies_152fz\models.py:477
+msgid "Хук адаптера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:243
+#: .\src\django_cookies_152fz\models.py:499
+msgid "Элемент cookie-реестра"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:244
+#: .\src\django_cookies_152fz\models.py:500
+msgid "Элементы cookie-реестра"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:265
+#: .\src\django_cookies_152fz\models.py:584
+msgid "Элемент реестра редакции cookie-policy"
+msgstr "Элемент реестра редакции политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:266
+#: .\src\django_cookies_152fz\models.py:585
+msgid "Элементы реестра редакции cookie-policy"
+msgstr "Элементы реестра редакции политики cookie"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:277
+#: .\src\django_cookies_152fz\models.py:1331
+msgid "Отклонить все"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:277
+#: .\src\django_cookies_152fz\models.py:1332
+#, fuzzy
+#| msgid "пользовательский"
+msgid "Только обязательные"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:277
+#: .\src\django_cookies_152fz\models.py:1333
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Сохранить выбранные категории"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:283
+#: .\src\django_cookies_152fz\models.py:1359
+msgid "Состояние cookie-баннера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:284
+#: .\src\django_cookies_152fz\models.py:1360
+msgid "Состояния cookie-баннера"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:294
+#: .\src\django_cookies_152fz\models.py:1455
+msgid "Принято"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:294
+#: .\src\django_cookies_152fz\models.py:1457
+msgid "Устарело"
+msgstr ""
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:308
+#: .\src\django_cookies_152fz\models.py:1478
+#, fuzzy
+#| msgid "Мои согласия"
+msgid "Событие cookie-согласия"
+msgstr "Мои согласия"
+
+#: .\src\django_cookies_152fz\migrations\0001_initial.py:309
+#: .\src\django_cookies_152fz\models.py:1479
+#, fuzzy
+#| msgid "Мои согласия"
+msgid "События cookie-согласий"
+msgstr "Мои согласия"
+
+#: .\src\django_cookies_152fz\models.py:111
+msgid "Управление cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:112
+msgid "Cookie-настройки"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:113
+msgid "Разрешить все"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:114
+#, fuzzy
+#| msgid "пользовательский"
+msgid "Оставить только обязательные"
+msgstr "пользовательский"
+
+#: .\src\django_cookies_152fz\models.py:115
+msgid "Настроить выбор"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:119
+#: .\src\django_cookies_152fz\models.py:120
+#, fuzzy
+#| msgid "Cookie updated"
+msgid "Cookie"
+msgstr "Cookie-решение обновлено"
+
+#: .\src\django_cookies_152fz\models.py:122
+msgid ""
+"Обязательные cookie включены всегда. Дополнительные можно включить или "
+"оставить отключёнными."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:125
+msgid "Выбрать вручную"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:126
+#, fuzzy
+#| msgid "коробочный"
+msgid "Точный выбор"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\models.py:127
+msgid "Сохранить"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:188
+#, fuzzy
+#| msgid "коробочный"
+msgid "Короткий коробочный текст политики cookie"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\models.py:191
+#, fuzzy
+#| msgid "коробочный"
+msgid "Полный коробочный текст политики cookie"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\models.py:206
+#, python-format
+msgid ""
+"Код cookie \"%(value)s\" должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:223
+#, python-format
+msgid "Поле \"%(field_name)s\" должно быть списком."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:232
+#, python-format
+msgid "Элемент \"%(field_name)s[%(index)s]\" должен быть непустой строкой."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:247
+#, python-format
+msgid "Поле \"%(field_name)s\" должно содержать только URL/путь к скрипту."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:259
+#, python-format
+msgid "Поле \"%(field_name)s\" не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:323
+#: .\src\django_cookies_152fz\models.py:510
+msgid "code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:395
+msgid "content_text обязателен для текстовых форматов."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:399
+msgid "content_file должен быть пустым для текстовых форматов."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:405
+msgid "content_file обязателен для формата pdf_file."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:409
+msgid "content_text должен быть пустым для формата pdf_file."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:455
+#: .\src\django_cookies_152fz\models.py:1195
+msgid "code не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:457
+#: .\src\django_cookies_152fz\models.py:1197
+msgid "title не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:459
+msgid "content_text не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:514
+#: .\src\django_cookies_152fz\models.py:611
+msgid "provider не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:518
+#: .\src\django_cookies_152fz\models.py:615
+msgid "purpose не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:542
+msgid "Активный элемент реестра требует активную cookie-категорию."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:602
+msgid "registry_code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:606
+msgid "category_code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:678
+#, fuzzy
+#| msgid "Сбалансированный"
+msgid "Сбалансированный (RU)"
+msgstr "Сбалансированный"
+
+#: .\src\django_cookies_152fz\models.py:682
+#, fuzzy
+#| msgid "Формальный"
+msgid "Формальный (RU)"
+msgstr "Формальный"
+
+#: .\src\django_cookies_152fz\models.py:686
+#, fuzzy
+#| msgid "Компактный"
+msgid "Компактный (RU)"
+msgstr "Компактный"
+
+#: .\src\django_cookies_152fz\models.py:1097
+msgid "Используйте HEX-цвет в формате #RRGGBB."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1113
+msgid "media_image_url должен быть безопасным URL/путём."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1116
+msgid "Для слота изображения обязателен media_image_url."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1118
+msgid "Для слота изображения обязателен media_image_alt."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1124
+msgid "Цвет фона и текста должен обеспечивать читаемый контраст."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1201
+#, python-format
+msgid "%(field_name)s не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1283
+#: .\src\django_cookies_152fz\models.py:1394
+msgid "anonymous_token обязателен, когда пользователь не указан."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1304
+#, python-format
+msgid "selected_categories содержит неизвестные категории: %(codes)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1309
+#, python-format
+msgid "selected_categories должен включать обязательные категории: %(codes)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1412
+msgid "Запятая (,)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1413
+msgid "Точка с запятой (;)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1414
+msgid "Табуляция (TAB)"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1415
+#, fuzzy
+#| msgid "коробочный"
+msgid "Вертикальная черта (|)"
+msgstr "коробочный"
+
+#: .\src\django_cookies_152fz\models.py:1427
+#: .\src\django_cookies_152fz\models.py:1428
+#: .\src\django_cookies_152fz\models.py:1433
+msgid "Настройки админ-инструментов cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1442
+msgid "CookieConsentEvent неизменяем и не может быть обновлён."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1447
+msgid "CookieConsentEvent неизменяем и не может быть удалён."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1508
+msgid "categories_snapshot должен быть списком."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1515
+#, python-format
+msgid ""
+"Элемент categories_snapshot[%(index)s] должен быть объектом (mapping/dict)."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1522
+#, python-format
+msgid ""
+"categories_snapshot[%(index)s][\"code\"] должен соответствовать шаблону \"[a-"
+"z][a-z0-9_]*\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1527
+#, python-format
+msgid "categories_snapshot содержит дублирующийся код \"%(code)s\"."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1533
+#, python-format
+msgid "categories_snapshot[%(index)s][\"title\"] не может быть пустым."
+msgstr ""
+
+#: .\src\django_cookies_152fz\models.py:1544
+#, python-format
+msgid ""
+"categories_snapshot[%(index)s][\"sort_order\"] должен быть целым числом."
+msgstr ""
+
+#: .\src\django_cookies_152fz\retention.py:93
+msgid "older_than_days должен быть неотрицательным целым числом или None."
+msgstr ""
+
+#: .\src\django_cookies_152fz\retention.py:101
+msgid "batch_size должен быть положительным целым числом."
+msgstr ""
+
+#: .\src\django_cookies_152fz\retention.py:139
+msgid "Очистка cookie-аудита по политике хранения."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:405
+#, python-format
+msgid ""
+"Неизвестный вариант текста cookie-policy: %(variant)s. Ожидается один из: "
+"%(allowed)s."
+msgstr ""
+"Неизвестный вариант текста политики cookie: %(variant)s. Ожидается один из: "
+"%(allowed)s."
+
+#: .\src\django_cookies_152fz\services.py:499
+#: .\src\django_cookies_152fz\services.py:701
+msgid "Нельзя опубликовать политику cookie без активных категорий."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:659
+msgid "Исходная редакция cookie-policy должна быть сохранена."
+msgstr "Исходная редакция политики cookie должна быть сохранена."
+
+#: .\src\django_cookies_152fz\services.py:845
+msgid "Исходная редакция cookie-баннера должна быть сохранена."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:2177
+msgid ""
+"Редакция политики cookie должна быть сохранена до синхронизации registry "
+"items."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:2544
+#: .\src\django_cookies_152fz\services.py:2594
+msgid "Cookie-модуль отключён."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:2549
+msgid ""
+"Для закрытия cookie-баннера нужен авторизованный пользователь или "
+"anonymous_token."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:2600
+msgid ""
+"Для выбора настроек cookie нужен авторизованный пользователь или "
+"anonymous_token."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:2980
+#: .\src\django_cookies_152fz\views.py:222
+msgid "Активная редакция политики cookie не найдена."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:3003
+#, python-format
+msgid "Выбраны неизвестные cookie-категории: %(codes)s."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:3128
+msgid ""
+"Для состояния cookie-баннера нужен авторизованный пользователь или "
+"anonymous_token."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:3214
+msgid "user должен быть экземпляром AUTH_USER_MODEL."
+msgstr ""
+
+#: .\src\django_cookies_152fz\services.py:3220
+msgid "anonymous_token должен быть непустой строкой."
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\cookie_preferences.html:6
+msgid "Cookie preferences"
+msgstr "Настройки cookie"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:6
+msgid "Все необязательные категории включены"
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:7
+#, fuzzy
+#| msgid "Заголовок блока выбора категорий"
+msgid "Отказ от необязательных категорий"
+msgstr "Заголовок блока выбора категорий"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:8
+msgid "Выбраны только обязательные категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:9
+msgid "Выбраны отдельные категории"
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:14
+msgid "no decision"
+msgstr "решение не принято"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:16
+msgid "Версия политики cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:24
+msgid ""
+"Обновите выбор категорий cookie: опубликована новая редакция политики cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:81
+msgid "Select all optional categories"
+msgstr "Выбрать все необязательные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:91
+#, fuzzy
+#| msgid "Select all optional categories"
+msgid "Reject optional categories"
+msgstr "Выбрать все необязательные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:101
+#, fuzzy
+#| msgid "Keep required categories only"
+msgid "Keep only required cookie categories"
+msgstr "Оставить только обязательные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:109
+msgid "Choose categories"
+msgstr "Выбрать категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:120
+msgid ""
+"Refusal means optional categories remain disabled until you change your "
+"choice."
+msgstr ""
+"Отказ означает, что необязательные категории остаются отключёнными, пока вы "
+"не измените свой выбор."
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:135
+msgid "Сохранить настройки cookie"
+msgstr ""
+
+#: .\src\django_cookies_152fz\views.py:122
+msgid "Неизвестное действие cookie-баннера."
+msgstr ""
+
+#: .\src\django_cookies_152fz\views.py:145
+#, fuzzy
+#| msgid "Блокирующий режим до выбора"
+msgid "В блокирующем режиме до выбора нельзя закрыть баннер. "
+msgstr "Блокирующий режим до выбора"
+
+#: .\src\django_cookies_152fz\views.py:146
+msgid "Сначала выберите вариант cookie."
+msgstr ""
+
+#: .\src\django_cookies_152fz\views.py:245
+msgid "Cookie-поток отключён."
+msgstr ""
+
+#~ msgid "Audience groups"
+#~ msgstr "Группы аудитории"
+
+#, fuzzy
+#~| msgid "Soft re-consent"
+#~ msgid "Режим re-consent"
+#~ msgstr "Мягкий re-consent"
+
+#~ msgid "Revision origin"
+#~ msgstr "Происхождение редакции"
+
+#~ msgid "Starter templates"
+#~ msgstr "Коробочные шаблоны"
+
+#~ msgid "Custom revisions"
+#~ msgstr "Пользовательские редакции"
+
+#~ msgid "Document stream"
+#~ msgstr "Поток документа"
+
+#~ msgid "Starter template stream"
+#~ msgstr "Коробочный поток шаблонов"
+
+#~ msgid "Custom stream"
+#~ msgstr "Пользовательский поток"
+
+#~ msgid "Starter + custom"
+#~ msgstr "Коробочный и пользовательский"
+
+#~ msgid "No revisions"
+#~ msgstr "Без редакций"
+
+#~ msgid "Document title"
+#~ msgstr "Название документа"
+
+#~ msgid "Origin"
+#~ msgstr "Происхождение"
+
+#~ msgid "Starter template"
+#~ msgstr "Коробочный шаблон"
+
+#~ msgid "Custom draft from starter template"
+#~ msgstr "Пользовательский черновик из коробочного шаблона"
+
+#~ msgid "Custom revision"
+#~ msgstr "Пользовательская редакция"
+
+#~ msgid "Source template"
+#~ msgstr "Исходный шаблон"
+
+#~ msgid "Create custom draft copies from selected starter templates"
+#~ msgstr "Создать пользовательские черновики из выбранных коробочных шаблонов"
+
+#, python-format
+#~ msgid "Created %(count)d custom draft from starter template."
+#~ msgid_plural "Created %(count)d custom drafts from starter templates."
+#~ msgstr[0] ""
+#~ "Создан %(count)d пользовательский черновик из коробочного шаблона."
+#~ msgstr[1] ""
+#~ "Создано %(count)d пользовательских черновика из коробочных шаблонов."
+#~ msgstr[2] ""
+#~ "Создано %(count)d пользовательских черновиков из коробочных шаблонов."
+
+#, python-format
+#~ msgid ""
+#~ "Failed to adapt %(count)d revision. Action is available only for starter "
+#~ "templates without file content."
+#~ msgid_plural ""
+#~ "Failed to adapt %(count)d revisions. Action is available only for starter "
+#~ "templates without file content."
+#~ msgstr[0] ""
+#~ "Не удалось адаптировать %(count)d редакцию. Действие доступно только для "
+#~ "коробочных шаблонов без файлового контента."
+#~ msgstr[1] ""
+#~ "Не удалось адаптировать %(count)d редакции. Действие доступно только для "
+#~ "коробочных шаблонов без файлового контента."
+#~ msgstr[2] ""
+#~ "Не удалось адаптировать %(count)d редакций. Действие доступно только для "
+#~ "коробочных шаблонов без файлового контента."
+
+#~ msgid "Apply revision to all registered users"
+#~ msgstr "Применить редакцию ко всем зарегистрированным пользователям"
+
+#~ msgid "Insufficient permissions to manage audience rules."
+#~ msgstr "Недостаточно прав для управления правилами аудитории."
+
+#, python-format
+#~ msgid "Applied %(count)d rule to all registered users."
+#~ msgid_plural "Applied %(count)d rules to all registered users."
+#~ msgstr[0] ""
+#~ "Применено %(count)d правило ко всем зарегистрированным пользователям."
+#~ msgstr[1] ""
+#~ "Применено %(count)d правила ко всем зарегистрированным пользователям."
+#~ msgstr[2] ""
+#~ "Применено %(count)d правил ко всем зарегистрированным пользователям."
+
+#~ msgid "Apply revision to selected Django groups"
+#~ msgstr "Применить редакцию к выбранным Django-группам"
+
+#~ msgid "Select at least one group for this action."
+#~ msgstr "Для этого действия нужно выбрать хотя бы одну группу."
+
+#, python-format
+#~ msgid "Applied %(count)d rule to selected Django groups."
+#~ msgid_plural "Applied %(count)d rules to selected Django groups."
+#~ msgstr[0] "Применено %(count)d правило к выбранным Django-группам."
+#~ msgstr[1] "Применено %(count)d правила к выбранным Django-группам."
+#~ msgstr[2] "Применено %(count)d правил к выбранным Django-группам."
+
+#~ msgid "Document"
+#~ msgstr "Документ"
+
+#~ msgid "Export selected records to CSV"
+#~ msgstr "Экспортировать выбранные записи в CSV"
+
+#~ msgid "152-FZ Consent"
+#~ msgstr "Согласия 152-ФЗ"
+
+#~ msgid "152-FZ Consent Cookies"
+#~ msgstr "Согласия 152-ФЗ: cookie"
+
+#~ msgid "Cookie Category"
+#~ msgstr "Категория cookie"
+
+#~ msgid "Cookie Categories"
+#~ msgstr "Категории cookie"
+
+#~ msgid "Plain text"
+#~ msgstr "Обычный текст"
+
+#~ msgid "Markdown"
+#~ msgstr "Markdown"
+
+#~ msgid "HTML"
+#~ msgstr "HTML"
+
+#~ msgid "PDF file"
+#~ msgstr "PDF-файл"
+
+#, fuzzy
+#~| msgid "Custom revision"
+#~ msgid "Cloned from revision"
+#~ msgstr "Пользовательская редакция"
+
+#~ msgid "Cookie Policy Revision"
+#~ msgstr "Редакция политики cookie"
+
+#~ msgid "Cookie Policy Revisions"
+#~ msgstr "Редакции политики cookie"
+
+#~ msgid "Cookie Policy Text Preset"
+#~ msgstr "Текстовый пресет политики cookie"
+
+#~ msgid "Cookie Policy Text Presets"
+#~ msgstr "Текстовые пресеты политики cookie"
+
+#~ msgid "None"
+#~ msgstr "Нет"
+
+#~ msgid "Best-effort delete"
+#~ msgstr "Удаление по возможности"
+
+#~ msgid "Adapter hook"
+#~ msgstr "Хук адаптера"
+
+#~ msgid "Cookie Registry Item"
+#~ msgstr "Элемент реестра cookie"
+
+#~ msgid "Cookie Registry Items"
+#~ msgstr "Элементы реестра cookie"
+
+#~ msgid "Cookie Policy Revision Registry Item"
+#~ msgstr "Элемент снимка реестра политики cookie"
+
+#~ msgid "Cookie Policy Revision Registry Items"
+#~ msgstr "Элементы снимка реестра политики cookie"
+
+#~ msgid "Compact"
+#~ msgstr "Компактный"
+
+#~ msgid "Wide"
+#~ msgstr "Широкий"
+
+#~ msgid "Light"
+#~ msgstr "Светлая"
+
+#~ msgid "Contrast"
+#~ msgstr "Контрастная"
+
+#~ msgid "Bottom right"
+#~ msgstr "Внизу справа"
+
+#~ msgid "Bottom left"
+#~ msgstr "Внизу слева"
+
+#~ msgid "Center viewport"
+#~ msgstr "По центру экрана"
+
+#~ msgid "Bottom full width"
+#~ msgstr "Нижний полноэкранный"
+
+#~ msgid "Bottom"
+#~ msgstr "Внизу"
+
+#~ msgid "Top"
+#~ msgstr "Вверху"
+
+#~ msgid "Left"
+#~ msgstr "Слева"
+
+#~ msgid "Right"
+#~ msgstr "Справа"
+
+#~ msgid "Bar"
+#~ msgstr "Панель"
+
+#~ msgid "Card"
+#~ msgstr "Карточка"
+
+#~ msgid "Modal"
+#~ msgstr "Модальное окно"
+
+#~ msgid "Inline"
+#~ msgstr "Встроенный"
+
+#~ msgid "Panel"
+#~ msgstr "Панель"
+
+#~ msgid "Alert"
+#~ msgstr "Уведомление"
+
+#, fuzzy
+#~| msgid "Custom revision"
+#~ msgid "Custom colors"
+#~ msgstr "Пользовательская редакция"
+
+#~ msgid "Reject action label"
+#~ msgstr "Подпись действия отклонения"
+
+#~ msgid "Close control tooltip"
+#~ msgstr "Подсказка кнопки закрытия"
+
+#~ msgid "Close control aria-label"
+#~ msgstr "ARIA-метка кнопки закрытия"
+
+#~ msgid "Show close control"
+#~ msgstr "Показывать кнопку закрытия"
+
+#~ msgid "Close control placement"
+#~ msgstr "Положение кнопки закрытия"
+
+#, fuzzy
+#~| msgid "Close control placement"
+#~ msgid "Mobile close control placement override"
+#~ msgstr "Положение кнопки закрытия"
+
+#~ msgid "Show reject action"
+#~ msgstr "Показывать действие отклонения"
+
+#, fuzzy
+#~| msgid "Show close control"
+#~ msgid "Mobile show close control override"
+#~ msgstr "Показывать кнопку закрытия"
+
+#, fuzzy
+#~| msgid "Show reject action"
+#~ msgid "Mobile show reject action override"
+#~ msgstr "Показывать действие отклонения"
+
+#~ msgid "Blocking mode until choice"
+#~ msgstr "Блокирующий режим до выбора"
+
+#~ msgid ""
+#~ "Block page interaction until the user explicitly chooses cookie "
+#~ "preferences."
+#~ msgstr ""
+#~ "Блокировать взаимодействие со страницей, пока пользователь явно не "
+#~ "выберет настройки cookie."
+
+#~ msgid "Keep banner visible after 'accept all'"
+#~ msgstr "Оставлять баннер видимым после «Принять все»"
+
+#~ msgid "Keep banner visible after 'required only'"
+#~ msgstr "Оставлять баннер видимым после «Только необходимые»"
+
+#~ msgid "Keep banner visible after 'save selected categories'"
+#~ msgstr "Оставлять баннер видимым после «Сохранить выбор категорий»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'accept all'"
+#~ msgid "Mobile keep banner visible after 'accept all' override"
+#~ msgstr "Оставлять баннер видимым после «Принять все»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'required only'"
+#~ msgid "Mobile keep banner visible after 'required only' override"
+#~ msgstr "Оставлять баннер видимым после «Только необходимые»"
+
+#, fuzzy
+#~| msgid "Keep banner visible after 'save selected categories'"
+#~ msgid "Mobile keep banner visible after 'save selected categories' override"
+#~ msgstr "Оставлять баннер видимым после «Сохранить выбор категорий»"
+
+#~ msgid "Cookie Banner Revision"
+#~ msgstr "Редакция cookie banner"
+
+#~ msgid "Cookie Banner Revisions"
+#~ msgstr "Редакции cookie banner"
+
+#~ msgid "Cookie Banner Text Preset"
+#~ msgstr "Текстовый пресет cookie banner"
+
+#~ msgid "Cookie Banner Text Presets"
+#~ msgstr "Текстовые пресеты cookie banner"
+
+#~ msgid "Current"
+#~ msgstr "Актуально"
+
+#~ msgid "Outdated"
+#~ msgstr "Устарело"
+
+#~ msgid "Cookie Consent Record"
+#~ msgstr "Запись cookie-согласия"
+
+#~ msgid "Cookie Consent Records"
+#~ msgstr "Записи cookie-согласий"
+
+#~ msgid "Accept all"
+#~ msgstr "Принять все"
+
+#~ msgid "Reject all"
+#~ msgstr "Отклонить все"
+
+#~ msgid "Required only"
+#~ msgstr "Только необходимые"
+
+#~ msgid "Save selected categories"
+#~ msgstr "Сохранить выбранные категории"
+
+#~ msgid "Decision action"
+#~ msgstr "Действие выбора"
+
+#~ msgid "Cookie Banner State"
+#~ msgstr "Состояние cookie banner"
+
+#~ msgid "Cookie Banner States"
+#~ msgstr "Состояния cookie banner"
+
+#~ msgid "Accepted"
+#~ msgstr "Принято"
+
+#~ msgid "Updated"
+#~ msgstr "Обновлено"
+
+#~ msgid "Cookie Consent Event"
+#~ msgstr "Событие cookie-согласия"
+
+#~ msgid "Cookie Consent Events"
+#~ msgstr "События cookie-согласий"
+
+#~ msgid "Legal Document"
+#~ msgstr "Юридический документ"
+
+#~ msgid "Legal Documents"
+#~ msgstr "Юридические документы"
+
+#~ msgid "Document Revision"
+#~ msgstr "Редакция документа"
+
+#~ msgid "Document Revisions"
+#~ msgstr "Редакции документов"
+
+#~ msgid "Block"
+#~ msgstr "Блокировать"
+
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid "Soft re-consent"
+#~ msgstr "Мягкий re-consent"
+
+#~ msgid "Hard re-consent"
+#~ msgstr "Жёсткий re-consent"
+
+#~ msgid "Consent Purpose"
+#~ msgstr "Цель согласия"
+
+#~ msgid "Consent Purposes"
+#~ msgstr "Цели согласия"
+
+#~ msgid "All registered users"
+#~ msgstr "Все зарегистрированные пользователи"
+
+#~ msgid "Django group"
+#~ msgstr "Django-группа"
+
+#~ msgid "Anonymous subjects"
+#~ msgstr "Анонимные субъекты"
+
+#~ msgid "Consent Audience Rule"
+#~ msgstr "Правило аудитории согласия"
+
+#~ msgid "Consent Audience Rules"
+#~ msgstr "Правила аудитории согласия"
+
+#~ msgid "Global"
+#~ msgstr "Глобально"
+
+#~ msgid "Django groups"
+#~ msgstr "Django-группы"
+
+#~ msgid "Personal Data Manager Assignment"
+#~ msgstr "Назначение Ответственного за ПДн"
+
+#~ msgid "Personal Data Manager Assignments"
+#~ msgstr "Назначения Ответственного за ПДн"
+
+#~ msgid "Deny"
+#~ msgstr "Запретить"
+
+#~ msgid "Read only"
+#~ msgstr "Только чтение"
+
+#~ msgid "Redirect to consent"
+#~ msgstr "Перенаправить к согласию"
+
+#~ msgid "Respect re-consent mode"
+#~ msgstr "Учитывать режим re-consent"
+
+#~ msgid "Consent Access Policy"
+#~ msgstr "Политика доступа по согласию"
+
+#~ msgid "Consent Access Policies"
+#~ msgstr "Политики доступа по согласию"
+
+#~ msgid "Withdrawn"
+#~ msgstr "Отозвано"
+
+#~ msgid "Pending confirmation"
+#~ msgstr "Ожидает подтверждения"
+
+#~ msgid "Rejected"
+#~ msgstr "Отклонено"
+
+#~ msgid "Deleted"
+#~ msgstr "Удалено"
+
+#~ msgid "Web checkbox"
+#~ msgstr "Веб-чекбокс"
+
+#~ msgid "Web button"
+#~ msgstr "Веб-кнопка"
+
+#~ msgid "API accept"
+#~ msgstr "Принято через API"
+
+#~ msgid "Uploaded paper"
+#~ msgstr "Загруженный бумажный документ"
+
+#~ msgid "Admin confirmed"
+#~ msgstr "Подтверждено администратором"
+
+#~ msgid "Employee confirmed"
+#~ msgstr "Подтверждено сотрудником"
+
+#~ msgid "Consent Record"
+#~ msgstr "Запись согласия"
+
+#~ msgid "Consent Records"
+#~ msgstr "Записи согласий"
+
+#~ msgid "Employee"
+#~ msgstr "Сотрудник"
+
+#~ msgid "Admin"
+#~ msgstr "Администратор"
+
+#~ msgid "System"
+#~ msgstr "Система"
+
+#~ msgid "Given"
+#~ msgstr "Дано"
+
+#~ msgid "Reconfirmed"
+#~ msgstr "Подтверждено повторно"
+
+#~ msgid "Paper uploaded"
+#~ msgstr "Бумажный документ загружен"
+
+#~ msgid "Blocked"
+#~ msgstr "Заблокировано"
+
+#~ msgid "Delete requested"
+#~ msgstr "Запрошено удаление"
+
+#~ msgid "Anonymized"
+#~ msgstr "Анонимизировано"
+
+#~ msgid "Consent Event"
+#~ msgstr "Событие согласия"
+
+#~ msgid "Consent Events"
+#~ msgstr "События согласия"
+
+#, fuzzy
+#~| msgid "Вариант интерфейса согласия"
+#~ msgid "Журнал операций согласий 152-ФЗ"
+#~ msgstr "Вариант интерфейса согласия"
+
+#, fuzzy
+#~| msgid "Вариант интерфейса согласия"
+#~ msgid "Журналы операций согласий 152-ФЗ"
+#~ msgstr "Вариант интерфейса согласия"
+
+#~ msgid "Доступный self-service alpha: просмотр и отзыв согласий."
+#~ msgstr "Доступный self-service alpha: просмотр и отзыв согласий."
+
+#~ msgid ""
+#~ "Расширенные юридические сценарии (включая «право на забвение» с SLA и "
+#~ "документооборотом) в этот интерфейс не входят."
+#~ msgstr ""
+#~ "Расширенные юридические сценарии (включая «право на забвение» с SLA и "
+#~ "документооборотом) в этот интерфейс не входят."
+
+#~ msgid "Текст документа"
+#~ msgstr "Текст документа"
+
+#~ msgid "Отозвать"
+#~ msgstr "Отозвать"
+
+#~ msgid "Согласия не найдены."
+#~ msgstr "Согласия не найдены."
+
+#~ msgid "Confirmation note"
+#~ msgstr "Комментарий подтверждения"
+
+#~ msgid "Rejection reason"
+#~ msgstr "Причина отклонения"
+
+#~ msgid "Confirm selected as employee_confirmed"
+#~ msgstr "Подтвердить выбранные как employee_confirmed"
+
+#~ msgid "Confirm selected as admin_confirmed"
+#~ msgstr "Подтвердить выбранные как admin_confirmed"
+
+#~ msgid "Confirming as admin_confirmed is available only to superusers."
+#~ msgstr "Подтверждение как admin_confirmed доступно только superuser."
+
+#~ msgid "Reject selected (requires reason)"
+#~ msgstr "Отклонить выбранные (требуется причина)"
+
+#~ msgid "Provide a rejection reason to reject selected artifacts."
+#~ msgstr "Для отклонения укажите причину отклонения артефактов."
+
+#, python-format
+#~ msgid "Confirmed %(count)d verified artifact."
+#~ msgid_plural "Confirmed %(count)d verified artifacts."
+#~ msgstr[0] "Подтвержден %(count)d verified-артефакт."
+#~ msgstr[1] "Подтверждено %(count)d verified-артефакта."
+#~ msgstr[2] "Подтверждено %(count)d verified-артефактов."
+
+#, python-format
+#~ msgid "Rejected %(count)d verified artifact."
+#~ msgid_plural "Rejected %(count)d verified artifacts."
+#~ msgstr[0] "Отклонён %(count)d verified-артефакт."
+#~ msgstr[1] "Отклонено %(count)d verified-артефакта."
+#~ msgstr[2] "Отклонено %(count)d verified-артефактов."
+
+#, python-format
+#~ msgid "Failed to process %(count)d artifact."
+#~ msgid_plural "Failed to process %(count)d artifacts."
+#~ msgstr[0] "Не удалось обработать %(count)d артефакт."
+#~ msgstr[1] "Не удалось обработать %(count)d артефакта."
+#~ msgstr[2] "Не удалось обработать %(count)d артефактов."
+
+#~ msgid "Paper required"
+#~ msgstr "Требуется бумажный документ"
+
+#~ msgid "Goskey required"
+#~ msgstr "Требуется Госключ"
+
+#~ msgid "Paper or Goskey"
+#~ msgstr "Бумажный документ или Госключ"
+
+#~ msgid "Verified Consent Policy"
+#~ msgstr "Политика проверяемого согласия"
+
+#~ msgid "Verified Consent Policies"
+#~ msgstr "Политики проверяемого согласия"
+
+#~ msgid "Paper document"
+#~ msgstr "Бумажный документ"
+
+#~ msgid "External signature"
+#~ msgstr "Внешняя подпись"
+
+#~ msgid "Verified Consent Artifact"
+#~ msgstr "Артефакт проверяемого согласия"
+
+#~ msgid "Verified Consent Artifacts"
+#~ msgstr "Артефакты проверяемого согласия"
+
+#, fuzzy
+#~| msgid "коробочный"
+#~ msgid "Коробочная цель"
+#~ msgstr "коробочный"
+
+#, fuzzy, python-format
+#~| msgid "Create custom draft copies from selected starter templates"
+#~ msgid "Created %(count)d policy draft copies from selected revisions."
+#~ msgstr "Создать пользовательские черновики из выбранных коробочных шаблонов"
+
+#, fuzzy, python-format
+#~| msgid "Create custom draft copies from selected starter templates"
+#~ msgid "Created %(count)d banner draft copies from selected revisions."
+#~ msgstr "Создать пользовательские черновики из выбранных коробочных шаблонов"
+
+#, fuzzy
+#~| msgid "Export selected records to CSV"
+#~ msgid "Export selected module audit logs to CSV"
+#~ msgstr "Экспортировать выбранные записи в CSV"
+
+#~ msgid "Short boxed policy text"
+#~ msgstr "Короткий коробочный текст политики cookie"
+
+#~ msgid "Full boxed policy text"
+#~ msgstr "Полный коробочный текст политики cookie"
+
+#~ msgid "Policy text variant"
+#~ msgstr "Вариант текста политики cookie"
+
+#, fuzzy
+#~| msgid "Блокирующий режим до выбора"
+#~ msgid "Mobile: блокирующий режим до выбора (override)"
+#~ msgstr "Блокирующий режим до выбора"
+
+#, fuzzy
+#~| msgid "No revisions"
+#~ msgid "Source revision"
+#~ msgstr "Без редакций"
+
+#~ msgid "Publish selected boxed policy text variant"
+#~ msgstr "Опубликовать выбранный коробочный вариант текста политики cookie"
+
+#~ msgid "Select policy text variant for this action."
+#~ msgstr "Выберите вариант текста политики cookie для этого действия."
+
+#, python-format
+#~ msgid "Published boxed policy variant. New revision: v%(version)s."
+#~ msgstr ""
+#~ "Опубликован коробочный вариант политики cookie. Новая редакция: "
+#~ "v%(version)s."
+
+#~ msgid "Create custom draft from selected boxed policy variant"
+#~ msgstr ""
+#~ "Создать пользовательский черновик из выбранного коробочного варианта "
+#~ "политики cookie"
+
+#, python-format
+#~ msgid ""
+#~ "Created custom draft from boxed variant. Draft revision: v%(version)s."
+#~ msgstr ""
+#~ "Создан пользовательский черновик из коробочного варианта. Черновик: "
+#~ "v%(version)s."
+
+#~ msgid "Revision"
+#~ msgstr "Редакция"
+
+#~ msgid "Texts"
+#~ msgstr "Тексты"
+
+#~ msgid "Variant presets"
+#~ msgstr "Пресеты вариантов"
+
+#~ msgid "Legacy presentation compatibility"
+#~ msgstr "Совместимость с прежним представлением"
+
+#~ msgid "Visibility and close controls"
+#~ msgstr "Управление видимостью и закрытием"
+
+#~ msgid ""
+#~ "Dismiss closes banner without recording consent. Post-consent visibility "
+#~ "controls only panel rendering after a decision and does not change "
+#~ "consent status. Blocking mode keeps the panel open until an explicit "
+#~ "cookie choice is submitted."
+#~ msgstr ""
+#~ "Dismiss закрывает баннер без фиксации consent. Post-consent visibility "
+#~ "управляет только отображением панели после принятия решения и не меняет "
+#~ "статус согласия. В blocking mode панель остаётся открытой до явного "
+#~ "выбора cookie."
+
+#~ msgid ""
+#~ "Fields are kept for backward compatibility with the legacy layout/theme/"
+#~ "position schema."
+#~ msgstr ""
+#~ "Поля сохранены для обратной совместимости с прежней схемой layout/theme/"
+#~ "position."
+
+#~ msgid "RU balanced"
+#~ msgstr "RU balanced"
+
+#~ msgid "RU formal"
+#~ msgstr "RU formal"
+
+#~ msgid "RU compact"
+#~ msgstr "RU compact"
+
+msgid "Override: show empty category block"
+msgstr "Переопределение: показывать пустой блок категорий"
+
+msgid "Override: show customize action without optional categories"
+msgstr "Переопределение: показывать действие \"Выбрать категории\" без необязательных категорий"
+
+msgid "Override: empty category block text"
+msgstr "Переопределение: текст пустого блока категорий"
+
+msgid "If enabled, shows the empty categories section even when no optional categories are configured. Leave empty to use settings.py value."
+msgstr "Если включено, показывает секцию пустых категорий даже при отсутствии необязательных категорий. Оставьте пустым, чтобы использовать значение из settings.py."
+
+msgid "If enabled, keeps the customize action visible even when optional categories are absent. Leave empty to use settings.py value."
+msgstr "Если включено, оставляет действие выбора категорий видимым даже при отсутствии необязательных категорий. Оставьте пустым, чтобы использовать значение из settings.py."
+
+msgid "Custom text for the empty categories section. Leave empty to use settings.py value."
+msgstr "Пользовательский текст для секции пустых категорий. Оставьте пустым, чтобы использовать значение из settings.py."

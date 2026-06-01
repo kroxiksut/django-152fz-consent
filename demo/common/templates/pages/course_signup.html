@@ -1,0 +1,139 @@
+﻿{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}Запись на курс | Учебный центр{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-8">
+      <div class="card demo-card">
+        <div class="card-body p-4">
+          <h2 class="h4 mb-2">Запись на курс</h2>
+          <p class="demo-muted mb-3">Шаг {{ wizard.steps.step1 }} из {{ wizard.steps.count }}.</p>
+
+          {% if wizard.steps.current == "confirm" and signup_preview %}
+            <div class="alert alert-secondary" role="status">
+              <h3 class="h6 mb-2">Проверьте данные</h3>
+              <dl class="row mb-0">
+                <dt class="col-sm-4">Курс</dt>
+                <dd class="col-sm-8">{{ signup_preview.course }}</dd>
+                <dt class="col-sm-4">ФИО</dt>
+                <dd class="col-sm-8">{{ signup_preview.full_name }}</dd>
+                <dt class="col-sm-4">Email</dt>
+                <dd class="col-sm-8">{{ signup_preview.email }}</dd>
+                <dt class="col-sm-4">Телефон</dt>
+                <dd class="col-sm-8">{{ signup_preview.phone }}</dd>
+                <dt class="col-sm-4">Комментарий</dt>
+                <dd class="col-sm-8">{{ signup_preview.comment|default:"-" }}</dd>
+              </dl>
+            </div>
+          {% endif %}
+
+          <form method="post" novalidate data-consent-radio-form>
+            {% csrf_token %}
+            {{ wizard.management_form }}
+            {% if verified_transition and verified_transition.blocking %}
+              <div class="alert alert-warning" role="alert">
+                {{ verified_transition.message }}
+                {% if verified_transition.upload_url %}
+                  <a href="{{ verified_transition.upload_url }}" class="alert-link">Загрузить подтверждение</a>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% for field in wizard.form.visible_fields %}
+              {% if field.name != "confirm" and field.name != "consent_decision" %}
+                {% bootstrap_field field %}
+              {% endif %}
+            {% endfor %}
+            {% if wizard.form.consent_decision or wizard.form.confirm %}
+              <p class="small demo-muted mb-3">
+                Текст согласия:
+                <a href="{{ consent_document_url }}" target="_blank" rel="noopener">открыть и подписать</a>
+              </p>
+              {% if wizard.form.consent_decision %}
+                {% bootstrap_field wizard.form.consent_decision %}
+              {% endif %}
+              {% if wizard.form.confirm %}
+                {% bootstrap_field wizard.form.confirm %}
+              {% endif %}
+              <p
+                class="text-danger fw-semibold"
+                data-consent-blocked-message
+                style="display:none;"
+                role="alert"
+              >
+                Без согласия на обработку персональных данных отправка формы невозможна.
+              </p>
+            {% endif %}
+
+            <div class="d-flex flex-wrap gap-2">
+              {% if wizard.steps.prev %}
+                <button
+                  class="btn btn-outline-secondary"
+                  name="wizard_goto_step"
+                  type="submit"
+                  value="{{ wizard.steps.prev }}"
+                >Назад</button>
+              {% endif %}
+              <button class="btn btn-primary" type="submit">
+                {% if wizard.steps.current == "confirm" %}
+                  Подтвердить запись
+                {% else %}
+                  Продолжить
+                {% endif %}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll("form[data-consent-radio-form]").forEach((form) => {
+      const decline = form.querySelector('input[name="consent_decision"][value="decline"]');
+      const agree = form.querySelector('input[name="consent_decision"][value="agree"]');
+      const blockedMessage = form.querySelector("[data-consent-blocked-message]");
+      const blockSubmit = "{{ consent_capture_settings.decline_action|default:'' }}" === "block_submit";
+      const warningEnabled = "{{ consent_capture_settings.decline_warning_enabled|yesno:'1,0' }}" === "1";
+
+      const syncDeclineState = () => {
+        if (!blockedMessage || !decline || !blockSubmit) {
+          return;
+        }
+        blockedMessage.style.display = decline.checked ? "" : "none";
+      };
+
+      if (decline) {
+        decline.addEventListener("change", syncDeclineState);
+      }
+      if (agree) {
+        agree.addEventListener("change", syncDeclineState);
+      }
+      syncDeclineState();
+
+      form.addEventListener("submit", (event) => {
+        if (!decline || !decline.checked) {
+          return;
+        }
+        if (blockSubmit) {
+          event.preventDefault();
+          if (blockedMessage) {
+            blockedMessage.style.display = "";
+            blockedMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return;
+        }
+        if (blockedMessage) {
+          blockedMessage.style.display = "none";
+        }
+        if (!warningEnabled) {
+          return;
+        }
+        const confirmed = window.confirm("{{ consent_capture_settings.decline_warning_text|escapejs }}");
+        if (!confirmed) {
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+{% endblock %}

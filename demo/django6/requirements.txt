@@ -1,0 +1,7 @@
+Django>=6,<7
+django-allauth>=65,<66
+django-formtools>=2.5,<3
+django-bootstrap5>=26,<27
+djangorestframework>=3.16,<4
+../../dist/consent/django_consent_152fz-1.0.0-py3-none-any.whl
+../../dist/cookies/django_cookies_152fz-1.0.0-py3-none-any.whl

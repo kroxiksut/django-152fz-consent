@@ -1,0 +1,13 @@
+{% load i18n static cookies_tags %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+<head>
+  <meta charset="utf-8">
+  <title>{% block cookie_preferences_title %}{% trans "Cookie preferences" %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'django_cookies_152fz/cookie_banner.css' %}">
+  <script src="{% static 'django_cookies_152fz/cookie_banner.js' %}" defer></script>
+</head>
+<body>
+  {% include "django_cookies_152fz/includes/cookie_preferences_content.html" %}
+</body>
+</html>

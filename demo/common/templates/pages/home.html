@@ -1,0 +1,72 @@
+﻿{% extends "base.html" %}
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Home | Training Center{% else %}Главная | Учебный центр{% endif %}{% endblock %}
+
+{% block content %}
+  <section class="card demo-card mb-4">
+    <div class="card-body p-4 p-lg-5">
+      {% if CURRENT_LANGUAGE == 'en' %}
+        <h2 class="mb-3">Welcome to the training center</h2>
+        <p class="lead mb-2">This demo site first shows a baseline scenario, then integration of the cookie module (adapted for 152-FZ) and the consent layer adapted to Russian Federal Law No. 152-FZ.</p>
+        <p class="demo-muted mb-2">The cookie module can be used outside Russia with adapted legal texts. The consent layer targets 152-FZ compliance scenarios.</p>
+        <p class="demo-muted mb-0">
+          Documentation:
+          <a href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/cookies/en/README.md" target="_blank" rel="noopener noreferrer">Cookies (EN)</a>,
+          <a href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/consent/en/README.md" target="_blank" rel="noopener noreferrer">Consent (EN)</a>.
+        </p>
+      {% else %}
+        <h2 class="mb-3">Добро пожаловать в учебный центр</h2>
+        <p class="lead mb-2">Этот демо-сайт сначала показывает базовый сценарий, а затем интеграцию cookie-модуля (адаптированного под 152-ФЗ) и слоя согласий, адаптированного под требования Федерального закона № 152-ФЗ.</p>
+        <p class="demo-muted mb-2">Cookie-модуль можно использовать и вне России при адаптации юридических текстов. Слой согласий ориентирован на сценарии соблюдения 152-ФЗ.</p>
+        <p class="demo-muted mb-0">
+          Ссылки на закон:
+          <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank" rel="noopener noreferrer">КонсультантПлюс</a>,
+          <a href="https://base.garant.ru/12148567/" target="_blank" rel="noopener noreferrer">Гарант</a>.
+        </p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-xl-3">
+        <article class="card h-100 demo-card">
+          <div class="card-body">
+            <h3 class="h5">{% if CURRENT_LANGUAGE == 'en' %}Courses{% else %}Курсы{% endif %}</h3>
+            <p class="demo-muted mb-3">{% if CURRENT_LANGUAGE == 'en' %}Explore active programs and pick a track.{% else %}Изучите активные программы и выберите направление.{% endif %}</p>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'pages:course_list' %}">{% if CURRENT_LANGUAGE == 'en' %}Open courses{% else %}Открыть курсы{% endif %}</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <article class="card h-100 demo-card">
+          <div class="card-body">
+            <h3 class="h5">{% if CURRENT_LANGUAGE == 'en' %}Course signup{% else %}Запись на курс{% endif %}</h3>
+            <p class="demo-muted mb-3">{% if CURRENT_LANGUAGE == 'en' %}Run the two-step signup flow.{% else %}Пройдите двухшаговую запись на курс.{% endif %}</p>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'pages:course_signup' %}">{% if CURRENT_LANGUAGE == 'en' %}Start signup{% else %}Начать запись{% endif %}</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <article class="card h-100 demo-card">
+          <div class="card-body">
+            <h3 class="h5">{% if CURRENT_LANGUAGE == 'en' %}Contacts{% else %}Контакты{% endif %}</h3>
+            <p class="demo-muted mb-3">{% if CURRENT_LANGUAGE == 'en' %}Send a message with the contact form.{% else %}Отправьте сообщение через форму обратной связи.{% endif %}</p>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'pages:contact' %}">{% if CURRENT_LANGUAGE == 'en' %}Contact us{% else %}Связаться с нами{% endif %}</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <article class="card h-100 demo-card">
+          <div class="card-body">
+            <h3 class="h5">{% if CURRENT_LANGUAGE == 'en' %}Profile{% else %}Профиль{% endif %}</h3>
+            <p class="demo-muted mb-3">{% if CURRENT_LANGUAGE == 'en' %}Go to account profile after sign in.{% else %}Перейдите в профиль пользователя после входа.{% endif %}</p>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'pages:profile' %}">{% if CURRENT_LANGUAGE == 'en' %}Open profile{% else %}Открыть профиль{% endif %}</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+{% endblock %}

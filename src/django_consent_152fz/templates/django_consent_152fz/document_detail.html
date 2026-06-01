@@ -1,0 +1,46 @@
+{% load i18n consent_tags %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{ revision.document.title }} | {{ purpose.title }}</title>
+</head>
+<body>
+  <main class="consent-document">
+    <p><a href="{% url 'django_consent_152fz:subject_consents' %}">{% trans "Вернуться к моим согласиям" %}</a></p>
+    <header>
+      <p>{% trans "Поток согласия" %}: <strong>{{ purpose.title }}</strong></p>
+      <h1>{{ revision.document.title }}</h1>
+      <p>{% trans "Редакция" %} {{ revision.version }}</p>
+      <p><a href="{{ document_pdf_url }}">{{ document_download_label }}</a></p>
+      {% if purpose.description %}
+      <p>{{ purpose.description }}</p>
+      {% endif %}
+    </header>
+
+    {% include "django_consent_152fz/includes/reconsent_notice.html" with notice=notice only %}
+
+    <section class="consent-document__meta">
+      <p>{% trans "Статус" %}: <strong>{{ status_info.status_label|default:"Нет согласия" }}</strong></p>
+      {% if field_descriptors %}
+      <p>{% trans "Поля, покрываемые согласием" %}:</p>
+      <ul>
+        {% for field in field_descriptors %}
+        <li>{{ field.label }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+
+    <article class="consent-document__content">
+      {{ revision|render_consent_document }}
+    </article>
+
+    {% include "django_consent_152fz/includes/consent_form_block.html" with accept_form=accept_form accept_url=accept_url requirement=requirement status_info=status_info field_descriptors=field_descriptors %}
+
+    {% if status_info.record_id %}
+    <p><a href="{{ withdraw_url }}">{% trans "Отозвать согласие" %}</a></p>
+    {% endif %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+[
+  {
+    "model": "training_center.course",
+    "pk": 1,
+    "fields": {
+      "title": "Python для веб-разработки",
+      "slug": "python-web-development",
+      "short_description": "Базовый курс по Python и Django для старта в вебе.",
+      "description": "Курс знакомит с Python, HTTP, Django и практикой создания небольших веб-сервисов.",
+      "starts_at": "2026-05-12T10:00:00Z",
+      "is_active": true,
+      "created_at": "2026-04-20T00:00:00Z",
+      "updated_at": "2026-04-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "training_center.course",
+    "pk": 2,
+    "fields": {
+      "title": "Frontend: HTML, CSS, JavaScript",
+      "slug": "frontend-html-css-js",
+      "short_description": "Практика верстки и клиентской логики для начинающих.",
+      "description": "Студенты собирают адаптивные интерфейсы, подключают API и учатся работать с формами.",
+      "starts_at": "2026-05-19T10:00:00Z",
+      "is_active": true,
+      "created_at": "2026-04-20T00:00:00Z",
+      "updated_at": "2026-04-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "training_center.course",
+    "pk": 3,
+    "fields": {
+      "title": "Тестирование веб-приложений",
+      "slug": "web-testing",
+      "short_description": "Ручное и автоматизированное тестирование на реальных кейсах.",
+      "description": "Курс покрывает тест-дизайн, API-тесты и базовую автоматизацию в CI-подходе.",
+      "starts_at": "2026-05-26T10:00:00Z",
+      "is_active": true,
+      "created_at": "2026-04-20T00:00:00Z",
+      "updated_at": "2026-04-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "training_center.course",
+    "pk": 4,
+    "fields": {
+      "title": "DevOps и поддержка сервисов",
+      "slug": "devops-service-ops",
+      "short_description": "Основы деплоя, мониторинга и сопровождения веб-сервисов.",
+      "description": "Участники осваивают контейнеризацию, базовый мониторинг и практики операционной поддержки.",
+      "starts_at": "2026-06-02T10:00:00Z",
+      "is_active": true,
+      "created_at": "2026-04-20T00:00:00Z",
+      "updated_at": "2026-04-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "training_center.course",
+    "pk": 5,
+    "fields": {
+      "title": "Архитектура Django-проектов",
+      "slug": "django-architecture",
+      "short_description": "Проектирование структуры Django-сайта и рабочих модулей.",
+      "description": "Курс про организацию приложений, слоев сервиса, админки и подготовку проекта к масштабированию.",
+      "starts_at": "2026-06-09T10:00:00Z",
+      "is_active": true,
+      "created_at": "2026-04-20T00:00:00Z",
+      "updated_at": "2026-04-20T00:00:00Z"
+    }
+  }
+]

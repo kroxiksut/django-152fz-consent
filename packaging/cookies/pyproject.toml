@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-cookies-152fz"
+version = "1.0.0"
+description = "Cookie banner and runtime package for Django projects targeting 152-FZ compliance workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "Django>=5,<7",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Framework :: Django :: 6.0",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/kroxiksut/django-consent-152fz"
+Repository = "https://github.com/kroxiksut/django-consent-152fz"
+Documentation = "https://github.com/kroxiksut/django-consent-152fz/tree/main/docs/cookies"
+
+[project.optional-dependencies]
+consent = [
+    "django-consent-152fz>=1.0.0,<2",
+]
+test = [
+    "pytest>=8,<9",
+    "pytest-django>=4.8,<5",
+]
+dev = [
+    "ruff>=0.11,<1",
+	"pyright>=1.1.390,<2",
+    "build>=1.2,<2",
+    "twine>=5,<7",
+]
+
+[tool.setuptools]
+package-dir = {"" = "../../src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["../../src"]
+include = ["django_cookies_152fz*"]
+
+[tool.setuptools.package-data]
+django_cookies_152fz = [
+    "templates/**/*.html",
+    "static/**/*.css",
+    "static/**/*.js",
+    "locale/**/*.po",
+    "locale/**/*.mo",
+    "ai/*.md",
+]
+

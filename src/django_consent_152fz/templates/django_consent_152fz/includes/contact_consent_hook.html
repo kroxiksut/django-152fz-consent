@@ -1,0 +1,255 @@
+{% load i18n %}
+<section
+  class="contact-consent-hook"
+  data-consent-hook
+  data-consent-scenario="{{ scenario }}"
+  data-consent-verified-transition="{% if status_info and status_info.verified_transition %}{{ status_info.verified_transition.status_code|default:'' }}{% endif %}"
+>
+  <p>
+    Документ согласия:
+    <a href="{{ document_url }}" target="_blank" rel="noopener">открыть</a>
+  </p>
+  {% if field_descriptors %}
+  <p>Согласие покрывает обработку следующих полей:</p>
+  <ul>
+    {% for field in field_descriptors %}
+    <li>{{ field.label }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% if status_info and status_info.is_current %}
+  <p>Для текущего анонимного субъекта уже есть актуальное согласие.</p>
+  {% endif %}
+  {% if requirement and requirement.verified_consent.required %}
+  <p data-consent-verified-required>
+    {% blocktrans with mode=requirement.verified_consent.verification_mode trimmed %}Для отправки этой формы требуется усиленное подтверждение согласия: {{ mode }}.{% endblocktrans %}
+  </p>
+  {% endif %}
+  {% if status_info and status_info.verified_transition and status_info.verified_transition.enabled and status_info.verified_transition.status_code != "verified" %}
+  <p
+    data-consent-verified-blocked-message
+    style="color:#b42318; font-weight:600;"
+    role="alert"
+  >
+    {% if status_info.verified_transition.status_code == "paper_required" %}
+    {% trans "Подписание через web-форму недоступно: требуется бумажное подтверждение согласия." %}
+    {% elif status_info.verified_transition.status_code == "awaiting_upload" %}
+    {% trans "Подписание через web-форму недоступно: сначала загрузите подписанный бумажный документ." %}
+    {% elif status_info.verified_transition.status_code == "pending_verification" %}
+    {% trans "Подписание через web-форму недоступно: документ уже загружен и ожидает проверки оператором ПДн." %}
+    {% elif status_info.verified_transition.status_code == "rejected" %}
+    {% trans "Подписание через web-форму недоступно: предыдущее подтверждение отклонено, загрузите новый документ." %}
+    {% else %}
+    {% trans "Подписание через web-форму недоступно для этого потока согласия." %}
+    {% endif %}
+  </p>
+  {% endif %}
+
+  {{ hook_form.anonymous_token }}
+  {{ hook_form.next }}
+  {{ hook_form.client_timezone }}
+  {{ hook_form.client_languages }}
+  {{ hook_form.client_os_locale }}
+  {{ hook_form.client_screen_width }}
+  {{ hook_form.client_screen_height }}
+  {{ hook_form.verification_channel }}
+  {{ hook_form.verification_form_code }}
+  {{ hook_form.scenario }}
+
+  <input
+    type="hidden"
+    name="{{ hook_form.subject_ref.html_name }}"
+    value="{{ hook_form.subject_ref.value|default:'' }}"
+    data-consent-hidden="subject_ref"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_name.html_name }}"
+    value="{{ hook_form.contact_name.value|default:'' }}"
+    data-consent-copy-from="full_name"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_email.html_name }}"
+    value="{{ hook_form.contact_email.value|default:'' }}"
+    data-consent-copy-from="email"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_phone.html_name }}"
+    value="{{ hook_form.contact_phone.value|default:'' }}"
+    data-consent-copy-from="phone"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_contacts.html_name }}"
+    value="{{ hook_form.contact_contacts.value|default:'' }}"
+    data-consent-copy-from="contacts"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_address.html_name }}"
+    value="{{ hook_form.contact_address.value|default:'' }}"
+    data-consent-copy-from="address"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.contact_message.html_name }}"
+    value="{{ hook_form.contact_message.value|default:'' }}"
+    data-consent-copy-from="message"
+  >
+  <input
+    type="hidden"
+    name="{{ hook_form.preorder_id.html_name }}"
+    value="{{ hook_form.preorder_id.value|default:'' }}"
+    data-consent-copy-from="preorder_id"
+  >
+
+  {% if hook_form.consent_decision %}
+    <fieldset>
+      <legend>{{ hook_form.consent_decision.label }}</legend>
+      {{ hook_form.consent_decision }}
+    </fieldset>
+    {% for error in hook_form.consent_decision.errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+  {% endif %}
+  {% if hook_form.confirm %}
+    <label>
+      {{ hook_form.confirm }}
+      {{ hook_form.confirm.label }}
+    </label>
+    {% for error in hook_form.confirm.errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+  {% endif %}
+  {% if hook_form.non_field_errors %}
+  <div class="consent-errors">
+    {% for error in hook_form.non_field_errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <p
+    data-consent-blocked-message
+    style="display:none; color:#b42318; font-weight:600;"
+    role="alert"
+  >
+    Без согласия на обработку персональных данных отправка формы невозможна.
+  </p>
+
+  <script>
+    (function () {
+      var hook = document.currentScript && document.currentScript.parentElement;
+      if (!hook || !hook.matches("[data-consent-hook]")) {
+        hook = document.querySelector("[data-consent-hook][data-consent-scenario='{{ scenario }}']");
+      }
+      if (!hook) {
+        return;
+      }
+      var hostForm = hook.closest("form");
+      if (!hostForm) {
+        return;
+      }
+
+      function readFieldValue(name) {
+        var field = hostForm.querySelector("[name='" + name + "']");
+        if (!field) {
+          return "";
+        }
+        if (field.type === "checkbox") {
+          return field.checked ? (field.value || "on") : "";
+        }
+        return field.value || "";
+      }
+
+      function syncAuditFields() {
+        var timezone = hostForm.querySelector("[name='{{ hook_form.client_timezone.html_name }}']");
+        if (timezone && window.Intl && Intl.DateTimeFormat) {
+          timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        }
+        var languages = hostForm.querySelector("[name='{{ hook_form.client_languages.html_name }}']");
+        if (languages && Array.isArray(navigator.languages)) {
+          languages.value = JSON.stringify(navigator.languages);
+        }
+        var osLocale = hostForm.querySelector("[name='{{ hook_form.client_os_locale.html_name }}']");
+        if (osLocale && navigator.language) {
+          osLocale.value = navigator.language;
+        }
+        var screenWidth = hostForm.querySelector("[name='{{ hook_form.client_screen_width.html_name }}']");
+        var screenHeight = hostForm.querySelector("[name='{{ hook_form.client_screen_height.html_name }}']");
+        if (screenWidth && window.screen) {
+          screenWidth.value = window.screen.width || "";
+        }
+        if (screenHeight && window.screen) {
+          screenHeight.value = window.screen.height || "";
+        }
+      }
+
+      function syncContactFields() {
+        hook.querySelectorAll("[data-consent-copy-from]").forEach(function (field) {
+          field.value = readFieldValue(field.getAttribute("data-consent-copy-from"));
+        });
+        var subjectRefField = hook.querySelector("[data-consent-hidden='subject_ref']");
+        if (!subjectRefField) {
+          return;
+        }
+        if (subjectRefField.value) {
+          return;
+        }
+        subjectRefField.value =
+          readFieldValue("subject_ref") ||
+          readFieldValue("preorder_id") ||
+          readFieldValue("email") ||
+          readFieldValue("phone") ||
+          readFieldValue("contacts") ||
+          readFieldValue("full_name");
+      }
+
+      syncAuditFields();
+      syncContactFields();
+      var declineChoice = hook.querySelector("input[name='{{ hook_form.consent_decision.html_name }}'][value='decline']");
+      var warningEnabled = "{{ consent_capture_settings.decline_warning_enabled|yesno:'1,0' }}" === "1";
+      var blockSubmit = "{{ consent_capture_settings.decline_action|default:'' }}" === "block_submit";
+      var blockedMessage = hook.querySelector("[data-consent-blocked-message]");
+      var verifiedTransition = hook.getAttribute("data-consent-verified-transition") || "";
+      var verifiedBlockedMessage = hook.querySelector("[data-consent-verified-blocked-message]");
+      hostForm.addEventListener("submit", function (event) {
+        syncAuditFields();
+        syncContactFields();
+        if (verifiedTransition && verifiedTransition !== "verified") {
+          event.preventDefault();
+          if (verifiedBlockedMessage) {
+            verifiedBlockedMessage.style.display = "";
+            verifiedBlockedMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+          return;
+        }
+        if (declineChoice && declineChoice.checked) {
+          if (blockSubmit) {
+            event.preventDefault();
+            if (blockedMessage) {
+              blockedMessage.style.display = "";
+            }
+            return;
+          }
+          if (!warningEnabled) {
+            if (blockedMessage) {
+              blockedMessage.style.display = "none";
+            }
+            return;
+          }
+          var confirmed = window.confirm("{{ consent_capture_settings.decline_warning_text|escapejs }}");
+          if (!confirmed) {
+            event.preventDefault();
+          }
+        } else if (blockedMessage) {
+          blockedMessage.style.display = "none";
+        }
+      });
+    })();
+  </script>
+</section>
+
+
+

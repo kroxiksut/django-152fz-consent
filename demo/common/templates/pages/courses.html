@@ -1,0 +1,39 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Курсы | Учебный центр{% endblock %}
+
+{% block content %}
+  <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+    <h2 class="mb-0">Доступные курсы</h2>
+    <a class="btn btn-primary" href="{% url 'pages:course_signup' %}">Записаться</a>
+  </div>
+
+  {% if courses %}
+    <div class="row g-3">
+      {% for course in courses %}
+        <div class="col-12 col-lg-6">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-2">{{ course.title }}</h3>
+              {% if course.starts_at %}
+                <p class="demo-muted mb-2">
+                  Старт: {{ course.starts_at|date:"d.m.Y H:i" }}
+                </p>
+              {% endif %}
+              <p class="mb-2">{{ course.short_description }}</p>
+              <p class="demo-muted mb-0">{{ course.description }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pt-0 pb-3 px-3">
+              <a
+                class="btn btn-outline-primary"
+                href="{% url 'pages:course_signup' %}?course={{ course.pk }}"
+              >Выбрать курс</a>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-secondary" role="status">Пока нет активных курсов.</div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,144 @@
+# НАЗНАЧЕНИЕ ЭТОГО ФАЙЛА.
+# Это корневой pyproject для РАЗРАБОТКИ и ТУЛИНГА, а НЕ релизный артефакт.
+# Он используется для editable-установки `pip install -e ".[dev,test,api]"`
+# (ставит оба пакета из src/ сразу, чтобы тесты видели и consent, и cookies)
+# и хранит общий конфиг инструментов: [tool.ruff], [tool.pytest.ini_options].
+# На PyPI он НЕ публикуется. Релизные wheel собираются по отдельности из
+# packaging/consent/pyproject.toml и packaging/cookies/pyproject.toml.
+# Подробнее: docs/ci-cd-packaging.md.
+#
+# Сборка идёт через setuptools по схеме PEP 517.
+# Этого достаточно для alpha-этапа: проект остаётся простым для публикации в PyPI,
+# а дальнейшее усложнение сборки можно отложить до появления реальных причин.
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Здесь задаются метаданные пакета, которые увидят и PyPI, и установщик pip.
+# Важно, что базовая зависимость остаётся минимальной: для ядра пакета нужен
+# только Django, а DRF подключается отдельно через optional extra.
+[project]
+name = "django-consent-152fz"
+version = "1.0.0"
+# Пакет для проектов, работающих на РФ: помогает получать, хранить и обновлять
+# согласия на обработку персональных данных для соблюдения требований 152-ФЗ.
+description = "Django package for websites and web services targeting the Russian Federation, helping projects implement 152-FZ personal data consent and compliance workflows."
+keywords = [
+    "django",
+    "152-fz",
+    "152fz",
+    "152-фз",
+    "personal-data-law",
+    "russian-data-protection",
+    "data-processing-consent",
+    "cookie-consent",
+    "согласие на cookie",
+    "пдн",
+    "персональные данные",
+    "согласие на обработку данных",
+    "защита персональных данных",
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    # Базовый runtime пакета. Здесь намеренно нет ни DRF, ни ReportLab:
+    # - API-слой по roadmap является опциональным (см. пункт 6 в TASKS);
+    # - ReportLab нужен только для генерации PDF бумажных согласий
+    #   (verified/paper flow) и подключается через optional extra `pdf`.
+    # Поэтому тяжёлые зависимости не навязываются всем пользователям ядра.
+    "Django>=5,<7",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Framework :: Django :: 6.0",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+# Optional dependencies разделены по сценариям использования:
+# - api: только для тех, кому нужен DRF-слой;
+# - test: минимальный набор для запуска тестов;
+# - dev: инструменты качества и упаковки.
+[project.optional-dependencies]
+api = [
+    "djangorestframework>=3.15,<4",
+]
+pdf = [
+    "reportlab>=4,<5",
+]
+test = [
+    "pytest>=8,<9",
+    "pytest-django>=4.8,<5",
+]
+dev = [
+    "ruff>=0.11,<1",
+    "pyright>=1.1.390,<2",
+    "django-stubs>=5.2,<6",
+    "djangorestframework-stubs>=3.16,<4",
+    "build>=1.2,<2",
+    "twine>=5,<7",
+]
+
+# Используем src-layout, чтобы тесты не подхватывали код "случайно" из корня
+# репозитория. Это ранний архитектурный барьер против ложноположительных тестов.
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# На alpha-этапе шаблоны уже считаются частью публичного пакета, потому что
+# template UI входит в roadmap. Поэтому их нужно включать в wheel/sdist явно.
+[tool.setuptools.package-data]
+django_consent_152fz = [
+    "templates/**/*.html",
+    "static/**/*.css",
+    "static/**/*.js",
+    "locale/**/*.po",
+    "locale/**/*.mo",
+    "ai/*.md",
+]
+django_cookies_152fz = [
+    "templates/**/*.html",
+    "static/**/*.css",
+    "static/**/*.js",
+    "locale/**/*.po",
+    "locale/**/*.mo",
+    "ai/*.md",
+]
+
+# Ruff закрывает сразу две задачи из пункта 3.2: линтинг и форматирование.
+# Правила пока умеренно строгие: они ловят реальные ошибки, но не душат
+# проект до того, как доменная модель стабилизируется.
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+# pytest настроен так, чтобы тестовый раннер сразу работал из коробки в CI.
+# DJANGO_SETTINGS_MODULE указывает на тестовый settings-модуль, который
+# поднимает минимальное Django-окружение для пакета и его optional модулей.
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+cache_dir = ".tmp/pytest-cache"
+markers = [
+    "api: tests that require optional API extra (DRF)",
+]
+
+

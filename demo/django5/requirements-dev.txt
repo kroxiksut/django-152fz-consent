@@ -1,0 +1,3 @@
+pyright>=1.1.390,<2
+django-stubs>=5.2,<6
+djangorestframework-stubs>=3.16,<4

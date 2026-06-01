@@ -1,0 +1,15 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  {{ block.super }}
+  {% if policy_variant_tools %}
+    {% for tool in policy_variant_tools %}
+      <li>
+        <a href="{{ tool.publish_url }}">{{ tool.publish_label }}</a>
+      </li>
+      <li>
+        <a href="{{ tool.draft_url }}">{{ tool.draft_label }}</a>
+      </li>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

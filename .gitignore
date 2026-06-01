@@ -4,6 +4,8 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+.tmp/
+tmp/
 
 CLAUDE.md
 
@@ -17,6 +19,8 @@ TASKS.md
 
 build/
 dist/
+packaging/src/
+packaging/**/build/
 conda.txt
 
 # VS Code local settings
@@ -39,3 +43,11 @@ demo/**/media/
 demo/**/test_media/
 demo/**/__pycache__/
 demo/**/.venv/
+demo/01*.md
+demo/02*.md
+demo/03*.md
+
+# Demo temp/scratch artifacts (DB-файлы демо намеренно НЕ игнорируются — там только демо admin/admin)
+demo/**/_tmp_*
+demo/**/.codex_tmp_*
+.codex-tmp/

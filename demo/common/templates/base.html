@@ -1,0 +1,142 @@
+﻿{% load i18n static cookies_tags %}
+{% get_current_language as CURRENT_LANGUAGE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'ru' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Training Center{% else %}Учебный центр{% endif %}{% endblock %}</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="{% static 'demo/css/theme.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="demo-body">
+  <header class="demo-header border-bottom">
+    <div class="container py-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <h1 class="h3 mb-0">{% if CURRENT_LANGUAGE == 'en' %}Training Center{% else %}Учебный центр{% endif %}</h1>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          {% if request.user.is_authenticated %}
+            <span class="small text-muted">{% if CURRENT_LANGUAGE == 'en' %}Signed in as:{% else %}Вы вошли как:{% endif %} {{ request.user.get_username }}</span>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'pages:profile' %}">{% if CURRENT_LANGUAGE == 'en' %}Profile{% else %}Профиль{% endif %}</a>
+            {% if request.user.is_staff %}
+              <a class="btn btn-outline-secondary btn-sm" href="{% url 'admin:index' %}">{% if CURRENT_LANGUAGE == 'en' %}Admin{% else %}Админка{% endif %}</a>
+            {% endif %}
+            <a class="btn btn-outline-danger btn-sm" href="{% url 'account_logout' %}">{% if CURRENT_LANGUAGE == 'en' %}Sign out{% else %}Выйти{% endif %}</a>
+          {% else %}
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'account_login' %}">{% if CURRENT_LANGUAGE == 'en' %}Sign in{% else %}Войти{% endif %}</a>
+            <a class="btn btn-primary btn-sm" href="{% url 'account_signup' %}">{% if CURRENT_LANGUAGE == 'en' %}Sign up{% else %}Регистрация{% endif %}</a>
+          {% endif %}
+          <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center gap-2">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}">
+            <label for="language-select" class="form-label mb-0">{% if CURRENT_LANGUAGE == 'en' %}Language{% else %}Язык{% endif %}</label>
+            <select id="language-select" name="language" class="form-select form-select-sm">
+              {% get_available_languages as AVAILABLE_LANGUAGES %}
+              {% for code, name in AVAILABLE_LANGUAGES %}
+                <option value="{{ code }}"{% if code == CURRENT_LANGUAGE %} selected{% endif %}>{{ name }}</option>
+              {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-outline-primary btn-sm">{% if CURRENT_LANGUAGE == 'en' %}Apply{% else %}Применить{% endif %}</button>
+          </form>
+        </div>
+      </div>
+      <nav class="demo-nav nav nav-pills mt-3" aria-label="{% if CURRENT_LANGUAGE == 'en' %}Main navigation{% else %}Основная навигация{% endif %}">
+        <a class="nav-link" href="{% url 'pages:home' %}">{% if CURRENT_LANGUAGE == 'en' %}Home{% else %}Главная{% endif %}</a>
+        <a class="nav-link" href="{% url 'pages:about' %}">{% if CURRENT_LANGUAGE == 'en' %}About{% else %}О центре{% endif %}</a>
+        <a class="nav-link" href="{% url 'pages:course_list' %}">{% if CURRENT_LANGUAGE == 'en' %}Courses{% else %}Курсы{% endif %}</a>
+        <a class="nav-link" href="{% url 'pages:contact' %}">{% if CURRENT_LANGUAGE == 'en' %}Contacts{% else %}Контакты{% endif %}</a>
+        <a class="nav-link" href="{% url 'pages:course_signup' %}">{% if CURRENT_LANGUAGE == 'en' %}Course signup{% else %}Запись на курс{% endif %}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    {% if messages %}
+      <div class="mb-3" aria-live="polite" aria-atomic="true">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags|default:'info' }} mb-2" role="status">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  {% render_cookie_banner %}
+
+  <footer class="demo-footer border-top py-3 mt-4">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <small>
+          {% if CURRENT_LANGUAGE == 'en' %}
+            Demo project for the cookie module (adapted for 152-FZ) and the consent layer aligned with Russian Federal Law No. 152-FZ.
+          {% else %}
+            Демо-проект для проверки cookie-модуля (адаптированного под 152-ФЗ) и слоя согласий по требованиям Федерального закона № 152-ФЗ.
+          {% endif %}
+        </small>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <a
+            href="https://github.com/kroxiksut/django-consent-152fz"
+            class="btn btn-sm btn-outline-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{% if CURRENT_LANGUAGE == 'en' %}Project repository{% else %}Репозиторий проекта{% endif %}</a>
+          {% if CURRENT_LANGUAGE == 'en' %}
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/demo/README.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Demo README (EN)</a>
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/cookies/en/README.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Cookies Docs (EN)</a>
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/consent/en/README.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Consent Docs (EN)</a>
+          {% else %}
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/demo/README.ru.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Демо README (RU)</a>
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/cookies/ru/README.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Cookie модуль</a>
+            <a
+              href="https://github.com/kroxiksut/django-consent-152fz/blob/main/docs/consent/ru/README.md"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Модуль согласий</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{% static 'demo/js/app.js' %}" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

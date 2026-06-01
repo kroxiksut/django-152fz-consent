@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: demo-training-center\n"
+"POT-Creation-Date: 2026-04-20 00:00+0800\n"
+"PO-Revision-Date: 2026-04-20 00:00+0800\n"
+"Last-Translator: demo team\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Training Center"
+msgstr "Training Center"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Apply"
+msgstr "Apply"
+
+msgid "Main navigation"
+msgstr "Main navigation"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "About"
+msgstr "About"
+
+msgid "Courses"
+msgstr "Courses"
+
+msgid "Contacts"
+msgstr "Contacts"
+
+msgid "Course signup"
+msgstr "Course signup"
+
+msgid "Profile"
+msgstr "Profile"
+
+msgid "Demo project for Django 152-FZ integration checks."
+msgstr "Demo project for Django 152-FZ integration checks."
+
+msgid "Welcome to the training center"
+msgstr "Welcome to the training center"
+
+msgid "This demo site shows the base flow first and then 152-FZ package integration."
+msgstr "This demo site shows the base flow first and then 152-FZ package integration."
+
+msgid "About the center"
+msgstr "About the center"
+
+msgid "We provide practical courses focused on applied software development skills."
+msgstr "We provide practical courses focused on applied software development skills."
+
+msgid "Available courses"
+msgstr "Available courses"
+
+msgid "Active courses are displayed here and sorted by the configured public order."
+msgstr "Active courses are displayed here and sorted by the configured public order."
+
+msgid "Use this page to reach the training center for schedule and enrollment questions."
+msgstr "Use this page to reach the training center for schedule and enrollment questions."
+
+msgid "This page is reserved for the two-step signup flow powered by django-formtools."
+msgstr "This page is reserved for the two-step signup flow powered by django-formtools."
+
+msgid "Authenticated user profile details and consent-related links are shown here."
+msgstr "Authenticated user profile details and consent-related links are shown here."
+
+msgid "Cookie preferences"
+msgstr "Cookie preferences"
+
+msgid "Cookie banner area"
+msgstr "Cookie banner area"
+
+msgid "Cookie controls are available without JavaScript on the cookie preferences page."
+msgstr "Cookie controls are available without JavaScript on the cookie preferences page."
+
+msgid "We use cookies"
+msgstr "We use cookies"
+
+msgid "Cookies help the site operate correctly and improve the user experience."
+msgstr "Cookies help the site operate correctly and improve the user experience."
+
+msgid "Accept all"
+msgstr "Accept all"
+
+msgid "Customize"
+msgstr "Customize"
+
+msgid "Save settings"
+msgstr "Save settings"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "I agree to personal data processing"
+msgstr "I agree to personal data processing"
+
+msgid "Consent is required to continue"
+msgstr "Consent is required to continue"
+
+msgid "Form submission is unavailable without consent"
+msgstr "Form submission is unavailable without consent"
+
+msgid "Consent saved"
+msgstr "Consent saved"
+
+msgid "Consent can be withdrawn in profile settings"
+msgstr "Consent can be withdrawn in profile settings"
+
+msgid "Full name"
+msgstr "Full name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Course"
+msgstr "Course"
+
+msgid "Select a course"
+msgstr "Select a course"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Comment"
+msgstr "Comment"
+
+msgid "Message sent successfully."
+msgstr "Message sent successfully."
+
+msgid "Please correct the form errors."
+msgstr "Please correct the form errors."
+
+msgid "Signup data is missing. Please try again."
+msgstr "Signup data is missing. Please try again."
+
+msgid "Course signup submitted successfully."
+msgstr "Course signup submitted successfully."
+
+msgid "This signup has already been submitted."
+msgstr "This signup has already been submitted."
+
+msgid "Step %(current)s of %(total)s."
+msgstr "Step %(current)s of %(total)s."
+
+msgid "Confirm your data"
+msgstr "Confirm your data"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Confirm signup"
+msgstr "Confirm signup"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "No account yet?"
+msgstr "No account yet?"
+
+msgid "Create one"
+msgstr "Create one"
+
+msgid "Sign out"
+msgstr "Sign out"
+
+msgid "Are you sure you want to sign out?"
+msgstr "Are you sure you want to sign out?"
+
+msgid "Sign up"
+msgstr "Sign up"
+
+msgid "Create account"
+msgstr "Create account"
+
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Choose this course"
+msgstr "Choose this course"
+
+msgid "Contact us"
+msgstr "Contact us"
+
+msgid "Continue"
+msgstr "Continue"
+
+msgid "No active courses yet."
+msgstr "No active courses yet."
+
+msgid "Send message"
+msgstr "Send message"
+
+msgid "Starts"
+msgstr "Starts"
+
+msgid "Start with the public pages and forms, then move to account and cookie scenarios."
+msgstr "Start with the public pages and forms, then move to account and cookie scenarios."
+
+msgid "Explore active programs and pick a track."
+msgstr "Explore active programs and pick a track."
+
+msgid "Open courses"
+msgstr "Open courses"
+
+msgid "Run the two-step signup flow."
+msgstr "Run the two-step signup flow."
+
+msgid "Start signup"
+msgstr "Start signup"
+
+msgid "Send a message with the contact form."
+msgstr "Send a message with the contact form."
+
+msgid "Go to account profile after sign in."
+msgstr "Go to account profile after sign in."
+
+msgid "Open profile"
+msgstr "Open profile"
+
+msgid "Project repository"
+msgstr "Project repository"
+
+msgid "This demo site first shows a baseline scenario, then integration of the cookie module (adapted for 152-FZ) and the consent layer adapted to Russian Federal Law No. 152-FZ."
+msgstr "This demo site first shows a baseline scenario, then integration of the cookie module (adapted for 152-FZ) and the consent layer adapted to Russian Federal Law No. 152-FZ."
+
+msgid "The cookie module can be used outside Russia with adapted legal texts. The consent layer targets 152-FZ compliance scenarios."
+msgstr "The cookie module can be used outside Russia with adapted legal texts. The consent layer targets 152-FZ compliance scenarios."
+
+msgid "Law references:"
+msgstr "Law references:"

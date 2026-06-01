@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 18:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\templates\django_consent_152fz\document_detail.html:9
+msgid "Вернуться к моим согласиям"
+msgstr ""
+
+#: .\templates\django_consent_152fz\document_detail.html:12
+msgid "Поток согласия"
+msgstr ""
+
+#: .\templates\django_consent_152fz\document_detail.html:14
+#: .\templates\django_consent_152fz\subject_consents.html:34
+msgid "Редакция"
+msgstr ""
+
+#: .\templates\django_consent_152fz\document_detail.html:23
+#: .\templates\django_consent_152fz\subject_consents.html:35
+msgid "Статус"
+msgstr ""
+
+#: .\templates\django_consent_152fz\document_detail.html:25
+msgid "Поля, покрываемые согласием"
+msgstr ""
+
+#: .\templates\django_consent_152fz\document_detail.html:41
+#: .\templates\django_consent_152fz\withdraw.html:46
+msgid "Отозвать согласие"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:4
+#: .\templates\django_consent_152fz\subject_consents.html:22
+msgid "Мои согласия"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:23
+msgid "Самообслуживание: просмотр и отзыв ваших согласий."
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:32
+msgid "Цель"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:33
+msgid "Документ"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:36
+msgid "Дата согласия"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:37
+msgid "Текст документа"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:38
+msgid "Действие"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:51
+#: .\templates\django_consent_152fz\subject_consents.html:52
+#: .\templates\django_consent_152fz\subject_consents.html:54
+#: .\templates\django_consent_152fz\subject_consents.html:56
+msgid "Открыть и подписать"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:63
+msgid "Отозвать"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:75
+msgid "Согласия не найдены."
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:83
+#: .\templates\django_consent_152fz\subject_consents.html:86
+msgid "Документ для подписания"
+msgstr ""
+
+#: .\templates\django_consent_152fz\subject_consents.html:84
+msgid "Закрыть"
+msgstr ""
+
+#: .\templates\django_consent_152fz\withdraw.html:4
+#: .\templates\django_consent_152fz\withdraw.html:9
+msgid "Отзыв согласия"
+msgstr ""
+
+#: .\templates\django_consent_152fz\withdraw.html:16
+msgid "Текущий статус"
+msgstr ""
+
+#: .\templates\django_consent_152fz\withdraw.html:17
+msgid "Вернуться к документу"
+msgstr ""
+
+#: .\templates\pages\about.html:4
+msgid "About"
+msgstr ""
+
+#: .\templates\pages\about.html:4
+msgid "Training Center"
+msgstr ""
+
+#: .\templates\pages\about.html:7
+msgid "About the center"
+msgstr ""
+
+#: .\templates\pages\about.html:8
+msgid ""
+"We provide practical courses focused on applied software development skills."
+msgstr ""
+
+#: .\templates\pages\consents.html:13
+msgid "Режим списка:"
+msgstr ""
+
+#: .\templates\pages\consents.html:24
+msgid "Все"
+msgstr ""
+
+#: .\templates\pages\consents.html:26
+msgid "Только подписанные"
+msgstr ""
+
+#: .\templates\pages\consents.html:28
+msgid "Только не подписанные"
+msgstr ""

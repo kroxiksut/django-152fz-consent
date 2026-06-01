@@ -1,0 +1,301 @@
+{% load static cookies_tags %}
+{% if cookie_banner_enabled %}
+<link rel="stylesheet" href="{% static 'django_cookies_152fz/cookie_banner.css' %}">
+{% if cookie_banner_custom_css_url %}
+<link rel="stylesheet" href="{{ cookie_banner_custom_css_url }}">
+{% endif %}
+<script src="{% static 'django_cookies_152fz/cookie_banner.js' %}" defer></script>
+{% if cookie_banner_custom_js_url %}
+<script src="{{ cookie_banner_custom_js_url }}" defer></script>
+{% endif %}
+{{ cookie_banner_runtime_payload|json_script:"dz152fz-cookie-banner-runtime-data" }}
+{{ cookie_banner_config.mobile_overrides|json_script:"dz152fz-cookie-banner-mobile-overrides" }}
+<div
+  class="dz152fz-cookie-banner dz152fz-cookie-banner--{{ cookie_banner_config.banner_variant }}{% if cookie_banner_blocking_mode_active %} dz152fz-cookie-banner--blocking-active{% endif %}"
+  style="{{ cookie_banner_config.visual_style }}"
+  data-cookie-banner-root
+  data-cookie-choice-root
+  data-cookie-choice-mode="banner"
+  data-cookie-choice-all-label="{{ cookie_banner_config.accept_all_label }}"
+  data-cookie-choice-required-label="{{ cookie_banner_config.required_only_label }}"
+  data-cookie-choice-reject-label="{{ cookie_banner_config.reject_label }}"
+  data-cookie-choice-custom-label="{{ cookie_banner_config.custom_section_summary }}"
+  data-cookie-choice-initial-state="{{ cookie_banner_state.default_choice_action|default:'' }}"
+  data-cookie-banner-state="{{ cookie_banner_state.state|default:'hidden' }}"
+  data-cookie-banner-open="{{ cookie_banner_should_show|yesno:'true,false' }}"
+  data-cookie-banner-blocking-mode="{{ cookie_banner_blocking_mode_enabled|yesno:'true,false' }}"
+  data-cookie-banner-blocking-active="{{ cookie_banner_blocking_mode_active|yesno:'true,false' }}"
+  data-cookie-banner-blocking-gate="{{ cookie_banner_blocking_gate_open|yesno:'true,false' }}"
+  data-cookie-banner-initial-visit="{{ cookie_banner_initial_visit|yesno:'true,false' }}"
+  data-cookie-banner-reopen-after-saved-choice="{{ cookie_banner_reopen_after_saved_choice|yesno:'true,false' }}"
+  data-cookie-banner-preview-mode="{{ cookie_banner_preview_mode|yesno:'true,false' }}"
+  data-cookie-banner-contract-version="{{ cookie_banner_config.variant_contract_version }}"
+  data-cookie-banner-variant="{{ cookie_banner_config.banner_variant }}"
+  data-cookie-banner-consent-ui="{{ cookie_banner_config.consent_ui_variant }}"
+  data-cookie-banner-reconsent-variant="{{ cookie_banner_config.reconsent_notice_variant }}"
+  data-cookie-banner-text-preset="{{ cookie_banner_config.text_preset_code }}"
+  data-cookie-banner-mobile-text-preset="{{ cookie_banner_config.mobile_text_preset_code }}"
+  data-cookie-banner-layout="{{ cookie_banner_config.layout_variant }}"
+  data-cookie-banner-theme="{{ cookie_banner_config.theme_variant }}"
+  data-cookie-banner-color-preset="{{ cookie_banner_config.color_preset }}"
+  data-cookie-banner-desktop-position="{{ cookie_banner_config.desktop_position }}"
+  data-cookie-banner-mobile-position="{{ cookie_banner_config.mobile_position }}"
+  data-cookie-banner-mobile-variant="{{ cookie_banner_config.mobile_banner_variant }}"
+  data-cookie-banner-mobile-consent-ui="{{ cookie_banner_config.mobile_consent_ui_variant }}"
+  data-cookie-banner-mobile-reconsent-variant="{{ cookie_banner_config.mobile_reconsent_notice_variant }}"
+  data-cookie-banner-show-close-control="{{ cookie_banner_config.show_close_control|yesno:'true,false' }}"
+  data-cookie-banner-close-placement="{{ cookie_banner_config.close_control_placement }}"
+  data-cookie-banner-mobile-show-close-control="{{ cookie_banner_config.mobile_show_close_control|yesno:'true,false,inherit' }}"
+  data-cookie-banner-mobile-close-placement="{{ cookie_banner_config.mobile_close_control_placement }}"
+  data-cookie-banner-keep-visible-after-accept-all="{{ cookie_banner_config.keep_visible_after_accept_all|yesno:'true,false' }}"
+  data-cookie-banner-keep-visible-after-required-only="{{ cookie_banner_config.keep_visible_after_required_only|yesno:'true,false' }}"
+  data-cookie-banner-keep-visible-after-save-custom="{{ cookie_banner_config.keep_visible_after_save_custom|yesno:'true,false' }}"
+  data-cookie-banner-mobile-show-reject-action="{{ cookie_banner_config.mobile_show_reject_action|yesno:'true,false,inherit' }}"
+>
+  {% if cookie_banner_launcher_visible %}
+  <div class="dz152fz-cookie-banner__launcher-row">
+    {% if cookie_banner_has_decision and not cookie_banner_blocking_mode_active %}
+    <button
+      type="submit"
+      class="dz152fz-cookie-banner__launcher-close"
+      name="banner_action"
+      value="dismiss"
+      form="dz152fz-cookie-banner-form"
+      data-cookie-banner-dismiss
+      title="{{ cookie_banner_config.close_tooltip_text }}"
+      aria-label="{{ cookie_banner_config.close_aria_label }}"
+      {% if not cookie_banner_config.show_close_control %}hidden{% endif %}
+    >
+      <span aria-hidden="true">&times;</span>
+      <span class="dz152fz-cookie-banner__sr-only" data-cookie-banner-text-key="dismiss_label">{{ cookie_banner_config.dismiss_label }}</span>
+    </button>
+    {% endif %}
+    <button
+      type="button"
+      class="dz152fz-cookie-banner__launcher"
+      data-cookie-banner-launcher
+      data-cookie-banner-text-key="launcher_label"
+      aria-controls="dz152fz-cookie-banner-panel"
+      aria-expanded="{{ cookie_banner_should_show|yesno:'true,false' }}"
+    >
+      {{ cookie_banner_config.launcher_label }}
+    </button>
+  </div>
+  {% endif %}
+
+  <button
+    type="button"
+    class="dz152fz-cookie-banner__backdrop"
+    data-cookie-banner-backdrop
+    aria-hidden="true"
+    tabindex="-1"
+  ></button>
+
+  <section
+    id="dz152fz-cookie-banner-panel"
+    class="dz152fz-cookie-banner__panel dz152fz-cookie-banner__panel--{{ cookie_banner_config.consent_ui_variant }}"
+    data-cookie-banner-panel
+    role="dialog"
+    aria-modal="{% if cookie_banner_config.banner_variant == 'modal' or cookie_banner_blocking_mode_active %}true{% else %}false{% endif %}"
+    aria-labelledby="dz152fz-cookie-banner-title"
+    aria-describedby="dz152fz-cookie-banner-description"
+    {% if not cookie_banner_should_show %}hidden{% endif %}
+  >
+    <div class="dz152fz-cookie-banner__header">
+      {% if cookie_banner_config.show_media_slot %}
+      <div class="dz152fz-cookie-banner__media" aria-hidden="{% if cookie_banner_config.media_slot_type == 'icon' %}true{% else %}false{% endif %}">
+        {% if cookie_banner_config.media_slot_type == 'image' and cookie_banner_config.media_image_url %}
+        <img src="{{ cookie_banner_config.media_image_url }}" alt="{{ cookie_banner_config.media_image_alt }}" loading="lazy" decoding="async">
+        {% else %}
+        <span>{{ cookie_banner_config.media_icon_emoji|default:'рџЌЄ' }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      <p class="dz152fz-cookie-banner__eyebrow" data-cookie-banner-text-key="eyebrow_text">{{ cookie_banner_config.eyebrow_text }}</p>
+      <h2 id="dz152fz-cookie-banner-title" class="dz152fz-cookie-banner__title" data-cookie-banner-text-key="title_text">
+        {{ cookie_banner_config.title_text }}
+      </h2>
+      <p
+        id="dz152fz-cookie-banner-description"
+        class="dz152fz-cookie-banner__description"
+        data-cookie-banner-text-key="description_text"
+      >
+        {{ cookie_banner_config.description_text }}
+      </p>
+      {% if cookie_banner_requires_reconsent %}
+      <p
+        class="dz152fz-cookie-banner__notice dz152fz-cookie-banner__notice--{{ cookie_banner_config.reconsent_notice_variant }}"
+        data-cookie-banner-reconsent-notice
+        data-cookie-banner-text-key="reconsent_notice_text"
+      >
+        {{ cookie_banner_config.reconsent_notice_text }}
+      </p>
+      {% elif cookie_banner_is_reask_due and cookie_banner_has_decision %}
+      <p
+        class="dz152fz-cookie-banner__notice dz152fz-cookie-banner__notice--{{ cookie_banner_config.reconsent_notice_variant }}"
+        data-cookie-banner-reconsent-notice
+        data-cookie-banner-text-key="reask_notice_text"
+      >
+        {{ cookie_banner_config.reask_notice_text }}
+      </p>
+      {% endif %}
+    </div>
+
+    <form
+      id="dz152fz-cookie-banner-form"
+      method="post"
+      action="{{ cookie_banner_action_url }}"
+      class="dz152fz-cookie-banner__form"
+      data-cookie-audit-form
+      data-cookie-banner-form
+    >
+      {% csrf_token %}
+      {{ cookie_banner_form.anonymous_token }}
+      {{ cookie_banner_form.next }}
+      {{ cookie_banner_form.client_timezone }}
+      {{ cookie_banner_form.client_languages }}
+      {{ cookie_banner_form.client_os_locale }}
+      {{ cookie_banner_form.client_screen_width }}
+      {{ cookie_banner_form.client_screen_height }}
+
+      {% if cookie_banner_form.non_field_errors %}
+      <div class="dz152fz-cookie-banner__errors" role="alert">
+        {% for error in cookie_banner_form.non_field_errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="dz152fz-cookie-banner__actions">
+        <button
+          type="submit"
+          name="banner_action"
+          value="accept_all"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="accept_all"
+          data-cookie-banner-text-key="accept_all_label"
+          aria-pressed="false"
+        >
+          {{ cookie_banner_config.accept_all_label }}
+        </button>
+        <button
+          type="submit"
+          name="banner_action"
+          value="reject_all"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="reject_all"
+          data-cookie-banner-text-key="reject_label"
+          {% if not cookie_banner_config.show_reject_action %}hidden{% endif %}
+          aria-pressed="false"
+        >
+          {{ cookie_banner_config.reject_label }}
+        </button>
+        <button
+          type="submit"
+          name="banner_action"
+          value="required_only"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--secondary"
+          data-cookie-choice-action="required_only"
+          data-cookie-banner-text-key="required_only_label"
+          aria-pressed="false"
+        >
+          {{ cookie_banner_config.required_only_label }}
+        </button>
+        {% if cookie_banner_show_customize_action %}
+        <button
+          type="button"
+          class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--ghost"
+          data-cookie-banner-open-custom
+          data-cookie-choice-action="custom"
+          data-cookie-banner-text-key="customize_label"
+          aria-controls="dz152fz-cookie-banner-custom"
+          aria-expanded="false"
+          aria-pressed="false"
+        >
+          {{ cookie_banner_config.customize_label }}
+        </button>
+        {% endif %}
+      </div>
+      <p class="dz152fz-cookie-banner__selection" data-cookie-choice-indicator></p>
+      <p
+        class="dz152fz-cookie-banner__sr-status"
+        data-cookie-choice-status
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      {% if cookie_banner_show_optional_custom_block %}
+      <details
+        id="dz152fz-cookie-banner-custom"
+        class="dz152fz-cookie-banner__custom dz152fz-cookie-banner__custom--{{ cookie_banner_config.consent_ui_variant }}"
+        data-cookie-banner-custom
+      >
+        <summary data-cookie-banner-text-key="custom_section_summary">{{ cookie_banner_config.custom_section_summary }}</summary>
+
+        <div class="dz152fz-cookie-banner__groups">
+          <section class="dz152fz-cookie-banner__group">
+            <h3 data-cookie-banner-text-key="required_section_title">{{ cookie_banner_config.required_section_title }}</h3>
+            <ul>
+              {% for category in cookie_required_categories %}
+              <li>
+                <strong>{{ category.title }}</strong>
+                {% if category.description %}<span>{{ category.description }}</span>{% endif %}
+              </li>
+              {% empty %}
+              <li>{{ cookie_banner_config.required_section_empty_text }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="dz152fz-cookie-banner__group">
+            <h3 data-cookie-banner-text-key="optional_section_title">{{ cookie_banner_config.optional_section_title }}</h3>
+            <div class="dz152fz-cookie-banner__checkboxes">
+              {% for field in cookie_banner_form.selected_categories %}
+              <label class="dz152fz-cookie-banner__checkbox">
+                {{ field.tag }}
+                <span>{{ field.choice_label }}</span>
+              </label>
+              {% empty %}
+              <p>{{ cookie_banner_empty_category_block_text }}</p>
+              {% endfor %}
+            </div>
+            {% for error in cookie_banner_form.selected_categories.errors %}
+            <p class="dz152fz-cookie-banner__field-error">{{ error }}</p>
+            {% endfor %}
+          </section>
+        </div>
+
+        {% if cookie_banner_has_optional_categories %}
+        <div class="dz152fz-cookie-banner__custom-actions">
+          <button
+            type="submit"
+            name="banner_action"
+            value="save_custom"
+            class="dz152fz-cookie-banner__button dz152fz-cookie-banner__button--primary"
+            data-cookie-banner-text-key="save_custom_label"
+          >
+            {{ cookie_banner_config.save_custom_label }}
+          </button>
+        </div>
+        {% endif %}
+      </details>
+      {% endif %}
+
+      <div class="dz152fz-cookie-banner__footer">
+        {% if cookie_preferences_link_visible %}
+        <a href="{{ cookie_preferences_url }}" class="dz152fz-cookie-banner__link" data-cookie-banner-text-key="preferences_link_label">
+          {{ cookie_banner_config.preferences_link_label }}
+        </a>
+      {% endif %}
+      </div>
+
+      <noscript>
+        <p class="dz152fz-cookie-banner__noscript">
+          {{ cookie_banner_config.noscript_text }}
+          <a href="{{ cookie_preferences_url }}">{{ cookie_banner_config.noscript_link_label }}</a>.
+        </p>
+      </noscript>
+    </form>
+  </section>
+</div>
+{% endif %}

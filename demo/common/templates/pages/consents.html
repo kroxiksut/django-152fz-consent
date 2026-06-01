@@ -1,0 +1,92 @@
+﻿{% extends "base.html" %}
+{% load i18n tz %}
+
+{% block title %}Согласия | Учебный центр{% endblock %}
+
+{% block content %}
+  <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+    <h2 class="mb-0">Согласия пользователя</h2>
+    <a class="btn btn-outline-primary" href="{{ subject_consents_url }}">Мои согласия (самообслуживание)</a>
+  </div>
+
+  <form method="get" class="d-flex align-items-center gap-2 mb-3">
+    <label for="consent-list-mode" class="form-label mb-0 text-muted small">{% trans "Режим списка:" %}</label>
+    <select
+      id="consent-list-mode"
+      name="list_mode"
+      class="form-select form-select-sm"
+      style="max-width: 260px;"
+      onchange="this.form.submit()"
+    >
+      {% for value in consent_list_mode_options %}
+        <option value="{{ value }}"{% if value == consent_list_mode %} selected{% endif %}>
+          {% if value == "all" %}
+            {% trans "Все" %}
+          {% elif value == "signed_only" %}
+            {% trans "Только подписанные" %}
+          {% elif value == "pending_only" %}
+            {% trans "Только не подписанные" %}
+          {% else %}
+            {{ value }}
+          {% endif %}
+        </option>
+      {% endfor %}
+    </select>
+  </form>
+
+  {% if consent_rows %}
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th>Цель</th>
+            <th>Документ</th>
+            <th>Статус</th>
+            <th>Дата подписания</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in consent_rows %}
+            <tr>
+              <td>{{ row.purpose_title }}</td>
+              <td>{{ row.document_title }}</td>
+              <td>
+                {% if row.is_current %}
+                  <span class="badge text-bg-success">Актуально</span>
+                {% else %}
+                  <span class="badge text-bg-warning">{{ row.status }}</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if row.signed_at %}
+                  {{ row.signed_at|timezone:"Europe/Moscow"|date:"d.m.Y H:i" }} МСК
+                {% else %}
+                  <span class="text-muted">—</span>
+                {% endif %}
+              </td>
+              <td class="d-flex flex-wrap gap-2">
+                {% if row.show_sign_action %}
+                  <a class="btn btn-sm btn-primary" href="{{ row.document_url }}">Открыть и подписать</a>
+                {% endif %}
+                {% if row.show_withdraw_action %}
+                  <form method="post" action="{{ row.withdraw_self_url }}" class="d-inline">
+                    {% csrf_token %}
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Отозвать</button>
+                  </form>
+                {% endif %}
+                {% if not row.show_sign_action and not row.show_withdraw_action %}
+                  <span class="text-muted">—</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="alert alert-secondary" role="status">
+      Сейчас нет активных потоков согласий для этого пользователя.
+    </div>
+  {% endif %}
+{% endblock %}

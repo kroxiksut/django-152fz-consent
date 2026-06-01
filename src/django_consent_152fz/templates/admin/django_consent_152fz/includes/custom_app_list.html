@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% if app_list %}
+  <div class="app-list-wrapper">
+    {% for app in app_list %}
+      {% if app.dz152fz_is_first_consent %}
+        <h2 class="app-dz152fz-section-title">{{ dz152fz_admin_navigation_section_title }}</h2>
+      {% endif %}
+      {% include "admin/django_consent_152fz/includes/custom_app_list_app.html" with app=app %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p>{% translate "You don't have permission to view or edit anything." %}</p>
+{% endif %}

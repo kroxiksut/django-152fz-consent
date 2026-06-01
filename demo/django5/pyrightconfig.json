@@ -1,0 +1,28 @@
+{
+  "include": [
+    "manage.py",
+    "demo_site",
+    "training_center"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    "media"
+  ],
+  "pythonVersion": "3.10",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none",
+  "reportAttributeAccessIssue": "warning",
+  "reportCallIssue": "warning",
+  "reportArgumentType": "warning",
+  "reportOptionalMemberAccess": "warning",
+  "executionEnvironments": [
+    {
+      "root": ".",
+      "extraPaths": [
+        ".",
+        "../../src"
+      ]
+    }
+  ]
+}

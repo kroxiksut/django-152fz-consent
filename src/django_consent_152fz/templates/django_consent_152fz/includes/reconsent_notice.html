@@ -1,0 +1,6 @@
+{% if notice %}
+<aside class="consent-reconsent consent-reconsent--{{ notice.kind }}">
+  <h2>{{ notice.title }}</h2>
+  <p>{{ notice.message }}</p>
+</aside>
+{% endif %}

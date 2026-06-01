@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from django.http import JsonResponse
 from django.urls import include, path
@@ -13,5 +13,3 @@ urlpatterns = [
     path("", include("django_consent_152fz.urls")),
     path("", include("django_cookies_152fz.urls")),
 ]
-
-

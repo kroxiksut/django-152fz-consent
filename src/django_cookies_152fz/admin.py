@@ -437,8 +437,7 @@ class CookieRegistryItemAdminForm(forms.ModelForm):
         }
         help_texts = {
             "code": _(
-                "Уникальный код элемента реестра cookie и скриптов времени "
-                "выполнения."
+                "Уникальный код элемента реестра cookie и скриптов времени выполнения."
             ),
             "category": _("Категория cookie, к которой относится элемент."),
             "provider": _("Поставщик cookie или скрипта."),
@@ -681,9 +680,7 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
             "custom_surface_color": _(
                 "Опциональный HEX #RRGGBB для вторичной подложки."
             ),
-            "custom_overlay_color": _(
-                "Опциональный HEX #RRGGBB для фона-затемнения."
-            ),
+            "custom_overlay_color": _("Опциональный HEX #RRGGBB для фона-затемнения."),
             "panel_padding_px": _(
                 "Внутренние отступы панели. Безопасный диапазон: 8..48."
             ),

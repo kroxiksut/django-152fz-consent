@@ -1638,10 +1638,7 @@ class CookieAdminSettings(models.Model):
 
     def __str__(self) -> str:
         csv_delimiter_display = self.get_csv_export_delimiter_display()  # pyright: ignore[reportAttributeAccessIssue]
-        return (
-            _("Настройки админ-инструментов cookie")
-            + f" ({csv_delimiter_display})"
-        )  # pyright: ignore[reportAttributeAccessIssue]
+        return _("Настройки админ-инструментов cookie") + f" ({csv_delimiter_display})"  # pyright: ignore[reportAttributeAccessIssue]
 
 
 class ImmutableCookieEventQuerySet(models.QuerySet):

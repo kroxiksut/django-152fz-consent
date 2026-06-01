@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import pytest
 from django.test import Client, override_settings
@@ -57,4 +57,3 @@ def test_cookie_only_router_include_exposes_preferences_and_banner_urls() -> Non
 
     response = client.get(preferences_url)
     assert response.status_code == 200
-

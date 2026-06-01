@@ -411,7 +411,9 @@ class ConsentPurposeAdminForm(forms.ModelForm):
             "decline_warning_enabled_override": _(
                 "Показывать предупреждение (переопределение)"
             ),
-            "decline_warning_text_override": _("Текст предупреждения (переопределение)"),
+            "decline_warning_text_override": _(
+                "Текст предупреждения (переопределение)"
+            ),
             "is_experimental": _("Экспериментальный режим"),
             "is_active": _("Активна"),
         }
@@ -515,7 +517,9 @@ class LegalDocumentAdminForm(forms.ModelForm):
             "is_active": _("Активен"),
         }
         help_texts = {
-            "code": _("Уникальный код документа для ссылок из политик и правил доступа."),
+            "code": _(
+                "Уникальный код документа для ссылок из политик и правил доступа."
+            ),
             "title": _("Человекочитаемое название документа."),
             "document_type": _("Тип документа для группировки и фильтрации редакций."),
             "description": _(

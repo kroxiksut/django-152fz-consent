@@ -265,9 +265,7 @@ def _render_cookie_preferences_response(
         display_options.get("empty_category_block_text", "") or ""
     ).strip()
     if not empty_category_block_text:
-        empty_category_block_text = _(
-            "Сейчас нет дополнительных категорий для выбора."
-        )
+        empty_category_block_text = _("Сейчас нет дополнительных категорий для выбора.")
     required_codes = {str(item["code"]) for item in required_categories}
     status_info = get_cookie_status(user=user, anonymous_token=anonymous_token or None)
     banner_state = get_cookie_banner_state(

@@ -44,9 +44,7 @@ class _CookieConstants:
     CONFIG_COOKIE_BANNER_CONSENT_UI_VARIANT: str = "consent_ui_variant"
     CONFIG_COOKIE_BANNER_RECONSENT_NOTICE_VARIANT: str = "reconsent_notice_variant"
     CONFIG_COOKIE_BANNER_TEXT_PRESET: str = "text_preset"
-    CONFIG_COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK: str = (
-        "show_empty_category_block"
-    )
+    CONFIG_COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK: str = "show_empty_category_block"
     CONFIG_COOKIE_BANNER_SHOW_CUSTOMIZE_ACTION_WITHOUT_OPTIONAL: str = (
         "show_customize_action_without_optional"
     )

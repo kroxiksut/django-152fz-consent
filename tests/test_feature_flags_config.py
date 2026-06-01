@@ -112,4 +112,3 @@ def test_verified_consents_installation_check_is_noop(
     errors = check_verified_consents_installation(None)
 
     assert errors == []
-

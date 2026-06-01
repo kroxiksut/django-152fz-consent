@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from pathlib import Path
 
@@ -593,7 +593,9 @@ def test_cookie_banner_hides_customize_block_when_optional_categories_absent_by_
     assert "data-cookie-banner-open-custom" not in rendered
 
 
-@override_settings(DJANGO_COOKIES_152FZ=COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK_SETTINGS)
+@override_settings(
+    DJANGO_COOKIES_152FZ=COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK_SETTINGS
+)
 @pytest.mark.django_db
 def test_cookie_banner_can_show_empty_customize_block_without_optional_categories() -> (
     None
@@ -729,6 +731,7 @@ def test_cookie_preferences_page_can_show_empty_optional_block_text() -> None:
     content = response.content.decode("utf-8")
     assert "Дополнительные категории сейчас недоступны." in content
 
+
 @override_settings(DJANGO_COOKIES_152FZ=COOKIE_SETTINGS)
 @pytest.mark.django_db
 def test_cookie_preferences_page_no_js_flow_can_save_without_client_side_fields() -> (
@@ -780,7 +783,10 @@ def test_cookie_banner_configuration_uses_active_revision_and_deactivates_previo
     assert first_revision.is_active is False
     assert configuration["revision_id"] == second_revision.pk
     assert configuration["revision_version"] == second_revision.version
-    assert configuration["launcher_label"] == "Р Р€Р С—РЎР‚Р В°Р Р†Р В»Р ВµР Р…Р С‘Р Вµ cookie"
+    assert (
+        configuration["launcher_label"]
+        == "Р Р€Р С—РЎР‚Р В°Р Р†Р В»Р ВµР Р…Р С‘Р Вµ cookie"
+    )
     assert configuration["layout_variant"] == "wide"
     assert configuration["theme_variant"] == "contrast"
     assert configuration["desktop_position"] == "bottom_left"
@@ -1632,7 +1638,9 @@ def test_cookie_banner_hides_launcher_after_decision_when_enabled_in_revision() 
         decision_action="accept_all",
     )
     request = RequestFactory().get("/landing/")
-    request.COOKIES[COOKIE_ANONYMOUS_TOKEN_COOKIE_NAME] = "anon-hide-launcher-after-decision"
+    request.COOKIES[COOKIE_ANONYMOUS_TOKEN_COOKIE_NAME] = (
+        "anon-hide-launcher-after-decision"
+    )
     template = Template("{% load cookies_tags %}{% render_cookie_banner %}")
 
     rendered = template.render(RequestContext(request, {}))
@@ -1921,5 +1929,3 @@ def test_authenticated_cookie_preferences_post_with_mismatch_token_does_not_atta
     assert CookieBannerState.objects.filter(
         anonymous_token="anon-cookie-mismatch"
     ).exists()
-
-

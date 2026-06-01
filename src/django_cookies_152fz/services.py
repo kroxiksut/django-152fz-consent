@@ -994,7 +994,9 @@ def get_cookie_empty_categories_display_options() -> dict[str, object]:
 
     banner_settings = get_cookie_banner_settings()
     effective_show_empty_category_block = bool(
-        banner_settings.get(constants.CONFIG_COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK, False)
+        banner_settings.get(
+            constants.CONFIG_COOKIE_BANNER_SHOW_EMPTY_CATEGORY_BLOCK, False
+        )
     )
     effective_show_customize_action_without_optional = bool(
         banner_settings.get(
@@ -1003,7 +1005,9 @@ def get_cookie_empty_categories_display_options() -> dict[str, object]:
         )
     )
     effective_empty_category_block_text = str(
-        banner_settings.get(constants.CONFIG_COOKIE_BANNER_EMPTY_CATEGORY_BLOCK_TEXT, "")
+        banner_settings.get(
+            constants.CONFIG_COOKIE_BANNER_EMPTY_CATEGORY_BLOCK_TEXT, ""
+        )
         or ""
     ).strip()
 

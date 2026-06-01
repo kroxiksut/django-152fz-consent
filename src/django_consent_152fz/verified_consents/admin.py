@@ -90,9 +90,7 @@ def _localize_verified_admin_field_labels() -> None:
             "document": _("Документ"),
             "form_code": _("Код формы"),
             "verification_mode_override": _("Режим верификации для формы"),
-            "draft_data_policy_override": _(
-                "Политика сохранения данных до загрузки"
-            ),
+            "draft_data_policy_override": _("Политика сохранения данных до загрузки"),
             "pre_upload_access_mode_override": _(
                 "Поведение до загрузки бумажного согласия"
             ),

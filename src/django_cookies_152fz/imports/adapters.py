@@ -81,8 +81,5 @@ def _get_configured_adapter_import_path(code: str) -> str | None:
         return None
     normalized = str(value).strip()
     if not normalized:
-        raise ConsentError(
-            f"import_adapters[{code!r}] must be non-empty import path."
-        )
+        raise ConsentError(f"import_adapters[{code!r}] must be non-empty import path.")
     return normalized
-

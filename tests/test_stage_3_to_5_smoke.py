@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import pytest
 from django.contrib.auth import get_user_model
@@ -437,4 +437,3 @@ def test_verified_consents_can_be_enabled_later_for_existing_core_record() -> No
             ConsentEvent.EventType.PAPER_UPLOADED,
             ConsentEvent.EventType.EMPLOYEE_CONFIRMED,
         ]
-

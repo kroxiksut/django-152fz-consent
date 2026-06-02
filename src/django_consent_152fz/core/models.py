@@ -827,8 +827,8 @@ class ConsentRecord(models.Model):
                 self.ConfirmationMethod.ADMIN_CONFIRMED,
                 self.ConfirmationMethod.EMPLOYEE_CONFIRMED,
             }
-            and not self.confirmed_by_id
-        ):  # pyright: ignore[reportAttributeAccessIssue]
+            and not getattr(self, "confirmed_by_id", None)
+        ):
             raise ValidationError(
                 {"confirmed_by": "confirmed_by is required for admin/employee flow."}
             )

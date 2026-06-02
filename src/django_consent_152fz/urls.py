@@ -8,7 +8,10 @@ independent feature flags and optional apps from sections 3 and 4.
 
 from __future__ import annotations
 
+from typing import TypeAlias
+
 from django.urls import include, path, re_path
+from django.urls.resolvers import URLPattern, URLResolver
 
 from . import constants, views
 from .api.dependencies import is_drf_available
@@ -22,7 +25,9 @@ from .settings import get_api_setting, is_api_app_installed
 
 app_name = "django_consent_152fz"
 
-urlpatterns = [
+UrlEntry: TypeAlias = URLPattern | URLResolver
+
+urlpatterns: list[UrlEntry] = [
     # The basic template UI routes work independently of the API.
     path(
         "consent/documents/<str:purpose_code>/<str:document_code>/",

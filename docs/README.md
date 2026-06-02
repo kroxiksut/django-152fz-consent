@@ -8,6 +8,11 @@ This is the English top-level documentation index.
 - [Cookie module](./cookies/en/README.md)
 - [Legal text inventory and review map](./legal-texts.md)
 
+## Quick start
+
+- [Consent module quick start](./consent/en/quickstart.md)
+- [Cookie module quick start](./cookies/en/quickstart.md)
+
 ## Package installation map
 
 - `pip install django-consent-152fz` - consent lifecycle module.
@@ -88,7 +93,7 @@ AI agent integration guides are maintained as English-only documents:
 ## Support
 
 - Community support — GitHub Issues
-- Commercial support — contact author
+- [Commercial support](./commercial-support.md) — paid implementation, adaptation and rollout for both packages
 - Legal & technical consulting — on request
 
 ## Contribution guides

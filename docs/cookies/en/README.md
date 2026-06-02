@@ -8,6 +8,7 @@ This section describes `django-cookies-152fz`: the cookie banner, the back-end l
 
 ## Basic documents
 
+- [Quick start](./quickstart.md)
 - [Overview and current status](./overview.md)
 - [Key invariants](./invariants.md)
 - [Lifecycle and server layer settings](./configuration.md)
@@ -32,7 +33,7 @@ This section describes `django-cookies-152fz`: the cookie banner, the back-end l
 ## Support
 
 - Community support — GitHub Issues
-- Commercial support — contact author
+- [Commercial support](../../commercial-support.md) — contact the authors
 - Legal & technical consulting — on request
 
 ## Legal notice

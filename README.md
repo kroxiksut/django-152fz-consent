@@ -22,7 +22,7 @@
 
 The two packages work independently - install either one on its own. If you only need the consent lifecycle, you can keep any cookie banner you already use (or any other cookie solution); if you only need a cookie banner, you can install the cookies package without the consent module. They align under a common 152-FZ context but do not require each other.
 
-> **Disclaimer:** this package is a technical tool, not legal advice. Installing it does not by itself make a project 152-FZ compliant - the legal correctness of your texts, documents, and processing workflows remains the operator's responsibility (directly or through legal counsel). See [Legal notice](#legal-notice) and [Commercial support](#commercial-support).
+> **Disclaimer:** this package is a technical tool, not legal advice. Installing it does not by itself make a project 152-FZ compliant - the legal correctness of your texts, documents, and processing workflows remains the operator's responsibility (directly or through legal counsel). See [Legal notice](#legal-notice) and [Commercial support](./docs/commercial-support.md).
 
 ## Why this project
 
@@ -66,6 +66,34 @@ If API endpoints are needed:
 pip install "django-consent-152fz[api]"
 ```
 
+## Quick start
+
+Both modules are enabled by adding their app to `INSTALLED_APPS`, including their URLs, and running migrations.
+
+**Consent** — add `"django_consent_152fz"`, configure `DJANGO_CONSENT_152FZ`, include `django_consent_152fz.urls`, then `migrate`:
+
+```python
+INSTALLED_APPS = ["django_consent_152fz", ...]
+DJANGO_CONSENT_152FZ = {"enable_core": True}
+```
+
+**Cookies** — add `"django_cookies_152fz"`, configure `DJANGO_COOKIES_152FZ`, include `django_cookies_152fz.urls` under `cookies/`, `migrate`, then render the banner in your base template:
+
+```python
+INSTALLED_APPS = ["django_cookies_152fz", ...]
+DJANGO_COOKIES_152FZ = {"enable_cookies": True}
+```
+
+```django
+{% load cookies_tags %}
+{% render_cookie_banner %}
+```
+
+Full step-by-step guides:
+
+- [Consent module quick start](./docs/consent/en/quickstart.md)
+- [Cookie module quick start](./docs/cookies/en/quickstart.md)
+
 ## Documentation
 
 - [Project documentation (EN)](./docs/README.md)
@@ -103,37 +131,14 @@ Translations into other languages and adaptations for other jurisdictions (PIPL,
 
 **Note:** a translation localizes the user interface, not legal compliance. Using the package in another jurisdiction requires that jurisdiction's own legal review (see [Legal notice](#legal-notice)).
 
-## Support
+## Support and commercial services
 
-- Community support - GitHub Issues
-- Commercial support - contact author
-- Legal & technical consulting - on request
+- **Community support** — [GitHub Issues](https://github.com/kroxiksut/django-consent-152fz/issues).
+- **Commercial support** — the authors offer paid implementation, adaptation (business processes, platforms, other jurisdictions) and rollout support for both packages; the technical side is covered by the authors, the legal side by practicing lawyers. Provided separately and not part of the package.
 
-## Commercial support
+Contacts: [Telegram @FyodorMalkov](https://t.me/FyodorMalkov) · [fmalkov91@gmail.com](mailto:fmalkov91@gmail.com).
 
-This project is distributed as open-source.
-
-The authors may provide commercial implementation and adaptation services for this package.
-
-Possible engagement areas:
-
-- technical integration into existing systems;
-- adaptation to business processes;
-- consent and cookie workflow setup;
-- implementation architecture and rollout support;
-- adaptation for websites, mobile applications, and other platforms;
-- integration into existing CMS and frameworks;
-- technical implementation support and, where needed, legal advisory on applying 152-FZ together with practicing lawyers;
-- adaptation for different jurisdictions;
-- custom solution development and support.
-
-Authors allow adaptation of ideas and implementations from this project for other languages, platforms, engines, and technology stacks when required.
-
-The package is built with reference to the requirements of Russian personal data law (152-FZ) and to the practice of comparable solutions, as current at the time of each release. Compliance, however, depends on how the operator configures and uses the package and which texts and processes it adopts - so the package is distributed "as is" and does not by itself guarantee automatic legal compliance. The legal correctness of documents, texts, and processing workflows is the operator's responsibility - directly or through their legal counsel.
-
-The paid implementation and legal-support services described above are provided separately and are not part of the package: the authors cover the technical side, practicing lawyers cover the legal side.
-
-For implementation and support requests, contact the project authors.
+Full details and engagement areas: [Commercial support](./docs/commercial-support.md).
 
 ## Legal notice
 

@@ -8,6 +8,7 @@ This section applies to `django-consent-152fz` and describes the consent lifecyc
 
 ## Basic documents
 
+- [Quick start](./quickstart.md)
 - [Overview and current state of the consent layer](./overview.md)
 - [Key invariants of the consent life cycle](./invariants.md)
 - [Using and administering the consent module](./operations-admin.md)
@@ -30,7 +31,7 @@ This section applies to `django-consent-152fz` and describes the consent lifecyc
 ## Support
 
 - Community support — GitHub Issues
-- Commercial support — contact author
+- [Commercial support](../../commercial-support.md) — contact the authors
 - Legal & technical consulting — on request
 
 ## Legal notice

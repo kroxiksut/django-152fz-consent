@@ -93,6 +93,7 @@ django-consent-152fz/
 - `docs/README.md` — индекс документации (EN).
 - `docs/README.ru.md` — индекс документации (RU).
 - `docs/legal-texts.md` и `docs/legal-texts.ru.md` — карта юридически значимых текстов (где лежат, что вычитывать).
+- `docs/commercial-support.md` и `docs/commercial-support.ru.md` — подробности коммерческой поддержки и контакты (для обоих пакетов).
 - `docs/consent/en/README.md` и `docs/consent/ru/README.md` — вход в документацию модуля согласий.
 - `docs/cookies/en/README.md` и `docs/cookies/ru/README.md` — вход в документацию модуля куки.
 - `demo/README.md` и `demo/README.ru.md` — вход в документацию демо-стендов.

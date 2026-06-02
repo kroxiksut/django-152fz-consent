@@ -23,8 +23,9 @@ install and run independently — neither requires the other.
 **Compatibility:** Python 3.10–3.12, Django 5.0 / 5.1 / 5.2 (LTS) / 6.0
 (`Django>=5,<7`). Verified in CI on Python 3.10 + Django 5.x and Python 3.12 +
 Django 6.x, including standalone (single-package) and integration runs. MIT
-license. UI text is Russian; configuration keys, enum values and the public API
-are English.
+license. Boxed/sample legal texts default to Russian; UI localization ships for
+Russian (`ru`) and English (`en`). Configuration keys, enum values and the
+public API are English.
 
 ### django-consent-152fz 1.0.0
 
@@ -42,9 +43,10 @@ Russia.
 - **Subject self-service** — template UI for a data subject to review and manage
   their own consents.
 - **Optional verified / paper-consent flow** — opt-in app
-  (`django_consent_152fz.verified_consents`) for verified and paper consents,
-  including the GosKey (Госключ) e-signature path; optional `[pdf]` extra
-  (ReportLab) generates consent PDFs.
+  (`django_consent_152fz.verified_consents`) for verified and paper consents;
+  GosKey (Госключ)-related modes are reserved for future integration, but no
+  production GosKey client ships yet; optional `[pdf]` extra (ReportLab)
+  generates consent PDFs.
 - **Optional DRF API** — opt-in app (`django_consent_152fz.api`) plus the
   `[api]` extra; mounted only when the app is installed and DRF is importable.
 - **Stable service facade** — `django_consent_152fz.service_api` is the public

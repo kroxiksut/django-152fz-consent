@@ -29,7 +29,7 @@ problems. Public disclosure before a fix puts data subjects at risk.
 Report privately through GitHub:
 
 1. Go to the repository
-   [github.com/kroxiksut/django-152fz](https://github.com/kroxiksut/django-152fz).
+   [github.com/kroxiksut/django-consent-152fz](https://github.com/kroxiksut/django-consent-152fz).
 2. Open the **Security** tab -> **Report a vulnerability**.
 
 If private reporting is unavailable to you, contact the maintainer privately via

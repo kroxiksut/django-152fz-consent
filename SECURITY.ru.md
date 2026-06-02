@@ -31,7 +31,7 @@
 Сообщайте приватно через GitHub:
 
 1. Откройте репозиторий
-   [github.com/kroxiksut/django-152fz](https://github.com/kroxiksut/django-152fz).
+   [github.com/kroxiksut/django-consent-152fz](https://github.com/kroxiksut/django-consent-152fz).
 2. Откройте вкладку **Security** -> **Report a vulnerability**.
 
 Если приватный канал вам недоступен, свяжитесь с мейнтейнером приватно через

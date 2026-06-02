@@ -821,14 +821,10 @@ class ConsentRecord(models.Model):
         if not self.user_id and not anonymous_token:  # pyright: ignore[reportAttributeAccessIssue]
             raise ValidationError("Either user or anonymous_token must be provided.")
 
-        if (
-            self.confirmation_method
-            in {
-                self.ConfirmationMethod.ADMIN_CONFIRMED,
-                self.ConfirmationMethod.EMPLOYEE_CONFIRMED,
-            }
-            and not getattr(self, "confirmed_by_id", None)
-        ):
+        if self.confirmation_method in {
+            self.ConfirmationMethod.ADMIN_CONFIRMED,
+            self.ConfirmationMethod.EMPLOYEE_CONFIRMED,
+        } and not getattr(self, "confirmed_by_id", None):
             raise ValidationError(
                 {"confirmed_by": "confirmed_by is required for admin/employee flow."}
             )

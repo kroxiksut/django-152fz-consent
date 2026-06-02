@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import pytest
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.db import OperationalError
+from django.db import OperationalError, close_old_connections
 from django.test import override_settings
 from django.utils import timezone
 
@@ -372,7 +372,8 @@ def test_accept_consent_double_submit_race_keeps_single_current_record(
     )
 
     def _run_accept() -> ConsentRecord:
-        for attempt in range(5):
+        max_attempts = 20
+        for attempt in range(max_attempts):
             try:
                 return accept_consent(
                     purpose_code=purpose.code,
@@ -380,9 +381,10 @@ def test_accept_consent_double_submit_race_keeps_single_current_record(
                     anonymous_token=race_token,
                 )
             except OperationalError as exc:
-                if "locked" not in str(exc).lower() or attempt == 4:
+                if "locked" not in str(exc).lower() or attempt == max_attempts - 1:
                     raise
-                time.sleep(0.05)
+                close_old_connections()
+                time.sleep(0.05 * (attempt + 1))
         raise AssertionError("unreachable")
 
     with ThreadPoolExecutor(max_workers=2) as pool:

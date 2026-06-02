@@ -8,10 +8,10 @@
   <img alt="Consent package" src="https://img.shields.io/badge/django--consent--152fz-1.0.0-blue">
   <img alt="Cookies package" src="https://img.shields.io/badge/django--cookies--152fz-1.0.0-blue">
   <img alt="Package status" src="https://img.shields.io/badge/status-stable-blue">
+  <br>
   <img alt="Python versions" src="https://img.shields.io/badge/python-3.10%2B-blue">
   <img alt="Django versions" src="https://img.shields.io/badge/django-5.x%20%7C%206.x-0C4B33">
   <img alt="Type checking" src="https://img.shields.io/badge/type%20checking-pyright-2E6BE6">
-  <img alt="Test coverage" src="https://img.shields.io/badge/coverage-pending-lightgrey">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 
@@ -140,4 +140,3 @@ For implementation and support requests, contact the project authors.
 This project is not affiliated with any government authority.
 
 Users remain responsible for determining applicable legal requirements and obtaining independent legal advice where necessary.
-

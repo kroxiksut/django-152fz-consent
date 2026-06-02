@@ -47,6 +47,11 @@ CI also validates artifact contents so that:
 - consent wheel contains `django_consent_152fz/*` and does not include cookies package files;
 - cookies wheel contains `django_cookies_152fz/*` and does not include consent package files.
 
+CI also runs a dedicated `coverage` job in a single reference environment
+(Python `3.12` + Django `6.x`), generates `coverage.xml` with `pytest-cov`,
+and uploads the report to Codecov. The README coverage badge reads from that
+Codecov project instead of a hard-coded value.
+
 ## Why this matters
 
 - Reduces release risk for module-isolated changes.

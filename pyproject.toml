@@ -77,6 +77,7 @@ pdf = [
 test = [
     "pytest>=8,<9",
     "pytest-django>=4.8,<5",
+    "pytest-cov>=5,<7",
 ]
 dev = [
     "ruff>=0.11,<1",
@@ -141,4 +142,3 @@ cache_dir = ".tmp/pytest-cache"
 markers = [
     "api: tests that require optional API extra (DRF)",
 ]
-

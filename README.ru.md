@@ -8,10 +8,10 @@
   <img alt="Пакет согласий" src="https://img.shields.io/badge/django--consent--152fz-1.0.0-blue">
   <img alt="Пакет куки" src="https://img.shields.io/badge/django--cookies--152fz-1.0.0-blue">
   <img alt="Статус пакета" src="https://img.shields.io/badge/status-beta-blue">
+  <br>
   <img alt="Версии Python" src="https://img.shields.io/badge/python-3.10%2B-blue">
   <img alt="Версии Django" src="https://img.shields.io/badge/django-5.x%20%7C%206.x-0C4B33">
   <img alt="Проверка типов" src="https://img.shields.io/badge/type%20checking-pyright-2E6BE6">
-  <img alt="Покрытие тестами" src="https://img.shields.io/badge/coverage-pending-lightgrey">
   <img alt="Лицензия" src="https://img.shields.io/badge/license-MIT-green">
 </p>
 

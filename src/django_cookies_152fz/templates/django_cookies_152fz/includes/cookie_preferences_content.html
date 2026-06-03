@@ -3,25 +3,25 @@
   class="cookie-preferences"
   data-cookie-choice-root
   data-cookie-choice-mode="preferences"
-  data-cookie-choice-all-label="{% trans 'Все необязательные категории включены' %}"
-  data-cookie-choice-reject-label="{% trans 'Отказ от необязательных категорий' %}"
-  data-cookie-choice-required-label="{% trans 'Выбраны только обязательные категории' %}"
-  data-cookie-choice-custom-label="{% trans 'Выбраны отдельные категории' %}"
+  data-cookie-choice-all-label="{% trans 'All optional categories are enabled' %}"
+  data-cookie-choice-reject-label="{% trans 'Reject optional categories' %}"
+  data-cookie-choice-required-label="{% trans 'Only required categories selected' %}"
+  data-cookie-choice-custom-label="{% trans 'Selected categories' %}"
   data-cookie-choice-initial-state="{{ banner_state.default_choice_action|default:'' }}"
 >
   {% block cookie_preferences_header %}
   <header>
     {% trans "no decision" as cookie_no_decision_text %}
     <p>
-      {% trans "Версия политики cookie" %}: <strong>{{ policy.version }}</strong>
+      {% trans "Version of cookie policy" %}: <strong>{{ policy.version }}</strong>
     </p>
-    <h1>{% trans "Настройки cookie" %}</h1>
+    <h1>{% trans "Cookie settings" %}</h1>
     <p>
-      {% trans "Статус" %}: <strong>{{ status_info.status|default:cookie_no_decision_text }}</strong>
+      {% trans "Status" %}: <strong>{{ status_info.status|default:cookie_no_decision_text }}</strong>
     </p>
     {% if status_info.requires_reconsent %}
     <p>
-      {% trans "Обновите выбор категорий cookie: опубликована новая редакция политики cookie." %}
+      {% trans "Update your cookie category choice: a new cookie policy revision has been published." %}
     </p>
     {% endif %}
   </header>
@@ -35,14 +35,14 @@
 
   {% block cookie_preferences_required %}
   <section class="cookie-required">
-    <h2>{% trans "Обязательные категории" %}</h2>
+    <h2>{% trans "Required categories" %}</h2>
     <ul>
       {% for category in required_categories %}
       <li>
         <strong>{{ category.title }}</strong>{% if category.description %} - {{ category.description }}{% endif %}
       </li>
       {% empty %}
-      <li>{% trans "Нет обязательных категорий." %}</li>
+      <li>{% trans "No required categories." %}</li>
       {% endfor %}
     </ul>
   </section>
@@ -50,7 +50,7 @@
 
   {% block cookie_preferences_optional %}
   <section class="cookie-optional">
-    <h2>{% trans "Необязательные категории" %}</h2>
+    <h2>{% trans "Optional categories" %}</h2>
     <form method="post" data-cookie-audit-form data-cookie-preferences-form>
       {% csrf_token %}
       {% if preferences_form.non_field_errors %}
@@ -136,7 +136,7 @@
       {% endfor %}
 
       {% if preferences_has_optional_categories %}
-      <button type="submit" name="banner_action" value="save_custom">{% trans "Сохранить настройки cookie" %}</button>
+      <button type="submit" name="banner_action" value="save_custom">{% trans "Save cookie settings" %}</button>
       {% endif %}
       {% endif %}
     </form>

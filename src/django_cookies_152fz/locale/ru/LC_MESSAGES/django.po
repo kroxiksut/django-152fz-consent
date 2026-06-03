@@ -2725,46 +2725,69 @@ msgstr ""
 msgid "no decision"
 msgstr "решение не принято"
 
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:6
+msgid "All optional categories are enabled"
+msgstr "Все необязательные категории включены"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:7
+msgid "Reject optional categories"
+msgstr "Отказаться от необязательных категорий"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:8
+msgid "Only required categories selected"
+msgstr "Выбраны только обязательные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:9
+msgid "Selected categories"
+msgstr "Выбраны отдельные категории"
+
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:16
-msgid "Версия политики cookie"
-msgstr ""
+msgid "Version of cookie policy"
+msgstr "Версия политики cookie"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:18
+msgid "Cookie settings"
+msgstr "Настройки cookie"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:21
+msgid "Status"
+msgstr "Статус"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:24
-msgid ""
-"Обновите выбор категорий cookie: опубликована новая редакция политики cookie."
-msgstr ""
+msgid "Update your cookie category choice: a new cookie policy revision has been published."
+msgstr "Обновите выбор категорий cookie: опубликована новая редакция политики cookie."
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:38
+msgid "Required categories"
+msgstr "Обязательные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:45
+msgid "No required categories."
+msgstr "Нет обязательных категорий."
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:53
+msgid "Optional categories"
+msgstr "Необязательные категории"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:81
 msgid "Select all optional categories"
 msgstr "Выбрать все необязательные категории"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:91
-#, fuzzy
-#| msgid "Select all optional categories"
-msgid "Reject optional categories"
-msgstr "Выбрать все необязательные категории"
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:101
-#, fuzzy
-#| msgid "Keep required categories only"
 msgid "Keep only required cookie categories"
-msgstr "Оставить только обязательные категории"
+msgstr "Оставить только обязательные категории cookie"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:109
 msgid "Choose categories"
 msgstr "Выбрать категории"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:120
-msgid ""
-"Refusal means optional categories remain disabled until you change your "
-"choice."
-msgstr ""
-"Отказ означает, что необязательные категории остаются отключёнными, пока вы "
-"не измените свой выбор."
+msgid "Refusal means optional categories remain disabled until you change your choice."
+msgstr "Отказ означает, что необязательные категории останутся отключёнными, пока вы не измените свой выбор."
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:135
-msgid "Сохранить настройки cookie"
-msgstr ""
+msgid "Save cookie settings"
+msgstr "Сохранить настройки cookie"
 
 #: .\src\django_cookies_152fz\views.py:122
 msgid "Неизвестное действие cookie-баннера."

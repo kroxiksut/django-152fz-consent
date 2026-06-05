@@ -12,6 +12,10 @@ This document describes how to personalize the appearance and texts of the cooki
 - which is specified via `settings.py`;
 - when out-of-the-box options are enough, and when you need your own CSS or JS.
 
+This is how the banner looks on the site with the boxed settings:
+
+![Cookie banner on the site](../../assets/cookie/en/1-cookie-banner-on-site.png)
+
 ## Where are texts and design stored?
 
 The implementation uses the `CookieBannerRevision` model:
@@ -100,6 +104,14 @@ edits;
 - you can separately control the panel background, text, primary button, borders,
 secondary surface and overlay layer.
 
+The `Visual customization` block in the banner revision:
+
+![Banner revision visual customization](../../assets/cookie/en/3.2-banner-revision-visual.png)
+
+The result of editing the colors — the same banner on the site with a custom palette:
+
+![Cookie banner on the site after editing colors in the admin panel](../../assets/cookie/en/4-cookie-banner-on-site-customized.png)
+
 Restrictions:
 
 - colors undergo basic validation;
@@ -172,6 +184,10 @@ Practical meaning:
 - you can control banner display for bot-like requests separately from the global
 settings.
 
+The `Deprecated compatibility fields` and `Visibility and close button` blocks — banner position and close-button behavior:
+
+![Banner revision position and visibility](../../assets/cookie/en/3.3-banner-revision-position-visibility.png)
+
 ## What is configured via `settings.py`
 
 Not all design lives only in the database. In `DJANGO_COOKIES_152FZ` remain
@@ -237,6 +253,10 @@ semantic blocks:
 
 Color fields use the browser's native color selection, so the basic
 personalization can be done without manually entering all the values.
+
+The `Texts` block in the banner revision:
+
+![Banner revision texts](../../assets/cookie/en/3.1-banner-revision-texts.png)
 
 ## Attribute contract in template
 

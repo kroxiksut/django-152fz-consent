@@ -9,6 +9,22 @@ Self-service in its current scope covers:
 - viewing current subject consents;
 - withdrawing consent for a specific `purpose + document` stream.
 
+## What it looks like
+
+A typical subject journey — from the signup form to managing their own consents.
+
+Consent on the course signup form:
+
+![Course signup form with the consent block](../../assets/consent/en/1-course-signup.png)
+
+Consent confirmation:
+
+![Consent confirmation screen](../../assets/consent/en/2-consent-confirmation.png)
+
+The subject's personal list of consents (self-service):
+
+![The "My consents" section](../../assets/consent/en/3-my-consents.png)
+
 ## What is not included in the scope
 
 - A full-fledged personal account with arbitrary legal workflow scenarios.

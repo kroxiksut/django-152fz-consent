@@ -7,6 +7,10 @@
 
 `verified_consents` is an experimental optional module for enhanced confirmation scenarios for individual consent streams.
 
+Uploading and confirming a paper consent:
+
+![Paper consent](../../assets/consent/en/4-paper-consent.png)
+
 ## Basic contract
 
 - single `verification_mode`:

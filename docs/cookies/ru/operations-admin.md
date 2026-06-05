@@ -136,6 +136,8 @@ python manage.py bootstrap_152fz_cookie_defaults
 - удалить запись нельзя;
 - добавить можно только одну запись.
 
+![Настройки админ-инструментов cookie](../../assets/cookie/ru/2-admin-tools-settings.png)
+
 ### `Cookie-категории`
 
 Что это:
@@ -202,6 +204,8 @@ python manage.py bootstrap_152fz_cookie_defaults
 - реестр синхронизируется в снимок редакции;
 - предыдущие актуальные согласия переводятся в устаревшие.
 
+![Редакция политики cookie](../../assets/cookie/ru/5-cookie-policy-revision.png)
+
 ### `Текстовые пресеты cookie-баннера`
 
 Что это:
@@ -214,6 +218,8 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 Действия:
 - клонирование выбранных пресетов в пользовательские пресеты.
+
+![Текстовые заготовки cookie-баннера](../../assets/cookie/ru/7-banner-text-presets.png)
 
 ### `Редакции cookie-баннера`
 
@@ -256,6 +262,8 @@ python manage.py bootstrap_152fz_cookie_defaults
 Назначение:
 - контроль текущего/устаревшего статуса;
 - поиск по пользователю, анонимному токену, идентификатору запроса.
+
+![Записи cookie-согласий](../../assets/cookie/ru/6-cookie-consent-records.png)
 
 ### `События cookie-согласий`
 

@@ -62,6 +62,10 @@ Practical recommendations:
 - the list of fields should reflect the real data that is processed in this
 flow, not an abstract "reserve for the future."
 
+Processing purposes in the administrative panel:
+
+![Consent purposes in the admin panel](../../assets/consent/en/7-consent-purposes.png)
+
 ## How to fill out a document
 
 `LegalDocument` is a container for revisions.
@@ -80,6 +84,10 @@ Practice:
 separate documents;
 - use a stable `document_code` so that application code does not depend on
 the document title shown in the interface.
+
+Examples of legal documents in the administrative panel:
+
+![Examples of legal documents](../../assets/consent/en/6-legal-document-examples.png)
 
 ## How to fill out the text revision
 
@@ -100,6 +108,10 @@ What is important in practice:
 consent bindings;
 - publishing a new revision affects re-consent and obsolescence status;
 - old revisions should not be rewritten retroactively.
+
+Document revisions in the administrative panel:
+
+![Document revisions](../../assets/consent/en/5-document-revisions.png)
 
 ## Which text format to choose
 

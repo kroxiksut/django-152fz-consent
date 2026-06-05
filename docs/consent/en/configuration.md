@@ -11,6 +11,12 @@ The main configuration is set in `DJANGO_CONSENT_152FZ`:
 - `subject_consents` for self-service behavior;
 - feature flags to enable additional flows.
 
+Module settings in the administrative panel:
+
+![Module settings, part 1](../../assets/consent/en/8-module-settings-1.png)
+
+![Module settings, part 2](../../assets/consent/en/8-module-settings-2.png)
+
 ## Feature flags
 
 - `enable_core` - main life cycle of consents;

@@ -211,6 +211,10 @@ Purpose:
 
 Main operating point: section `ConsentRecord`.
 
+A user's list of consents in the administrative panel:
+
+![All user consents in the admin panel](../../assets/consent/en/3.1-all-user-consents.png)
+
 How to search for signed ones:
 1. Open the `ConsentRecord` list.
 2. Set the filter by status:
@@ -353,6 +357,10 @@ What to do:
 - open the confirmation file;
 - confirm or reject it with a comment;
 - record the reason for rejection so the subject can resubmit.
+
+Operator actions on a paper consent in the admin panel:
+
+![Admin actions on a paper consent](../../assets/consent/en/4.1-paper-consent-admin-actions.png)
 
 ## How to link a document to a form
 

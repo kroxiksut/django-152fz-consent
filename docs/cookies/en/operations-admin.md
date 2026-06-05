@@ -136,6 +136,8 @@ Peculiarities:
 - the entry cannot be deleted;
 - only one entry can be added.
 
+![Cookie admin tool settings](../../assets/cookie/en/2-admin-tools-settings.png)
+
 ### `Cookie categories`
 
 What is this:
@@ -202,6 +204,8 @@ Important:
 - the registry is synchronized into a revision snapshot;
 - previously valid consents are converted to outdated.
 
+![Cookie policy revision](../../assets/cookie/en/5-cookie-policy-revision.png)
+
 ### `Cookie banner text presets`
 
 What is this:
@@ -214,6 +218,8 @@ What can be configured:
 
 Actions:
 - cloning selected presets into custom presets.
+
+![Cookie banner text presets](../../assets/cookie/en/7-banner-text-presets.png)
 
 ### `Cookie banner revisions`
 
@@ -256,6 +262,8 @@ Mode:
 Purpose:
 - monitoring of current/outdated status;
 - search by user, anonymous token, request ID.
+
+![Cookie consent records](../../assets/cookie/en/6-cookie-consent-records.png)
 
 ### `Cookie Consent Events`
 

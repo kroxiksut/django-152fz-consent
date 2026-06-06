@@ -1,15 +1,16 @@
-﻿{% extends "base.html" %}
-{% load django_bootstrap5 %}
+{% extends "base.html" %}
+{% load django_bootstrap5 i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Контакты | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Contacts | Training Center{% else %}Контакты | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Связаться с нами</h2>
-          <p class="demo-muted">Используйте эту форму для вопросов по расписанию и записи на обучение.</p>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Contact us{% else %}Связаться с нами{% endif %}</h2>
+          <p class="demo-muted">{% if CURRENT_LANGUAGE == 'en' %}Use this form for questions about the schedule and enrollment.{% else %}Используйте эту форму для вопросов по расписанию и записи на обучение.{% endif %}</p>
 
           <form method="post" novalidate data-consent-radio-form>
             {% csrf_token %}
@@ -17,7 +18,7 @@
               <div class="alert alert-warning" role="alert">
                 {{ verified_transition.message }}
                 {% if verified_transition.upload_url %}
-                  <a href="{{ verified_transition.upload_url }}" class="alert-link">Загрузить подтверждение</a>
+                  <a href="{{ verified_transition.upload_url }}" class="alert-link">{% if CURRENT_LANGUAGE == 'en' %}Upload confirmation{% else %}Загрузить подтверждение{% endif %}</a>
                 {% endif %}
               </div>
             {% endif %}
@@ -25,8 +26,8 @@
             {% bootstrap_field form.email %}
             {% bootstrap_field form.message %}
             <p class="small demo-muted mb-3">
-              Текст согласия:
-              <a href="{{ consent_document_url }}" target="_blank" rel="noopener">открыть и подписать</a>
+              {% if CURRENT_LANGUAGE == 'en' %}Consent text:{% else %}Текст согласия:{% endif %}
+              <a href="{{ consent_document_url }}" target="_blank" rel="noopener">{% if CURRENT_LANGUAGE == 'en' %}open and sign{% else %}открыть и подписать{% endif %}</a>
             </p>
             {% if form.consent_decision %}
               {% bootstrap_field form.consent_decision %}
@@ -40,9 +41,9 @@
               style="display:none;"
               role="alert"
             >
-              Без согласия на обработку персональных данных отправка формы невозможна.
+              {% if CURRENT_LANGUAGE == 'en' %}Form submission is unavailable without consent to personal data processing.{% else %}Без согласия на обработку персональных данных отправка формы невозможна.{% endif %}
             </p>
-            <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+            <button class="btn btn-primary" type="submit">{% if CURRENT_LANGUAGE == 'en' %}Send message{% else %}Отправить сообщение{% endif %}</button>
           </form>
         </div>
       </div>

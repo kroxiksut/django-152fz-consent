@@ -138,6 +138,10 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 ![Настройки админ-инструментов cookie](../../assets/cookie/ru/2-admin-tools-settings.png)
 
+Сама форма настроек — разделитель CSV-экспорта и необязательные переопределения показа:
+
+![Форма настроек админ-инструментов cookie](../../assets/cookie/ru/8-admin-tools-settings-form.png)
+
 ### `Cookie-категории`
 
 Что это:
@@ -151,6 +155,14 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 Когда менять:
 - при появлении новой категории обработки или изменении классификации.
+
+Список категорий с коробочным набором:
+
+![Список cookie-категорий](../../assets/cookie/ru/9-cookie-categories-list.png)
+
+Карточка отдельной категории (`analytics`) — код, отображаемое имя, описание, признак обязательности, порядок сортировки и активность:
+
+![Cookie-категория: аналитические](../../assets/cookie/ru/9.1-cookie-category-analytics.png)
 
 ### `Элементы cookie-реестра`
 
@@ -170,6 +182,14 @@ python manage.py bootstrap_152fz_cookie_defaults
 Когда менять:
 - при подключении/отключении внешних систем и аналитики.
 
+Список реестра с коробочными демо-интеграциями:
+
+![Список элементов cookie-реестра](../../assets/cookie/ru/10-cookie-registry-items-list.png)
+
+Карточка элемента реестра (`google_analytics_demo`) — поставщик, назначение, срок хранения, имена cookie, URL скрипта и стратегия очистки:
+
+![Элемент cookie-реестра: Google Analytics](../../assets/cookie/ru/10.1-cookie-registry-item-google.png)
+
 ### `Текстовые пресеты политики куки`
 
 Что это:
@@ -183,6 +203,10 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 Действия:
 - клонирование выбранных пресетов в пользовательские пресеты.
+
+Коробочные пресеты — полный и короткий текст политики на русском и английском:
+
+![Текстовые пресеты политики cookie](../../assets/cookie/ru/13-cookie-policy-text-presets-list.png)
 
 ### `Редакции политики куки`
 
@@ -263,7 +287,7 @@ python manage.py bootstrap_152fz_cookie_defaults
 - контроль текущего/устаревшего статуса;
 - поиск по пользователю, анонимному токену, идентификатору запроса.
 
-![Записи cookie-согласий](../../assets/cookie/ru/6-cookie-consent-records.png)
+![Записи cookie-согласий](../../assets/cookie/ru/11-cookie-consent-records-list.png)
 
 ### `События cookie-согласий`
 
@@ -275,6 +299,13 @@ python manage.py bootstrap_152fz_cookie_defaults
 
 Действия:
 - экспорт выбранных событий в CSV.
+
+Выбор событий и применение действия `Экспортировать выбранные события в CSV`:
+
+![События cookie-согласий: просмотр и экспорт](../../assets/cookie/ru/12-cookie-consent-events-export.png)
+
+Пример итоговой выгрузки (`csv_export_delimiter = ;`):
+[cookie-consent-events.csv](../../assets/cookie/cookie-consent-events.csv)
 
 ### `Состояния cookie-баннера`
 

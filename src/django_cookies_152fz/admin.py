@@ -28,6 +28,7 @@ from .integration_contract import (
 )
 from .models import (
     COOKIE_BANNER_PROTECTED_TEXT_FIELDS,
+    DEFAULT_COOKIE_BANNER_REVISION_BEHAVIOR,
     CookieAdminSettings,
     CookieBannerRevision,
     CookieBannerState,
@@ -808,11 +809,25 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
         mobile_field.widget = forms.Select(choices=mobile_choices)
         mobile_field.choices = mobile_choices
 
+        close_control_field = cast(forms.ChoiceField, self.fields["close_control_placement"])
+        close_control_choices = list(cast(Any, close_control_field).choices)
+        close_control_field.required = False
+        close_control_field.widget = forms.Select(choices=close_control_choices)
+        close_control_field.initial = self._resolve_initial_choice_value(
+            "close_control_placement",
+            default_value=str(
+                DEFAULT_COOKIE_BANNER_REVISION_BEHAVIOR["close_control_placement"]
+            ),
+        )
+
         self._allowed_text_preset_codes = {
             str(code) for code, _ in text_choices if str(code)
         }
         self._allowed_mobile_text_preset_codes = {
             str(code) for code, _ in mobile_choices if str(code)
+        }
+        self._allowed_close_control_placement_codes = {
+            str(code) for code, _ in close_control_choices if str(code)
         }
         self._localize_choice_fields()
 
@@ -873,6 +888,15 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
         if getattr(self.instance, "pk", None):
             return getattr(self.instance, field_name, None)
         return None
+
+    def _resolve_initial_choice_value(self, field_name: str, *, default_value: str) -> str:
+        if field_name in self.initial:
+            value = self.initial.get(field_name)
+            return str(value or "").strip() or default_value
+        if getattr(self.instance, "pk", None):
+            value = getattr(self.instance, field_name, None)
+            return str(value or "").strip() or default_value
+        return default_value
 
     def _localize_choice_fields(self) -> None:
         choice_labels_by_value: dict[str, dict[str, Any]] = {
@@ -982,6 +1006,21 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
                 _(
                     "Выберите заготовку для мобильной версии из справочника или оставьте пустым для наследования."
                 )
+            )
+        return code
+
+    def clean_close_control_placement(self) -> str:
+        code = str(self.cleaned_data.get("close_control_placement") or "").strip()
+        if not code:
+            existing_value = str(
+                getattr(self.instance, "close_control_placement", "") or ""
+            ).strip()
+            return existing_value or str(
+                DEFAULT_COOKIE_BANNER_REVISION_BEHAVIOR["close_control_placement"]
+            )
+        if code not in self._allowed_close_control_placement_codes:
+            raise forms.ValidationError(
+                _("Выберите положение кнопки закрытия из справочника.")
             )
         return code
 
@@ -1198,6 +1237,38 @@ class CookiePolicyRevisionAdmin(
     """Admin for cookie-policy revisions with automatic consent outdate."""
 
     form = CookiePolicyRevisionAdminForm
+    fieldsets = (
+        (
+            _("Ревизия и статус"),
+            {
+                "fields": (
+                    "version",
+                    "cloned_from",
+                    "is_active",
+                    "is_box_template",
+                    "published_at",
+                    "created_at",
+                    "updated_at",
+                )
+            },
+        ),
+        (
+            _("Содержимое"),
+            {
+                "fields": (
+                    "format",
+                    "content_text",
+                    "content_file",
+                )
+            },
+        ),
+        (
+            _("Снимок категорий"),
+            {
+                "fields": ("categories_snapshot",),
+            },
+        ),
+    )
     change_list_template = (
         "admin/django_cookies_152fz/cookiepolicyrevision/change_list.html"
     )
@@ -1269,16 +1340,16 @@ class CookiePolicyRevisionAdmin(
         return variant in known_variants
 
     def _build_policy_variant_tools(self) -> list[dict[str, str]]:
-        publish_label = str(
-            _("Опубликовать выбранный коробочный вариант текста политики")
-        )
-        draft_label = str(
-            _("Создать пользовательский черновик из выбранного коробочного варианта")
-        )
+        publish_label = str(_("Опубликовать"))
+        draft_label = str(_("Черновик"))
+        variant_short_titles = {
+            COOKIE_POLICY_TEXT_VARIANT_SHORT: str(_("Короткий")),
+            COOKIE_POLICY_TEXT_VARIANT_FULL: str(_("Полный")),
+        }
         tools: list[dict[str, str]] = []
         for variant_code, variant_title in COOKIE_POLICY_VARIANT_CHOICES:
             variant = str(variant_code)
-            title = str(variant_title)
+            title = str(variant_short_titles.get(variant_code) or variant_title)
             publish_url = (
                 reverse(
                     "admin:django_cookies_152fz_cookiepolicyrevision_publish_box_variant"

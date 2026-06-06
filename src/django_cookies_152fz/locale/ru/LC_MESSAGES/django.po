@@ -404,6 +404,8 @@ msgstr ""
 msgid "Положение кнопки закрытия"
 msgstr ""
 
+msgid "Выберите положение кнопки закрытия из справочника."
+msgstr "Выберите положение кнопки закрытия из справочника."
 #: .\src\django_cookies_152fz\admin.py:158
 #: .\src\django_cookies_152fz\admin.py:504
 #, fuzzy
@@ -2495,6 +2497,10 @@ msgstr ""
 msgid "category_code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
 msgstr ""
 
+#: .\src\django_cookies_152fz\models.py:674
+msgid "Auto (locale-based)"
+msgstr "Авто (по локали)"
+
 #: .\src\django_cookies_152fz\models.py:678
 #, fuzzy
 #| msgid "Сбалансированный"
@@ -2704,28 +2710,6 @@ msgid "Cookie preferences"
 msgstr "Настройки cookie"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:6
-msgid "Все необязательные категории включены"
-msgstr ""
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:7
-#, fuzzy
-#| msgid "Заголовок блока выбора категорий"
-msgid "Отказ от необязательных категорий"
-msgstr "Заголовок блока выбора категорий"
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:8
-msgid "Выбраны только обязательные категории"
-msgstr ""
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:9
-msgid "Выбраны отдельные категории"
-msgstr ""
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:14
-msgid "no decision"
-msgstr "решение не принято"
-
-#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:6
 msgid "All optional categories are enabled"
 msgstr "Все необязательные категории включены"
 
@@ -2740,6 +2724,10 @@ msgstr "Выбраны только обязательные категории"
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:9
 msgid "Selected categories"
 msgstr "Выбраны отдельные категории"
+
+#: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:14
+msgid "no decision"
+msgstr "решение не принято"
 
 #: .\src\django_cookies_152fz\templates\django_cookies_152fz\includes\cookie_preferences_content.html:16
 msgid "Version of cookie policy"
@@ -3058,6 +3046,8 @@ msgstr ""
 #~ msgid "Close control placement"
 #~ msgstr "Положение кнопки закрытия"
 
+msgid "???????? ????????? ?????? ???????? ?? ???????????."
+msgstr "???????? ????????? ?????? ???????? ?? ???????????."
 #, fuzzy
 #~| msgid "Close control placement"
 #~ msgid "Mobile close control placement override"

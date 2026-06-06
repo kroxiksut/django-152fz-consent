@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}{% trans "About" %} | {% trans "Training Center" %}{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}About | Training Center{% else %}О центре | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
-  <h2>{% trans "About the center" %}</h2>
-  <p>{% trans "We provide practical courses focused on applied software development skills." %}</p>
+  <h2>{% if CURRENT_LANGUAGE == 'en' %}About the center{% else %}О центре{% endif %}</h2>
+  <p>{% if CURRENT_LANGUAGE == 'en' %}We provide practical courses focused on applied software development skills.{% else %}Мы проводим практические курсы, ориентированные на прикладные навыки разработки программного обеспечения.{% endif %}</p>
 {% endblock %}

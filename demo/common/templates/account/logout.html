@@ -1,25 +1,25 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Выход | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Sign out | Training Center{% else %}Выход | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Выйти</h2>
-          <p>Вы действительно хотите выйти?</p>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Sign out{% else %}Выйти{% endif %}</h2>
+          <p>{% if CURRENT_LANGUAGE == 'en' %}Are you sure you want to sign out?{% else %}Вы действительно хотите выйти?{% endif %}</p>
           <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
             {% if redirect_field_value %}
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
             {% endif %}
-            <button class="btn btn-outline-danger" type="submit">Выйти</button>
+            <button class="btn btn-outline-danger" type="submit">{% if CURRENT_LANGUAGE == 'en' %}Sign out{% else %}Выйти{% endif %}</button>
           </form>
         </div>
       </div>
     </div>
   </div>
 {% endblock %}
-

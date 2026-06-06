@@ -67,6 +67,18 @@ Practical meaning:
 - `panel` is better when there are more categories and explanations;
 - `alert` makes the repeated request more noticeable than `inline`.
 
+The `card` variant — a compact panel pinned to the edge of the page:
+
+![Cookie banner: card variant](../../assets/cookie/en/1.3-banner-card-variant.png)
+
+The `modal` variant — a centered dialog over a dimmed page, for a tighter focus on the choice:
+
+![Cookie banner: modal variant](../../assets/cookie/en/1.2-banner-modal-variant.png)
+
+The expanded `Customize` panel (`consent_ui_variant: panel`) — required and optional categories side by side:
+
+![Cookie banner: custom category selection](../../assets/cookie/en/1.1-banner-customize-categories.png)
+
 ## Positioning and Layout
 
 Separate position parameters are already available for the banner:

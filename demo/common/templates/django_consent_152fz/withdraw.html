@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}{% trans "Отзыв согласия" %} | {{ revision.document.title }}{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Withdraw consent{% else %}Отзыв согласия{% endif %} | {{ revision.document.title }}{% endblock %}
 
 {% block content %}
   <main class="consent-withdraw">
     <header class="mb-3">
-      <h2 class="h4">{% trans "Отзыв согласия" %}</h2>
+      <h2 class="h4">{% if CURRENT_LANGUAGE == 'en' %}Withdraw consent{% else %}Отзыв согласия{% endif %}</h2>
       <p class="demo-muted">{{ purpose.title }} / {{ revision.document.title }}</p>
     </header>
 
     {% include "django_consent_152fz/includes/reconsent_notice.html" with notice=notice only %}
 
     <section class="mb-3">
-      <p>{% trans "Текущий статус" %}: <strong>{{ status_info.status_label|default:"Нет согласия" }}</strong></p>
-      <p><a href="{{ document_url }}">{% trans "Вернуться к документу" %}</a></p>
+      <p>{% if CURRENT_LANGUAGE == 'en' %}Current status{% else %}Текущий статус{% endif %}: <strong>{{ status_info.status_label|default:"Нет согласия" }}</strong></p>
+      <p><a href="{{ document_url }}">{% if CURRENT_LANGUAGE == 'en' %}Back to the document{% else %}Вернуться к документу{% endif %}</a></p>
     </section>
 
     <form method="post">
@@ -43,7 +44,7 @@
       <p>{{ error }}</p>
       {% endfor %}
 
-      <button type="submit" class="btn btn-outline-danger mt-2">{% trans "Отозвать согласие" %}</button>
+      <button type="submit" class="btn btn-outline-danger mt-2">{% if CURRENT_LANGUAGE == 'en' %}Withdraw consent{% else %}Отозвать согласие{% endif %}</button>
     </form>
   </main>
 {% endblock %}

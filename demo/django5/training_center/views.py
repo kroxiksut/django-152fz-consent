@@ -10,6 +10,7 @@ from django.db.models import Q
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse
+from django.utils.translation import get_language
 from formtools.wizard.views import SessionWizardView
 
 from django_consent_152fz import constants
@@ -42,39 +43,53 @@ from .forms import (
 from .models import Course, CourseSignup
 
 
+def _msg(ru: str, en: str) -> str:
+    """Return RU or EN flash/UI text for the active language (demo uses inline i18n)."""
+    return en if (get_language() or "").startswith("en") else ru
+
+
 def _status_label(status_code: str) -> str:
     normalized = str(status_code or "").strip()
     labels = {
-        "missing": "Нет согласия",
-        constants.CONSENT_STATUS_CURRENT: "Актуально",
-        constants.CONSENT_STATUS_OUTDATED: "Устарело",
-        constants.CONSENT_STATUS_WITHDRAWN: "Отозвано",
-        constants.CONSENT_STATUS_PENDING_CONFIRMATION: "Ожидает подтверждения",
-        constants.CONSENT_STATUS_REJECTED: "Отклонено",
-        constants.CONSENT_STATUS_DELETED: "Удалено",
+        "missing": _msg("Нет согласия", "No consent"),
+        constants.CONSENT_STATUS_CURRENT: _msg("Актуально", "Current"),
+        constants.CONSENT_STATUS_OUTDATED: _msg("Устарело", "Outdated"),
+        constants.CONSENT_STATUS_WITHDRAWN: _msg("Отозвано", "Withdrawn"),
+        constants.CONSENT_STATUS_PENDING_CONFIRMATION: _msg(
+            "Ожидает подтверждения", "Pending confirmation"
+        ),
+        constants.CONSENT_STATUS_REJECTED: _msg("Отклонено", "Rejected"),
+        constants.CONSENT_STATUS_DELETED: _msg("Удалено", "Deleted"),
     }
-    return labels.get(normalized, normalized or "Нет согласия")
+    return labels.get(normalized, normalized or _msg("Нет согласия", "No consent"))
 
 
 def _verified_transition_message(status_code: str) -> str:
     normalized = str(status_code or "").strip()
     messages_map = {
-        constants.VERIFIED_TRANSITION_STATUS_PAPER_REQUIRED: (
-            "Для этого потока требуется бумажное подтверждение согласия."
+        constants.VERIFIED_TRANSITION_STATUS_PAPER_REQUIRED: _msg(
+            "Для этого потока требуется бумажное подтверждение согласия.",
+            "This flow requires paper confirmation of consent.",
         ),
-        constants.VERIFIED_TRANSITION_STATUS_AWAITING_UPLOAD: (
-            "Сначала загрузите подписанный бумажный документ."
+        constants.VERIFIED_TRANSITION_STATUS_AWAITING_UPLOAD: _msg(
+            "Сначала загрузите подписанный бумажный документ.",
+            "Upload the signed paper document first.",
         ),
-        constants.VERIFIED_TRANSITION_STATUS_PENDING_VERIFICATION: (
-            "Документ загружен и ожидает проверки оператором ПДн."
+        constants.VERIFIED_TRANSITION_STATUS_PENDING_VERIFICATION: _msg(
+            "Документ загружен и ожидает проверки оператором ПДн.",
+            "The document has been uploaded and is awaiting review by the personal-data operator.",
         ),
-        constants.VERIFIED_TRANSITION_STATUS_REJECTED: (
-            "Предыдущее подтверждение отклонено. Загрузите новый документ."
+        constants.VERIFIED_TRANSITION_STATUS_REJECTED: _msg(
+            "Предыдущее подтверждение отклонено. Загрузите новый документ.",
+            "The previous confirmation was rejected. Upload a new document.",
         ),
     }
     return messages_map.get(
         normalized,
-        "Подписание через web-форму недоступно для этого потока согласия.",
+        _msg(
+            "Подписание через web-форму недоступно для этого потока согласия.",
+            "Web-form signing is unavailable for this consent flow.",
+        ),
     )
 
 
@@ -282,13 +297,18 @@ def contact(request: HttpRequest) -> HttpResponse:
                 },
                 result={"contact_message_id": message.pk},
             )
-            messages.success(request, "Сообщение успешно отправлено.")
+            messages.success(
+                request, _msg("Сообщение успешно отправлено.", "Message sent successfully.")
+            )
             response = redirect("pages:contact")
             if anonymous_token:
                 persist_anonymous_token(response, anonymous_token=anonymous_token)
             return response
 
-        messages.error(request, "Пожалуйста, исправьте ошибки в форме.")
+        messages.error(
+            request,
+            _msg("Пожалуйста, исправьте ошибки в форме.", "Please correct the errors in the form."),
+        )
     else:
         form = ContactForm()
         if not consent_required:
@@ -485,7 +505,13 @@ class CourseSignupWizard(SessionWizardView):
             dict[str, Any], details_raw if isinstance(details_raw, dict) else {}
         )
         if not details:
-            messages.error(self.request, "Данные записи не найдены. Попробуйте снова.")
+            messages.error(
+                self.request,
+                _msg(
+                    "Данные записи не найдены. Попробуйте снова.",
+                    "Signup data was not found. Please try again.",
+                ),
+            )
             return redirect("pages:course_signup")
 
         signature_payload = {
@@ -514,7 +540,13 @@ class CourseSignupWizard(SessionWizardView):
                 payload={"document_code": document_code},
                 result={"duplicate": True},
             )
-            messages.info(self.request, "Такая заявка уже была отправлена.")
+            messages.info(
+                self.request,
+                _msg(
+                    "Такая заявка уже была отправлена.",
+                    "This signup has already been submitted.",
+                ),
+            )
             return redirect("pages:course_signup")
 
         user, anonymous_token = get_request_consent_subject(
@@ -594,7 +626,13 @@ class CourseSignupWizard(SessionWizardView):
             result={"course_signup_id": signup.pk},
         )
         self.request.session[self.dedupe_session_key] = signature
-        messages.success(self.request, "Заявка на курс успешно отправлена.")
+        messages.success(
+            self.request,
+            _msg(
+                "Заявка на курс успешно отправлена.",
+                "Course signup submitted successfully.",
+            ),
+        )
         response = redirect("pages:course_signup")
         if anonymous_token:
             persist_anonymous_token(response, anonymous_token=anonymous_token)
@@ -669,7 +707,10 @@ def certificate_request(request: HttpRequest) -> HttpResponse:
         if not available_courses:
             form.add_error(
                 "course_name",
-                "Сначала оставьте заявку на курс, затем подайте заявку на сертификат.",
+                _msg(
+                    "Сначала оставьте заявку на курс, затем подайте заявку на сертификат.",
+                    "Submit a course signup first, then request a certificate.",
+                ),
             )
         if verified_transition["blocking"]:
             form.add_error(None, verified_transition["message"])
@@ -757,12 +798,21 @@ def certificate_request(request: HttpRequest) -> HttpResponse:
                 },
                 result={"certificate_request_id": request_obj.pk},
             )
-            messages.success(request, "Заявка на получение сертификата отправлена.")
+            messages.success(
+                request,
+                _msg(
+                    "Заявка на получение сертификата отправлена.",
+                    "Certificate request submitted.",
+                ),
+            )
             response = redirect("pages:certificate_request")
             if anonymous_token:
                 persist_anonymous_token(response, anonymous_token=anonymous_token)
             return response
-        messages.error(request, "Пожалуйста, исправьте ошибки в форме.")
+        messages.error(
+            request,
+            _msg("Пожалуйста, исправьте ошибки в форме.", "Please correct the errors in the form."),
+        )
     else:
         request_user = cast(Any, request.user)
         initial = {
@@ -777,7 +827,10 @@ def certificate_request(request: HttpRequest) -> HttpResponse:
         if not available_courses:
             messages.info(
                 request,
-                "Сначала отправьте заявку на курс. После этого курс появится в списке для сертификата.",
+                _msg(
+                    "Сначала отправьте заявку на курс. После этого курс появится в списке для сертификата.",
+                    "Submit a course signup first. After that the course will appear in the list for the certificate.",
+                ),
             )
 
     return render(
@@ -872,11 +925,20 @@ def verified_paper_consent(request: HttpRequest) -> HttpResponse:
                 )
             except ConsentError as exc:
                 form.add_error("paper_file", str(exc))
-                messages.error(request, "Не удалось отправить бумажное подтверждение.")
+                messages.error(
+                    request,
+                    _msg(
+                        "Не удалось отправить бумажное подтверждение.",
+                        "Failed to submit the paper confirmation.",
+                    ),
+                )
             else:
                 messages.success(
                     request,
-                    "Бумажное согласие загружено и отправлено на проверяемое подтверждение.",
+                    _msg(
+                        "Бумажное согласие загружено и отправлено на проверяемое подтверждение.",
+                        "Paper consent uploaded and submitted for verified confirmation.",
+                    ),
                 )
                 redirect_url = reverse("pages:verified_paper_consent")
                 query = {

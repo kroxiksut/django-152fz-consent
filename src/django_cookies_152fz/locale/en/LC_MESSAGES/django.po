@@ -6,13 +6,13 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: django-cookies-152fz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 18:51+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2026-06-03 22:38+0800\n"
+"PO-Revision-Date: 2026-06-03 00:00+0000\n"
+"Last-Translator: django-cookies-152fz\n"
+"Language-Team: English\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,1154 +20,1262 @@ msgstr ""
 
 #: .\admin.py:84
 msgid "Код"
-msgstr ""
+msgstr "Code"
 
-#: .\admin.py:85 .\admin.py:342
+#: .\admin.py:85 .\admin.py:360
 msgid "Название"
-msgstr ""
+msgstr "Name"
 
-#: .\admin.py:86 .\admin.py:130 .\admin.py:299 .\admin.py:343 .\admin.py:454
-#: .\admin.py:901
+#: .\admin.py:86 .\admin.py:130 .\admin.py:317 .\admin.py:361 .\admin.py:495
+#: .\admin.py:1035
 msgid "Описание"
-msgstr ""
+msgstr "Description"
 
-#: .\admin.py:87 .\admin.py:344
+#: .\admin.py:87 .\admin.py:362
 msgid "Обязательная категория"
-msgstr ""
+msgstr "Required category"
 
-#: .\admin.py:88 .\admin.py:345
+#: .\admin.py:88 .\admin.py:363
 msgid "Порядок сортировки"
-msgstr ""
+msgstr "Sort order"
 
-#: .\admin.py:89 .\admin.py:205 .\admin.py:346 .\admin.py:548
+#: .\admin.py:89 .\admin.py:223 .\admin.py:364 .\admin.py:595
 msgid "Активна"
-msgstr ""
+msgstr "Active"
 
-#: .\admin.py:95 .\admin.py:125 .\admin.py:363 .\admin.py:449
+#: .\admin.py:95 .\admin.py:125 .\admin.py:390 .\admin.py:490
 msgid "Версия"
-msgstr ""
+msgstr "Version"
 
-#: .\admin.py:96 .\admin.py:364
+#: .\admin.py:96 .\admin.py:391
 msgid "Формат"
-msgstr ""
+msgstr "Format"
 
-#: .\admin.py:97 .\admin.py:365
+#: .\admin.py:97 .\admin.py:392
 msgid "Текст политики"
-msgstr ""
+msgstr "Policy text"
 
-#: .\admin.py:98 .\admin.py:366
+#: .\admin.py:98 .\admin.py:393
 msgid "Файл политики"
-msgstr ""
+msgstr "Policy file"
 
-#: .\admin.py:99 .\admin.py:367
+#: .\admin.py:99 .\admin.py:394 .\admin.py:1227
 msgid "Снимок категорий"
-msgstr ""
+msgstr "Categories snapshot"
 
-#: .\admin.py:100 .\admin.py:126 .\admin.py:368 .\admin.py:450
+#: .\admin.py:100 .\admin.py:126 .\admin.py:395 .\admin.py:491
 msgid "Скопировано из ревизии"
-msgstr ""
+msgstr "Copied from revision"
 
-#: .\admin.py:101 .\admin.py:369
+#: .\admin.py:101 .\admin.py:396
 msgid "Опубликована"
-msgstr ""
+msgstr "Published"
 
-#: .\admin.py:102 .\admin.py:204 .\admin.py:370 .\admin.py:547
+#: .\admin.py:102 .\admin.py:222 .\admin.py:397 .\admin.py:594
 msgid "Коробочный шаблон"
-msgstr ""
+msgstr "Built-in template"
 
-#: .\admin.py:103 .\admin.py:206 .\admin.py:371 .\admin.py:549
+#: .\admin.py:103 .\admin.py:224 .\admin.py:398 .\admin.py:596
 msgid "Дата публикации"
-msgstr ""
+msgstr "Publication date"
 
-#: .\admin.py:104 .\admin.py:226 .\admin.py:259 .\admin.py:266 .\admin.py:372
+#: .\admin.py:104 .\admin.py:244 .\admin.py:277 .\admin.py:284 .\admin.py:399
 msgid "Создано"
-msgstr ""
+msgstr "Created"
 
-#: .\admin.py:105 .\admin.py:227 .\admin.py:267 .\admin.py:278 .\admin.py:373
+#: .\admin.py:105 .\admin.py:245 .\admin.py:285 .\admin.py:296 .\admin.py:400
+#: .\models.py:1663
 msgid "Обновлено"
-msgstr ""
+msgstr "Updated"
 
-#: .\admin.py:111 .\admin.py:251 .\admin.py:395
+#: .\admin.py:111 .\admin.py:269 .\admin.py:428
 msgid "Код элемента реестра"
-msgstr ""
+msgstr "Registry item code"
 
-#: .\admin.py:112 .\admin.py:396
+#: .\admin.py:112 .\admin.py:429
 msgid "Категория"
-msgstr ""
+msgstr "Category"
 
-#: .\admin.py:113 .\admin.py:253 .\admin.py:397
-msgid "Провайдер"
-msgstr ""
+#: .\admin.py:113 .\admin.py:271 .\admin.py:430
+msgid "Поставщик"
+msgstr "Provider"
 
-#: .\admin.py:114 .\admin.py:254 .\admin.py:398
+#: .\admin.py:114 .\admin.py:272 .\admin.py:431
 msgid "Назначение"
-msgstr ""
+msgstr "Purpose"
 
-#: .\admin.py:115 .\admin.py:255 .\admin.py:399
+#: .\admin.py:115 .\admin.py:273 .\admin.py:432
 msgid "Срок хранения"
-msgstr ""
+msgstr "Retention period"
 
-#: .\admin.py:116 .\admin.py:256 .\admin.py:400
+#: .\admin.py:116 .\admin.py:274 .\admin.py:433
 msgid "Cookie-имена"
-msgstr ""
+msgstr "Cookie names"
 
-#: .\admin.py:117 .\admin.py:257 .\admin.py:401
+#: .\admin.py:117 .\admin.py:275 .\admin.py:434
 msgid "URL скрипта"
-msgstr ""
+msgstr "Script URL"
 
-#: .\admin.py:118 .\admin.py:258 .\admin.py:402
+#: .\admin.py:118 .\admin.py:276 .\admin.py:435
 msgid "Стратегия очистки"
-msgstr ""
+msgstr "Cleanup strategy"
 
-#: .\admin.py:119 .\admin.py:288 .\admin.py:317 .\admin.py:403 .\admin.py:876
-#: .\admin.py:919
+#: .\admin.py:119 .\admin.py:306 .\admin.py:335 .\admin.py:436 .\admin.py:1010
+#: .\admin.py:1053
 msgid "Активен"
-msgstr ""
+msgstr "Active"
 
-#: .\admin.py:127 .\admin.py:296 .\admin.py:451 .\admin.py:898
+#: .\admin.py:127 .\admin.py:314 .\admin.py:492 .\admin.py:1032
 msgid "Текст кнопки «Настройки cookie»"
-msgstr ""
+msgstr "«Cookie settings» button text"
 
-#: .\admin.py:128 .\admin.py:297 .\admin.py:452 .\admin.py:899
+#: .\admin.py:128 .\admin.py:315 .\admin.py:493 .\admin.py:1033
 msgid "Подзаголовок"
-msgstr ""
+msgstr "Subtitle"
 
-#: .\admin.py:129 .\admin.py:298 .\admin.py:453 .\admin.py:900
+#: .\admin.py:129 .\admin.py:316 .\admin.py:494 .\admin.py:1034
 msgid "Заголовок"
-msgstr ""
+msgstr "Title"
 
-#: .\admin.py:131 .\admin.py:300 .\admin.py:455 .\admin.py:902
+#: .\admin.py:131 .\admin.py:318 .\admin.py:496 .\admin.py:1036
 msgid "Текст уведомления о повторном согласии"
-msgstr ""
+msgstr "Re-consent notice text"
 
-#: .\admin.py:132 .\admin.py:301 .\admin.py:456 .\admin.py:903
+#: .\admin.py:132 .\admin.py:319 .\admin.py:497 .\admin.py:1037
 msgid "Текст повторного запроса"
-msgstr ""
+msgstr "Re-ask notice text"
 
-#: .\admin.py:133 .\admin.py:302 .\admin.py:457 .\admin.py:904
+#: .\admin.py:133 .\admin.py:320 .\admin.py:498 .\admin.py:1038
 msgid "Кнопка: принять все"
-msgstr ""
+msgstr "Button: accept all"
 
-#: .\admin.py:134 .\admin.py:303 .\admin.py:458 .\admin.py:905
+#: .\admin.py:134 .\admin.py:321 .\admin.py:499 .\admin.py:1039
 msgid "Кнопка: отказаться от необязательных cookie"
-msgstr ""
+msgstr "Button: reject optional cookies"
 
-#: .\admin.py:135 .\admin.py:304 .\admin.py:459 .\admin.py:906
+#: .\admin.py:135 .\admin.py:322 .\admin.py:500 .\admin.py:1040
 msgid "Кнопка: только необходимые"
-msgstr ""
+msgstr "Button: required only"
 
-#: .\admin.py:136 .\admin.py:305 .\admin.py:460 .\admin.py:907
+#: .\admin.py:136 .\admin.py:323 .\admin.py:501 .\admin.py:1041
 msgid "Кнопка: выбрать категории"
-msgstr ""
+msgstr "Button: choose categories"
 
-#: .\admin.py:137 .\admin.py:306 .\admin.py:461 .\admin.py:908
+#: .\admin.py:137 .\admin.py:324 .\admin.py:502 .\admin.py:1042
 msgid "Заголовок блока выбора категорий"
-msgstr ""
+msgstr "Category selection block title"
 
-#: .\admin.py:138 .\admin.py:307 .\admin.py:462 .\admin.py:909
+#: .\admin.py:138 .\admin.py:325 .\admin.py:503 .\admin.py:1043
 msgid "Заголовок обязательных категорий"
-msgstr ""
+msgstr "Required categories title"
 
-#: .\admin.py:139 .\admin.py:308 .\admin.py:463 .\admin.py:910
+#: .\admin.py:139 .\admin.py:326 .\admin.py:504 .\admin.py:1044
 msgid "Пустой текст обязательных"
-msgstr ""
+msgstr "Empty text for required"
 
-#: .\admin.py:140 .\admin.py:309 .\admin.py:464 .\admin.py:911
+#: .\admin.py:140 .\admin.py:327 .\admin.py:505 .\admin.py:1045
 msgid "Заголовок необязательных категорий"
-msgstr ""
+msgstr "Optional categories title"
 
-#: .\admin.py:141 .\admin.py:310 .\admin.py:465 .\admin.py:912
+#: .\admin.py:141 .\admin.py:328 .\admin.py:506 .\admin.py:1046
 msgid "Пустой текст необязательных"
-msgstr ""
+msgstr "Empty text for optional"
 
-#: .\admin.py:142 .\admin.py:311 .\admin.py:466 .\admin.py:913
+#: .\admin.py:142 .\admin.py:329 .\admin.py:507 .\admin.py:1047
 msgid "Кнопка: сохранить выбор"
-msgstr ""
+msgstr "Button: save choice"
 
-#: .\admin.py:143 .\admin.py:312 .\admin.py:467 .\admin.py:914
+#: .\admin.py:143 .\admin.py:330 .\admin.py:508 .\admin.py:1048
 msgid "Ссылка: полная страница"
-msgstr ""
+msgstr "Link: full page"
 
-#: .\admin.py:144 .\admin.py:313 .\admin.py:468 .\admin.py:915
+#: .\admin.py:144 .\admin.py:331 .\admin.py:509 .\admin.py:1049
 msgid "Скрытый текст кнопки закрытия"
-msgstr ""
+msgstr "Hidden close button text"
 
-#: .\admin.py:145 .\admin.py:469
+#: .\admin.py:145 .\admin.py:510 .\models.py:935
 msgid "Подсказка кнопки закрытия"
-msgstr ""
+msgstr "Close button tooltip"
 
-#: .\admin.py:146 .\admin.py:470
+#: .\admin.py:146 .\admin.py:511 .\models.py:940
 msgid "ARIA-метка кнопки закрытия"
-msgstr ""
+msgstr "Close button ARIA label"
 
-#: .\admin.py:147 .\admin.py:314 .\admin.py:471
+#: .\admin.py:147 .\admin.py:332 .\admin.py:512
 msgid "Текст для режима без JavaScript"
-msgstr ""
+msgstr "Text for no-JavaScript mode"
 
-#: .\admin.py:148 .\admin.py:315 .\admin.py:472
+#: .\admin.py:148 .\admin.py:333 .\admin.py:513
 msgid "Ссылка для режима без JavaScript"
-msgstr ""
+msgstr "Link for no-JavaScript mode"
 
-#: .\admin.py:149 .\admin.py:473
+#: .\admin.py:149 .\admin.py:514
 msgid "Вариант баннера"
-msgstr ""
+msgstr "Banner variant"
 
-#: .\admin.py:150 .\admin.py:474
+#: .\admin.py:150 .\admin.py:515
 msgid "Вариант интерфейса согласия"
-msgstr ""
+msgstr "Consent UI variant"
 
-#: .\admin.py:151 .\admin.py:475
+#: .\admin.py:151 .\admin.py:516
 msgid "Вариант уведомления о повторном согласии"
-msgstr ""
+msgstr "Re-consent notice variant"
 
-#: .\admin.py:152 .\admin.py:476
-msgid "Текстовый пресет"
-msgstr ""
+#: .\admin.py:152 .\admin.py:517
+msgid "Текстовая заготовка"
+msgstr "Text preset"
 
-#: .\admin.py:153 .\admin.py:477
-msgid "Мобильный текстовый пресет (переопределение)"
-msgstr ""
+#: .\admin.py:154 .\admin.py:519
+msgid "Мобильная текстовая заготовка (переопределение)"
+msgstr "Mobile text preset (override)"
 
-#: .\admin.py:154 .\admin.py:478
+#: .\admin.py:156 .\admin.py:521
 msgid "Устаревший режим компоновки"
-msgstr ""
+msgstr "Legacy layout mode"
 
-#: .\admin.py:155 .\admin.py:479
+#: .\admin.py:157 .\admin.py:522
 msgid "Устаревший режим темы"
-msgstr ""
+msgstr "Legacy theme mode"
 
-#: .\admin.py:156 .\admin.py:480
+#: .\admin.py:158 .\admin.py:523
 msgid "Позиция на компьютерах"
-msgstr ""
+msgstr "Desktop position"
 
-#: .\admin.py:157
+#: .\admin.py:159
 msgid "Позиция на мобильных устройствах"
-msgstr ""
+msgstr "Mobile position"
 
-#: .\admin.py:158 .\admin.py:499
+#: .\admin.py:161 .\admin.py:543
 msgid "Мобильная версия: вариант баннера (переопределение)"
-msgstr ""
+msgstr "Mobile: banner variant (override)"
 
-#: .\admin.py:159 .\admin.py:500
+#: .\admin.py:164 .\admin.py:546
 msgid "Мобильная версия: вариант интерфейса (переопределение)"
-msgstr ""
+msgstr "Mobile: UI variant (override)"
 
-#: .\admin.py:161 .\admin.py:502
+#: .\admin.py:168 .\admin.py:549
 msgid ""
 "Мобильная версия: вариант уведомления о повторном согласии (переопределение)"
-msgstr ""
+msgstr "Mobile: re-consent notice variant (override)"
 
-#: .\admin.py:163 .\admin.py:504
+#: .\admin.py:171 .\admin.py:551 .\models.py:1071
 msgid "Показывать кнопку закрытия"
-msgstr ""
+msgstr "Show close button"
 
-#: .\admin.py:164 .\admin.py:505
+#: .\admin.py:172 .\admin.py:552
 msgid "Положение кнопки закрытия"
-msgstr ""
+msgstr "Close button position"
 
-#: .\admin.py:166 .\admin.py:507
+msgid "Выберите положение кнопки закрытия из справочника."
+msgstr "Select the close button position from the available choices."
+#: .\admin.py:174 .\admin.py:554
 msgid "Мобильная версия: положение кнопки закрытия (переопределение)"
-msgstr ""
+msgstr "Mobile: close button position (override)"
 
-#: .\admin.py:168 .\admin.py:509
+#: .\admin.py:176 .\admin.py:556
 msgid "Показывать кнопку отклонения"
-msgstr ""
+msgstr "Show reject button"
 
-#: .\admin.py:170 .\admin.py:511
+#: .\admin.py:178 .\admin.py:558
 msgid "Мобильная версия: показывать кнопку закрытия (переопределение)"
-msgstr ""
+msgstr "Mobile: show close button (override)"
 
-#: .\admin.py:173 .\admin.py:514
+#: .\admin.py:181 .\admin.py:561
 msgid "Мобильная версия: показывать кнопку отклонения (переопределение)"
-msgstr ""
+msgstr "Mobile: show reject button (override)"
 
-#: .\admin.py:175 .\admin.py:516
+#: .\admin.py:183 .\admin.py:563 .\models.py:1108
 msgid "Блокирующий режим до выбора"
-msgstr ""
+msgstr "Blocking mode until choice"
 
-#: .\admin.py:177 .\admin.py:518
+#: .\admin.py:185 .\admin.py:565
 msgid "Мобильная версия: блокирующий режим до выбора (переопределение)"
-msgstr ""
+msgstr "Mobile: blocking mode until choice (override)"
 
-#: .\admin.py:180 .\admin.py:521
+#: .\admin.py:188 .\admin.py:568
 msgid "Скрывать 'Настройки cookie' после выбора пользователя"
-msgstr ""
+msgstr "Hide 'Cookie settings' after the user's choice"
 
-#: .\admin.py:183 .\admin.py:524
+#: .\admin.py:192 .\admin.py:571
 msgid ""
 "Мобильная версия: скрывать 'Настройки cookie' после выбора (переопределение)"
-msgstr ""
+msgstr "Mobile: hide 'Cookie settings' after choice (override)"
 
-#: .\admin.py:186 .\admin.py:527
+#: .\admin.py:196 .\admin.py:574
 msgid "Не закрывать баннер после 'принять все'"
-msgstr ""
+msgstr "Keep banner open after 'accept all'"
 
-#: .\admin.py:189 .\admin.py:530
+#: .\admin.py:199 .\admin.py:577
 msgid "Не закрывать баннер после 'только необходимые'"
-msgstr ""
+msgstr "Keep banner open after 'required only'"
 
-#: .\admin.py:192 .\admin.py:533
+#: .\admin.py:202 .\admin.py:580
 msgid "Не закрывать баннер после 'сохранить выбор'"
-msgstr ""
+msgstr "Keep banner open after 'save choice'"
 
-#: .\admin.py:195 .\admin.py:536
+#: .\admin.py:206 .\admin.py:583
 msgid "Мобильная версия: не закрывать после 'принять все' (переопределение)"
-msgstr ""
+msgstr "Mobile: keep open after 'accept all' (override)"
 
-#: .\admin.py:198 .\admin.py:539
+#: .\admin.py:211 .\admin.py:586
 msgid ""
 "Мобильная версия: не закрывать после 'только необходимые' (переопределение)"
-msgstr ""
+msgstr "Mobile: keep open after 'required only' (override)"
 
-#: .\admin.py:201 .\admin.py:542
+#: .\admin.py:216 .\admin.py:589
 msgid ""
 "Мобильная версия: не закрывать после 'сохранить выбор' (переопределение)"
-msgstr ""
+msgstr "Mobile: keep open after 'save choice' (override)"
 
-#: .\admin.py:203 .\admin.py:545
+#: .\admin.py:220 .\admin.py:592
 msgid "Скрывать баннер для поисковых/технических ботов"
-msgstr ""
+msgstr "Hide banner for search/technical bots"
 
-#: .\admin.py:207 .\admin.py:550
+#: .\admin.py:225 .\admin.py:597
 msgid "Создана"
-msgstr ""
+msgstr "Created"
 
-#: .\admin.py:208 .\admin.py:551
+#: .\admin.py:226 .\admin.py:598
 msgid "Обновлена"
-msgstr ""
+msgstr "Updated"
 
-#: .\admin.py:214 .\admin.py:273
+#: .\admin.py:232 .\admin.py:291
 msgid "Пользователь"
-msgstr ""
+msgstr "User"
 
-#: .\admin.py:215 .\admin.py:274
+#: .\admin.py:233 .\admin.py:292
 msgid "Анонимный токен"
-msgstr ""
+msgstr "Anonymous token"
 
-#: .\admin.py:216 .\admin.py:249
+#: .\admin.py:234 .\admin.py:267
 msgid "Редакция политики"
-msgstr ""
+msgstr "Policy revision"
 
-#: .\admin.py:217
+#: .\admin.py:235
 msgid "Статус"
-msgstr ""
+msgstr "Status"
 
-#: .\admin.py:218 .\admin.py:235
+#: .\admin.py:236 .\admin.py:253
 msgid "Источник"
-msgstr ""
+msgstr "Source"
 
-#: .\admin.py:219
+#: .\admin.py:237
 msgid "Выбранные категории"
-msgstr ""
+msgstr "Selected categories"
 
-#: .\admin.py:220 .\admin.py:236
+#: .\admin.py:238 .\admin.py:254
 msgid "IP-адрес"
-msgstr ""
+msgstr "IP address"
 
-#: .\admin.py:221 .\admin.py:237
+#: .\admin.py:239 .\admin.py:255
 msgid "User-Agent"
-msgstr ""
+msgstr "User-Agent"
 
-#: .\admin.py:222 .\admin.py:238
+#: .\admin.py:240 .\admin.py:256
 msgid "Локаль"
-msgstr ""
+msgstr "Locale"
 
-#: .\admin.py:223 .\admin.py:239
+#: .\admin.py:241 .\admin.py:257
 msgid "Request ID"
-msgstr ""
+msgstr "Request ID"
 
-#: .\admin.py:224 .\admin.py:240
+#: .\admin.py:242 .\admin.py:258
 msgid "Хеш ключа сессии"
-msgstr ""
+msgstr "Session key hash"
 
-#: .\admin.py:225 .\admin.py:242
+#: .\admin.py:243 .\admin.py:260
 msgid "Дополнительные метаданные"
-msgstr ""
+msgstr "Additional metadata"
 
-#: .\admin.py:233
+#: .\admin.py:251 .\models.py:1418
 msgid "Запись cookie-согласия"
-msgstr ""
+msgstr "Cookie consent record"
 
-#: .\admin.py:234
+#: .\admin.py:252
 msgid "Тип события"
-msgstr ""
+msgstr "Event type"
 
-#: .\admin.py:241
+#: .\admin.py:259
 msgid "Данные события"
-msgstr ""
+msgstr "Event data"
 
-#: .\admin.py:243
+#: .\admin.py:261
 msgid "Время события"
-msgstr ""
+msgstr "Event time"
 
-#: .\admin.py:250
+#: .\admin.py:268
 msgid "Элемент реестра"
-msgstr ""
+msgstr "Registry item"
 
-#: .\admin.py:252 .\admin.py:341
+#: .\admin.py:270 .\admin.py:359
 msgid "Код категории"
-msgstr ""
+msgstr "Category code"
 
-#: .\admin.py:265 .\admin.py:1021
+#: .\admin.py:283 .\admin.py:1155 .\models.py:1611
 msgid "Разделитель CSV-экспорта"
-msgstr ""
+msgstr "CSV export separator"
 
-#: .\admin.py:275
+#: .\admin.py:293 .\models.py:1543
 msgid "Действие выбора"
-msgstr ""
+msgstr "Choice action"
 
-#: .\admin.py:276
+#: .\admin.py:294
 msgid "Скрыт в"
-msgstr ""
+msgstr "Hidden at"
 
-#: .\admin.py:277
+#: .\admin.py:295
 msgid "Решение принято в"
-msgstr ""
+msgstr "Decision made at"
 
-#: .\admin.py:284 .\admin.py:294 .\admin.py:872 .\admin.py:896
-msgid "Код пресета"
-msgstr ""
+#: .\admin.py:302 .\admin.py:312 .\admin.py:1006 .\admin.py:1030
+msgid "Код заготовки"
+msgstr "Preset code"
 
-#: .\admin.py:285 .\admin.py:295 .\admin.py:873 .\admin.py:897
-msgid "Название пресета"
-msgstr ""
+#: .\admin.py:303 .\admin.py:313 .\admin.py:1007 .\admin.py:1031
+msgid "Название заготовки"
+msgstr "Preset name"
 
-#: .\admin.py:286 .\admin.py:874
-msgid "Текст пресета"
-msgstr ""
+#: .\admin.py:304 .\admin.py:1008
+msgid "Текст заготовки"
+msgstr "Preset text"
 
-#: .\admin.py:287 .\admin.py:316 .\admin.py:875 .\admin.py:918
-msgid "Коробочный пресет"
-msgstr ""
+#: .\admin.py:305 .\admin.py:334 .\admin.py:1009 .\admin.py:1052
+msgid "Коробочная заготовка"
+msgstr "Built-in preset"
 
-#: .\admin.py:327
+#: .\admin.py:345
 msgid "Короткий коробочный текст"
-msgstr ""
-
-#: .\admin.py:331
-msgid "Полный коробочный текст"
-msgstr ""
+msgstr "Short built-in text"
 
 #: .\admin.py:349
-msgid "Стабильный код категории cookie в consent/runtime контрактах."
-msgstr ""
+msgid "Полный коробочный текст"
+msgstr "Full built-in text"
 
-#: .\admin.py:350
+#: .\admin.py:368
+msgid ""
+"Стабильный код категории cookie в контрактах согласия и среды выполнения."
+msgstr "Stable cookie category code used in consent and runtime contracts."
+
+#: .\admin.py:371
 msgid "Название категории, отображаемое пользователю."
-msgstr ""
+msgstr "Category name shown to the user."
 
-#: .\admin.py:351
+#: .\admin.py:372
 msgid "Пояснение назначения категории cookie."
-msgstr ""
+msgstr "Explanation of the cookie category purpose."
 
-#: .\admin.py:352
+#: .\admin.py:374
 msgid "Обязательная категория всегда включается независимо от выбора."
-msgstr ""
-
-#: .\admin.py:353
-msgid "Порядок отображения категории в баннере и на странице настроек."
-msgstr ""
-
-#: .\admin.py:354
-msgid "Отключите категорию, чтобы исключить её из текущего выбора."
-msgstr ""
-
-#: .\admin.py:376
-msgid "Версия policy revision в versioned-flow."
-msgstr ""
+msgstr "A required category is always enabled regardless of the choice."
 
 #: .\admin.py:377
-msgid "Формат контента политики: текст или файл."
-msgstr ""
-
-#: .\admin.py:378
-msgid "Текст policy revision для text-формата."
-msgstr ""
-
-#: .\admin.py:379
-msgid "Файл policy revision для file/pdf сценариев."
-msgstr ""
+msgid "Порядок отображения категории в баннере и на странице настроек."
+msgstr "Display order of the category in the banner and on the settings page."
 
 #: .\admin.py:380
-msgid "JSON-снимок активных категорий на момент публикации."
-msgstr ""
+msgid "Отключите категорию, чтобы исключить её из текущего выбора."
+msgstr "Disable the category to exclude it from the current selection."
 
-#: .\admin.py:381 .\admin.py:555
-msgid "Исходная ревизия, если запись создана через clone/copy flow."
-msgstr ""
+#: .\admin.py:403
+msgid "Версия редакции политики в версионируемом потоке."
+msgstr "Policy revision version in the versioned flow."
 
-#: .\admin.py:382
-msgid "Активная редакция применяется в текущем cookie flow."
-msgstr ""
+#: .\admin.py:404
+msgid "Формат содержимого политики: текст или файл."
+msgstr "Policy content format: text or file."
 
-#: .\admin.py:383
-msgid "Флаг коробочного шаблона, поставляемого пакетом."
-msgstr ""
-
-#: .\admin.py:384
-msgid "Дата и время публикации редакции."
-msgstr ""
-
-#: .\admin.py:385 .\admin.py:637
-msgid "Техническое время создания записи."
-msgstr ""
-
-#: .\admin.py:386 .\admin.py:638
-msgid "Техническое время последнего обновления."
-msgstr ""
+#: .\admin.py:405
+msgid "Текст редакции политики для текстового формата."
+msgstr "Policy revision text for the text format."
 
 #: .\admin.py:406
-msgid "Уникальный код элемента runtime-реестра cookie/script."
-msgstr ""
-
-#: .\admin.py:407
-msgid "Категория cookie, к которой относится элемент."
-msgstr ""
+msgid "Файл редакции политики для сценариев с файлом/PDF."
+msgstr "Policy revision file for file/PDF scenarios."
 
 #: .\admin.py:408
-msgid "Провайдер/вендор cookie или скрипта."
-msgstr ""
+msgid "JSON-снимок активных категорий на момент публикации."
+msgstr "JSON snapshot of the active categories at publication time."
 
-#: .\admin.py:409
-msgid "Назначение cookie/script элемента для disclosure и аудита."
+#: .\admin.py:411 .\admin.py:603
+msgid ""
+"Исходная ревизия, если запись создана через процесс клонирования/копирования."
 msgstr ""
-
-#: .\admin.py:410
-msgid "Срок хранения cookie/script данных."
-msgstr ""
-
-#: .\admin.py:411
-msgid "JSON-список имён cookie, связанных с элементом."
-msgstr ""
-
-#: .\admin.py:412
-msgid "URL скрипта для consent-gated runtime загрузки."
-msgstr ""
-
-#: .\admin.py:413
-msgid "Стратегия очистки при отзыве/изменении согласия."
-msgstr ""
+"Source revision if the record was created through the clone/copy process."
 
 #: .\admin.py:414
-msgid "Включает или отключает элемент в runtime."
-msgstr ""
+msgid "Активная редакция применяется в текущем процессе работы с cookie."
+msgstr "The active revision is applied in the current cookie flow."
 
-#: .\admin.py:481
+#: .\admin.py:416
+msgid "Флаг коробочного шаблона, поставляемого пакетом."
+msgstr "Flag for the built-in template shipped with the package."
+
+#: .\admin.py:417
+msgid "Дата и время публикации редакции."
+msgstr "Date and time the revision was published."
+
+#: .\admin.py:418 .\admin.py:769
+msgid "Техническое время создания записи."
+msgstr "Technical record creation time."
+
+#: .\admin.py:419 .\admin.py:770
+msgid "Техническое время последнего обновления."
+msgstr "Technical time of the last update."
+
+#: .\admin.py:440
+msgid "Уникальный код элемента реестра cookie и скриптов времени выполнения."
+msgstr "Unique code of the cookie and runtime script registry item."
+
+#: .\admin.py:442
+msgid "Категория cookie, к которой относится элемент."
+msgstr "Cookie category the item belongs to."
+
+#: .\admin.py:443
+msgid "Поставщик cookie или скрипта."
+msgstr "Provider of the cookie or script."
+
+#: .\admin.py:445
+msgid "Назначение элемента cookie/скрипта для информирования и аудита."
+msgstr "Purpose of the cookie/script item for disclosure and audit."
+
+#: .\admin.py:447
+msgid "Срок хранения данных cookie/скрипта."
+msgstr "Retention period of the cookie/script data."
+
+#: .\admin.py:448
+msgid "JSON-список имён cookie, связанных с элементом."
+msgstr "JSON list of cookie names associated with the item."
+
+#: .\admin.py:450
+msgid "URL скрипта для загрузки во время выполнения с учётом согласия."
+msgstr "Script URL for consent-aware runtime loading."
+
+#: .\admin.py:452
+msgid "Стратегия очистки при отзыве/изменении согласия."
+msgstr "Cleanup strategy on consent withdrawal/change."
+
+#: .\admin.py:453
+msgid "Включает или отключает элемент во время выполнения."
+msgstr "Enables or disables the item at runtime."
+
+#: .\admin.py:524
 msgid "Позиция на мобильных"
-msgstr ""
+msgstr "Mobile position"
 
-#: .\admin.py:482
-msgid "Цветовой пресет"
-msgstr ""
+#: .\admin.py:525 .\models.py:1020
+msgid "Цветовая заготовка"
+msgstr "Color preset"
 
-#: .\admin.py:483
-msgid "Кастомный фон"
-msgstr ""
+#: .\admin.py:526
+msgid "Пользовательский фон"
+msgstr "Custom background"
 
-#: .\admin.py:484
-msgid "Кастомный текст"
-msgstr ""
+#: .\admin.py:527
+msgid "Пользовательский текст"
+msgstr "Custom text"
 
-#: .\admin.py:485
-msgid "Кастомный акцентный цвет"
-msgstr ""
+#: .\admin.py:528
+msgid "Пользовательский акцентный цвет"
+msgstr "Custom accent color"
 
-#: .\admin.py:486
-msgid "Кастомный текст акцентной кнопки"
-msgstr ""
+#: .\admin.py:529
+msgid "Пользовательский текст акцентной кнопки"
+msgstr "Custom accent button text"
 
-#: .\admin.py:487
-msgid "Кастомная граница"
-msgstr ""
+#: .\admin.py:530
+msgid "Пользовательская граница"
+msgstr "Custom border"
 
-#: .\admin.py:488
-msgid "Кастомная подложка"
-msgstr ""
+#: .\admin.py:531
+msgid "Пользовательская подложка"
+msgstr "Custom surface"
 
-#: .\admin.py:489
-msgid "Кастомный overlay"
-msgstr ""
+#: .\admin.py:532
+msgid "Пользовательское затемнение фона"
+msgstr "Custom background overlay"
 
-#: .\admin.py:490
-msgid "Внутренний отступ panel (px)"
-msgstr ""
+#: .\admin.py:533
+msgid "Внутренний отступ панели (px)"
+msgstr "Panel inner padding (px)"
 
-#: .\admin.py:491
+#: .\admin.py:534
 msgid "Отступ между секциями (px)"
-msgstr ""
+msgstr "Spacing between sections (px)"
 
-#: .\admin.py:492
+#: .\admin.py:535
 msgid "Отступ между кнопками (px)"
-msgstr ""
+msgstr "Spacing between buttons (px)"
 
-#: .\admin.py:493
-msgid "Прозрачность overlay (%)"
-msgstr ""
+#: .\admin.py:536
+msgid "Прозрачность затемнения (%)"
+msgstr "Overlay opacity (%)"
 
-#: .\admin.py:494
+#: .\admin.py:537 .\models.py:1043
 msgid "Показывать медиаблок"
-msgstr ""
+msgstr "Show media block"
 
-#: .\admin.py:495
+#: .\admin.py:538 .\models.py:1049
 msgid "Тип медиаблока"
-msgstr ""
+msgstr "Media block type"
 
-#: .\admin.py:496
+#: .\admin.py:539 .\models.py:1055
 msgid "Эмодзи для медиаблока"
-msgstr ""
+msgstr "Emoji for the media block"
 
-#: .\admin.py:497
+#: .\admin.py:540
 msgid "Адрес изображения для медиаблока"
-msgstr ""
+msgstr "Image address for the media block"
 
-#: .\admin.py:498
-msgid "Alt-текст изображения для accessibility"
-msgstr ""
+#: .\admin.py:541
+msgid "Альтернативный текст изображения для доступности"
+msgstr "Image alt text for accessibility"
 
-#: .\admin.py:554
-msgid "Версия banner revision в versioned-flow."
-msgstr ""
+#: .\admin.py:601
+msgid "Версия редакции баннера в версионируемом потоке."
+msgstr "Banner revision version in the versioned flow."
 
-#: .\admin.py:556 .\admin.py:924
+#: .\admin.py:605 .\admin.py:1060
 msgid "Текст кнопки/ссылки открытия настроек cookie."
-msgstr ""
+msgstr "Text of the button/link that opens cookie settings."
 
-#: .\admin.py:557 .\admin.py:926
+#: .\admin.py:606 .\admin.py:1061
 msgid "Короткий подзаголовок над основным заголовком баннера."
-msgstr ""
+msgstr "Short subtitle above the main banner title."
 
-#: .\admin.py:558 .\admin.py:928
+#: .\admin.py:607 .\admin.py:1062
 msgid "Главный заголовок баннера cookie."
-msgstr ""
+msgstr "Main title of the cookie banner."
 
-#: .\admin.py:559 .\admin.py:930
+#: .\admin.py:609 .\admin.py:1064
 msgid "Основное описание назначения cookie и выбора категорий."
-msgstr ""
+msgstr "Main description of the cookie purpose and category selection."
 
-#: .\admin.py:560
+#: .\admin.py:612
 msgid "Текст уведомления при необходимости re-consent."
-msgstr ""
+msgstr "Notice text when re-consent is required."
 
-#: .\admin.py:562 .\admin.py:936
+#: .\admin.py:615 .\admin.py:1070
 msgid "Текст повторного запроса после интервала повторного показа."
-msgstr ""
+msgstr "Re-ask text shown after the re-display interval."
 
-#: .\admin.py:564 .\admin.py:938
+#: .\admin.py:617 .\admin.py:1072
 msgid "Текст кнопки быстрого действия «принять все»."
-msgstr ""
+msgstr "Text of the «accept all» quick action button."
 
-#: .\admin.py:565
+#: .\admin.py:619
 msgid "Текст кнопки быстрого действия «отказаться от необязательных cookie». "
-msgstr ""
+msgstr "Text of the «reject optional cookies» quick action button. "
 
-#: .\admin.py:566 .\admin.py:942
+#: .\admin.py:621 .\admin.py:1076
 msgid "Текст кнопки «только необходимые»."
-msgstr ""
+msgstr "Text of the «required only» button."
 
-#: .\admin.py:568 .\admin.py:944
+#: .\admin.py:623 .\admin.py:1078
 msgid "Текст кнопки открытия выбора пользовательских категорий."
-msgstr ""
+msgstr "Text of the button that opens custom category selection."
 
-#: .\admin.py:570 .\admin.py:947
+#: .\admin.py:626 .\admin.py:1081
 msgid "Заголовок/summary блока детальной настройки категорий."
-msgstr ""
+msgstr "Title/summary of the detailed category settings block."
 
-#: .\admin.py:571 .\admin.py:949
+#: .\admin.py:628 .\admin.py:1083
 msgid "Заголовок секции обязательных категорий."
-msgstr ""
+msgstr "Title of the required categories section."
 
-#: .\admin.py:572 .\admin.py:951
+#: .\admin.py:630 .\admin.py:1085
 msgid "Текст, если обязательные категории не отображаются."
-msgstr ""
+msgstr "Text shown when required categories are not displayed."
 
-#: .\admin.py:573 .\admin.py:953
+#: .\admin.py:632 .\admin.py:1087
 msgid "Заголовок секции необязательных категорий."
-msgstr ""
+msgstr "Title of the optional categories section."
 
-#: .\admin.py:574 .\admin.py:955
+#: .\admin.py:634 .\admin.py:1089
 msgid "Текст, если необязательные категории отсутствуют."
-msgstr ""
+msgstr "Text shown when there are no optional categories."
 
-#: .\admin.py:575 .\admin.py:958
+#: .\admin.py:637 .\admin.py:1092
 msgid "Текст кнопки сохранения пользовательского выбора категорий."
-msgstr ""
+msgstr "Text of the button that saves the custom category selection."
 
-#: .\admin.py:576 .\admin.py:961
+#: .\admin.py:640 .\admin.py:1095
 msgid "Текст ссылки на полную страницу настроек cookie."
-msgstr ""
+msgstr "Text of the link to the full cookie settings page."
 
-#: .\admin.py:577 .\admin.py:964
+#: .\admin.py:643 .\admin.py:1098
 msgid "Скрытый (a11y) текст для кнопки закрытия/сворачивания."
-msgstr ""
+msgstr "Hidden (a11y) text for the close/collapse button."
 
-#: .\admin.py:578
+#: .\admin.py:646
 msgid "Всплывающая подсказка кнопки закрытия блока запуска."
-msgstr ""
+msgstr "Tooltip of the launcher block close button."
 
-#: .\admin.py:579
+#: .\admin.py:648
 msgid "ARIA-метка кнопки закрытия блока запуска."
-msgstr ""
+msgstr "ARIA label of the launcher block close button."
 
-#: .\admin.py:580 .\admin.py:966
+#: .\admin.py:649 .\admin.py:1100
 msgid "Текст блока для режима без JavaScript."
-msgstr ""
+msgstr "Block text for the no-JavaScript mode."
 
-#: .\admin.py:581
+#: .\admin.py:650
 msgid "Текст ссылки в блоке без JavaScript."
-msgstr ""
+msgstr "Link text in the no-JavaScript block."
 
-#: .\admin.py:582
+#: .\admin.py:652
 msgid "Визуальный вариант баннера: полоска, карточка или модальное окно."
-msgstr ""
+msgstr "Visual banner variant: bar, card, or modal."
 
-#: .\admin.py:583
+#: .\admin.py:655
 msgid "Вариант интерфейса выбора категорий: встроенный или панель."
-msgstr ""
+msgstr "Category selection UI variant: inline or panel."
 
-#: .\admin.py:584
+#: .\admin.py:658
 msgid ""
 "Вариант отображения уведомления о повторном согласии: встроенный или "
 "предупреждение."
-msgstr ""
+msgstr "Display variant of the re-consent notice: inline or alert."
 
-#: .\admin.py:586
-msgid "Выбор текстового пресета для основной версии баннера на компьютерах."
-msgstr ""
+#: .\admin.py:661
+msgid "Выбор текстовой заготовки для основной версии баннера на компьютерах."
+msgstr "Text preset choice for the main desktop banner version."
 
-#: .\admin.py:589
+#: .\admin.py:664
 msgid ""
-"Необязательное переопределение пресета для мобильной версии; пусто — "
-"наследование основного пресета."
+"Необязательное переопределение заготовки для мобильной версии; пусто — "
+"наследование основной заготовки."
 msgstr ""
+"Optional preset override for the mobile version; empty inherits the main "
+"preset."
 
-#: .\admin.py:591
+#: .\admin.py:667
 msgid "Устаревшее поле режима компоновки для обратной совместимости."
-msgstr ""
+msgstr "Legacy layout mode field kept for backward compatibility."
 
-#: .\admin.py:592
+#: .\admin.py:669
 msgid "Устаревшее поле темы для обратной совместимости."
-msgstr ""
+msgstr "Legacy theme field kept for backward compatibility."
 
-#: .\admin.py:593
+#: .\admin.py:670
 msgid "Позиция баннера на компьютерах."
-msgstr ""
+msgstr "Banner position on desktops."
 
-#: .\admin.py:594
+#: .\admin.py:671
 msgid "Позиция баннера на мобильных устройствах."
-msgstr ""
+msgstr "Banner position on mobile devices."
 
-#: .\admin.py:595
-msgid "Коробочный цветовой пресет баннера."
-msgstr ""
+#: .\admin.py:672
+msgid "Коробочная цветовая заготовка баннера."
+msgstr "Built-in banner color preset."
 
-#: .\admin.py:596
+#: .\admin.py:673
 msgid "Опциональный HEX #RRGGBB для фона баннера."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for the banner background."
 
-#: .\admin.py:597
+#: .\admin.py:674
 msgid "Опциональный HEX #RRGGBB для текста баннера."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for the banner text."
 
-#: .\admin.py:598
+#: .\admin.py:675
 msgid "Опциональный HEX #RRGGBB для основной кнопки."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for the primary button."
 
-#: .\admin.py:599
+#: .\admin.py:677
 msgid "Опциональный HEX #RRGGBB для текста основной кнопки."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for the primary button text."
 
-#: .\admin.py:600
+#: .\admin.py:679
 msgid "Опциональный HEX #RRGGBB для границ."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for borders."
 
-#: .\admin.py:601
+#: .\admin.py:681
 msgid "Опциональный HEX #RRGGBB для вторичной подложки."
-msgstr ""
+msgstr "Optional HEX #RRGGBB for the secondary surface."
 
-#: .\admin.py:602
-msgid "Опциональный HEX #RRGGBB для фона backdrop/overlay."
-msgstr ""
+#: .\admin.py:683
+msgid "Опциональный HEX #RRGGBB для фона-затемнения."
+msgstr "Optional HEX #RRGGBB for the overlay background."
 
-#: .\admin.py:603
+#: .\admin.py:685
 msgid "Внутренние отступы панели. Безопасный диапазон: 8..48."
-msgstr ""
+msgstr "Panel inner padding. Safe range: 8..48."
 
-#: .\admin.py:604
+#: .\admin.py:688
 msgid "Отступ между секциями формы. Безопасный диапазон: 4..32."
-msgstr ""
+msgstr "Spacing between form sections. Safe range: 4..32."
 
-#: .\admin.py:605
+#: .\admin.py:690
 msgid "Отступ между кнопками. Безопасный диапазон: 4..24."
-msgstr ""
+msgstr "Spacing between buttons. Safe range: 4..24."
 
-#: .\admin.py:606
-msgid "Прозрачность overlay в процентах. Безопасный диапазон: 0..85."
-msgstr ""
+#: .\admin.py:692
+msgid "Прозрачность затемнения в процентах. Безопасный диапазон: 0..85."
+msgstr "Overlay opacity in percent. Safe range: 0..85."
 
-#: .\admin.py:607
+#: .\admin.py:695
 msgid "Включает необязательный медиаблок в заголовке баннера."
-msgstr ""
+msgstr "Enables the optional media block in the banner header."
 
-#: .\admin.py:608
+#: .\admin.py:698
 msgid "Тип медиаблока: эмодзи-иконка или небольшое изображение."
-msgstr ""
+msgstr "Media block type: an emoji icon or a small image."
 
-#: .\admin.py:609
+#: .\admin.py:700
 msgid "Эмодзи для простого сценария с иконкой."
-msgstr ""
+msgstr "Emoji for the simple icon scenario."
 
-#: .\admin.py:610
+#: .\admin.py:702
 msgid "Адрес или путь к изображению для медиаблока (без произвольного HTML)."
-msgstr ""
+msgstr "Image address or path for the media block (no arbitrary HTML)."
 
-#: .\admin.py:612
-msgid "Alt-текст для accessibility при использовании режима изображения."
-msgstr ""
-
-#: .\admin.py:614
+#: .\admin.py:705
 msgid ""
-"Необязательное переопределение варианта баннера для мобильной версии; пусто "
-"— наследование основной версии."
-msgstr ""
+"Альтернативный текст для доступности при использовании режима изображения."
+msgstr "Alt text for accessibility when image mode is used."
 
-#: .\admin.py:615
+#: .\admin.py:709
+msgid ""
+"Необязательное переопределение варианта баннера для мобильной версии; пусто —"
+" наследование основной версии."
+msgstr ""
+"Optional banner variant override for the mobile version; empty inherits the "
+"main version."
+
+#: .\admin.py:712
 msgid ""
 "Необязательное переопределение интерфейса выбора категорий для мобильной "
 "версии; пусто — наследование основной версии."
 msgstr ""
+"Optional category selection UI override for the mobile version; empty "
+"inherits the main version."
 
-#: .\admin.py:616
+#: .\admin.py:715
 msgid ""
-"Необязательное переопределение уведомления о повторном согласии для "
-"мобильной версии; пусто — наследование основной версии."
+"Необязательное переопределение уведомления о повторном согласии для мобильной"
+" версии; пусто — наследование основной версии."
 msgstr ""
+"Optional re-consent notice override for the mobile version; empty inherits "
+"the main version."
 
-#: .\admin.py:617
+#: .\admin.py:718
 msgid "Показывать кнопку закрытия рядом с кнопкой «Настройки cookie»."
-msgstr ""
+msgstr "Show the close button next to the «Cookie settings» button."
 
-#: .\admin.py:618
+#: .\admin.py:721
 msgid ""
-"Расположение кнопки закрытия относительно текста кнопки «Настройки cookieВ»."
+"Расположение кнопки закрытия относительно текста кнопки «Настройки cookie»."
 msgstr ""
+"Position of the close button relative to the «Cookie settings» button text."
 
-#: .\admin.py:619
+#: .\admin.py:724
 msgid ""
 "Переопределение положения кнопки закрытия для мобильной версии; пусто — "
 "наследование основной версии."
 msgstr ""
+"Close button position override for the mobile version; empty inherits the "
+"main version."
 
-#: .\admin.py:620
+#: .\admin.py:726
 msgid "Показывать кнопку «Отклонить cookie»."
-msgstr ""
+msgstr "Show the «Reject cookies» button."
 
-#: .\admin.py:621
+#: .\admin.py:728
 msgid ""
 "Переопределение показа кнопки закрытия для мобильной версии; пусто — "
 "наследование основной версии."
 msgstr ""
+"Close button visibility override for the mobile version; empty inherits the "
+"main version."
 
-#: .\admin.py:622
+#: .\admin.py:731
 msgid ""
 "Переопределение показа кнопки отклонения для мобильной версии; пусто — "
 "наследование основной версии."
 msgstr ""
+"Reject button visibility override for the mobile version; empty inherits the "
+"main version."
 
-#: .\admin.py:623
+#: .\admin.py:734
 msgid "Блокировать взаимодействие со страницей до первого явного выбора."
-msgstr ""
+msgstr "Block page interaction until the first explicit choice."
 
-#: .\admin.py:624
+#: .\admin.py:737
 msgid ""
 "Переопределение блокирующего режима для мобильной версии; пусто — "
 "наследование основной версии."
 msgstr ""
+"Blocking mode override for the mobile version; empty inherits the main "
+"version."
 
-#: .\admin.py:625
+#: .\admin.py:740
 msgid "Скрывать кнопку «Настройки cookie» после сохранённого выбора."
-msgstr ""
+msgstr "Hide the «Cookie settings» button after a saved choice."
 
-#: .\admin.py:626
+#: .\admin.py:743
 msgid ""
-"Переопределение скрытия кнопки «Настройки cookie» для мобильной версии; "
-"пусто — наследование основной версии."
+"Переопределение скрытия кнопки «Настройки cookie» для мобильной версии; пусто"
+" — наследование основной версии."
 msgstr ""
+"Override for hiding the «Cookie settings» button on the mobile version; empty"
+" inherits the main version."
 
-#: .\admin.py:627
+#: .\admin.py:746
 msgid ""
 "Если включено, баннер после «принять все» не закрывается и не сворачивается "
 "автоматически."
 msgstr ""
+"If enabled, after «accept all» the banner does not close or collapse "
+"automatically."
 
-#: .\admin.py:628
+#: .\admin.py:749
 msgid ""
 "Если включено, баннер после «только необходимые» не закрывается и не "
 "сворачивается автоматически."
 msgstr ""
+"If enabled, after «required only» the banner does not close or collapse "
+"automatically."
 
-#: .\admin.py:629
+#: .\admin.py:752
 msgid ""
 "Если включено, баннер после «сохранить выбор» не закрывается и не "
 "сворачивается автоматически."
 msgstr ""
+"If enabled, after «save choice» the banner does not close or collapse "
+"automatically."
 
-#: .\admin.py:630
+#: .\admin.py:755
 msgid ""
 "Переопределение поведения после «принять все» для мобильной версии: оставить "
 "баннер открытым; пусто — наследование основной версии."
 msgstr ""
+"Behavior override after «accept all» for the mobile version: keep the banner "
+"open; empty inherits the main version."
 
-#: .\admin.py:631
+#: .\admin.py:758
 msgid ""
 "Переопределение поведения после «только необходимые» для мобильной версии: "
 "оставить баннер открытым; пусто — наследование основной версии."
 msgstr ""
+"Behavior override after «required only» for the mobile version: keep the "
+"banner open; empty inherits the main version."
 
-#: .\admin.py:632
+#: .\admin.py:761
 msgid ""
 "Переопределение поведения после «сохранить выбор» для мобильной версии: "
 "оставить баннер открытым; пусто — наследование основной версии."
 msgstr ""
+"Behavior override after «save choice» for the mobile version: keep the banner"
+" open; empty inherits the main version."
 
-#: .\admin.py:633
+#: .\admin.py:764
 msgid ""
 "Переопределение скрытия для ботов: пусто — использовать "
 "`cookie_runtime.hide_for_bots` из настроек; включено — скрывать баннер для "
-"похожих на ботов user-agent; выключено — показывать баннер даже ботам."
+"запросов с похожим на ботов заголовком User-Agent; выключено — показывать "
+"баннер даже ботам."
 msgstr ""
+"Bot-hiding override: empty uses `cookie_runtime.hide_for_bots` from settings;"
+" enabled hides the banner for requests with a bot-like User-Agent header; "
+"disabled shows the banner even to bots."
 
-#: .\admin.py:634
+#: .\admin.py:766
 msgid "Признак коробочной (поставляемой пакетом) ревизии."
-msgstr ""
+msgstr "Indicates a built-in revision (shipped with the package)."
 
-#: .\admin.py:635
+#: .\admin.py:767
 msgid "Активная ревизия используется в рабочем режиме."
-msgstr ""
+msgstr "The active revision is used in production mode."
 
-#: .\admin.py:636
+#: .\admin.py:768
 msgid "Дата и время публикации ревизии."
-msgstr ""
+msgstr "Date and time the revision was published."
 
-#: .\admin.py:655
-msgid "Наследовать основной пресет"
-msgstr ""
+#: .\admin.py:785
+msgid "Наследовать основную заготовку"
+msgstr "Inherit the main preset"
 
-#: .\admin.py:729 .\admin.py:791
+#: .\admin.py:861 .\admin.py:924
 msgid "Наследовать основное значение"
-msgstr ""
+msgstr "Inherit the main value"
 
-#: .\admin.py:731
+#: .\admin.py:863
 msgid "Если включено, мобильная версия использует значение основной версии."
-msgstr ""
+msgstr "If enabled, the mobile version uses the main version's value."
 
-#: .\admin.py:748 .\admin.py:753
+#: .\admin.py:880 .\admin.py:885
 msgid "Полоска"
-msgstr ""
+msgstr "Bar"
 
-#: .\admin.py:749 .\admin.py:754
+#: .\admin.py:881 .\admin.py:886 .\models.py:813
 msgid "Карточка"
-msgstr ""
+msgstr "Card"
 
-#: .\admin.py:750 .\admin.py:755
+#: .\admin.py:882 .\admin.py:887 .\models.py:814
 msgid "Модальное окно"
-msgstr ""
+msgstr "Modal"
 
-#: .\admin.py:758 .\admin.py:762 .\admin.py:766 .\admin.py:770
+#: .\admin.py:890 .\admin.py:894 .\admin.py:898 .\admin.py:902 .\models.py:817
+#: .\models.py:823
 msgid "Встроенный"
-msgstr ""
+msgstr "Inline"
 
-#: .\admin.py:759 .\admin.py:763
+#: .\admin.py:891 .\admin.py:895 .\models.py:818
 msgid "Панель"
-msgstr ""
+msgstr "Panel"
 
-#: .\admin.py:767 .\admin.py:771
+#: .\admin.py:899 .\admin.py:903
 msgid "Предупреждение"
-msgstr ""
+msgstr "Alert"
 
-#: .\admin.py:774
+#: .\admin.py:906 .\models.py:484 .\models.py:859
 msgid "Иконка"
-msgstr ""
+msgstr "Icon"
 
-#: .\admin.py:775
+#: .\admin.py:907 .\models.py:485 .\models.py:860
 msgid "Изображение"
-msgstr ""
-
-#: .\admin.py:799
-msgid "Сбалансированный"
-msgstr ""
-
-#: .\admin.py:800
-msgid "Формальный"
-msgstr ""
-
-#: .\admin.py:801
-msgid "Компактный"
-msgstr ""
-
-#: .\admin.py:802
-msgid "Balanced"
-msgstr ""
-
-#: .\admin.py:803
-msgid "Formal"
-msgstr ""
-
-#: .\admin.py:804
-msgid "Compact"
-msgstr ""
-
-#: .\admin.py:811
-msgid "коробочный"
-msgstr ""
-
-#: .\admin.py:811
-msgid "пользовательский"
-msgstr ""
-
-#: .\admin.py:830
-#, python-format
-msgid "Устаревший пресет: %(code)s"
-msgstr ""
-
-#: .\admin.py:837
-msgid ""
-"Выберите текстовый пресет из справочника. Ручной ввод кода не допускается."
-msgstr ""
-
-#: .\admin.py:849
-msgid ""
-"Выберите пресет для мобильной версии из справочника или оставьте пустым для "
-"наследования."
-msgstr ""
-
-#: .\admin.py:879
-msgid "Уникальный стабильный код текстового пресета политики cookie."
-msgstr ""
-
-#: .\admin.py:880 .\admin.py:923
-msgid "Служебное название пресета для админки."
-msgstr ""
-
-#: .\admin.py:882
-msgid "Текст политики cookie, который будет подставляться в редакцию."
-msgstr ""
-
-#: .\admin.py:885 .\admin.py:969
-msgid "Отмечает пресет как коробочный (поставляется пакетом)."
-msgstr ""
-
-#: .\admin.py:887 .\admin.py:971
-msgid "Отключите пресет, чтобы скрыть его из выбора."
-msgstr ""
-
-#: .\admin.py:916
-msgid "Текст no-JS"
-msgstr ""
-
-#: .\admin.py:917
-msgid "Ссылка no-JS"
-msgstr ""
-
-#: .\admin.py:922
-msgid "Уникальный стабильный код текстового пресета интерфейса баннера."
-msgstr ""
+msgstr "Image"
 
 #: .\admin.py:933
-msgid "Текст уведомления при необходимости повторного согласия."
-msgstr ""
+msgid "Сбалансированный"
+msgstr "Balanced"
 
-#: .\admin.py:940
-msgid "Текст кнопки быстрого действия «отказаться от необязательных cookie»."
-msgstr ""
+#: .\admin.py:934
+msgid "Формальный"
+msgstr "Formal"
 
-#: .\admin.py:967
-msgid "Текст ссылки в блоке для режима без JavaScript."
-msgstr ""
+#: .\admin.py:935 .\models.py:788
+msgid "Компактный"
+msgstr "Compact"
 
-#: .\admin.py:1025
+#: .\admin.py:936
+msgid "Balanced"
+msgstr "Balanced"
+
+#: .\admin.py:937
+msgid "Formal"
+msgstr "Formal"
+
+#: .\admin.py:938
+msgid "Compact"
+msgstr "Compact"
+
+#: .\admin.py:945
+msgid "коробочный"
+msgstr "built-in"
+
+#: .\admin.py:945
+msgid "пользовательский"
+msgstr "custom"
+
+#: .\admin.py:964
+#, python-format
+msgid "Устаревшая заготовка: %(code)s"
+msgstr "Legacy preset: %(code)s"
+
+#: .\admin.py:971
 msgid ""
-"Разделитель по умолчанию для CSV-экспорта записей и событий cookie-согласия "
-"в админке."
+"Выберите текстовую заготовку из справочника. Ручной ввод кода не допускается."
 msgstr ""
+"Select a text preset from the reference list. Manual code entry is not "
+"allowed."
 
-#: .\admin.py:1077 .\admin.py:1563
+#: .\admin.py:983
+msgid ""
+"Выберите заготовку для мобильной версии из справочника или оставьте пустым "
+"для наследования."
+msgstr ""
+"Select a preset for the mobile version from the reference list, or leave it "
+"empty to inherit."
+
+#: .\admin.py:1013
+msgid "Уникальный стабильный код текстовой заготовки политики cookie."
+msgstr "Unique stable code of the cookie policy text preset."
+
+#: .\admin.py:1014 .\admin.py:1059
+msgid "Служебное название заготовки для админки."
+msgstr "Internal preset name for the admin."
+
+#: .\admin.py:1016
+msgid "Текст политики cookie, который будет подставляться в редакцию."
+msgstr "Cookie policy text that will be inserted into the revision."
+
+#: .\admin.py:1019 .\admin.py:1103
+msgid "Отмечает заготовку как коробочную (поставляется пакетом)."
+msgstr "Marks the preset as built-in (shipped with the package)."
+
+#: .\admin.py:1021 .\admin.py:1105
+msgid "Отключите заготовку, чтобы скрыть её из выбора."
+msgstr "Disable the preset to hide it from selection."
+
+#: .\admin.py:1050
+msgid "Текст no-JS"
+msgstr "No-JS text"
+
+#: .\admin.py:1051
+msgid "Ссылка no-JS"
+msgstr "No-JS link"
+
+#: .\admin.py:1057
+msgid "Уникальный стабильный код текстовой заготовки интерфейса баннера."
+msgstr "Unique stable code of the banner UI text preset."
+
+#: .\admin.py:1067
+msgid "Текст уведомления при необходимости повторного согласия."
+msgstr "Notice text when re-consent is required."
+
+#: .\admin.py:1074
+msgid "Текст кнопки быстрого действия «отказаться от необязательных cookie»."
+msgstr "Text of the «reject optional cookies» quick action button."
+
+#: .\admin.py:1101
+msgid "Текст ссылки в блоке для режима без JavaScript."
+msgstr "Link text in the no-JavaScript mode block."
+
+#: .\admin.py:1157 .\models.py:1617
+msgid "Override: show empty category block"
+msgstr "Override: show empty category block"
+
+#: .\admin.py:1160 .\models.py:1623
+msgid "Override: show customize action without optional categories"
+msgstr "Override: show customize action without optional categories"
+
+#: .\admin.py:1163 .\models.py:1629
+msgid "Override: empty category block text"
+msgstr "Override: empty category block text"
+
+#: .\admin.py:1168
+msgid ""
+"Разделитель по умолчанию для CSV-экспорта записей и событий cookie-согласия в"
+" админке."
+msgstr ""
+"Default separator for CSV export of cookie consent records and events in the "
+"admin."
+
+#: .\admin.py:1171
+msgid ""
+"If enabled, shows the empty categories section even when no optional "
+"categories are configured. Leave empty to use settings.py value."
+msgstr ""
+"If enabled, shows the empty categories section even when no optional "
+"categories are configured. Leave empty to use settings.py value."
+
+#: .\admin.py:1174
+msgid ""
+"If enabled, keeps the customize action visible even when optional categories "
+"are absent. Leave empty to use settings.py value."
+msgstr ""
+"If enabled, keeps the customize action visible even when optional categories "
+"are absent. Leave empty to use settings.py value."
+
+#: .\admin.py:1177
+msgid ""
+"Custom text for the empty categories section. Leave empty to use settings.py "
+"value."
+msgstr ""
+"Custom text for the empty categories section. Leave empty to use settings.py "
+"value."
+
+#: .\admin.py:1203
+msgid "Ревизия и статус"
+msgstr "Revision and status"
+
+#: .\admin.py:1217
+msgid "Содержимое"
+msgstr "Content"
+
+#: .\admin.py:1261 .\admin.py:1749
 msgid "Исходная ревизия"
-msgstr ""
+msgstr "Source revision"
 
-#: .\admin.py:1121
-msgid "Опубликовать выбранный коробочный вариант текста политики"
-msgstr ""
+#: .\admin.py:1304
+msgid "Опубликовать"
+msgstr "Publish"
 
-#: .\admin.py:1125
-msgid "Создать пользовательский черновик из выбранного коробочного варианта"
-msgstr ""
+#: .\admin.py:1305
+msgid "Черновик"
+msgstr "Draft"
 
-#: .\admin.py:1161 .\admin.py:1195
+#: .\admin.py:1307
+msgid "Короткий"
+msgstr "Short"
+
+#: .\admin.py:1308
+msgid "Полный"
+msgstr "Full"
+
+#: .\admin.py:1343 .\admin.py:1377
 msgid "Выберите вариант текста политики для этого действия."
-msgstr ""
+msgstr "Select a policy text variant for this action."
 
-#: .\admin.py:1172
+#: .\admin.py:1354
 #, python-format
 msgid "Опубликован коробочный вариант политики. Новая ревизия: v%(version)s."
 msgstr ""
+"The built-in policy variant has been published. New revision: v%(version)s."
 
-#: .\admin.py:1208
+#: .\admin.py:1391
 #, python-format
 msgid ""
 "Создан пользовательский черновик из коробочного варианта. Ревизия: "
 "v%(version)s."
 msgstr ""
+"A custom draft has been created from the built-in variant. Revision: "
+"v%(version)s."
 
-#: .\admin.py:1226
+#: .\admin.py:1410
 msgid "Клонировать выбранные редакции политики как пользовательские черновики"
-msgstr ""
+msgstr "Clone the selected policy revisions as custom drafts"
 
-#: .\admin.py:1236
+#: .\admin.py:1420
 #, python-format
 msgid "Создано %(count)d черновиков политики из выбранных редакций."
-msgstr ""
+msgstr "Created %(count)d policy drafts from the selected revisions."
 
-#: .\admin.py:1246
+#: .\admin.py:1430
 msgid "Клонирование выбранных редакций политики в пользовательские черновики."
-msgstr ""
+msgstr "Cloning the selected policy revisions into custom drafts."
 
-#: .\admin.py:1269 .\admin.py:1556 .\admin.py:1934 .\admin.py:2036
+#: .\admin.py:1453 .\admin.py:1740 .\admin.py:2132 .\admin.py:2234
 msgid ""
-"Это коробочная ревизия: защищённые текстовые поля доступны только для "
-"чтения. Чтобы редактировать тексты, создайте пользовательскую копию ревизии."
+"Это коробочная ревизия: защищённые текстовые поля доступны только для чтения."
+" Чтобы редактировать тексты, создайте пользовательскую копию ревизии."
 msgstr ""
+"This is a built-in revision: protected text fields are read-only. To edit the"
+" texts, create a custom copy of the revision."
 
-#: .\admin.py:1363
+#: .\admin.py:1547
 msgid "Ревизия"
-msgstr ""
+msgstr "Revision"
 
-#: .\admin.py:1378
+#: .\admin.py:1562
 msgid "Тексты"
-msgstr ""
+msgstr "Texts"
 
-#: .\admin.py:1408
+#: .\admin.py:1592
 msgid "Варианты отображения"
-msgstr ""
+msgstr "Display variants"
 
-#: .\admin.py:1421
+#: .\admin.py:1605
 msgid "Визуальная настройка"
-msgstr ""
+msgstr "Visual customization"
 
-#: .\admin.py:1446
+#: .\admin.py:1630
 msgid "Устаревшие поля совместимости"
-msgstr ""
+msgstr "Legacy compatibility fields"
 
-#: .\admin.py:1449
+#: .\admin.py:1633
 msgid ""
-"Поля сохранены для обратной совместимости с прежней схемой компоновки, темы "
-"и позиционирования."
+"Поля сохранены для обратной совместимости с прежней схемой компоновки, темы и"
+" позиционирования."
 msgstr ""
+"Fields kept for backward compatibility with the former layout, theme, and "
+"positioning scheme."
 
-#: .\admin.py:1461
+#: .\admin.py:1645
 msgid "Видимость и кнопка закрытия"
-msgstr ""
+msgstr "Visibility and close button"
 
-#: .\admin.py:1464
+#: .\admin.py:1648
 msgid ""
 "Параметры сгруппированы парами: слева — основная версия (desktop), справа — "
 "мобильное переопределение. Кнопка закрытия скрывает баннер без фиксации "
@@ -1175,996 +1283,1026 @@ msgid ""
 "баннера и не меняют статус согласия. Блокирующий режим удерживает баннер "
 "открытым до явного выбора пользователя."
 msgstr ""
+"Settings are grouped in pairs: the main version (desktop) on the left, the "
+"mobile override on the right. The close button hides the banner without "
+"recording consent. The post-choice visibility settings control only how the "
+"banner is displayed and do not change the consent status. Blocking mode keeps"
+" the banner open until the user makes an explicit choice."
 
-#: .\admin.py:1527
+#: .\admin.py:1711
 msgid "Настольная версия"
-msgstr ""
+msgstr "Desktop version"
 
-#: .\admin.py:1531
+#: .\admin.py:1715
 msgid "Мобильная версия"
-msgstr ""
+msgstr "Mobile version"
 
-#: .\admin.py:1533
+#: .\admin.py:1717
 msgid "Сброс цветовых настроек"
-msgstr ""
+msgstr "Reset color settings"
 
-#: .\admin.py:1540
+#: .\admin.py:1724
 msgid "Сбросить цвета по умолчанию"
-msgstr ""
+msgstr "Reset colors to defaults"
 
-#: .\admin.py:1542
+#: .\admin.py:1726
 msgid ""
-"Возвращает цветовой пресет и кастомные цветовые поля к значениям по "
-"умолчанию."
+"Возвращает цветовую заготовку и пользовательские цветовые поля к значениям по"
+" умолчанию."
 msgstr ""
+"Resets the color preset and the custom color fields to their default values."
 
-#: .\admin.py:1546
+#: .\admin.py:1730
 msgid "Статус редактирования текстов"
-msgstr ""
+msgstr "Text editing status"
 
-#: .\admin.py:1550
+#: .\admin.py:1734
 msgid "Поля текста можно редактировать в пользовательских ревизиях."
-msgstr ""
+msgstr "Text fields can be edited in custom revisions."
 
-#: .\admin.py:1560
+#: .\admin.py:1745
 msgid ""
 "Это пользовательская ревизия: все текстовые поля доступны для редактирования."
-msgstr ""
+msgstr "This is a custom revision: all text fields are editable."
 
-#: .\admin.py:1571
+#: .\admin.py:1757
 msgid "Клонировать выбранные редакции баннера как пользовательские черновики"
-msgstr ""
+msgstr "Clone the selected banner revisions as custom drafts"
 
-#: .\admin.py:1581
+#: .\admin.py:1767
 #, python-format
 msgid "Создано %(count)d черновиков баннера из выбранных редакций."
-msgstr ""
+msgstr "Created %(count)d banner drafts from the selected revisions."
 
-#: .\admin.py:1591
+#: .\admin.py:1777
 msgid "Клонирование выбранных редакций баннера в пользовательские черновики."
-msgstr ""
+msgstr "Cloning the selected banner revisions into custom drafts."
 
-#: .\admin.py:1650 .\admin.py:1853
+#: .\admin.py:1836 .\admin.py:2051
 msgid "Subject"
-msgstr ""
+msgstr "Subject"
 
-#: .\admin.py:1716
+#: .\admin.py:1902
 msgid "Экспортировать выбранные события в CSV"
-msgstr ""
+msgstr "Export the selected events to CSV"
 
-#: .\admin.py:1872
+#: .\admin.py:2070
 msgid "Clone selected policy presets as custom presets"
-msgstr ""
+msgstr "Clone selected policy presets as custom presets"
 
-#: .\admin.py:1884 .\admin.py:1966
+#: .\admin.py:2082 .\admin.py:2164
 msgid "копия"
-msgstr ""
+msgstr "copy"
 
-#: .\admin.py:1892
+#: .\admin.py:2090
 #, python-format
 msgid "Created %(count)d custom policy presets."
-msgstr ""
+msgstr "Created %(count)d custom policy presets."
 
-#: .\admin.py:1954
+#: .\admin.py:2152
 msgid "Clone selected banner presets as custom presets"
-msgstr ""
+msgstr "Clone selected banner presets as custom presets"
 
-#: .\admin.py:1994
+#: .\admin.py:2192
 #, python-format
 msgid "Created %(count)d custom banner presets."
-msgstr ""
+msgstr "Created %(count)d custom banner presets."
 
 #: .\apps.py:13
 msgid "Согласия 152-ФЗ: cookie"
-msgstr ""
+msgstr "Consent 152-FZ: cookie"
 
 #: .\forms.py:20
 msgid "Необязательные категории cookie"
-msgstr ""
+msgstr "Optional cookie categories"
 
 #: .\forms.py:37
 msgid "Обязательные категории включены всегда и не требуют выбора."
-msgstr ""
+msgstr "Required categories are always enabled and do not require a choice."
 
-#: .\importers.py:71
+#: .\importers.py:70
 #, python-format
 msgid "CSV-файл не найден: %(path)s."
-msgstr ""
+msgstr "CSV file not found: %(path)s."
 
-#: .\importers.py:77
+#: .\importers.py:75
 msgid "CSV-файл не содержит строку заголовков."
-msgstr ""
+msgstr "The CSV file does not contain a header row."
 
-#: .\importers.py:123
+#: .\importers.py:121
 msgid "Импорт записей cookie-согласий и состояния баннера из CSV."
-msgstr ""
+msgstr "Import cookie consent records and banner state from CSV."
 
-#: .\importers.py:149
+#: .\importers.py:147
 #, python-format
 msgid "Неподдерживаемый kind '%(kind)s'."
-msgstr ""
+msgstr "Unsupported kind '%(kind)s'."
 
-#: .\importers.py:158
+#: .\importers.py:156
 #, python-format
 msgid ""
 "Неподдерживаемый contract_version '%(actual)s', ожидается '%(expected)s'."
-msgstr ""
+msgstr "Unsupported contract_version '%(actual)s', expected '%(expected)s'."
 
-#: .\importers.py:171
+#: .\importers.py:170
 msgid "Субъект не задан: укажите user или anonymous_token."
-msgstr ""
+msgstr "Subject not specified: provide user or anonymous_token."
 
 #: .\importers.py:206
 msgid "policy_revision_version должен быть положительным целым числом."
-msgstr ""
+msgstr "policy_revision_version must be a positive integer."
 
-#: .\importers.py:213
+#: .\importers.py:216
 #, python-format
 msgid "Редакция политики cookie v%(version)s не найдена."
-msgstr ""
+msgstr "Cookie policy revision v%(version)s not found."
 
-#: .\importers.py:232
+#: .\importers.py:239
 #, python-format
 msgid ""
 "policy_categories_snapshot_json не совпадает с редакцией политики "
 "v%(version)s."
 msgstr ""
+"policy_categories_snapshot_json does not match policy revision v%(version)s."
 
-#: .\importers.py:246
+#: .\importers.py:254
 msgid "selected_categories_json должен быть JSON-списком."
-msgstr ""
+msgstr "selected_categories_json must be a JSON list."
 
-#: .\importers.py:265 .\importers.py:286
+#: .\importers.py:273 .\importers.py:296
 msgid "Дубликат: fingerprint строки уже был импортирован."
-msgstr ""
+msgstr "Duplicate: the row fingerprint has already been imported."
 
-#: .\importers.py:271
+#: .\importers.py:280
 #, python-format
 msgid "consent для policy_revision_version=%(version)s, категорий=%(count)s."
-msgstr ""
+msgstr "consent for policy_revision_version=%(version)s, categories=%(count)s."
 
-#: .\importers.py:316
+#: .\importers.py:327
 #, python-format
 msgid ""
 "Активная редакция политики не совпадает с импортируемой версией v%(version)s."
 msgstr ""
+"The active policy revision does not match the imported version v%(version)s."
 
-#: .\importers.py:324
+#: .\importers.py:336
 #, python-format
 msgid "record_id=%(id)s"
-msgstr ""
+msgstr "record_id=%(id)s"
 
-#: .\importers.py:342
+#: .\importers.py:356
 #, python-format
 msgid "Неподдерживаемый decision_action '%(action)s'."
-msgstr ""
+msgstr "Unsupported decision_action '%(action)s'."
 
-#: .\importers.py:351
+#: .\importers.py:365
 msgid "banner_state"
-msgstr ""
+msgstr "banner_state"
 
-#: .\importers.py:370
+#: .\importers.py:388
 #, python-format
 msgid "banner_state_id=%(id)s"
-msgstr ""
+msgstr "banner_state_id=%(id)s"
 
-#: .\importers.py:394
+#: .\importers.py:412
 msgid "datetime должен быть в формате ISO."
-msgstr ""
+msgstr "datetime must be in ISO format."
 
-#: .\importers.py:411
+#: .\importers.py:431
 msgid "extra_meta_json должен содержать JSON-объект."
-msgstr ""
+msgstr "extra_meta_json must contain a JSON object."
 
 #: .\models.py:26 .\models.py:27
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:18
 msgid "Настройки cookie"
-msgstr ""
+msgstr "Cookie settings"
 
 #: .\models.py:29
 msgid ""
 "Мы используем cookie для работы сайта и настройки дополнительных категорий."
-msgstr ""
+msgstr "We use cookies to run the site and to configure additional categories."
 
-#: .\models.py:34
+#: .\models.py:33
 msgid ""
 "Обязательные категории включены всегда. Необязательные категории можно "
 "разрешить сразу, оставить выключенными или выбрать вручную."
 msgstr ""
+"Required categories are always enabled. Optional categories can be allowed "
+"right away, left disabled, or chosen manually."
 
-#: .\models.py:39
+#: .\models.py:38
 msgid "Доступна новая редакция cookie-policy. Обновите свой выбор категорий."
 msgstr ""
+"A new cookie policy revision is available. Update your category choice."
 
 #: .\models.py:42
 msgid ""
 "Мы периодически уточняем выбор cookie-категорий. Подтвердите или обновите "
 "настройки."
 msgstr ""
+"We periodically refine the set of cookie categories. Confirm or update your "
+"settings."
 
-#: .\models.py:45 .\models.py:1512
+#: .\models.py:46 .\models.py:1520
 msgid "Принять все"
-msgstr ""
-
-#: .\models.py:46
-msgid "Отказаться от необязательных cookie"
-msgstr ""
+msgstr "Accept all"
 
 #: .\models.py:47
-msgid "Только необходимые cookie"
-msgstr ""
+msgid "Отказаться от необязательных cookie"
+msgstr "Reject optional cookies"
 
 #: .\models.py:48
-msgid "Выбрать категории"
-msgstr ""
+msgid "Только необходимые cookie"
+msgstr "Required cookies only"
 
 #: .\models.py:49
-msgid "Собственный выбор категорий"
-msgstr ""
+msgid "Выбрать категории"
+msgstr "Choose categories"
 
 #: .\models.py:50
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:38
-msgid "Обязательные категории"
-msgstr ""
+msgid "Собственный выбор категорий"
+msgstr "Custom category selection"
 
 #: .\models.py:51
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:45
-msgid "Нет обязательных категорий."
-msgstr ""
+msgid "Обязательные категории"
+msgstr "Required categories"
 
 #: .\models.py:52
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:53
+msgid "Нет обязательных категорий."
+msgstr "No required categories."
+
+#: .\models.py:53
 msgid "Необязательные категории"
-msgstr ""
+msgstr "Optional categories"
 
-#: .\models.py:54
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:129
+#: .\models.py:55 .\views.py:268
 msgid "Сейчас нет дополнительных категорий для выбора."
-msgstr ""
-
-#: .\models.py:56
-msgid "Сохранить выбор"
-msgstr ""
+msgstr "There are currently no additional categories to choose from."
 
 #: .\models.py:57
-msgid "Полная страница настроек"
-msgstr ""
+msgid "Сохранить выбор"
+msgstr "Save choice"
 
 #: .\models.py:58
-msgid "Свернуть"
-msgstr ""
+msgid "Полная страница настроек"
+msgstr "Full settings page"
 
 #: .\models.py:59
-msgid "Если JavaScript отключён, можно открыть"
-msgstr ""
+msgid "Свернуть"
+msgstr "Collapse"
 
 #: .\models.py:60
-msgid "страницу настроек cookie"
-msgstr ""
+msgid "Если JavaScript отключён, можно открыть"
+msgstr "If JavaScript is disabled, you can open"
 
-#: .\models.py:117
-msgid "Управление cookie"
-msgstr ""
+#: .\models.py:61
+msgid "страницу настроек cookie"
+msgstr "the cookie settings page"
 
 #: .\models.py:118
-msgid "Cookie-настройки"
-msgstr ""
+msgid "Управление cookie"
+msgstr "Cookie management"
 
 #: .\models.py:119
-msgid "Разрешить все"
-msgstr ""
+msgid "Cookie-настройки"
+msgstr "Cookie settings"
 
 #: .\models.py:120
-msgid "Оставить только обязательные"
-msgstr ""
+msgid "Разрешить все"
+msgstr "Allow all"
 
 #: .\models.py:121
+msgid "Оставить только обязательные"
+msgstr "Keep only required"
+
+#: .\models.py:122
 msgid "Настроить выбор"
-msgstr ""
+msgstr "Customize choice"
 
-#: .\models.py:125 .\models.py:126
+#: .\models.py:126 .\models.py:127
 msgid "Cookie"
-msgstr ""
+msgstr "Cookie"
 
-#: .\models.py:128
+#: .\models.py:130
 msgid ""
 "Обязательные cookie включены всегда. Дополнительные можно включить или "
 "оставить отключёнными."
 msgstr ""
+"Required cookies are always enabled. Optional ones can be enabled or left "
+"disabled."
 
-#: .\models.py:131
+#: .\models.py:134
 msgid "Выбрать вручную"
-msgstr ""
+msgstr "Choose manually"
 
-#: .\models.py:132
+#: .\models.py:135
 msgid "Точный выбор"
-msgstr ""
+msgstr "Precise selection"
 
-#: .\models.py:133
+#: .\models.py:136
 msgid "Сохранить"
-msgstr ""
+msgstr "Save"
 
-#: .\models.py:258
+#: .\models.py:261
 msgid "Иконка cookie"
-msgstr ""
+msgstr "Cookie icon"
 
-#: .\models.py:277 .\models.py:278
+#: .\models.py:280 .\models.py:281
 msgid "Закрыть баннер cookie"
-msgstr ""
-
-#: .\models.py:283
-msgid "Короткий коробочный текст политики cookie"
-msgstr ""
+msgstr "Close the cookie banner"
 
 #: .\models.py:286
+msgid "Короткий коробочный текст политики cookie"
+msgstr "Short built-in cookie policy text"
+
+#: .\models.py:289
 msgid "Полный коробочный текст политики cookie"
-msgstr ""
+msgstr "Full built-in cookie policy text"
 
-#: .\models.py:301
+#: .\models.py:305
 #, python-format
-msgid ""
-"Код cookie \"%(value)s\" должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
-msgstr ""
+msgid "Код cookie \"%(value)s\" должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
+msgstr "Cookie code \"%(value)s\" must match the pattern \"[a-z][a-z0-9_]*\"."
 
-#: .\models.py:317
+#: .\models.py:321
 #, python-format
 msgid "Поле \"%(field_name)s\" должно содержать JSON-объект."
-msgstr ""
+msgstr "Field \"%(field_name)s\" must contain a JSON object."
 
-#: .\models.py:329
+#: .\models.py:332
 #, python-format
-msgid ""
-"Поле \"%(field_name)s\" превышает лимит %(limit)s байт для JSON-значения."
+msgid "Поле \"%(field_name)s\" превышает лимит %(limit)s байт для JSON-значения."
 msgstr ""
+"Field \"%(field_name)s\" exceeds the %(limit)s-byte limit for a JSON value."
 
 #: .\models.py:337
 #, python-format
 msgid "Поле \"%(field_name)s\" содержит зарезервированные ключи: %(keys)s."
-msgstr ""
+msgstr "Field \"%(field_name)s\" contains reserved keys: %(keys)s."
 
-#: .\models.py:353
+#: .\models.py:351
 #, python-format
 msgid "Поле \"%(field_name)s\" должно быть списком."
-msgstr ""
+msgstr "Field \"%(field_name)s\" must be a list."
 
-#: .\models.py:362
+#: .\models.py:359
 #, python-format
 msgid "Элемент \"%(field_name)s[%(index)s]\" должен быть непустой строкой."
-msgstr ""
+msgstr "Item \"%(field_name)s[%(index)s]\" must be a non-empty string."
 
-#: .\models.py:376
+#: .\models.py:373
 #, python-format
 msgid "Поле \"%(field_name)s\" должно содержать только URL/путь к скрипту."
-msgstr ""
+msgstr "Field \"%(field_name)s\" must contain only a script URL/path."
 
-#: .\models.py:400
+#: .\models.py:397
 #, python-format
 msgid "Поле \"%(field_name)s\" не может быть пустым."
-msgstr ""
+msgstr "Field \"%(field_name)s\" cannot be empty."
+
+#: .\models.py:453
+msgid "Cookie-категория"
+msgstr "Cookie category"
 
 #: .\models.py:454
-msgid "Cookie-категория"
-msgstr ""
-
-#: .\models.py:455
 msgid "Cookie-категории"
-msgstr ""
+msgstr "Cookie categories"
 
-#: .\models.py:464 .\models.py:651
+#: .\models.py:463 .\models.py:651
 msgid "code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
-msgstr ""
+msgstr "code must match the pattern \"[a-z][a-z0-9_]*\"."
+
+#: .\models.py:478
+msgid "Обычный текст"
+msgstr "Plain text"
 
 #: .\models.py:479
-msgid "Обычный текст"
-msgstr ""
+msgid "Разметка Markdown"
+msgstr "Markdown markup"
 
 #: .\models.py:480
-msgid "Разметка Markdown"
-msgstr ""
+msgid "Разметка HTML"
+msgstr "HTML markup"
 
 #: .\models.py:481
-msgid "Разметка HTML"
-msgstr ""
-
-#: .\models.py:482
 msgid "PDF-файл"
-msgstr ""
+msgstr "PDF file"
 
-#: .\models.py:506 .\models.py:1199
+#: .\models.py:505 .\models.py:1200
 msgid "Скопировано из редакции"
-msgstr ""
+msgstr "Copied from revision"
+
+#: .\models.py:514
+msgid "Редакция cookie-policy"
+msgstr "Cookie policy revision"
 
 #: .\models.py:515
-msgid "Редакция cookie-policy"
-msgstr ""
-
-#: .\models.py:516
 msgid "Редакции cookie-policy"
-msgstr ""
+msgstr "Cookie policy revisions"
 
-#: .\models.py:536
+#: .\models.py:535
 msgid "content_text обязателен для текстовых форматов."
-msgstr ""
+msgstr "content_text is required for text formats."
 
-#: .\models.py:540
+#: .\models.py:539
 msgid "content_file должен быть пустым для текстовых форматов."
-msgstr ""
+msgstr "content_file must be empty for text formats."
 
-#: .\models.py:546
+#: .\models.py:545
 msgid "content_file обязателен для формата pdf_file."
-msgstr ""
+msgstr "content_file is required for the pdf_file format."
 
-#: .\models.py:550
+#: .\models.py:549
 msgid "content_text должен быть пустым для формата pdf_file."
-msgstr ""
+msgstr "content_text must be empty for the pdf_file format."
+
+#: .\models.py:582
+msgid "Текстовая заготовка политики cookie"
+msgstr "Cookie policy text preset"
 
 #: .\models.py:583
-msgid "Текстовый пресет cookie-policy"
-msgstr ""
+msgid "Текстовые заготовки политики cookie"
+msgstr "Cookie policy text presets"
 
-#: .\models.py:584
-msgid "Текстовые пресеты cookie-policy"
-msgstr ""
-
-#: .\models.py:596 .\models.py:1351
+#: .\models.py:595 .\models.py:1360
 msgid "code не может быть пустым."
-msgstr ""
+msgstr "code cannot be empty."
 
-#: .\models.py:598 .\models.py:1353
+#: .\models.py:597 .\models.py:1362
 msgid "title не может быть пустым."
-msgstr ""
+msgstr "title cannot be empty."
 
-#: .\models.py:600
+#: .\models.py:599
 msgid "content_text не может быть пустым."
-msgstr ""
+msgstr "content_text cannot be empty."
+
+#: .\models.py:615
+msgid "Нет"
+msgstr "None"
 
 #: .\models.py:616
-msgid "Нет"
-msgstr ""
+msgid "Удалить по возможности"
+msgstr "Delete if possible"
 
 #: .\models.py:617
-msgid "Удалить по возможности"
-msgstr ""
-
-#: .\models.py:618
 msgid "Хук адаптера"
-msgstr ""
+msgstr "Adapter hook"
 
 #: .\models.py:640
 msgid "Элемент cookie-реестра"
-msgstr ""
+msgstr "Cookie registry item"
 
 #: .\models.py:641
 msgid "Элементы cookie-реестра"
-msgstr ""
+msgstr "Cookie registry items"
 
 #: .\models.py:655 .\models.py:752
 msgid "provider не может быть пустым."
-msgstr ""
+msgstr "provider cannot be empty."
 
 #: .\models.py:659 .\models.py:756
 msgid "purpose не может быть пустым."
-msgstr ""
+msgstr "purpose cannot be empty."
 
 #: .\models.py:683
 msgid "Активный элемент реестра требует активную cookie-категорию."
-msgstr ""
+msgstr "An active registry item requires an active cookie category."
 
 #: .\models.py:725
 msgid "Элемент реестра редакции cookie-policy"
-msgstr ""
+msgstr "Cookie policy revision registry item"
 
 #: .\models.py:726
 msgid "Элементы реестра редакции cookie-policy"
-msgstr ""
+msgstr "Cookie policy revision registry items"
 
 #: .\models.py:743
 msgid "registry_code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
-msgstr ""
+msgstr "registry_code must match the pattern \"[a-z][a-z0-9_]*\"."
 
 #: .\models.py:747
 msgid "category_code должен соответствовать шаблону \"[a-z][a-z0-9_]*\"."
-msgstr ""
+msgstr "category_code must match the pattern \"[a-z][a-z0-9_]*\"."
 
 #: .\models.py:789
 msgid "Широкий"
-msgstr ""
+msgstr "Wide"
 
-#: .\models.py:791 .\models.py:842
+#: .\models.py:792 .\models.py:854
 msgid "Светлый"
-msgstr ""
+msgstr "Light"
 
-#: .\models.py:792 .\models.py:843
+#: .\models.py:793 .\models.py:855
 msgid "Контрастный"
-msgstr ""
+msgstr "High contrast"
 
-#: .\models.py:794
+#: .\models.py:796
 msgid "Снизу справа"
-msgstr ""
+msgstr "Bottom right"
 
-#: .\models.py:795
+#: .\models.py:797
 msgid "Снизу слева"
-msgstr ""
+msgstr "Bottom left"
 
-#: .\models.py:796 .\models.py:801
+#: .\models.py:798 .\models.py:804
 msgid "По центру экрана"
-msgstr ""
+msgstr "Screen center"
 
-#: .\models.py:797 .\models.py:802
+#: .\models.py:799 .\models.py:805
 msgid "Снизу на всю ширину"
-msgstr ""
+msgstr "Bottom full width"
 
-#: .\models.py:799
+#: .\models.py:802
 msgid "Снизу"
-msgstr ""
+msgstr "Bottom"
 
-#: .\models.py:800
+#: .\models.py:803
 msgid "Сверху"
-msgstr ""
+msgstr "Top"
 
-#: .\models.py:804
+#: .\models.py:808
 msgid "Слева"
-msgstr ""
+msgstr "Left"
 
-#: .\models.py:805
+#: .\models.py:809
 msgid "Справа"
-msgstr ""
+msgstr "Right"
 
-#: .\models.py:807
+#: .\models.py:812
 msgid "Плашка"
-msgstr ""
+msgstr "Bar"
 
-#: .\models.py:815
+#: .\models.py:825
 msgid "Оповещение"
-msgstr ""
+msgstr "Notice"
 
-#: .\models.py:819
+#: .\models.py:830
+msgid "Auto (locale-based)"
+msgstr "Auto (locale-based)"
+
+#: .\models.py:830
 msgid "Сбалансированный (RU)"
-msgstr ""
+msgstr "Balanced (RU)"
 
-#: .\models.py:823
+#: .\models.py:834
 msgid "Формальный (RU)"
-msgstr ""
+msgstr "Formal (RU)"
 
-#: .\models.py:827
+#: .\models.py:838
 msgid "Компактный (RU)"
-msgstr ""
+msgstr "Compact (RU)"
 
-#: .\models.py:831
+#: .\models.py:842
 msgid "Balanced (EN)"
-msgstr ""
+msgstr "Balanced (EN)"
 
-#: .\models.py:835
+#: .\models.py:846
 msgid "Formal (EN)"
-msgstr ""
+msgstr "Formal (EN)"
 
-#: .\models.py:839
+#: .\models.py:850
 msgid "Compact (EN)"
-msgstr ""
+msgstr "Compact (EN)"
 
-#: .\models.py:844
+#: .\models.py:856
 msgid "Пользовательские цвета"
-msgstr ""
+msgstr "Custom colors"
 
-#: .\models.py:876
+#: .\models.py:890
 msgid "Надпись кнопки отказа"
-msgstr ""
+msgstr "Reject button label"
 
-#: .\models.py:1053
+#: .\models.py:1061
 msgid "URL изображения для медиаблока"
-msgstr ""
+msgstr "Image URL for the media block"
 
-#: .\models.py:1059
-msgid "Alt-текст изображения медиаблока"
-msgstr ""
+#: .\models.py:1067
+msgid "Альтернативный текст изображения медиаблока"
+msgstr "Media block image alt text"
 
-#: .\models.py:1071
+#: .\models.py:1077
 msgid "Расположение кнопки закрытия"
-msgstr ""
+msgstr "Close button position"
 
-#: .\models.py:1080
+#: .\models.py:1087
 msgid "Переопределение расположения кнопки закрытия для мобильной версии"
-msgstr ""
-
-#: .\models.py:1084
-msgid "Показывать кнопку отказа"
-msgstr ""
+msgstr "Close button position override for the mobile version"
 
 #: .\models.py:1092
+msgid "Показывать кнопку отказа"
+msgstr "Show reject button"
+
+#: .\models.py:1098
 msgid "Переопределение показа кнопки закрытия для мобильной версии"
-msgstr ""
+msgstr "Close button visibility override for the mobile version"
 
-#: .\models.py:1100
+#: .\models.py:1104
 msgid "Переопределение показа кнопки отказа для мобильной версии"
-msgstr ""
+msgstr "Reject button visibility override for the mobile version"
 
-#: .\models.py:1108
+#: .\models.py:1110
 msgid ""
 "Блокировать взаимодействие со страницей, пока пользователь явно не выберет "
 "настройки cookie."
 msgstr ""
+"Block page interaction until the user explicitly chooses cookie settings."
 
-#: .\models.py:1117
+#: .\models.py:1119
 msgid "Переопределение блокирующего режима для мобильной версии"
-msgstr ""
+msgstr "Blocking mode override for the mobile version"
 
 #: .\models.py:1123
 msgid "Скрывать кнопку настроек после выбора"
-msgstr ""
+msgstr "Hide the settings button after a choice"
 
 #: .\models.py:1131
 msgid "Переопределение скрытия кнопки настроек для мобильной версии"
-msgstr ""
+msgstr "Override for hiding the settings button on the mobile version"
 
 #: .\models.py:1137
 msgid "Оставлять баннер видимым после действия «принять все»"
-msgstr ""
+msgstr "Keep the banner visible after the «accept all» action"
 
 #: .\models.py:1143
 msgid "Оставлять баннер видимым после действия «только обязательные»"
-msgstr ""
+msgstr "Keep the banner visible after the «required only» action"
 
 #: .\models.py:1150
 msgid "Оставлять баннер видимым после действия «сохранить выбранные категории»"
-msgstr ""
+msgstr "Keep the banner visible after the «save selected categories» action"
 
 #: .\models.py:1160
 msgid ""
 "Переопределение видимости баннера после «принять все» для мобильной версии"
-msgstr ""
+msgstr "Banner visibility override after «accept all» for the mobile version"
 
 #: .\models.py:1170
 msgid ""
 "Переопределение видимости баннера после «только обязательные» для мобильной "
 "версии"
 msgstr ""
+"Banner visibility override after «required only» for the mobile version"
 
 #: .\models.py:1180
 msgid ""
 "Переопределение видимости баннера после «сохранить выбранные категории» для "
 "мобильной версии"
 msgstr ""
+"Banner visibility override after «save selected categories» for the mobile "
+"version"
 
 #: .\models.py:1187
 msgid "Переопределение скрытия для ботов"
-msgstr ""
+msgstr "Bot-hiding override"
 
 #: .\models.py:1189
 msgid ""
-"Переопределение скрытия для ботов в runtime: пусто — использовать "
-"settings.py, включено — скрывать баннер для определённых ботов, выключено — "
-"показывать баннер."
+"Переопределение скрытия для ботов во время выполнения: пусто — использовать "
+"значение из настроек, включено — скрывать баннер для определённых ботов, "
+"выключено — показывать баннер."
 msgstr ""
-
-#: .\models.py:1208
-msgid "Редакция cookie-баннера"
-msgstr ""
+"Runtime bot-hiding override: empty uses the value from settings, enabled "
+"hides the banner for certain bots, disabled shows the banner."
 
 #: .\models.py:1209
+msgid "Редакция cookie-баннера"
+msgstr "Cookie banner revision"
+
+#: .\models.py:1210
 msgid "Редакции cookie-баннера"
-msgstr ""
+msgstr "Cookie banner revisions"
 
-#: .\models.py:1250
+#: .\models.py:1251
 msgid "Используйте HEX-цвет в формате #RRGGBB."
-msgstr ""
+msgstr "Use a HEX color in the #RRGGBB format."
 
-#: .\models.py:1269
+#: .\models.py:1273
 msgid "media_image_url должен быть безопасным URL/путём."
-msgstr ""
+msgstr "media_image_url must be a safe URL/path."
 
-#: .\models.py:1272
+#: .\models.py:1278
 msgid "Для слота изображения обязателен media_image_url."
-msgstr ""
+msgstr "media_image_url is required for the image slot."
 
-#: .\models.py:1274
+#: .\models.py:1282
 msgid "Для слота изображения обязателен media_image_alt."
-msgstr ""
+msgstr "media_image_alt is required for the image slot."
 
-#: .\models.py:1280
+#: .\models.py:1289
 msgid "Цвет фона и текста должен обеспечивать читаемый контраст."
-msgstr ""
+msgstr "The background and text colors must provide readable contrast."
 
-#: .\models.py:1339
-msgid "Текстовый пресет cookie-баннера"
-msgstr ""
+#: .\models.py:1348
+msgid "Текстовая заготовка cookie-баннера"
+msgstr "Cookie banner text preset"
 
-#: .\models.py:1340
-msgid "Текстовые пресеты cookie-баннера"
-msgstr ""
+#: .\models.py:1349
+msgid "Текстовые заготовки cookie-баннера"
+msgstr "Cookie banner text presets"
 
-#: .\models.py:1357
+#: .\models.py:1366
 #, python-format
 msgid "%(field_name)s не может быть пустым."
-msgstr ""
+msgstr "%(field_name)s cannot be empty."
 
-#: .\models.py:1376
+#: .\models.py:1385
 msgid "Актуальная"
-msgstr ""
+msgstr "Current"
 
-#: .\models.py:1377
+#: .\models.py:1386
 msgid "Устаревшая"
-msgstr ""
+msgstr "Obsolete"
 
-#: .\models.py:1409
+#: .\models.py:1419
 msgid "Записи cookie-согласий"
-msgstr ""
+msgstr "Cookie consent records"
 
-#: .\models.py:1458 .\models.py:1576
+#: .\models.py:1468 .\models.py:1584
 msgid "anonymous_token обязателен, когда пользователь не указан."
-msgstr ""
+msgstr "anonymous_token is required when the user is not specified."
 
-#: .\models.py:1479
+#: .\models.py:1489
 #, python-format
 msgid "selected_categories содержит неизвестные категории: %(codes)s."
-msgstr ""
+msgstr "selected_categories contains unknown categories: %(codes)s."
 
-#: .\models.py:1484
+#: .\models.py:1493
 #, python-format
 msgid "selected_categories должен включать обязательные категории: %(codes)s."
-msgstr ""
+msgstr "selected_categories must include the required categories: %(codes)s."
 
-#: .\models.py:1513
+#: .\models.py:1521
 msgid "Отклонить все"
-msgstr ""
+msgstr "Reject all"
 
-#: .\models.py:1514
+#: .\models.py:1522
 msgid "Только обязательные"
-msgstr ""
+msgstr "Required only"
 
-#: .\models.py:1515
+#: .\models.py:1523
 msgid "Сохранить выбранные категории"
-msgstr ""
+msgstr "Save selected categories"
 
-#: .\models.py:1541
+#: .\models.py:1549
 msgid "Состояние cookie-баннера"
-msgstr ""
+msgstr "Cookie banner state"
 
-#: .\models.py:1542
+#: .\models.py:1550
 msgid "Состояния cookie-баннера"
-msgstr ""
+msgstr "Cookie banner states"
 
-#: .\models.py:1594
+#: .\models.py:1602
 msgid "Запятая (,)"
-msgstr ""
+msgstr "Comma (,)"
 
-#: .\models.py:1595
+#: .\models.py:1603
 msgid "Точка с запятой (;)"
-msgstr ""
+msgstr "Semicolon (;)"
 
-#: .\models.py:1596
+#: .\models.py:1604
 msgid "Табуляция (TAB)"
-msgstr ""
+msgstr "Tab (TAB)"
 
-#: .\models.py:1597
+#: .\models.py:1605
 msgid "Вертикальная черта (|)"
-msgstr ""
+msgstr "Vertical bar (|)"
 
-#: .\models.py:1609 .\models.py:1610 .\models.py:1615
+#: .\models.py:1635 .\models.py:1636 .\models.py:1641
 msgid "Настройки админ-инструментов cookie"
-msgstr ""
+msgstr "Cookie admin tools settings"
 
-#: .\models.py:1624
+#: .\models.py:1649
 msgid "CookieConsentEvent неизменяем и не может быть обновлён."
-msgstr ""
+msgstr "CookieConsentEvent is immutable and cannot be updated."
 
-#: .\models.py:1629
+#: .\models.py:1654
 msgid "CookieConsentEvent неизменяем и не может быть удалён."
-msgstr ""
+msgstr "CookieConsentEvent is immutable and cannot be deleted."
 
-#: .\models.py:1637
+#: .\models.py:1662
 msgid "Принято"
-msgstr ""
+msgstr "Accepted"
 
-#: .\models.py:1639
+#: .\models.py:1664
 msgid "Устарело"
-msgstr ""
+msgstr "Obsolete"
 
-#: .\models.py:1660
+#: .\models.py:1686
 msgid "Событие cookie-согласия"
-msgstr ""
+msgstr "Cookie consent event"
 
-#: .\models.py:1661
+#: .\models.py:1687
 msgid "События cookie-согласий"
-msgstr ""
+msgstr "Cookie consent events"
 
-#: .\models.py:1710
+#: .\models.py:1736
 msgid "categories_snapshot должен быть списком."
-msgstr ""
+msgstr "categories_snapshot must be a list."
 
-#: .\models.py:1717
+#: .\models.py:1744
 #, python-format
 msgid ""
 "Элемент categories_snapshot[%(index)s] должен быть объектом (mapping/dict)."
-msgstr ""
+msgstr "categories_snapshot[%(index)s] item must be an object (mapping/dict)."
 
-#: .\models.py:1724
+#: .\models.py:1753
 #, python-format
 msgid ""
-"categories_snapshot[%(index)s][\"code\"] должен соответствовать шаблону \"[a-"
-"z][a-z0-9_]*\"."
+"categories_snapshot[%(index)s][\"code\"] должен соответствовать шаблону "
+"\"[a-z][a-z0-9_]*\"."
 msgstr ""
+"categories_snapshot[%(index)s][\"code\"] must match the pattern "
+"\"[a-z][a-z0-9_]*\"."
 
-#: .\models.py:1729
+#: .\models.py:1759
 #, python-format
 msgid "categories_snapshot содержит дублирующийся код \"%(code)s\"."
-msgstr ""
+msgstr "categories_snapshot contains a duplicate code \"%(code)s\"."
 
-#: .\models.py:1735
+#: .\models.py:1765
 #, python-format
 msgid "categories_snapshot[%(index)s][\"title\"] не может быть пустым."
-msgstr ""
+msgstr "categories_snapshot[%(index)s][\"title\"] cannot be empty."
 
-#: .\models.py:1751
+#: .\models.py:1782
 #, python-format
-msgid ""
-"categories_snapshot[%(index)s][\"sort_order\"] должен быть целым числом."
-msgstr ""
+msgid "categories_snapshot[%(index)s][\"sort_order\"] должен быть целым числом."
+msgstr "categories_snapshot[%(index)s][\"sort_order\"] must be an integer."
 
-#: .\retention.py:106
+#: .\retention.py:104
 msgid "older_than_days должен быть неотрицательным целым числом или None."
-msgstr ""
+msgstr "older_than_days must be a non-negative integer or None."
 
-#: .\retention.py:122
+#: .\retention.py:120
 msgid "batch_size должен быть положительным целым числом."
-msgstr ""
+msgstr "batch_size must be a positive integer."
 
-#: .\retention.py:165
+#: .\retention.py:159
 msgid "Очистка cookie-аудита по политике хранения."
-msgstr ""
+msgstr "Cleanup of the cookie audit according to the retention policy."
 
-#: .\services.py:470
+#: .\services.py:442
 #, python-format
 msgid ""
 "Неизвестный вариант текста cookie-policy: %(variant)s. Ожидается один из: "
 "%(allowed)s."
 msgstr ""
+"Unknown cookie policy text variant: %(variant)s. Expected one of: "
+"%(allowed)s."
 
-#: .\services.py:564 .\services.py:760
+#: .\services.py:536 .\services.py:733
 msgid "Нельзя опубликовать политику cookie без активных категорий."
-msgstr ""
+msgstr "Cannot publish the cookie policy without active categories."
 
-#: .\services.py:718
+#: .\services.py:690
 msgid "Исходная редакция cookie-policy должна быть сохранена."
-msgstr ""
+msgstr "The source cookie policy revision must be saved."
 
-#: .\services.py:910
+#: .\services.py:884
 msgid "Исходная редакция cookie-баннера должна быть сохранена."
-msgstr ""
+msgstr "The source cookie banner revision must be saved."
 
-#: .\services.py:2384
+#: .\services.py:2381
 msgid ""
 "Редакция политики cookie должна быть сохранена до синхронизации registry "
 "items."
 msgstr ""
+"The cookie policy revision must be saved before synchronizing registry items."
 
-#: .\services.py:2760 .\services.py:2811
+#: .\services.py:2753 .\services.py:2806
 msgid "Cookie-модуль отключён."
-msgstr ""
+msgstr "The cookie module is disabled."
 
-#: .\services.py:2765
+#: .\services.py:2759
 msgid ""
 "Для закрытия cookie-баннера нужен авторизованный пользователь или "
 "anonymous_token."
 msgstr ""
+"Closing the cookie banner requires an authenticated user or anonymous_token."
 
-#: .\services.py:2817
+#: .\services.py:2813
 msgid ""
 "Для выбора настроек cookie нужен авторизованный пользователь или "
 "anonymous_token."
 msgstr ""
+"Choosing cookie settings requires an authenticated user or anonymous_token."
 
-#: .\services.py:3218 .\views.py:224
+#: .\services.py:3211 .\views.py:223
 msgid "Активная редакция политики cookie не найдена."
-msgstr ""
+msgstr "No active cookie policy revision found."
 
-#: .\services.py:3241
+#: .\services.py:3234
 #, python-format
 msgid "Выбраны неизвестные cookie-категории: %(codes)s."
-msgstr ""
+msgstr "Unknown cookie categories were selected: %(codes)s."
 
-#: .\services.py:3366
+#: .\services.py:3356
 msgid ""
 "Для состояния cookie-баннера нужен авторизованный пользователь или "
 "anonymous_token."
 msgstr ""
+"The cookie banner state requires an authenticated user or anonymous_token."
 
-#: .\services.py:3452
+#: .\services.py:3441
 msgid "user должен быть экземпляром AUTH_USER_MODEL."
-msgstr ""
+msgstr "user must be an instance of AUTH_USER_MODEL."
 
-#: .\services.py:3458
+#: .\services.py:3447
 msgid "anonymous_token должен быть непустой строкой."
-msgstr ""
+msgstr "anonymous_token must be a non-empty string."
 
 #: .\templates\django_cookies_152fz\cookie_preferences.html:6
 msgid "Cookie preferences"
-msgstr ""
+msgstr "Cookie preferences"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:6
-msgid "Все необязательные категории включены"
-msgstr ""
+msgid "All optional categories are enabled"
+msgstr "All optional categories are enabled"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:7
-msgid "Отказ от необязательных категорий"
-msgstr ""
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:91
+msgid "Reject optional categories"
+msgstr "Reject optional categories"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:8
-msgid "Выбраны только обязательные категории"
-msgstr ""
+msgid "Only required categories selected"
+msgstr "Only required categories selected"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:9
-msgid "Выбраны отдельные категории"
-msgstr ""
+msgid "Selected categories"
+msgstr "Selected categories"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:14
 msgid "no decision"
-msgstr ""
+msgstr "no decision"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:16
-msgid "Версия политики cookie"
-msgstr ""
+msgid "Version of cookie policy"
+msgstr "Version of cookie policy"
+
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:18
+msgid "Cookie settings"
+msgstr "Cookie settings"
+
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:20
+msgid "Status"
+msgstr "Status"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:24
 msgid ""
-"Обновите выбор категорий cookie: опубликована новая редакция политики cookie."
+"Update your cookie category choice: a new cookie policy revision has been "
+"published."
 msgstr ""
+"Update your cookie category choice: a new cookie policy revision has been "
+"published."
+
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:38
+msgid "Required categories"
+msgstr "Required categories"
+
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:45
+msgid "No required categories."
+msgstr "No required categories."
+
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:53
+msgid "Optional categories"
+msgstr "Optional categories"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:81
 msgid "Select all optional categories"
-msgstr ""
-
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:91
-msgid "Reject optional categories"
-msgstr ""
+msgstr "Select all optional categories"
 
 #: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:101
 msgid "Keep only required cookie categories"
-msgstr ""
+msgstr "Keep only required cookie categories"
 
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:109
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:110
 msgid "Choose categories"
-msgstr ""
+msgstr "Choose categories"
 
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:120
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:122
 msgid ""
 "Refusal means optional categories remain disabled until you change your "
 "choice."
 msgstr ""
+"Refusal means optional categories remain disabled until you change your "
+"choice."
 
-#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:135
-msgid "Сохранить настройки cookie"
-msgstr ""
+#: .\templates\django_cookies_152fz\includes\cookie_preferences_content.html:139
+msgid "Save cookie settings"
+msgstr "Save cookie settings"
 
-#: .\views.py:124
+#: .\views.py:125
 msgid "Неизвестное действие cookie-баннера."
-msgstr ""
-
-#: .\views.py:147
-msgid "В блокирующем режиме до выбора нельзя закрыть баннер. "
-msgstr ""
+msgstr "Unknown cookie banner action."
 
 #: .\views.py:148
+msgid "В блокирующем режиме до выбора нельзя закрыть баннер. "
+msgstr "In blocking mode the banner cannot be closed before a choice is made. "
+
+#: .\views.py:149
 msgid "Сначала выберите вариант cookie."
-msgstr ""
+msgstr "Choose a cookie option first."
 
-#: .\views.py:247
+#: .\views.py:246
 msgid "Cookie-поток отключён."
-msgstr ""
-
-msgid "Override: show empty category block"
-msgstr "Override: show empty category block"
-
-msgid "Override: show customize action without optional categories"
-msgstr "Override: show customize action without optional categories"
-
-msgid "Override: empty category block text"
-msgstr "Override: empty category block text"
-
-msgid "If enabled, shows the empty categories section even when no optional categories are configured. Leave empty to use settings.py value."
-msgstr "If enabled, shows the empty categories section even when no optional categories are configured. Leave empty to use settings.py value."
-
-msgid "If enabled, keeps the customize action visible even when optional categories are absent. Leave empty to use settings.py value."
-msgstr "If enabled, keeps the customize action visible even when optional categories are absent. Leave empty to use settings.py value."
-
-msgid "Custom text for the empty categories section. Leave empty to use settings.py value."
-msgstr "Custom text for the empty categories section. Leave empty to use settings.py value."
+msgstr "The cookie flow is disabled."

@@ -1,29 +1,30 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Профиль | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Profile | Training Center{% else %}Профиль | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Профиль</h2>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Profile{% else %}Профиль{% endif %}</h2>
           <dl class="row mb-0">
-            <dt class="col-sm-4">Имя пользователя</dt>
+            <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Username{% else %}Имя пользователя{% endif %}</dt>
             <dd class="col-sm-8">{{ request.user.get_username }}</dd>
             <dt class="col-sm-4">Email</dt>
             <dd class="col-sm-8">{{ request.user.email|default:"-" }}</dd>
-            <dt class="col-sm-4">ФИО</dt>
+            <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Full name{% else %}ФИО{% endif %}</dt>
             <dd class="col-sm-8">{{ request.user.get_full_name|default:"-" }}</dd>
           </dl>
           <div class="d-flex flex-wrap gap-2 mt-4">
-            <a class="btn btn-outline-primary" href="{% url 'pages:consents' %}">Мои согласия</a>
-            <a class="btn btn-outline-success" href="{% url 'pages:certificate_request' %}">Получение сертификата</a>
-            <a class="btn btn-outline-warning" href="{% url 'pages:verified_paper_consent' %}">Бумажное согласие</a>
-            <a class="btn btn-outline-danger" href="{% url 'account_logout' %}">Выйти</a>
+            <a class="btn btn-outline-primary" href="{% url 'pages:consents' %}">{% if CURRENT_LANGUAGE == 'en' %}My consents{% else %}Мои согласия{% endif %}</a>
+            <a class="btn btn-outline-success" href="{% url 'pages:certificate_request' %}">{% if CURRENT_LANGUAGE == 'en' %}Get certificate{% else %}Получение сертификата{% endif %}</a>
+            <a class="btn btn-outline-warning" href="{% url 'pages:verified_paper_consent' %}">{% if CURRENT_LANGUAGE == 'en' %}Paper consent{% else %}Бумажное согласие{% endif %}</a>
+            <a class="btn btn-outline-danger" href="{% url 'account_logout' %}">{% if CURRENT_LANGUAGE == 'en' %}Sign out{% else %}Выйти{% endif %}</a>
             {% if request.user.is_staff %}
-              <a class="btn btn-outline-secondary" href="{% url 'admin:index' %}">Админка</a>
+              <a class="btn btn-outline-secondary" href="{% url 'admin:index' %}">{% if CURRENT_LANGUAGE == 'en' %}Admin{% else %}Админка{% endif %}</a>
             {% endif %}
           </div>
         </div>
@@ -31,4 +32,3 @@
     </div>
   </div>
 {% endblock %}
-

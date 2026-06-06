@@ -1,21 +1,22 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Вход | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Sign in | Training Center{% else %}Вход | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Войти</h2>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Sign in{% else %}Войти{% endif %}</h2>
           <form method="post" action="{% url 'account_login' %}" novalidate>
             {% csrf_token %}
             {% if form.non_field_errors %}
               <div class="alert alert-danger" role="alert">{{ form.non_field_errors }}</div>
             {% endif %}
             <div class="mb-3">
-              <label class="form-label" for="{{ form.login.id_for_label }}">Имя пользователя</label>
+              <label class="form-label" for="{{ form.login.id_for_label }}">{% if CURRENT_LANGUAGE == 'en' %}Username{% else %}Имя пользователя{% endif %}</label>
               <input
                 type="text"
                 name="{{ form.login.html_name }}"
@@ -23,20 +24,20 @@
                 class="form-control"
                 value="{{ form.login.value|default_if_none:'' }}"
                 autocomplete="username"
-                placeholder="Имя пользователя"
+                placeholder="{% if CURRENT_LANGUAGE == 'en' %}Username{% else %}Имя пользователя{% endif %}"
                 required
               >
               {% if form.login.errors %}<div class="text-danger small">{{ form.login.errors }}</div>{% endif %}
             </div>
             <div class="mb-3">
-              <label class="form-label" for="{{ form.password.id_for_label }}">Пароль</label>
+              <label class="form-label" for="{{ form.password.id_for_label }}">{% if CURRENT_LANGUAGE == 'en' %}Password{% else %}Пароль{% endif %}</label>
               <input
                 type="password"
                 name="{{ form.password.html_name }}"
                 id="{{ form.password.id_for_label }}"
                 class="form-control"
                 autocomplete="current-password"
-                placeholder="Пароль"
+                placeholder="{% if CURRENT_LANGUAGE == 'en' %}Password{% else %}Пароль{% endif %}"
                 required
               >
               {% if form.password.errors %}<div class="text-danger small">{{ form.password.errors }}</div>{% endif %}
@@ -50,22 +51,21 @@
                   class="form-check-input"
                   {% if form.remember.value %}checked{% endif %}
                 >
-                <label class="form-check-label" for="{{ form.remember.id_for_label }}">Запомнить меня</label>
+                <label class="form-check-label" for="{{ form.remember.id_for_label }}">{% if CURRENT_LANGUAGE == 'en' %}Remember me{% else %}Запомнить меня{% endif %}</label>
               </div>
             {% endif %}
             {% if redirect_field_value %}
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
             {% endif %}
-            <button class="btn btn-primary" type="submit">Войти</button>
+            <button class="btn btn-primary" type="submit">{% if CURRENT_LANGUAGE == 'en' %}Sign in{% else %}Войти{% endif %}</button>
           </form>
           <hr>
           <p class="mb-0">
-            Ещё нет аккаунта?
-            <a href="{% url 'account_signup' %}">Создать</a>
+            {% if CURRENT_LANGUAGE == 'en' %}No account yet?{% else %}Ещё нет аккаунта?{% endif %}
+            <a href="{% url 'account_signup' %}">{% if CURRENT_LANGUAGE == 'en' %}Create one{% else %}Создать{% endif %}</a>
           </p>
         </div>
       </div>
     </div>
   </div>
 {% endblock %}
-

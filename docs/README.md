@@ -2,6 +2,13 @@
 
 This is the English top-level documentation index.
 
+## At a glance
+
+| [Cookie module](./cookies/en/README.md) | [Consent module](./consent/en/README.md) |
+| :---: | :---: |
+| ![Cookie banner on the site](./assets/cookie/en/1-cookie-banner-on-site.png) | ![Course signup form with the consent block](./assets/consent/en/1-course-signup.png) |
+| Banner, runtime layer, integration registry and audit. | Consent lifecycle: documents, records, audit and self-service. |
+
 ## Main sections
 
 - [Consent module](./consent/en/README.md)

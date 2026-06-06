@@ -151,6 +151,10 @@ What can be configured:
 When to change:
 - when only a portion of users/groups need consent.
 
+The audience rules list — coverage and the consent requirement per purpose/document:
+
+![Consent audience rules](../../assets/consent/en/13-consent-audience-rule.png)
+
 ### `ConsentAccessPolicy` (access policies)
 
 What can be configured:
@@ -169,6 +173,13 @@ Mode:
 Purpose:
 - checking current/outdated/revoked status;
 - audit by user, anonymous token, source.
+
+The records list with the `Export selected records to CSV` action:
+
+![Consent records in the admin panel](../../assets/consent/en/10-consent-records-admin.png)
+
+A sample of the resulting export:
+[consent-records.csv](../../assets/consent/consent-records.csv)
 
 ### `ConsentEvent` (consent events)
 
@@ -207,6 +218,13 @@ Mode:
 Purpose:
 - log of consent module operations (admin panel and service actions).
 
+The operation log with the `Export selected log entries to CSV` action:
+
+![Consent module operation audit log](../../assets/consent/en/9-operation-audit-log.png)
+
+A sample of the resulting export:
+[consent-module-operation-audit.csv](../../assets/consent/consent-module-operation-audit.csv)
+
 ## Where to view signed consents
 
 Main operating point: section `ConsentRecord`.
@@ -214,6 +232,10 @@ Main operating point: section `ConsentRecord`.
 A user's list of consents in the administrative panel:
 
 ![All user consents in the admin panel](../../assets/consent/en/3.1-all-user-consents.png)
+
+The same view with the `Pending only` list mode and a withdrawn consent:
+
+![Withdrawn consent in the user consents list](../../assets/consent/en/15-withdrawn-consent.png)
 
 How to search for signed ones:
 1. Open the `ConsentRecord` list.
@@ -323,6 +345,10 @@ What to do:
 - enable/disable the requirement for paper confirmation for the flow;
 - set soft or strict behavior for old web consents.
 
+The flow-level policies — verification mode, scope and behavior for old web consents:
+
+![Verified consent policies](../../assets/consent/en/12-verified-consent-policy.png)
+
 ### `VerifiedConsentFormPolicy`
 
 What can be configured:
@@ -333,6 +359,10 @@ What can be configured:
 What to do:
 - enable paper confirmation only for a specific form;
 - gradually expand coverage without affecting other forms in the flow.
+
+The per-form overrides keyed by `form_code`:
+
+![Verified consent form policies](../../assets/consent/en/11-verified-consent-form-policy.png)
 
 ### `VerifiedConsentSubmission`
 
@@ -361,6 +391,10 @@ What to do:
 Operator actions on a paper consent in the admin panel:
 
 ![Admin actions on a paper consent](../../assets/consent/en/4.1-paper-consent-admin-actions.png)
+
+A single artifact card — document hash, uploaded file and the `Verify as employee` / `Verify as administrator` actions:
+
+![Verified consent artifact](../../assets/consent/en/14-verified-consent-artifact.png)
 
 ## How to link a document to a form
 

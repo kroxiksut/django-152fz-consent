@@ -1,7 +1,8 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}{% trans "Мои согласия" %} | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}My consents{% else %}Мои согласия{% endif %} | {% if CURRENT_LANGUAGE == 'en' %}Training Center{% else %}Учебный центр{% endif %}{% endblock %}
 
 {% block extra_head %}
   {{ block.super }}
@@ -19,8 +20,8 @@
 
 {% block content %}
   <main class="subject-consents">
-    <h2 class="h4 mb-3">{% trans "Мои согласия" %}</h2>
-    <p>{% trans "Самообслуживание: просмотр и отзыв ваших согласий." %}</p>
+    <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}My consents{% else %}Мои согласия{% endif %}</h2>
+    <p>{% if CURRENT_LANGUAGE == 'en' %}Self-service: view and withdraw your consents.{% else %}Самообслуживание: просмотр и отзыв ваших согласий.{% endif %}</p>
     {% if error_message %}
     <p><strong>{{ error_message }}</strong></p>
     {% endif %}
@@ -29,13 +30,13 @@
       <table class="table table-striped align-middle">
         <thead>
           <tr>
-            <th>{% trans "Цель" %}</th>
-            <th>{% trans "Документ" %}</th>
-            <th>{% trans "Редакция" %}</th>
-            <th>{% trans "Статус" %}</th>
-            <th>{% trans "Дата согласия" %}</th>
-            <th>{% trans "Текст документа" %}</th>
-            <th>{% trans "Действие" %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Purpose{% else %}Цель{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Document{% else %}Документ{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Revision{% else %}Редакция{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Status{% else %}Статус{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Consent date{% else %}Дата согласия{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Document text{% else %}Текст документа{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Action{% else %}Действие{% endif %}</th>
           </tr>
         </thead>
         <tbody>
@@ -48,19 +49,19 @@
             <td>{{ item.consented_at }}</td>
             <td>
               {% if subject_consents_open_mode_modal %}
-              <button type="button" class="btn btn-sm btn-outline-primary" data-action="open-document-modal" data-document-url="{{ item.document_url }}" data-document-title="{{ item.document_title }}">{% trans "Открыть и подписать" %}</button>
-              <noscript><a href="{{ item.document_url }}">{% trans "Открыть и подписать" %}</a></noscript>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-action="open-document-modal" data-document-url="{{ item.document_url }}" data-document-title="{{ item.document_title }}">{% if CURRENT_LANGUAGE == 'en' %}Open and sign{% else %}Открыть и подписать{% endif %}</button>
+              <noscript><a href="{{ item.document_url }}">{% if CURRENT_LANGUAGE == 'en' %}Open and sign{% else %}Открыть и подписать{% endif %}</a></noscript>
               {% elif subject_consents_open_mode_new_window %}
-              <a href="{{ item.document_url }}" target="_blank" rel="noopener">{% trans "Открыть и подписать" %}</a>
+              <a href="{{ item.document_url }}" target="_blank" rel="noopener">{% if CURRENT_LANGUAGE == 'en' %}Open and sign{% else %}Открыть и подписать{% endif %}</a>
               {% else %}
-              <a href="{{ item.document_url }}">{% trans "Открыть и подписать" %}</a>
+              <a href="{{ item.document_url }}">{% if CURRENT_LANGUAGE == 'en' %}Open and sign{% else %}Открыть и подписать{% endif %}</a>
               {% endif %}
             </td>
             <td>
               {% if item.can_withdraw %}
               <form method="post" action="{{ item.withdraw_self_url }}">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-sm btn-outline-danger">{% trans "Отозвать" %}</button>
+                <button type="submit" class="btn btn-sm btn-outline-danger">{% if CURRENT_LANGUAGE == 'en' %}Withdraw{% else %}Отозвать{% endif %}</button>
               </form>
               {% else %}
               —
@@ -72,7 +73,7 @@
       </table>
     </div>
     {% else %}
-    <p>{% trans "Согласия не найдены." %}</p>
+    <p>{% if CURRENT_LANGUAGE == 'en' %}No consents found.{% else %}Согласия не найдены.{% endif %}</p>
     {% endif %}
   </main>
 
@@ -80,10 +81,10 @@
   <div id="subject-consents-modal" class="subject-consents-modal" hidden aria-hidden="true">
     <div class="subject-consents-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="subject-consents-modal-title">
       <div class="subject-consents-modal__header">
-        <h2 id="subject-consents-modal-title" class="subject-consents-modal__title">{% trans "Документ для подписания" %}</h2>
-        <button type="button" class="subject-consents-modal__close" data-action="close-document-modal">{% trans "Закрыть" %}</button>
+        <h2 id="subject-consents-modal-title" class="subject-consents-modal__title">{% if CURRENT_LANGUAGE == 'en' %}Document to sign{% else %}Документ для подписания{% endif %}</h2>
+        <button type="button" class="subject-consents-modal__close" data-action="close-document-modal">{% if CURRENT_LANGUAGE == 'en' %}Close{% else %}Закрыть{% endif %}</button>
       </div>
-      <iframe class="subject-consents-modal__frame" title="{% trans 'Документ для подписания' %}" src="about:blank" data-role="document-frame"></iframe>
+      <iframe class="subject-consents-modal__frame" title="{% if CURRENT_LANGUAGE == 'en' %}Document to sign{% else %}Документ для подписания{% endif %}" src="about:blank" data-role="document-frame"></iframe>
     </div>
   </div>
   {% endif %}

@@ -1,5 +1,28 @@
 {% extends "admin/change_list.html" %}
 
+{% block extrastyle %}
+  {{ block.super }}
+  <style>
+    #content-main .object-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    #content-main .object-tools li {
+      float: none;
+      margin: 0;
+    }
+
+    #content-main .object-tools a {
+      white-space: normal;
+      line-height: 1.2;
+    }
+  </style>
+{% endblock %}
+
 {% block object-tools-items %}
   {{ block.super }}
   {% if policy_variant_tools %}

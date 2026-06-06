@@ -5,8 +5,8 @@
 <h1 align="center">django-consent-152fz repository: consent and cookie modules for 152-FZ workflows</h1>
 
 <p align="center">
-  <img alt="Consent package" src="https://img.shields.io/badge/django--consent--152fz-1.0.0-blue">
-  <img alt="Cookies package" src="https://img.shields.io/badge/django--cookies--152fz-1.0.0-blue">
+  <img alt="Consent package" src="https://img.shields.io/badge/django--consent--152fz-1.0.1-blue">
+  <img alt="Cookies package" src="https://img.shields.io/badge/django--cookies--152fz-1.0.1-blue">
   <img alt="Package status" src="https://img.shields.io/badge/status-stable-blue">
   <br>
   <img alt="Python versions" src="https://img.shields.io/badge/python-3.10%2B-blue">
@@ -21,6 +21,11 @@
 - `django-cookies-152fz`: cookie banner, policy revisions, runtime registry, consent-aware script execution, cookie audit, flexible branding, and mobile-friendly variants.
 
 The two packages work independently - install either one on its own. If you only need the consent lifecycle, you can keep any cookie banner you already use (or any other cookie solution); if you only need a cookie banner, you can install the cookies package without the consent module. They align under a common 152-FZ context but do not require each other.
+
+| [Cookie module](./docs/cookies/en/README.md) | [Consent module](./docs/consent/en/README.md) |
+| :---: | :---: |
+| ![Cookie banner on the site](./docs/assets/cookie/en/1-cookie-banner-on-site.png) | ![Course signup form with the consent block](./docs/assets/consent/en/1-course-signup.png) |
+| Banner, runtime layer, integration registry and audit. | Consent lifecycle: documents, records, audit and self-service. |
 
 > **Disclaimer:** this package is a technical tool, not legal advice. Installing it does not by itself make a project 152-FZ compliant - the legal correctness of your texts, documents, and processing workflows remains the operator's responsibility (directly or through legal counsel). See [Legal notice](#legal-notice) and [Commercial support](./docs/commercial-support.md).
 

@@ -1,16 +1,17 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% load i18n tz %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Согласия | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Consents | Training Center{% else %}Согласия | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-    <h2 class="mb-0">Согласия пользователя</h2>
-    <a class="btn btn-outline-primary" href="{{ subject_consents_url }}">Мои согласия (самообслуживание)</a>
+    <h2 class="mb-0">{% if CURRENT_LANGUAGE == 'en' %}User consents{% else %}Согласия пользователя{% endif %}</h2>
+    <a class="btn btn-outline-primary" href="{{ subject_consents_url }}">{% if CURRENT_LANGUAGE == 'en' %}My consents (self-service){% else %}Мои согласия (самообслуживание){% endif %}</a>
   </div>
 
   <form method="get" class="d-flex align-items-center gap-2 mb-3">
-    <label for="consent-list-mode" class="form-label mb-0 text-muted small">{% trans "Режим списка:" %}</label>
+    <label for="consent-list-mode" class="form-label mb-0 text-muted small">{% if CURRENT_LANGUAGE == 'en' %}List mode:{% else %}Режим списка:{% endif %}</label>
     <select
       id="consent-list-mode"
       name="list_mode"
@@ -21,11 +22,11 @@
       {% for value in consent_list_mode_options %}
         <option value="{{ value }}"{% if value == consent_list_mode %} selected{% endif %}>
           {% if value == "all" %}
-            {% trans "Все" %}
+            {% if CURRENT_LANGUAGE == 'en' %}All{% else %}Все{% endif %}
           {% elif value == "signed_only" %}
-            {% trans "Только подписанные" %}
+            {% if CURRENT_LANGUAGE == 'en' %}Signed only{% else %}Только подписанные{% endif %}
           {% elif value == "pending_only" %}
-            {% trans "Только не подписанные" %}
+            {% if CURRENT_LANGUAGE == 'en' %}Pending only{% else %}Только не подписанные{% endif %}
           {% else %}
             {{ value }}
           {% endif %}
@@ -39,11 +40,11 @@
       <table class="table table-striped align-middle">
         <thead>
           <tr>
-            <th>Цель</th>
-            <th>Документ</th>
-            <th>Статус</th>
-            <th>Дата подписания</th>
-            <th>Действия</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Purpose{% else %}Цель{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Document{% else %}Документ{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Status{% else %}Статус{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Signed at{% else %}Дата подписания{% endif %}</th>
+            <th>{% if CURRENT_LANGUAGE == 'en' %}Actions{% else %}Действия{% endif %}</th>
           </tr>
         </thead>
         <tbody>
@@ -53,26 +54,26 @@
               <td>{{ row.document_title }}</td>
               <td>
                 {% if row.is_current %}
-                  <span class="badge text-bg-success">Актуально</span>
+                  <span class="badge text-bg-success">{% if CURRENT_LANGUAGE == 'en' %}Current{% else %}Актуально{% endif %}</span>
                 {% else %}
                   <span class="badge text-bg-warning">{{ row.status }}</span>
                 {% endif %}
               </td>
               <td>
                 {% if row.signed_at %}
-                  {{ row.signed_at|timezone:"Europe/Moscow"|date:"d.m.Y H:i" }} МСК
+                  {{ row.signed_at|timezone:"Europe/Moscow"|date:"d.m.Y H:i" }} {% if CURRENT_LANGUAGE == 'en' %}MSK{% else %}МСК{% endif %}
                 {% else %}
                   <span class="text-muted">—</span>
                 {% endif %}
               </td>
               <td class="d-flex flex-wrap gap-2">
                 {% if row.show_sign_action %}
-                  <a class="btn btn-sm btn-primary" href="{{ row.document_url }}">Открыть и подписать</a>
+                  <a class="btn btn-sm btn-primary" href="{{ row.document_url }}">{% if CURRENT_LANGUAGE == 'en' %}Open and sign{% else %}Открыть и подписать{% endif %}</a>
                 {% endif %}
                 {% if row.show_withdraw_action %}
                   <form method="post" action="{{ row.withdraw_self_url }}" class="d-inline">
                     {% csrf_token %}
-                    <button class="btn btn-sm btn-outline-danger" type="submit">Отозвать</button>
+                    <button class="btn btn-sm btn-outline-danger" type="submit">{% if CURRENT_LANGUAGE == 'en' %}Withdraw{% else %}Отозвать{% endif %}</button>
                   </form>
                 {% endif %}
                 {% if not row.show_sign_action and not row.show_withdraw_action %}
@@ -86,7 +87,7 @@
     </div>
   {% else %}
     <div class="alert alert-secondary" role="status">
-      Сейчас нет активных потоков согласий для этого пользователя.
+      {% if CURRENT_LANGUAGE == 'en' %}There are currently no active consent flows for this user.{% else %}Сейчас нет активных потоков согласий для этого пользователя.{% endif %}
     </div>
   {% endif %}
 {% endblock %}

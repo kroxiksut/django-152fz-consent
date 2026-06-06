@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% load django_bootstrap5 %}
+{% load django_bootstrap5 i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Получение сертификата | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Certificate request | Training Center{% else %}Получение сертификата | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Заявка на получение сертификата</h2>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Certificate request{% else %}Заявка на получение сертификата{% endif %}</h2>
           <p class="demo-muted">
-            Заполните данные для подготовки сертификата. Для этого сценария используется
-            проверяемое (бумажное) согласие.
+            {% if CURRENT_LANGUAGE == 'en' %}Fill in the details to prepare the certificate. This scenario uses verified (paper) consent.{% else %}Заполните данные для подготовки сертификата. Для этого сценария используется проверяемое (бумажное) согласие.{% endif %}
           </p>
 
           <form method="post" novalidate data-consent-radio-form>
@@ -20,7 +20,7 @@
               <div class="alert alert-warning" role="alert">
                 {{ verified_transition.message }}
                 {% if verified_transition.upload_url %}
-                  <a href="{{ verified_transition.upload_url }}" class="alert-link">Загрузить подтверждение</a>
+                  <a href="{{ verified_transition.upload_url }}" class="alert-link">{% if CURRENT_LANGUAGE == 'en' %}Upload confirmation{% else %}Загрузить подтверждение{% endif %}</a>
                 {% endif %}
               </div>
             {% endif %}
@@ -31,13 +31,13 @@
             {% bootstrap_field form.comment %}
             <p class="small demo-muted mb-3">
               {% if verified_transition and verified_transition.enabled %}
-                Документ согласия:
-                <a href="{{ consent_document_pdf_url }}" download>скачать PDF</a>.
-                Подписанный файл:
-                <a href="{{ verified_upload_url }}">загрузить бумажное подтверждение</a>.
+                {% if CURRENT_LANGUAGE == 'en' %}Consent document:{% else %}Документ согласия:{% endif %}
+                <a href="{{ consent_document_pdf_url }}" download>{% if CURRENT_LANGUAGE == 'en' %}download PDF{% else %}скачать PDF{% endif %}</a>.
+                {% if CURRENT_LANGUAGE == 'en' %}Signed file:{% else %}Подписанный файл:{% endif %}
+                <a href="{{ verified_upload_url }}">{% if CURRENT_LANGUAGE == 'en' %}upload paper confirmation{% else %}загрузить бумажное подтверждение{% endif %}</a>.
               {% else %}
-                Текст согласия:
-                <a href="{{ consent_document_url }}" target="_blank" rel="noopener">открыть и подписать</a>.
+                {% if CURRENT_LANGUAGE == 'en' %}Consent text:{% else %}Текст согласия:{% endif %}
+                <a href="{{ consent_document_url }}" target="_blank" rel="noopener">{% if CURRENT_LANGUAGE == 'en' %}open and sign{% else %}открыть и подписать{% endif %}</a>.
               {% endif %}
             </p>
             {% if show_web_consent and form.consent_decision %}
@@ -52,12 +52,12 @@
               style="display:none;"
               role="alert"
             >
-              Без согласия на обработку персональных данных отправка формы невозможна.
+              {% if CURRENT_LANGUAGE == 'en' %}Form submission is unavailable without consent to personal data processing.{% else %}Без согласия на обработку персональных данных отправка формы невозможна.{% endif %}
             </p>
-            <button class="btn btn-primary" type="submit"{% if not has_available_courses %} disabled{% endif %}>Отправить заявку</button>
+            <button class="btn btn-primary" type="submit"{% if not has_available_courses %} disabled{% endif %}>{% if CURRENT_LANGUAGE == 'en' %}Submit request{% else %}Отправить заявку{% endif %}</button>
             {% if not has_available_courses %}
               <p class="small text-warning mt-2 mb-0">
-                Для заявки на сертификат нужен курс из ваших ранее отправленных заявок.
+                {% if CURRENT_LANGUAGE == 'en' %}A certificate request requires a course from your previously submitted signups.{% else %}Для заявки на сертификат нужен курс из ваших ранее отправленных заявок.{% endif %}
               </p>
             {% endif %}
           </form>

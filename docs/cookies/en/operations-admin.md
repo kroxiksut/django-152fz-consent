@@ -138,6 +138,10 @@ Peculiarities:
 
 ![Cookie admin tool settings](../../assets/cookie/en/2-admin-tools-settings.png)
 
+The settings form itself — CSV export delimiter and the optional display overrides:
+
+![Cookie admin tool settings form](../../assets/cookie/en/8-admin-tools-settings-form.png)
+
 ### `Cookie categories`
 
 What is this:
@@ -151,6 +155,14 @@ What can be configured:
 
 When to change:
 - when a new processing category appears or classification changes.
+
+The category list with the boxed set:
+
+![Cookie categories list](../../assets/cookie/en/9-cookie-categories-list.png)
+
+A single category card (the `analytics` category) — code, displayed name, description, mandatory flag, sort order and activity:
+
+![Cookie category: analytics](../../assets/cookie/en/9.1-cookie-category-analytics.png)
 
 ### `Cookie Registry Elements`
 
@@ -170,6 +182,14 @@ What can be configured:
 When to change:
 - when connecting/disconnecting external systems and analytics.
 
+The registry list with the boxed demo integrations:
+
+![Cookie registry items list](../../assets/cookie/en/10-cookie-registry-items-list.png)
+
+A registry item card (`google_analytics_demo`) — provider, purpose, retention period, cookie names, script URL and cleanup strategy:
+
+![Cookie registry item: Google Analytics](../../assets/cookie/en/10.1-cookie-registry-item-google.png)
+
 ### `Cookie-policy text presets`
 
 What is this:
@@ -183,6 +203,10 @@ What can be configured:
 
 Actions:
 - cloning selected presets into custom presets.
+
+The boxed presets — full and short policy text in Russian and English:
+
+![Cookie policy text presets](../../assets/cookie/en/13-cookie-policy-text-presets-list.png)
 
 ### `Cookie policy revisions`
 
@@ -263,7 +287,7 @@ Purpose:
 - monitoring of current/outdated status;
 - search by user, anonymous token, request ID.
 
-![Cookie consent records](../../assets/cookie/en/6-cookie-consent-records.png)
+![Cookie consent records](../../assets/cookie/en/11-cookie-consent-records-list.png)
 
 ### `Cookie Consent Events`
 
@@ -275,6 +299,13 @@ Mode:
 
 Actions:
 - export selected events to CSV.
+
+Selecting events and applying the `Export the selected events to CSV` action:
+
+![Cookie consent events: view and export](../../assets/cookie/en/12-cookie-consent-events-export.png)
+
+A sample of the resulting export (`csv_export_delimiter = ;`):
+[cookie-consent-events.csv](../../assets/cookie/cookie-consent-events.csv)
 
 ### `Cookie banner states`
 

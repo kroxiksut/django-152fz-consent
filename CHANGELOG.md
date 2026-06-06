@@ -13,6 +13,48 @@ packages follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [django-cookies-152fz 1.0.1] - 2026-06-06
+
+### Added
+
+- Added locale-aware automatic cookie-banner text preset selection.
+- Added demo cookie registry items to the idempotent cookie defaults bootstrap.
+- Added synchronization of category and registry snapshots for cookie policy
+  revisions.
+- Added clearer cookie-policy variant controls and revision fieldsets in the
+  Django admin.
+
+### Fixed
+
+- Updated Russian and English cookie-package translations and compiled locale
+  files.
+- Fixed cookie-banner close-control choice initialization and validation in the
+  Django admin.
+
+### Documentation
+
+- Expanded the Russian and English cookie-module guides, including quickstart,
+  administration, and banner presentation documentation.
+- Added Russian and English screenshots covering banner variants, settings,
+  categories, registry items, consent records, policy text presets, and event
+  export, plus a sample cookie-consent event CSV.
+
+## [django-consent-152fz 1.0.1] - 2026-06-06
+
+### Fixed
+
+- Corrected English interface translations and rebuilt the compiled locale
+  catalog.
+
+### Documentation
+
+- Expanded the Russian and English consent-module guides, including quickstart,
+  administration, authoring, configuration, self-service, and verified-consent
+  flows.
+- Added Russian and English screenshots covering consent workflows, documents,
+  purposes, settings, audit records, and verified consents, plus sample consent
+  and operation-audit CSV exports.
+
 ## [1.0.0] - 2026-06-02
 
 First public release of both packages. Reusable Django building blocks for

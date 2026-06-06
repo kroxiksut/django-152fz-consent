@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-cookies-152fz"
-version = "1.0.0"
+version = "1.0.1"
 description = "Cookie banner and runtime package for Django projects targeting 152-FZ compliance workflows."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -63,4 +63,3 @@ django_cookies_152fz = [
     "locale/**/*.mo",
     "ai/*.md",
 ]
-

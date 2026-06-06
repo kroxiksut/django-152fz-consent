@@ -21,6 +21,10 @@ Consent confirmation:
 
 ![Consent confirmation screen](../../assets/consent/en/2-consent-confirmation.png)
 
+The rendered consent document the subject reviews before confirming:
+
+![Consent agreement example](../../assets/consent/en/2.1-agreement-example.png)
+
 The subject's personal list of consents (self-service):
 
 ![The "My consents" section](../../assets/consent/en/3-my-consents.png)

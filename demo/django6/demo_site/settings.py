@@ -98,16 +98,22 @@ DJANGO_CONSENT_152FZ = {
 }
 DJANGO_COOKIES_152FZ = {
     "enable_cookies": True,
+    "default_cookie_category_codes": [
+        "necessary",
+        "functional",
+        "analytics",
+        "marketing",
+    ],
     "cookie_banner": {
         "bootstrap_initial_revision": True,
         "banner_variant": "card",
         "consent_ui_variant": "panel",
-        "text_preset": "ru_balanced",
+        "text_preset": "auto",
         "show_launcher": True,
         "show_preferences_link": False,
         "show_empty_category_block": True,
         "show_customize_action_without_optional": True,
-        "empty_category_block_text": "?? ????? ???????????? ?????? ???????????? cookie. ?????????????? ????????? ?????? ?? ?????????.",
+        "empty_category_block_text": "Сейчас нет дополнительных категорий cookie. Дополнительные категории сейчас не настроены.",
     },
     "cookie_runtime": {
         "force_banner": False,

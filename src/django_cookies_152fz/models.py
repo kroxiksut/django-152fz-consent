@@ -232,7 +232,7 @@ DEFAULT_COOKIE_BANNER_REVISION_PRESENTATION = {
     "reconsent_notice_variant": (
         constants.COOKIE_BANNER_RECONSENT_NOTICE_VARIANT_INLINE
     ),
-    "text_preset_code": constants.COOKIE_BANNER_TEXT_PRESET_RU_BALANCED,
+    "text_preset_code": constants.COOKIE_BANNER_TEXT_PRESET_AUTO,
     "layout_variant": "compact",
     "theme_variant": "light",
     "desktop_position": "bottom_right",
@@ -825,6 +825,10 @@ class CookieBannerRevision(models.Model):
         ALERT = constants.COOKIE_BANNER_RECONSENT_NOTICE_VARIANT_ALERT, _("Оповещение")
 
     class TextPreset(models.TextChoices):
+        AUTO = (
+            constants.COOKIE_BANNER_TEXT_PRESET_AUTO,
+            _("Auto (locale-based)"),
+        )
         RU_BALANCED = (
             constants.COOKIE_BANNER_TEXT_PRESET_RU_BALANCED,
             _("Сбалансированный (RU)"),

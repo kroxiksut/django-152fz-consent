@@ -2,6 +2,8 @@
 
 This section applies to `django-consent-152fz` and describes the consent lifecycle.
 
+![Course signup form with the consent block](../../assets/consent/en/1-course-signup.png)
+
 ## Navigation
 
 - [← General documentation section](../README.md)

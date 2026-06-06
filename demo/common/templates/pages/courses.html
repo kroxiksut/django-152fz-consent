@@ -1,11 +1,13 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Курсы | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Courses | Training Center{% else %}Курсы | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-    <h2 class="mb-0">Доступные курсы</h2>
-    <a class="btn btn-primary" href="{% url 'pages:course_signup' %}">Записаться</a>
+    <h2 class="mb-0">{% if CURRENT_LANGUAGE == 'en' %}Available courses{% else %}Доступные курсы{% endif %}</h2>
+    <a class="btn btn-primary" href="{% url 'pages:course_signup' %}">{% if CURRENT_LANGUAGE == 'en' %}Enroll{% else %}Записаться{% endif %}</a>
   </div>
 
   {% if courses %}
@@ -17,7 +19,7 @@
               <h3 class="h5 card-title mb-2">{{ course.title }}</h3>
               {% if course.starts_at %}
                 <p class="demo-muted mb-2">
-                  Старт: {{ course.starts_at|date:"d.m.Y H:i" }}
+                  {% if CURRENT_LANGUAGE == 'en' %}Starts{% else %}Старт{% endif %}: {{ course.starts_at|date:"d.m.Y H:i" }}
                 </p>
               {% endif %}
               <p class="mb-2">{{ course.short_description }}</p>
@@ -27,13 +29,13 @@
               <a
                 class="btn btn-outline-primary"
                 href="{% url 'pages:course_signup' %}?course={{ course.pk }}"
-              >Выбрать курс</a>
+              >{% if CURRENT_LANGUAGE == 'en' %}Choose this course{% else %}Выбрать курс{% endif %}</a>
             </div>
           </article>
         </div>
       {% endfor %}
     </div>
   {% else %}
-    <div class="alert alert-secondary" role="status">Пока нет активных курсов.</div>
+    <div class="alert alert-secondary" role="status">{% if CURRENT_LANGUAGE == 'en' %}No active courses yet.{% else %}Пока нет активных курсов.{% endif %}</div>
   {% endif %}
 {% endblock %}

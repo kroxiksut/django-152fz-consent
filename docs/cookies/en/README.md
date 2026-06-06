@@ -2,6 +2,8 @@
 
 This section describes `django-cookies-152fz`: the cookie banner, the back-end layer that processes user selections, the integration registry and auditing.
 
+![Cookie banner on the site](../../assets/cookie/en/1-cookie-banner-on-site.png)
+
 ## Navigation
 
 - [To the general documentation section](../README.md)

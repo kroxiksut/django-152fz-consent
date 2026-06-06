@@ -1,16 +1,17 @@
-﻿{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %}
+{% load static i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Проверяемое согласие | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Verified consent | Training Center{% else %}Проверяемое согласие | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-3">Проверяемое согласие (бумажное подтверждение)</h2>
+          <h2 class="h4 mb-3">{% if CURRENT_LANGUAGE == 'en' %}Verified consent (paper confirmation){% else %}Проверяемое согласие (бумажное подтверждение){% endif %}</h2>
           <p class="text-muted mb-3">
-            Текущий статус по потоку: <strong>{{ consent_status_label }}</strong>
+            {% if CURRENT_LANGUAGE == 'en' %}Current flow status{% else %}Текущий статус по потоку{% endif %}: <strong>{{ consent_status_label }}</strong>
           </p>
           {% if verified_transition and verified_transition.enabled %}
             <div class="alert {% if verified_transition.blocking %}alert-warning{% else %}alert-success{% endif %}" role="status">
@@ -18,8 +19,8 @@
             </div>
           {% endif %}
           <p class="mb-3">
-            Документ согласия:
-            <a href="{{ consent_document_pdf_url }}" download>скачать PDF</a>
+            {% if CURRENT_LANGUAGE == 'en' %}Consent document{% else %}Документ согласия{% endif %}:
+            <a href="{{ consent_document_pdf_url }}" download>{% if CURRENT_LANGUAGE == 'en' %}download PDF{% else %}скачать PDF{% endif %}</a>
           </p>
           <form method="post" enctype="multipart/form-data" novalidate>
             {% csrf_token %}
@@ -28,16 +29,16 @@
             <input type="hidden" name="_form_code" value="{{ form_code }}">
             {{ form.as_p }}
             <div class="d-flex flex-wrap gap-2">
-              <button type="submit" class="btn btn-primary">Загрузить и отправить</button>
+              <button type="submit" class="btn btn-primary">{% if CURRENT_LANGUAGE == 'en' %}Upload and submit{% else %}Загрузить и отправить{% endif %}</button>
               {% if return_to_certificate_url %}
-                <a href="{{ return_to_certificate_url }}" class="btn btn-outline-primary">Вернуться к заявке на сертификат</a>
+                <a href="{{ return_to_certificate_url }}" class="btn btn-outline-primary">{% if CURRENT_LANGUAGE == 'en' %}Back to the certificate request{% else %}Вернуться к заявке на сертификат{% endif %}</a>
               {% endif %}
-              <a href="{% url 'pages:consents' %}" class="btn btn-outline-secondary">Мои согласия</a>
+              <a href="{% url 'pages:consents' %}" class="btn btn-outline-secondary">{% if CURRENT_LANGUAGE == 'en' %}My consents{% else %}Мои согласия{% endif %}</a>
             </div>
           </form>
           <hr>
           <p class="small text-muted mb-0">
-            Для проверочного теста можно использовать файл:
+            {% if CURRENT_LANGUAGE == 'en' %}For a test you can use the file{% else %}Для проверочного теста можно использовать файл{% endif %}:
             <a href="{% static 'demo/files/verified/sample_verified_consent.pdf' %}" download>sample_verified_consent.pdf</a>
           </p>
         </div>

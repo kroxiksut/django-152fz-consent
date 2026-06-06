@@ -19,7 +19,7 @@ build-backend = "setuptools.build_meta"
 # только Django, а DRF подключается отдельно через optional extra.
 [project]
 name = "django-consent-152fz"
-version = "1.0.0"
+version = "1.0.1"
 # Пакет для проектов, работающих на РФ: помогает получать, хранить и обновлять
 # согласия на обработку персональных данных для соблюдения требований 152-ФЗ.
 description = "Django package for websites and web services targeting the Russian Federation, helping projects implement 152-FZ personal data consent and compliance workflows."

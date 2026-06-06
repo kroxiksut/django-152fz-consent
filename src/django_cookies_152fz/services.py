@@ -406,6 +406,71 @@ def snapshot_active_cookie_registry_items(
     ]
 
 
+@transaction.atomic
+def ensure_default_cookie_registry_items(
+    *,
+    using: str = DEFAULT_DB_ALIAS,
+) -> list[CookieRegistryItem]:
+    """Create or update demo-friendly live cookie registry items."""
+
+    ensure_default_cookie_categories()
+    categories_by_code = {
+        category.code: category
+        for category in CookieCategory.objects.using(using).filter(
+            code__in={"functional", "analytics"}
+        )
+    }
+    defaults: list[dict[str, object]] = [
+        {
+            "code": "google_analytics_demo",
+            "category_code": "analytics",
+            "provider": "Google Analytics",
+            "purpose": (
+                "Анализ посещаемости и поведения пользователей для улучшения "
+                "структуры и контента сайта."
+            ),
+            "retention": "До 24 месяцев, в зависимости от политики провайдера.",
+            "cookie_names": ["_ga", "_gid", "_gat"],
+            "src_url": "https://www.google-analytics.com/analytics.js",
+            "clear_strategy": CookieRegistryItem.ClearStrategy.BEST_EFFORT_DELETE,
+        },
+        {
+            "code": "site_feedback_widget_demo",
+            "category_code": "functional",
+            "provider": "Intercom",
+            "purpose": (
+                "Показ виджета обратной связи и сохранение настроек интерфейса "
+                "для удобства пользователя."
+            ),
+            "retention": "До закрытия вкладки или до 12 месяцев для настроек.",
+            "cookie_names": ["intercom-session-demo", "intercom-id-demo"],
+            "src_url": "https://widget.intercom.io/widget/demo",
+            "clear_strategy": CookieRegistryItem.ClearStrategy.ADAPTER_HOOK,
+        },
+    ]
+
+    created_or_updated: list[CookieRegistryItem] = []
+    for payload in defaults:
+        category = categories_by_code.get(str(payload["category_code"]))
+        if category is None:
+            continue
+        item, _ = CookieRegistryItem.objects.using(using).update_or_create(
+            code=str(payload["code"]),
+            defaults={
+                "category": category,
+                "provider": str(payload["provider"]),
+                "purpose": str(payload["purpose"]),
+                "retention": str(payload["retention"]),
+                "cookie_names": list(cast(list[str], payload["cookie_names"])),
+                "src_url": str(payload["src_url"]),
+                "clear_strategy": payload["clear_strategy"],
+                "is_active": True,
+            },
+        )
+        created_or_updated.append(item)
+    return created_or_updated
+
+
 def get_cookie_policy_text_variants() -> dict[str, dict[str, Any]]:
     """Function get_cookie_policy_text_variants documentation."""
 
@@ -571,6 +636,46 @@ def _find_box_policy_revision_by_variant(
     )
 
 
+def _sync_cookie_policy_revision_category_snapshots(
+    *,
+    using: str = DEFAULT_DB_ALIAS,
+    snapshot: Iterable[Mapping[str, object]] | None = None,
+) -> int:
+    current_snapshot = normalize_categories_snapshot(
+        list(snapshot) if snapshot is not None else snapshot_active_cookie_categories()
+    )
+    if not current_snapshot:
+        return 0
+
+    updated_count = 0
+    revisions = CookiePolicyRevision.objects.using(using).filter(
+        format=CookiePolicyRevision.ContentFormat.PLAIN_TEXT
+    )
+    for revision in revisions:
+        revision_snapshot = normalize_categories_snapshot(revision.categories_snapshot)
+        if revision_snapshot == current_snapshot:
+            continue
+        revision.categories_snapshot = current_snapshot
+        revision.save(update_fields=["categories_snapshot", "updated_at"])
+        sync_cookie_policy_revision_registry_items(policy_revision=revision)
+        updated_count += 1
+    return updated_count
+
+
+def _sync_cookie_policy_revision_registry_snapshots(
+    *,
+    using: str = DEFAULT_DB_ALIAS,
+) -> int:
+    updated_count = 0
+    revisions = CookiePolicyRevision.objects.using(using).filter(
+        format=CookiePolicyRevision.ContentFormat.PLAIN_TEXT
+    )
+    for revision in revisions:
+        sync_cookie_policy_revision_registry_items(policy_revision=revision)
+        updated_count += 1
+    return updated_count
+
+
 @transaction.atomic
 def ensure_default_cookie_policy_variants(
     *,
@@ -590,6 +695,13 @@ def ensure_default_cookie_policy_variants(
 
     ensure_default_cookie_categories()
     snapshot = snapshot_active_cookie_categories()
+    synced_revisions = _sync_cookie_policy_revision_category_snapshots(
+        using=using,
+        snapshot=snapshot,
+    )
+    synced_registry_revisions = _sync_cookie_policy_revision_registry_snapshots(
+        using=using,
+    )
     created_variants: list[str] = []
     revisions_by_variant: dict[str, CookiePolicyRevision] = {}
 
@@ -636,6 +748,8 @@ def ensure_default_cookie_policy_variants(
     return {
         "created": bool(created_variants),
         "created_variants": created_variants,
+        "synced_revisions": synced_revisions,
+        "synced_registry_revisions": synced_registry_revisions,
         "active_revision_id": active_revision.pk if active_revision else None,
         "active_revision_version": (
             active_revision.version if active_revision else None
@@ -1700,7 +1814,7 @@ def _normalize_cookie_banner_revision_fields(
     revision_fields: Mapping[str, object],
 ) -> dict[str, object]:
     fields = dict(revision_fields)
-    text_preset_code, text_preset_values = _resolve_cookie_banner_text_preset(
+    text_preset_code, text_preset_values = _resolve_cookie_banner_text_preset_for_storage(
         preset_code=fields.get("text_preset_code")
     )
     fields["text_preset_code"] = text_preset_code
@@ -1916,6 +2030,22 @@ def _normalize_cookie_banner_revision_fields(
         or DEFAULT_COOKIE_BANNER_REVISION_PRESENTATION["media_image_alt"]
     ).strip()
     return fields
+
+
+def _resolve_cookie_banner_text_preset_for_storage(
+    *,
+    preset_code: object,
+) -> tuple[str, dict[str, str]]:
+    normalized_code = str(preset_code or "").strip().lower()
+    if normalized_code == constants.COOKIE_BANNER_TEXT_PRESET_AUTO:
+        preferred_code = _preferred_cookie_banner_preset_code_for_language(
+            get_language() or ""
+        )
+        presets = get_cookie_banner_text_presets()
+        if preferred_code not in presets:
+            preferred_code = constants.COOKIE_BANNER_TEXT_PRESET_RU_BALANCED
+        return normalized_code, dict(presets[preferred_code])
+    return _resolve_cookie_banner_text_preset(preset_code=normalized_code)
 
 
 def _resolve_cookie_banner_text_preset(

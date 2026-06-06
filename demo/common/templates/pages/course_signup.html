@@ -1,29 +1,30 @@
-﻿{% extends "base.html" %}
-{% load django_bootstrap5 %}
+{% extends "base.html" %}
+{% load django_bootstrap5 i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
 
-{% block title %}Запись на курс | Учебный центр{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'en' %}Course signup | Training Center{% else %}Запись на курс | Учебный центр{% endif %}{% endblock %}
 
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-12 col-xl-8">
       <div class="card demo-card">
         <div class="card-body p-4">
-          <h2 class="h4 mb-2">Запись на курс</h2>
-          <p class="demo-muted mb-3">Шаг {{ wizard.steps.step1 }} из {{ wizard.steps.count }}.</p>
+          <h2 class="h4 mb-2">{% if CURRENT_LANGUAGE == 'en' %}Course signup{% else %}Запись на курс{% endif %}</h2>
+          <p class="demo-muted mb-3">{% if CURRENT_LANGUAGE == 'en' %}Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}.{% else %}Шаг {{ wizard.steps.step1 }} из {{ wizard.steps.count }}.{% endif %}</p>
 
           {% if wizard.steps.current == "confirm" and signup_preview %}
             <div class="alert alert-secondary" role="status">
-              <h3 class="h6 mb-2">Проверьте данные</h3>
+              <h3 class="h6 mb-2">{% if CURRENT_LANGUAGE == 'en' %}Confirm your data{% else %}Проверьте данные{% endif %}</h3>
               <dl class="row mb-0">
-                <dt class="col-sm-4">Курс</dt>
+                <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Course{% else %}Курс{% endif %}</dt>
                 <dd class="col-sm-8">{{ signup_preview.course }}</dd>
-                <dt class="col-sm-4">ФИО</dt>
+                <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Full name{% else %}ФИО{% endif %}</dt>
                 <dd class="col-sm-8">{{ signup_preview.full_name }}</dd>
                 <dt class="col-sm-4">Email</dt>
                 <dd class="col-sm-8">{{ signup_preview.email }}</dd>
-                <dt class="col-sm-4">Телефон</dt>
+                <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Phone{% else %}Телефон{% endif %}</dt>
                 <dd class="col-sm-8">{{ signup_preview.phone }}</dd>
-                <dt class="col-sm-4">Комментарий</dt>
+                <dt class="col-sm-4">{% if CURRENT_LANGUAGE == 'en' %}Comment{% else %}Комментарий{% endif %}</dt>
                 <dd class="col-sm-8">{{ signup_preview.comment|default:"-" }}</dd>
               </dl>
             </div>
@@ -36,7 +37,7 @@
               <div class="alert alert-warning" role="alert">
                 {{ verified_transition.message }}
                 {% if verified_transition.upload_url %}
-                  <a href="{{ verified_transition.upload_url }}" class="alert-link">Загрузить подтверждение</a>
+                  <a href="{{ verified_transition.upload_url }}" class="alert-link">{% if CURRENT_LANGUAGE == 'en' %}Upload confirmation{% else %}Загрузить подтверждение{% endif %}</a>
                 {% endif %}
               </div>
             {% endif %}
@@ -47,8 +48,8 @@
             {% endfor %}
             {% if wizard.form.consent_decision or wizard.form.confirm %}
               <p class="small demo-muted mb-3">
-                Текст согласия:
-                <a href="{{ consent_document_url }}" target="_blank" rel="noopener">открыть и подписать</a>
+                {% if CURRENT_LANGUAGE == 'en' %}Consent text:{% else %}Текст согласия:{% endif %}
+                <a href="{{ consent_document_url }}" target="_blank" rel="noopener">{% if CURRENT_LANGUAGE == 'en' %}open and sign{% else %}открыть и подписать{% endif %}</a>
               </p>
               {% if wizard.form.consent_decision %}
                 {% bootstrap_field wizard.form.consent_decision %}
@@ -62,7 +63,7 @@
                 style="display:none;"
                 role="alert"
               >
-                Без согласия на обработку персональных данных отправка формы невозможна.
+                {% if CURRENT_LANGUAGE == 'en' %}Form submission is unavailable without consent to personal data processing.{% else %}Без согласия на обработку персональных данных отправка формы невозможна.{% endif %}
               </p>
             {% endif %}
 
@@ -73,13 +74,13 @@
                   name="wizard_goto_step"
                   type="submit"
                   value="{{ wizard.steps.prev }}"
-                >Назад</button>
+                >{% if CURRENT_LANGUAGE == 'en' %}Back{% else %}Назад{% endif %}</button>
               {% endif %}
               <button class="btn btn-primary" type="submit">
                 {% if wizard.steps.current == "confirm" %}
-                  Подтвердить запись
+                  {% if CURRENT_LANGUAGE == 'en' %}Confirm signup{% else %}Подтвердить запись{% endif %}
                 {% else %}
-                  Продолжить
+                  {% if CURRENT_LANGUAGE == 'en' %}Continue{% else %}Продолжить{% endif %}
                 {% endif %}
               </button>
             </div>
@@ -90,8 +91,13 @@
   </div>
   <script>
     document.querySelectorAll("form[data-consent-radio-form]").forEach((form) => {
-      const decline = form.querySelector('input[name="consent_decision"][value="decline"]');
-      const agree = form.querySelector('input[name="consent_decision"][value="agree"]');
+      const consentFieldName = "{{ wizard.form.consent_decision.html_name|default:''|escapejs }}";
+      const decline = consentFieldName
+        ? form.querySelector(`input[name="${consentFieldName}"][value="decline"]`)
+        : null;
+      const agree = consentFieldName
+        ? form.querySelector(`input[name="${consentFieldName}"][value="agree"]`)
+        : null;
       const blockedMessage = form.querySelector("[data-consent-blocked-message]");
       const blockSubmit = "{{ consent_capture_settings.decline_action|default:'' }}" === "block_submit";
       const warningEnabled = "{{ consent_capture_settings.decline_warning_enabled|yesno:'1,0' }}" === "1";

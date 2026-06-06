@@ -1,0 +1,32 @@
+# Line-ending policy.
+#
+# The working copy lives in a Yandex.Disk-synced folder and Git runs with
+# core.autocrlf=true on Windows, which together let CRLF drift into source
+# files. That breaks `ruff format --check` in CI (it normalizes to LF) even
+# though the change is invisible. Pin text sources to LF in BOTH the repo and
+# the working tree so the formatter and CI always agree.
+
+# Source and text files: always LF.
+*.py      text eol=lf
+*.pyi     text eol=lf
+*.md      text eol=lf
+*.po      text eol=lf
+*.txt     text eol=lf
+*.cfg     text eol=lf
+*.ini     text eol=lf
+*.toml    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.html    text eol=lf
+*.csv     text eol=lf
+
+# Binary assets: never normalize or diff as text.
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.svg     binary
+*.mo      binary
+*.sqlite3 binary
+*.pdf     binary

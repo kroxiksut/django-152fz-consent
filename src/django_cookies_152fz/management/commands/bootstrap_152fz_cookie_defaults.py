@@ -1,4 +1,4 @@
-﻿"""Bootstrap command for default cookie-only data."""
+"""Bootstrap command for default cookie-only data."""
 
 from __future__ import annotations
 

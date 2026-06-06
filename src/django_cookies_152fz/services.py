@@ -1814,8 +1814,10 @@ def _normalize_cookie_banner_revision_fields(
     revision_fields: Mapping[str, object],
 ) -> dict[str, object]:
     fields = dict(revision_fields)
-    text_preset_code, text_preset_values = _resolve_cookie_banner_text_preset_for_storage(
-        preset_code=fields.get("text_preset_code")
+    text_preset_code, text_preset_values = (
+        _resolve_cookie_banner_text_preset_for_storage(
+            preset_code=fields.get("text_preset_code")
+        )
     )
     fields["text_preset_code"] = text_preset_code
     fields["mobile_text_preset_code"] = _normalize_mobile_text_preset_code(

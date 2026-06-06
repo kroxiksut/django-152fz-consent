@@ -809,7 +809,9 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
         mobile_field.widget = forms.Select(choices=mobile_choices)
         mobile_field.choices = mobile_choices
 
-        close_control_field = cast(forms.ChoiceField, self.fields["close_control_placement"])
+        close_control_field = cast(
+            forms.ChoiceField, self.fields["close_control_placement"]
+        )
         close_control_choices = list(cast(Any, close_control_field).choices)
         close_control_field.required = False
         close_control_field.widget = forms.Select(choices=close_control_choices)
@@ -889,7 +891,9 @@ class CookieBannerRevisionAdminForm(forms.ModelForm):
             return getattr(self.instance, field_name, None)
         return None
 
-    def _resolve_initial_choice_value(self, field_name: str, *, default_value: str) -> str:
+    def _resolve_initial_choice_value(
+        self, field_name: str, *, default_value: str
+    ) -> str:
         if field_name in self.initial:
             value = self.initial.get(field_name)
             return str(value or "").strip() or default_value

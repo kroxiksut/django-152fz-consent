@@ -298,7 +298,8 @@ def contact(request: HttpRequest) -> HttpResponse:
                 result={"contact_message_id": message.pk},
             )
             messages.success(
-                request, _msg("Сообщение успешно отправлено.", "Message sent successfully.")
+                request,
+                _msg("Сообщение успешно отправлено.", "Message sent successfully."),
             )
             response = redirect("pages:contact")
             if anonymous_token:
@@ -307,7 +308,10 @@ def contact(request: HttpRequest) -> HttpResponse:
 
         messages.error(
             request,
-            _msg("Пожалуйста, исправьте ошибки в форме.", "Please correct the errors in the form."),
+            _msg(
+                "Пожалуйста, исправьте ошибки в форме.",
+                "Please correct the errors in the form.",
+            ),
         )
     else:
         form = ContactForm()
@@ -811,7 +815,10 @@ def certificate_request(request: HttpRequest) -> HttpResponse:
             return response
         messages.error(
             request,
-            _msg("Пожалуйста, исправьте ошибки в форме.", "Please correct the errors in the form."),
+            _msg(
+                "Пожалуйста, исправьте ошибки в форме.",
+                "Please correct the errors in the form.",
+            ),
         )
     else:
         request_user = cast(Any, request.user)

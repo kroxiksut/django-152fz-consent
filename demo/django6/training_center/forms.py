@@ -102,7 +102,10 @@ class CourseSignupConfirmForm(ConsentCaptureModeMixin, forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        if "consent_decision" in self.fields and not self.fields["consent_decision"].initial:
+        if (
+            "consent_decision" in self.fields
+            and not self.fields["consent_decision"].initial
+        ):
             self.fields["consent_decision"].initial = "agree"
 
 

@@ -12,6 +12,7 @@
 
 - [Быстрый старт](./quickstart.md)
 - [Обзор и текущее состояние](./overview.md)
+- [Сравнение с django-cookie-consent](./comparison-django-cookie-consent.md)
 - [Ключевые инварианты](./invariants.md)
 - [Настройки жизненного цикла и серверного слоя](./configuration.md)
 - [Использование, меню админки и настройка](./operations-admin.md)

@@ -12,6 +12,7 @@ This section describes `django-cookies-152fz`: the cookie banner, the back-end l
 
 - [Quick start](./quickstart.md)
 - [Overview and current status](./overview.md)
+- [Comparison with django-cookie-consent](./comparison-django-cookie-consent.md)
 - [Key invariants](./invariants.md)
 - [Lifecycle and server layer settings](./configuration.md)
 - [Usage, admin menu and settings](./operations-admin.md)

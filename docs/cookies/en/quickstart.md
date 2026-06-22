@@ -27,7 +27,8 @@ Optional integration with the consent package:
 pip install "django-cookies-152fz[consent]"   # pulls in django-consent-152fz
 ```
 
-Compatibility: Python 3.10–3.12, Django 5.0 / 5.1 / 5.2 / 6.0 (`Django>=5,<7`).
+Compatibility: Python 3.10–3.14, Django 5.0 / 5.1 / 5.2 / 6.0 (`Django>=5,<7`).
+Python 3.14 requires Django 5.2.8+ or Django 6.x.
 
 ## 2. Enable the app
 

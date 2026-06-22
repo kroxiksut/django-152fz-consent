@@ -39,11 +39,14 @@ ask for them.
 
 ## Compatibility
 
-- **Python:** 3.10 – 3.12
+- **Python:** 3.10 – 3.14
 - **Django:** 5.0, 5.1, 5.2 (LTS), 6.0 — declared as `Django>=5,<7`
 
-Verified in CI on Python 3.10 + Django 5.x and Python 3.12 + Django 6.x, and on
-the project demo sites.
+Use a Django release that supports the selected Python version. Python 3.14
+requires Django 5.2.8+ or Django 6.x.
+
+Verified in CI on Python 3.10 + Django 5.x, Python 3.12–3.13 + Django 6.x, and
+Python 3.14 + Django 5.2 / 6.x, as well as on the project demo sites.
 
 ## Quick start
 
@@ -118,7 +121,8 @@ MIT.
 (extra: `[api]` — DRF API, `[pdf]` — генерация PDF для бумажных согласий).
 
 Ядро зависит только от Django; DRF и ReportLab подключаются опционально.
-Поддержка: Python 3.10–3.12, Django 5.0–6.0.
+Поддержка: Python 3.10–3.14, Django 5.0–6.0. Для Python 3.14 требуется Django
+5.2.8+ или Django 6.x.
 
 > Пакет распространяется «как есть» и сам по себе не гарантирует юридическое
 > соответствие — корректность текстов и процессов остаётся ответственностью

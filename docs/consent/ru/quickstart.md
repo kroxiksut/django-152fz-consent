@@ -25,8 +25,9 @@ pip install "django-consent-152fz[api]"   # эндпойнты DRF API
 pip install "django-consent-152fz[pdf]"   # PDF для контура бумажных согласий (ReportLab)
 ```
 
-Ядро зависит только от Django (`Django>=5,<7`, Python 3.10–3.12). DRF и ReportLab
+Ядро зависит только от Django (`Django>=5,<7`, Python 3.10–3.14). DRF и ReportLab
 подключаются только через extra выше.
+Для Python 3.14 требуется Django 5.2.8+ или Django 6.x.
 
 ## 2. Включение приложений
 

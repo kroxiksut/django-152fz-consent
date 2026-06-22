@@ -35,11 +35,15 @@ pip install "django-cookies-152fz[consent]"   # pulls in django-consent-152fz
 
 ## Compatibility
 
-- **Python:** 3.10 – 3.12
+- **Python:** 3.10 – 3.14
 - **Django:** 5.0, 5.1, 5.2 (LTS), 6.0 — declared as `Django>=5,<7`
 
-Verified in CI on Python 3.12 + Django 6.x (standalone, without the consent
-package installed) and on the project demo sites.
+Use a Django release that supports the selected Python version. Python 3.14
+requires Django 5.2.8+ or Django 6.x.
+
+Verified standalone in CI on Python 3.12–3.13 + Django 6.x and Python 3.14 +
+Django 5.2 / 6.x, without the consent package installed, and on the project
+demo sites.
 
 ## Quick start
 
@@ -98,7 +102,8 @@ MIT.
 **Установка:** `pip install django-cookies-152fz`
 (extra: `[consent]` — подключает `django-consent-152fz` для совместной работы).
 
-Поддержка: Python 3.10–3.12, Django 5.0–6.0.
+Поддержка: Python 3.10–3.14, Django 5.0–6.0. Для Python 3.14 требуется Django
+5.2.8+ или Django 6.x.
 
 > Пакет распространяется «как есть» и сам по себе не гарантирует юридическое
 > соответствие — корректность текстов и инвентаризации cookie остаётся

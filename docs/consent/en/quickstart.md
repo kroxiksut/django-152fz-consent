@@ -25,8 +25,9 @@ pip install "django-consent-152fz[api]"   # DRF API endpoints
 pip install "django-consent-152fz[pdf]"   # PDF for the verified/paper flow (ReportLab)
 ```
 
-The core depends only on Django (`Django>=5,<7`, Python 3.10–3.12). DRF and
+The core depends only on Django (`Django>=5,<7`, Python 3.10–3.14). DRF and
 ReportLab are pulled in only through the extras above.
+Python 3.14 requires Django 5.2.8+ or Django 6.x.
 
 ## 2. Enable the app(s)
 

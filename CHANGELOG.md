@@ -13,6 +13,17 @@ packages follow [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.2] - 2026-06-22
+
+Compatibility metadata release for both packages.
+
+### Changed
+
+- Declared and documented support for Python 3.13 and 3.14 while preserving the
+  existing minimum of Python 3.10.
+- Added CI coverage for Python 3.13 with Django 6.x and Python 3.14 with Django
+  5.2 and 6.x for both standalone distributions.
+
 ## [django-cookies-152fz 1.0.1] - 2026-06-06
 
 ### Added

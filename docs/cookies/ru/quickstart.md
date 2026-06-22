@@ -27,7 +27,8 @@ pip install django-cookies-152fz
 pip install "django-cookies-152fz[consent]"   # подключает django-consent-152fz
 ```
 
-Совместимость: Python 3.10–3.12, Django 5.0 / 5.1 / 5.2 / 6.0 (`Django>=5,<7`).
+Совместимость: Python 3.10–3.14, Django 5.0 / 5.1 / 5.2 / 6.0 (`Django>=5,<7`).
+Для Python 3.14 требуется Django 5.2.8+ или Django 6.x.
 
 ## 2. Включение приложения
 
